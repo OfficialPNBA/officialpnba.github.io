@@ -71,7 +71,7 @@ function empty(symbol,title,text,extra=''){return `<div class="empty-state"><div
 const noResults='<div class="no-results" data-no-results hidden><h2>No matches found</h2><p>Try another filter or search term.</p><button class="button outline" data-reset>Reset filters <span aria-hidden="true">→</span></button></div>';
 function standingsPage(){
   // Card-style standings: conference views split into Playoffs / Play-In / Lottery tiers, plus a league-wide view.
-  const {playoffSpots=4,playInSpots=2,teamsPerConference=7}=standingsFormat;
+  const {playoffSpots=3,playInSpots=2,teamsPerConference=7}=standingsFormat;
   const pct=s=>s.w+s.l?s.w/(s.w+s.l):0;
   const order=list=>list.map(t=>({t,s:stat(t.id)})).sort((a,b)=>(a.t.seed??Infinity)-(b.t.seed??Infinity)||pct(b.s)-pct(a.s)||b.s.w-a.s.w||(a.t.officialRank??Infinity)-(b.t.officialRank??Infinity)||a.t.name.localeCompare(b.t.name));
   const confKey=c=>/west/i.test(c||'')?'west':/east/i.test(c||'')?'east':'';
@@ -84,7 +84,7 @@ function standingsPage(){
     const real=list.length>0;
     const slice=(a,b)=>real?list.slice(a,b).map(x=>card(x)).join(''):Array.from({length:b-a},ghost).join('');
     const p=playoffSpots,q=playoffSpots+playInSpots,n=Math.max(teamsPerConference,q+1);
-    return `<section class="conf-view conf-${key}" data-conf-view="${key}"${key==='west'?'':' hidden'}><header class="conf-title"><img class="conf-logo" src="/assets/conferences/${key}.webp" alt="${label} Conference" width="220" height="228"><span class="sr-only">${label} CONFERENCE</span></header><div class="tiers">${tier('PLAYOFFS',`Seeds 1–${p}`,'tier-playoffs',slice(0,p))}<div class="tier-stack">${tier('PLAY-IN',`Seeds ${p+1}–${q}`,'tier-playin',slice(p,q))}${tier('LOTTERY',`Seed${n-q>1?'s':''} ${q+1}${n-q>1?'–'+n:''}`,'tier-lottery',real?slice(q,Infinity)||'<p class="tier-empty">No teams</p>':slice(q,n))}</div></div></section>`;
+    return `<section class="conf-view conf-${key}" data-conf-view="${key}"${key==='west'?'':' hidden'}><header class="conf-title"><img class="conf-logo" src="/assets/conferences/${key}.webp" alt="${label} Conference" width="220" height="228"><span class="sr-only">${label} CONFERENCE</span></header><div class="tiers">${tier('PLAYOFFS',`Seeds 1–${p}`,'tier-playoffs',slice(0,p))}<div class="tier-stack">${tier('PLAY-IN',`Seeds ${p+1}–${q}`,'tier-playin',slice(p,q))}${tier('OUT OF PLAYOFFS',`Seed${n-q>1?'s':''} ${q+1}${n-q>1?'–'+n:''}`,'tier-lottery',real?slice(q,Infinity)||'<p class="tier-empty">No teams</p>':slice(q,n))}</div></div></section>`;
   }
   const all=order(teams);
   return `<section class="standings-board" data-standings><div class="conf-switch" role="group" aria-label="Choose conference"><button class="conf-btn west" data-conf="west" aria-pressed="true">Western</button><button class="conf-btn east" data-conf="east" aria-pressed="false">Eastern</button><button class="conf-btn all" data-conf="all" aria-pressed="false">All Teams</button></div>${conference('west','WESTERN')}${conference('east','EASTERN')}<section class="conf-view conf-all" data-conf-view="all" hidden><header class="conf-title"><span class="conf-label">NPBA STANDINGS</span><h2>ALL TEAMS</h2></header><div class="all-grid">${all.length?all.map(x=>card(x,true)).join(''):Array.from({length:teamsPerConference*2},ghost).join('')}</div></section></section><div class="content-note">${icon('shield')} ${teams.length?'Records are calculated from final games. Seeds are set by the league.':'Teams and seeds will appear here once the league announces them.'}</div>`;
