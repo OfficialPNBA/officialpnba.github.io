@@ -366,15 +366,16 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .conf-btn.edit[aria-current=page]{background:var(--c);border-color:var(--c);color:var(--bg);border-style:solid}
 @media(max-width:650px){.conf-switch:has(.edit:not([hidden])){grid-template-columns:repeat(2,1fr)}.conf-btn.edit{grid-column:auto}}
 .conf-super .conf-logo{width:clamp(170px,22vw,280px)}
-/* Media: insider-style posts (message above, picture below) */
-.post-feed{display:grid;gap:18px;max-width:720px;margin:0 auto 38px}
-.post{display:flex;gap:14px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
-.post-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid #2c2f35}
-.post-main{min-width:0;flex:1}
-.post-head{display:flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:15px;line-height:1.3}
-.post-head strong{font-weight:700}
-.post-verified{width:18px;height:18px;color:#1d9bf0}
-.post-handle,.post-dot,.post-head time{color:#8b939e}
-.post-text{font-size:16px;line-height:1.55;margin-top:6px;color:var(--white);white-space:pre-line}
-.post-image{width:100%;height:auto;margin-top:14px;border-radius:14px;border:1px solid #2c2f35;aspect-ratio:16/9;object-fit:cover}
-@media(max-width:650px){.post{padding:16px 14px;gap:10px}.post-avatar{width:44px;height:44px}.post-text{font-size:15px}.post-head{font-size:14px}}
+/* Media: insider-style posts (profile on the left, message above, picture below) */
+.post-feed{display:grid;gap:22px;margin:0 0 38px}
+.post{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:24px 28px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.post-side{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
+.post-avatar{width:112px;height:112px;border-radius:50%;object-fit:cover;border:3px solid #2c2f35;margin-bottom:8px}
+.post-name{display:flex;align-items:center;gap:5px;font-size:16px;font-weight:700}
+.post-verified{width:18px;height:18px;color:#1d9bf0;flex-shrink:0}
+.post-handle,.post-side time{color:#8b939e;font-size:13px}
+.post-main{min-width:0;max-width:760px}
+.post-text{font:italic 500 21px/1.5 Barlow,League,Arial,sans-serif;color:#e4e6ea}
+.post-text b{font-weight:800;color:#fff}
+.post-image{width:100%;height:auto;margin-top:16px;border-radius:14px;border:1px solid #2c2f35;aspect-ratio:16/9;object-fit:cover}
+@media(max-width:650px){.post{grid-template-columns:96px minmax(0,1fr);gap:14px;padding:16px 14px}.post-avatar{width:84px;height:84px}.post-name{font-size:14px}.post-handle,.post-side time{font-size:11px}.post-text{font-size:17px}}
