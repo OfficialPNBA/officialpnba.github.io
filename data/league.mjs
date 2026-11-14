@@ -23,3 +23,13 @@ export const media = [
 //                received: [{ teamId, assets: [] }] }
 // Type: Trade | Signing | Release | Other.
 export const transactions = [];
+// Home page banner: players shown in panels around the logo, listed from the
+// logo outward and alternating left/right. Image goes in public/assets/banner/.
+// Player: { team, image, color }. An odd count adds a "next franchise" teaser panel.
+export const bannerPlayers = [
+  { team:'Washington Griffins', image:'/assets/banner/griffins.webp', color:'#d4213d' },
+  { team:'Miami Makos', image:'/assets/banner/makos.webp', color:'#1fc2b2' },
+  { team:'Minnesota Sabers', image:'/assets/banner/sabers.webp', color:'#8b4cf0' },
+  { team:'Chicago Vortex', image:'/assets/banner/vortex.webp', color:'#3f74ff' },
+  { team:'Ember', image:'/assets/banner/ember.webp', color:'#f06a1f' }
+];
