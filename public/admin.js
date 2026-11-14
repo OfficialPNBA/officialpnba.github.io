@@ -38,6 +38,9 @@
     if (p.position) o.position = String(p.position).trim().toUpperCase();
     if (p.number !== '' && p.number != null) o.number = String(p.number).trim();
     if (!o.teamId && p.formerTeamId) o.formerTeamId = p.formerTeamId;
+    if (p.owner) o.owner = true;
+    if (p.coach) o.coach = true;
+    if (p.lineup === 'starter' || p.lineup === 'bench') o.lineup = p.lineup;
     return o;
   });
   const pSerialize = list => JSON.stringify(pClean(list), null, 2) + '\n';
@@ -95,6 +98,7 @@
       <td><input class="admin-input wide" data-pk="name" value="${esc(p.name)}" placeholder="Player name" aria-label="Player name"></td>
       <td><select class="admin-input team" data-pk="teamId" aria-label="Team">${teamOpts(p)}</select></td>
       <td><input class="admin-input abbr" data-pk="position" value="${esc(p.position || '')}" maxlength="3" placeholder="PG" aria-label="Position"></td>
+      <td><div class="role-cell"><label class="role-chk"><input type="checkbox" data-pk="owner"${p.owner ? ' checked' : ''}> Owner</label><label class="role-chk"><input type="checkbox" data-pk="coach"${p.coach ? ' checked' : ''}> Coach</label><select class="admin-input lineup" data-pk="lineup" aria-label="Starter or bench"><option value="">—</option><option value="starter"${p.lineup === 'starter' ? ' selected' : ''}>Starter</option><option value="bench"${p.lineup === 'bench' ? ' selected' : ''}>Bench</option></select></div></td>
       <td><input class="admin-input num" data-pk="number" value="${esc(p.number ?? '')}" maxlength="3" placeholder="0" aria-label="Number"></td>
       <td>${p.teamId ? '<span class="pill signed">Signed</span>' : `<span class="pill fa">Free Agent</span>${p.formerTeamId && tname(p.formerTeamId) ? `<small class="former">formerly ${esc(tname(p.formerTeamId))}</small>` : ''}`}</td>
       <td><button class="admin-x" data-premove title="Remove player" aria-label="Remove ${esc(p.name)}">✕</button></td></tr>`).join('');
@@ -199,10 +203,12 @@
     const tr = e.target.closest('tr'); const k = e.target.dataset.pk; if (!tr || !k) return;
     const p = players[+tr.dataset.pi];
     if (k === 'teamId') { const v = e.target.value || null; if (!v && p.teamId) p.formerTeamId = p.teamId; if (v) delete p.formerTeamId; p.teamId = v; renderPlayers(); return; }
+    if (k === 'owner' || k === 'coach') { p[k] = e.target.checked; status(); return; }
+    if (k === 'lineup') { p.lineup = e.target.value || null; status(); return; }
     p[k] = e.target.value; status();
   };
-  prows.addEventListener('input', e => { if (e.target.tagName !== 'SELECT') pUpdate(e); });
-  prows.addEventListener('change', e => { if (e.target.tagName === 'SELECT') pUpdate(e); });
+  prows.addEventListener('input', e => { if (e.target.tagName !== 'SELECT' && e.target.type !== 'checkbox') pUpdate(e); });
+  prows.addEventListener('change', e => { if (e.target.tagName === 'SELECT' || e.target.type === 'checkbox') pUpdate(e); });
   prows.addEventListener('click', e => {
     if (!e.target.closest('[data-premove]')) return;
     const p = players[+e.target.closest('tr').dataset.pi];
