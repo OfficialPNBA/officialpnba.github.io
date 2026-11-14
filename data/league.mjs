@@ -1,7 +1,10 @@
 // Publish confirmed league information only.
 export const league = { name:'NPBA', fullName:'National Practical Basketball Association', discordUrl:null, robloxUrl:null };
-// Team: { id, name, abbreviation, conference, logo, officialRank }
+// Team: { id, name, abbreviation, conference ('Western' or 'Eastern'), logo, color ('#hex' card color),
+//        seed (number, or leave out to show it blank), officialRank }
 export const teams = [];
+// Standings tiers per conference: seeds 1-6 Playoffs, 7-10 Play-In, the rest Lottery.
+export const standingsFormat = { playoffSpots:6, playInSpots:4 };
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
 export const games = [];
