@@ -6,7 +6,8 @@ export const league = { name:'NPBA', fullName:'National Practical Basketball Ass
 //        seed (number or null for blank), wins, losses (numbers; when set they replace records from games) }
 export const teams = JSON.parse(readFileSync(new URL('./teams.json', import.meta.url), 'utf8'));
 // Players live in data/players.json (edited from /admin/). Player: { id, name, teamId (null = free agent),
-//   position, number, formerTeamId (last team, shown for free agents) }
+//   position, number, formerTeamId (last team, shown for free agents),
+//   owner (true = Franchise Owner), coach (true = Head Coach), lineup ('starter' | 'bench' | null) }
 export const players = JSON.parse(readFileSync(new URL('./players.json', import.meta.url), 'utf8'));
 // One NPBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
 export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSpots:4 };

@@ -529,3 +529,31 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .spot-vs.dnp .spot-vs-team{color:var(--opp2)}
 .spot-dnp-tag{background:#ff2a2a;color:#fff;padding:3px 8px;border-radius:4px;font-size:.8em;letter-spacing:1.5px}
 @media(max-width:1399px){.spotlight-rail .spot-who,.spotlight-rail .spot-vs{justify-content:flex-start}.spotlight-rail .spot-vs time{text-align:left}}
+/* Roster drawer v2: 15 slots, roles, team-color outline */
+.team-drawer{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);border:3px solid var(--team);border-top:0;box-shadow:0 0 0 1px #000,0 0 22px color-mix(in srgb,var(--team) 45%,transparent),0 14px 30px #000b;background:linear-gradient(180deg,color-mix(in srgb,var(--team) 18%,#0b0c0e),#0b0c0e 60%);padding:18px 20px 20px}
+.drawer-roster{max-height:none;overflow:visible;gap:5px;counter-reset:none}
+.drawer-roster li{grid-template-columns:28px 46px minmax(0,1fr) auto;min-height:38px;padding:6px 10px;border-left:3px solid transparent}
+.drawer-roster li.staff{border-left-color:var(--gold);background:#f5b6320f}
+.drawer-roster li.starter{border-left-color:#22c55e}
+.drawer-roster li.bench{border-left-color:#6b7280}
+.drawer-roster li.open{background:transparent;border:1px dashed #2f3238;color:#5d636c}
+.dr-slot{font:700 13px/1 var(--display);color:#6b7280;text-align:center}
+.dr-name{display:flex;align-items:baseline;gap:8px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dr-name small{color:#8b939e;font-size:11px;font-weight:700}
+.dr-roles{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.role{display:inline-block;font:700 10px/1 League,sans-serif;letter-spacing:.8px;text-transform:uppercase;padding:4px 7px;border-radius:4px;white-space:nowrap}
+.role.owner{background:var(--gold);color:#1a1205}
+.role.coach{background:#2563eb;color:#fff}
+.role.starter{background:#15803d;color:#dcfce7}
+.role.bench{background:#374151;color:#d1d5db}
+.pc-roles{display:flex;gap:4px;flex-wrap:wrap;margin:3px 0}
+.role-cell{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.role-chk{display:flex;align-items:center;gap:4px;font-size:12px;color:#c9ccd2}
+.admin-input.lineup{width:100px}
+.admin-table.players{min-width:980px}
+@media(max-width:650px){.team-drawer{grid-template-columns:1fr}.drawer-roster li{grid-template-columns:22px 36px minmax(0,1fr) auto;padding:5px 6px}}
+.team-drawer{grid-template-columns:1fr;row-gap:16px}
+.drawer-roster li{grid-template-columns:26px 44px minmax(90px,1fr) auto}
+.dr-roles{flex-direction:row;flex-wrap:wrap;justify-content:flex-end}
+.drawer-roster li.staff .dr-roles{flex-direction:column;align-items:flex-end}
+@media(max-width:650px){.drawer-roster li{grid-template-columns:22px 36px minmax(0,1fr);row-gap:4px}.dr-roles{grid-column:3;justify-content:flex-start;flex-direction:row!important;align-items:flex-start!important}.dr-roles:empty{display:none}.role{font-size:9px;padding:3px 5px}}
