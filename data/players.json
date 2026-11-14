@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "spitboy",
+    "name": "spitboy",
+    "teamId": "minnesota-sabers",
+    "position": "PG/SG",
+    "overall": 83,
+    "number": "36",
+    "owner": true,
+    "lineup": "bench"
+  }
+]
