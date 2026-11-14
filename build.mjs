@@ -1,5 +1,5 @@
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
-import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, posts, players } from './data/league.mjs';
+import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, posts, players, spotlights } from './data/league.mjs';
 
 const pages = [
   { key:'home', path:'/', title:'Home' },
@@ -98,6 +98,22 @@ function playersPage(){
   const signed=players.filter(p=>team(p.teamId)).length;
   return `<section data-filter-region><div class="filter-toolbar page-toolbar">${chips([{label:`All players (${players.length})`,value:'all'},{label:`Signed (${signed})`,value:'signed'},{label:`Free agents (${players.length-signed})`,value:'free-agent'}],'players')}${search('Search players or teams')}</div><div class="player-grid">${cards}</div>${!players.length?`<div class="data-panel">${empty('ball','THE PLAYER INDEX IS COMING.','Signed players and free agents will appear here as teams build their rosters.',link('View the standings','/standings/','button outline'))}</div>`:''}${noResults}</section>`;
 }
+function spotlightCards(){
+  if(!spotlights?.length)return '';
+  const hx=(v,d)=>/^#[0-9a-f]{3,8}$/i.test(v||'')?v:d;
+  const statLabels=[['pts','PTS'],['ast','AST'],['reb','REB'],['min','MIN'],['to','TO']];
+  const cards=spotlights.map((sp,i)=>{const t=team(sp.teamId)||{};const opp=team(sp.opponentId);
+    const stats=sp.look==='dnp'?'':`<dl class="spot-stats">${statLabels.filter(([k])=>sp.stats?.[k]!=null).map(([k,l])=>`<div><dt>${l}</dt><dd>${esc(sp.stats[k])}</dd></div>`).join('')}</dl>`;
+    const head=sp.look==='fire'?'<span class="spot-tag">ON FIRE <span aria-hidden="true">🔥</span></span>':sp.look==='stinker'?'<span class="spot-tag">ROUGH NIGHT <span aria-hidden="true">💨</span></span>':'<span class="spot-tag">DID NOT PLAY</span>';
+    const dnp=sp.look==='dnp'&&opp?`<div class="spot-dnp">${url(opp.logo)?`<img src="${url(opp.logo)}" alt="" width="64" height="64">`:''}<span>DNP <small>vs</small> <b>${esc(opp.name)}</b></span></div>`:'';
+    const badge=sp.look==='stinker'?'<span class="spot-badge">STINKER</span>':sp.look==='dnp'?'<span class="spot-badge">MISSING</span>':'';
+    const fx=sp.look==='fire'?'<span class="spot-flames" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="spot-emoji" aria-hidden="true"><i>🔥</i><i>🔥</i><i>🔥</i></span>':sp.look==='stinker'?'<span class="spot-emoji stink" aria-hidden="true"><i>💨</i><i>💨</i><i>🤢</i></span>':'';
+    const label=sp.look==='dnp'?`${sp.player} did not play versus ${opp?.name||'their opponent'}`:`${sp.player}: ${statLabels.filter(([k])=>sp.stats?.[k]!=null).map(([k,l])=>sp.stats[k]+' '+l).join(', ')}`;
+    return `<figure class="spotlight look-${esc(sp.look)}" data-spotlight="${i}"${i?' hidden':''} aria-label="${esc(label)}" style="--team:${hx(t.color,'#6d28d9')};--p:${hx(t.primary,'#c084fc')};--opp:${hx(opp?.color,'#4a2a14')};--opp2:${hx(opp?.secondary,'#f2b632')}">
+<div class="spot-stage">${sp.look==='dnp'&&opp&&url(opp.logo)?`<img class="spot-opp-mark" src="${url(opp.logo)}" alt="" aria-hidden="true">`:''}${fx}<img class="spot-player" src="${url(sp.image)}" alt="" width="291" height="700">${badge}</div>
+<figcaption><span class="spot-kicker">${url(t.logo)?`<img src="${url(t.logo)}" alt="" width="28" height="28">`:''}LAST GAME</span><strong class="spot-name">${esc(sp.player)}</strong>${head}${stats}${dnp}</figcaption></figure>`;}).join('');
+  return `<aside class="spotlight-rail" aria-label="Player spotlight">${cards}</aside>`;
+}
 function standingsPage(){
   // Card-style standings for the single NPBA Super Conference: Playoffs / Play-In / Out Of Playoffs tiers.
   const {playoffSpots=6,playInSpots=4,teamsPerConference=14}=standingsFormat;
@@ -113,7 +129,7 @@ function standingsPage(){
   const list=order(teams);const real=list.length>0;
   const slice=(a,b)=>real?list.slice(a,b).map((x,i)=>row(a+i+1,card(x),x.t)).join(''):Array.from({length:b-a},(_,i)=>row(a+i+1,ghost())).join('');
   const p=playoffSpots,q=playoffSpots+playInSpots,n=Math.max(teamsPerConference,q+1);
-  return `<section class="standings-board" data-standings><div class="conf-switch" role="group" aria-label="Admin" data-admin-only hidden><a class="conf-btn all" href="/standings/" aria-pressed="true">Standings</a><a class="conf-btn edit" href="/admin/">${icon('lock')} Edit Standings</a></div><section class="conf-view conf-super"><header class="conf-title"><img class="conf-logo" src="/assets/conferences/super.webp?v=${BUILD}" alt="NPBA Super Conference" width="320" height="308"><span class="sr-only">NPBA SUPER CONFERENCE</span></header><div class="tiers">${tier('PLAYOFFS',`Seeds 1–${p}`,'tier-playoffs',slice(0,p))}<div class="tier-stack">${tier('PLAY-IN',`Seeds ${p+1}–${q}`,'tier-playin',slice(p,q))}${tier('OUT OF PLAYOFFS',`Seed${n-q>1?'s':''} ${q+1}${n-q>1?'–'+n:''}`,'tier-lottery',real?slice(q,Infinity)||'<p class="tier-empty">No teams</p>':slice(q,n))}</div></div></section></section>`;
+  return `<section class="standings-board" data-standings>${spotlightCards()}<div class="conf-switch" role="group" aria-label="Admin" data-admin-only hidden><a class="conf-btn all" href="/standings/" aria-pressed="true">Standings</a><a class="conf-btn edit" href="/admin/">${icon('lock')} Edit Standings</a></div><section class="conf-view conf-super"><header class="conf-title"><img class="conf-logo" src="/assets/conferences/super.webp?v=${BUILD}" alt="NPBA Super Conference" width="320" height="308"><span class="sr-only">NPBA SUPER CONFERENCE</span></header><div class="tiers">${tier('PLAYOFFS',`Seeds 1–${p}`,'tier-playoffs',slice(0,p))}<div class="tier-stack">${tier('PLAY-IN',`Seeds ${p+1}–${q}`,'tier-playin',slice(p,q))}${tier('OUT OF PLAYOFFS',`Seed${n-q>1?'s':''} ${q+1}${n-q>1?'–'+n:''}`,'tier-lottery',real?slice(q,Infinity)||'<p class="tier-empty">No teams</p>':slice(q,n))}</div></div></section></section>`;
 }
 function gameTime(game){if(!game.tipoff||!Number.isFinite(Date.parse(game.tipoff)))return '<p class="game-time">Tipoff to be announced</p>';return `<time class="game-time" datetime="${esc(game.tipoff)}" data-time="${esc(game.tipoff)}">${esc(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(game.tipoff)))}</time>`;}
 function schedulePage(){

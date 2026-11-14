@@ -442,3 +442,63 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 /* Community panel: buttons only, no wording */
 .community-panel{grid-template-columns:1fr;padding:24px 28px}
 .community-links{max-width:640px;margin-inline:auto;width:100%}
+/* Standings: player spotlight in the empty space left of the board */
+.standings-board{position:relative}
+/* wide screens: spotlight column on the left of the board; smaller screens: compact card above it */
+@media(min-width:1400px){
+.standings-board{display:grid;grid-template-columns:clamp(280px,20vw,360px) minmax(0,1fr);column-gap:28px;align-items:start;margin-inline:calc(50% - min(1060px,50vw - 20px))}
+.standings-board>*{grid-column:2}
+.standings-board>.spotlight-rail{grid-column:1;grid-row:1 / span 3;align-self:stretch}
+}
+@media(max-width:1399px){
+.spotlight-rail{margin-bottom:22px}
+.spotlight{display:grid;grid-template-columns:200px 1fr;align-items:center;max-width:760px;margin-inline:auto;position:relative;top:auto}
+.spotlight[hidden]{display:none}
+.spotlight .spot-stage{height:270px}.spotlight .spot-player{height:auto;max-height:255px;max-width:92%}
+.spotlight .spot-badge{font-size:26px;bottom:10px;padding:4px 10px;letter-spacing:2px}
+.spotlight-rail .spotlight figcaption{text-align:left}.spotlight .spot-kicker{justify-content:flex-start}.spotlight .spot-dnp{justify-content:flex-start}
+}
+@media(max-width:560px){.spotlight{grid-template-columns:120px 1fr}.spotlight .spot-stage{height:210px}.spotlight .spot-player{max-height:195px}.spot-name{font-size:28px}.spot-stats dd{font-size:20px}.spot-stats{grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:4px}.spot-stats dt{font-size:9px;letter-spacing:.5px}.spotlight .spot-badge{font-size:16px;letter-spacing:1px;padding:3px 7px;border-width:2px}.spotlight figcaption{padding:12px 10px}.spot-tag{font-size:12px}.spot-dnp span{font-size:14px}.spot-dnp img{width:34px;height:34px}}
+.spotlight{margin:0;position:sticky;top:110px;border-radius:14px;overflow:hidden;border:2px solid #000;box-shadow:0 0 0 1px #2a2d33,0 18px 40px #000b;background:radial-gradient(ellipse 90% 60% at 50% 35%,color-mix(in srgb,var(--team) 70%,transparent),transparent 75%),linear-gradient(180deg,color-mix(in srgb,var(--team) 45%,#0b0c0e),#0b0c0e 80%)}
+.spot-stage{position:relative;height:430px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.spot-player{position:relative;z-index:2;height:410px;width:auto;filter:drop-shadow(0 12px 18px #000c)}
+.spotlight figcaption{padding:16px 18px 18px;text-align:center;position:relative;z-index:3}
+.spot-kicker{display:flex;align-items:center;justify-content:center;gap:8px;font-size:10px;letter-spacing:2px;font-weight:700;color:#b9bcc2}
+.spot-kicker img{width:28px;height:28px;object-fit:contain}
+.spot-name{display:block;font:700 40px/1 var(--display);letter-spacing:1px;margin-top:6px}
+.spot-tag{display:inline-block;margin-top:8px;font:700 15px/1 var(--display);letter-spacing:2px;padding:6px 12px;border-radius:999px;background:#ffffff14}
+.spot-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(52px,1fr));gap:6px;margin:14px 0 0}
+.spot-stats div{text-align:center;background:#00000066;border:1px solid #ffffff1a;border-radius:8px;padding:8px 4px}
+.spot-stats dt{font-size:10px;letter-spacing:1.5px;color:#a2a8b2;font-weight:700}
+.spot-stats dd{margin:2px 0 0;font:700 28px/1 var(--display)}
+/* look: on fire */
+.look-fire{background:radial-gradient(ellipse 80% 55% at 50% 70%,#ff6a0080,transparent 70%),linear-gradient(180deg,#3b1206,#0b0c0e 85%);box-shadow:0 0 0 1px #2a2d33,0 0 40px #ff6a0040,0 18px 40px #000b}
+.look-fire .spot-tag{background:linear-gradient(90deg,#ff3d00,#ffb300);color:#1a0900}
+.look-fire .spot-stats dd{color:#ffd27a;text-shadow:0 0 12px #ff6a0099}
+.look-fire .spot-player{filter:drop-shadow(0 0 18px #ff7a00cc) drop-shadow(0 12px 18px #000c)}
+.spot-flames{position:absolute;inset:auto 0 0 0;height:75%;z-index:1;display:flex;justify-content:center;gap:0;pointer-events:none}
+.spot-flames i{width:34%;margin:0 -9%;border-radius:50% 50% 30% 30%/70% 70% 30% 30%;background:radial-gradient(ellipse at 50% 85%,#fff3b0 0%,#ffb300 22%,#ff5a00 48%,#ff2a00aa 62%,transparent 75%);filter:blur(6px);transform-origin:50% 100%;animation:flame 1.1s ease-in-out infinite alternate;opacity:.9}
+.spot-flames i:nth-child(2){animation-delay:-.3s;height:85%;align-self:flex-end}.spot-flames i:nth-child(3){animation-delay:-.6s}.spot-flames i:nth-child(4){animation-delay:-.15s;height:80%;align-self:flex-end}.spot-flames i:nth-child(5){animation-delay:-.45s;height:70%;align-self:flex-end}
+@keyframes flame{0%{transform:scale(1,1) skewX(-3deg)}50%{transform:scale(1.08,1.15) skewX(3deg)}100%{transform:scale(.95,1.05) skewX(-2deg)}}
+.spot-emoji{position:absolute;inset:0;z-index:3;pointer-events:none}
+.spot-emoji i{position:absolute;font-style:normal;font-size:34px;animation:float-up 2.6s ease-in infinite;opacity:0}
+.spot-emoji i:nth-child(1){left:12%;bottom:30%}.spot-emoji i:nth-child(2){right:12%;bottom:45%;animation-delay:.9s}.spot-emoji i:nth-child(3){left:20%;bottom:62%;animation-delay:1.7s;font-size:26px}
+@keyframes float-up{0%{transform:translateY(20px) scale(.8);opacity:0}20%{opacity:1}100%{transform:translateY(-70px) scale(1.1);opacity:0}}
+/* look: stinker */
+.look-stinker{background:radial-gradient(ellipse 80% 50% at 50% 90%,#ff1a1a45,transparent 70%),linear-gradient(180deg,#1d1f1a,#0b0c0e 85%)}
+.look-stinker .spot-player{filter:saturate(.35) brightness(.8) drop-shadow(0 12px 18px #000c);transform:rotate(-7deg) translateY(8px);transform-origin:50% 100%}
+.look-stinker .spot-tag{background:#3a3d2a;color:#c8d18a}
+.look-stinker .spot-stats dd{color:#ff6b6b}
+.spot-emoji.stink i{font-size:30px;animation-duration:3.2s}
+/* look: did not play */
+.look-dnp{background:radial-gradient(ellipse 90% 60% at 50% 35%,color-mix(in srgb,var(--opp) 85%,transparent),transparent 75%),linear-gradient(180deg,color-mix(in srgb,var(--opp) 60%,#0b0c0e),#0b0c0e 85%)}
+.spot-opp-mark{position:absolute;z-index:0;top:8%;left:50%;width:85%;transform:translateX(-50%);opacity:.32;filter:drop-shadow(0 0 30px color-mix(in srgb,var(--opp2) 50%,transparent))}
+.look-dnp .spot-player{filter:grayscale(1) brightness(.55) contrast(1.1) drop-shadow(0 12px 18px #000c);opacity:.75}
+.look-dnp .spot-tag{background:var(--opp2);color:#1a1205}
+.spot-dnp{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;padding:10px;border-radius:10px;background:color-mix(in srgb,var(--opp) 70%,#000);border:1px solid color-mix(in srgb,var(--opp2) 60%,transparent)}
+.spot-dnp img{width:48px;height:48px;object-fit:contain}
+.spot-dnp span{font:700 18px/1.15 var(--display);letter-spacing:1px;text-align:left}.spot-dnp small{font-size:12px;color:#d6c9b0}.spot-dnp b{color:var(--opp2)}
+/* red glow badges */
+.spot-badge{position:absolute;z-index:4;left:50%;bottom:14px;transform:translateX(-50%) rotate(-4deg);font:700 46px/1 var(--display);letter-spacing:3px;color:#fff;padding:6px 18px;border:3px solid #ff2a2a;border-radius:8px;background:#2a0505d9;text-shadow:0 0 10px #ff2a2a,0 0 22px #ff2a2a;box-shadow:0 0 18px #ff2a2acc,0 0 40px #ff2a2a66,inset 0 0 14px #ff2a2a66;animation:badge-glow 1.8s ease-in-out infinite;white-space:nowrap}
+@keyframes badge-glow{0%,100%{box-shadow:0 0 18px #ff2a2acc,0 0 40px #ff2a2a66,inset 0 0 14px #ff2a2a66}50%{box-shadow:0 0 8px #ff2a2a88,0 0 18px #ff2a2a33,inset 0 0 8px #ff2a2a44}}
+@media(prefers-reduced-motion:reduce){.spot-flames i,.spot-emoji i,.spot-badge{animation:none}.spot-emoji{display:none}}

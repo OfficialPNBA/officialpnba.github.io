@@ -46,3 +46,7 @@ document.querySelectorAll('.seed-card[aria-controls]').forEach(card=>{
   card.addEventListener('click',toggle);
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
 });
+// Standings spotlight: show the next card on each page load (cycles through all of them).
+(()=>{const cards=[...document.querySelectorAll('[data-spotlight]')];if(cards.length<2)return;
+  let n;try{n=(parseInt(localStorage.getItem('npba-spotlight')||'-1',10)+1)%cards.length;localStorage.setItem('npba-spotlight',String(n));}catch{n=Math.floor(Math.random()*cards.length);}
+  if(!Number.isFinite(n))n=0;cards.forEach((c,i)=>c.hidden=i!==n);})();
