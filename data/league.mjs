@@ -21,6 +21,17 @@ export const posts = [
     text:'Welcome To The **League**! Media Will Provide **Storylines**, **League Updates**, and Other Information to Keep Up With the **Season**. I look Forward to Provide **Game Articles**, **Power Rankings**, and Even Show some of the **Insane Season Stats**. Who Will Win **Awards**? Who Will Become the **Biggest League Villain**? **What will Happen Next?**',
     image:'/assets/media/welcome-post.webp', imageAlt:'NPBA logo' }
 ];
+// Standings spotlight: one card shows beside the standings and it rotates to the next one on every page refresh.
+// { id, player, teamId, image, look: 'fire' | 'stinker' | 'dnp',
+//   stats: { pts, ast, reb, min, to } (any can be left out), opponentId (for 'dnp': the team they missed) }
+export const spotlights = [
+  { id:'spitboy-56', player:'Spitboy', teamId:'minnesota-sabers', image:'/assets/spotlight/spitboy.webp', look:'fire',
+    stats:{ pts:56, ast:10, reb:7, min:28, to:0 } },
+  { id:'spitboy-zero', player:'Spitboy', teamId:'minnesota-sabers', image:'/assets/spotlight/spitboy.webp', look:'stinker',
+    stats:{ pts:0, ast:0, reb:1, to:5 } },
+  { id:'spitboy-dnp', player:'Spitboy', teamId:'minnesota-sabers', image:'/assets/spotlight/spitboy.webp', look:'dnp',
+    opponentId:'washington-griffins' }
+];
 // Article: { id, title, category, summary, image, body, url, download }
 export const media = [
   { id:'welcome-to-npba', title:'A new home for the game.', category:'Announcements',
