@@ -3,8 +3,8 @@ export const league = { name:'NPBA', fullName:'National Practical Basketball Ass
 // Team: { id, name, abbreviation, conference ('Western' or 'Eastern'), logo, color ('#hex' card color),
 //        seed (number, or leave out to show it blank), officialRank }
 export const teams = [];
-// Standings tiers per conference: seeds 1-6 Playoffs, 7-10 Play-In, the rest Lottery.
-export const standingsFormat = { playoffSpots:6, playInSpots:4 };
+// Standings per conference: 7 teams. Seeds 1-4 Playoffs, 5-6 Play-In, 7 Lottery.
+export const standingsFormat = { teamsPerConference:7, playoffSpots:4, playInSpots:2 };
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
 export const games = [];
