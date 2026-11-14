@@ -284,3 +284,12 @@ dialog{background:#16191d;color:var(--white);border:1px solid #574729;max-width:
 .tier-playoffs .sc-record{font-size:60px}
 .tier-playoffs .tier-cards{gap:16px}
 @media(max-width:650px){.tier-playoffs .seed-card{min-height:118px}.tier-playoffs .sc-logo,.tier-playoffs .sc-logo img{width:84px;height:84px}.tier-playoffs .sc-monogram{width:78px;height:78px;font-size:28px}.tier-playoffs .sc-record{font-size:46px}.tier-playoffs .sc-seed{font-size:24px}}
+
+/* Animated glows: conference logo, panel and top-3 cards pulse dimmer every few seconds */
+@keyframes logo-pulse{0%,100%{filter:drop-shadow(0 0 18px color-mix(in srgb,var(--glow) 90%,transparent)) drop-shadow(0 0 46px color-mix(in srgb,var(--glow) 60%,transparent))}50%{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--glow) 35%,transparent)) drop-shadow(0 0 14px color-mix(in srgb,var(--glow) 18%,transparent))}}
+@keyframes panel-pulse{0%,100%{box-shadow:0 0 60px color-mix(in srgb,var(--glow) 26%,transparent),inset 0 0 80px color-mix(in srgb,var(--glow) 12%,transparent)}50%{box-shadow:0 0 22px color-mix(in srgb,var(--glow) 8%,transparent),inset 0 0 40px color-mix(in srgb,var(--glow) 4%,transparent)}}
+@keyframes top3-pulse{0%,100%{box-shadow:0 0 0 1px #000,0 0 14px 2px #ffffff2e,0 0 30px 4px #ffffff14}50%{box-shadow:0 0 0 1px #000,0 0 6px 1px #ffffff0d,0 0 12px 2px #ffffff05}}
+.conf-logo{animation:logo-pulse 3.5s ease-in-out infinite}
+.conf-west,.conf-east{animation:panel-pulse 3.5s ease-in-out infinite}
+.tier-playoffs .seed-card{animation:top3-pulse 3.5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.conf-logo,.conf-west,.conf-east,.tier-playoffs .seed-card{animation:none}}
