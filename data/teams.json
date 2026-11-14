@@ -8,7 +8,9 @@
     "logo": "/assets/teams/denver-summit.webp",
     "seed": 1,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#60a5fa",
+    "secondary": "#e0f2fe"
   },
   {
     "id": "houston-apollos",
@@ -19,7 +21,9 @@
     "logo": "/assets/teams/houston-apollos.webp",
     "seed": 2,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#ff4d4d",
+    "secondary": "#22d3ee"
   },
   {
     "id": "los-angeles-ember",
@@ -30,7 +34,9 @@
     "logo": "/assets/teams/los-angeles-ember.webp",
     "seed": 3,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#fb923c",
+    "secondary": "#fde047"
   },
   {
     "id": "minnesota-sabers",
@@ -41,7 +47,9 @@
     "logo": "/assets/teams/minnesota-sabers.webp",
     "seed": 4,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#c084fc",
+    "secondary": "#facc15"
   },
   {
     "id": "phoenix-redrocks",
@@ -52,7 +60,9 @@
     "logo": "/assets/teams/phoenix-redrocks.webp",
     "seed": 5,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#ff6a2b",
+    "secondary": "#ffc069"
   },
   {
     "id": "portland-bloom",
@@ -63,7 +73,9 @@
     "logo": "/assets/teams/portland-bloom.webp",
     "seed": 6,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#f9a8d4",
+    "secondary": "#e879f9"
   },
   {
     "id": "sin-city-vice",
@@ -74,7 +86,9 @@
     "logo": "/assets/teams/sin-city-vice.webp",
     "seed": 7,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#ff5a5a",
+    "secondary": "#fbbf24"
   },
   {
     "id": "boston-rebels",
@@ -85,7 +99,9 @@
     "logo": "/assets/teams/boston-rebels.webp",
     "seed": 1,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#ff4d5e",
+    "secondary": "#fff1d6"
   },
   {
     "id": "charlotte-knights",
@@ -96,7 +112,9 @@
     "logo": "/assets/teams/charlotte-knights.webp",
     "seed": 2,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#22c55e",
+    "secondary": "#e5e7eb"
   },
   {
     "id": "chicago-vortex",
@@ -107,7 +125,9 @@
     "logo": "/assets/teams/chicago-vortex.webp",
     "seed": 3,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#22d3ee",
+    "secondary": "#a855f7"
   },
   {
     "id": "detroit-drift",
@@ -118,7 +138,9 @@
     "logo": "/assets/teams/detroit-drift.webp",
     "seed": 4,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#f3f4f6",
+    "secondary": "#9ca3af"
   },
   {
     "id": "miami-makos",
@@ -129,7 +151,9 @@
     "logo": "/assets/teams/miami-makos.webp",
     "seed": 5,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#2dd4bf",
+    "secondary": "#fb923c"
   },
   {
     "id": "new-york-empire",
@@ -140,7 +164,9 @@
     "logo": "/assets/teams/new-york-empire.webp",
     "seed": 6,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#e4ff3a",
+    "secondary": "#e5e7eb"
   },
   {
     "id": "washington-griffins",
@@ -151,6 +177,8 @@
     "logo": "/assets/teams/washington-griffins.webp",
     "seed": 7,
     "wins": 0,
-    "losses": 0
+    "losses": 0,
+    "primary": "#fbbf24",
+    "secondary": "#ef4444"
   }
 ]

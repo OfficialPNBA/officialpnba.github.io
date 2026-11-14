@@ -23,7 +23,7 @@
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const confKey = c => /west/i.test(c || '') ? 'west' : /east/i.test(c || '') ? 'east' : '';
   const clean = list => list.map(t => {
-    const o = { id: t.id, name: t.name.trim(), abbreviation: (t.abbreviation || '').trim().toUpperCase(), conference: t.conference, color: t.color };
+    const o = { id: t.id, name: t.name.trim(), abbreviation: (t.abbreviation || '').trim().toUpperCase(), conference: t.conference, color: t.color, primary: t.primary || '#ffffff', secondary: t.secondary || '#cccccc' };
     if (t.logo) o.logo = t.logo;
     o.seed = Number.isFinite(t.seed) ? t.seed : null;
     o.wins = Number.isFinite(t.wins) ? t.wins : 0;
@@ -82,6 +82,7 @@
       <td><input class="admin-input abbr" data-k="abbreviation" value="${esc(t.abbreviation)}" maxlength="4" placeholder="ABC" aria-label="Abbreviation"></td>
       <td><select class="admin-input" data-k="conference" aria-label="Conference"><option value="Western"${confKey(t.conference) === 'west' ? ' selected' : ''}>Western</option><option value="Eastern"${confKey(t.conference) === 'east' ? ' selected' : ''}>Eastern</option></select></td>
       <td><input type="color" class="admin-color" data-k="color" value="${/^#[0-9a-f]{6}$/i.test(t.color || '') ? t.color : '#3a3f47'}" aria-label="Card color"></td>
+      <td><span class="admin-pair"><input type="color" class="admin-color" data-k="primary" value="${/^#[0-9a-f]{6}$/i.test(t.primary || '') ? t.primary : '#ffffff'}" aria-label="Name color 1"><input type="color" class="admin-color" data-k="secondary" value="${/^#[0-9a-f]{6}$/i.test(t.secondary || '') ? t.secondary : '#cccccc'}" aria-label="Name color 2"></span></td>
       <td><select class="admin-input seed" data-k="seed" aria-label="Seed">${seedOptions(t)}</select></td>
       <td><input type="number" min="0" max="99" class="admin-input num" data-k="wins" value="${Number.isFinite(t.wins) ? t.wins : 0}" aria-label="Wins"></td>
       <td><input type="number" min="0" max="99" class="admin-input num" data-k="losses" value="${Number.isFinite(t.losses) ? t.losses : 0}" aria-label="Losses"></td>
@@ -135,7 +136,7 @@
   $('[data-signin-form]').addEventListener('submit', e => { e.preventDefault(); signIn(new FormData(e.target).get('key')); });
   $('[data-signout]').addEventListener('click', () => { if (dirty() && !confirm('Sign out without saving your changes?')) return; store.clear(); location.reload(); });
   $('[data-add]').addEventListener('click', () => {
-    teams.push({ id: '', name: 'New team', abbreviation: '', conference: tab === 'east' ? 'Eastern' : 'Western', color: '#3a3f47', seed: null, wins: 0, losses: 0 });
+    teams.push({ id: '', name: 'New team', abbreviation: '', conference: tab === 'east' ? 'Eastern' : 'Western', color: '#3a3f47', primary: '#ffffff', secondary: '#cccccc', seed: null, wins: 0, losses: 0 });
     render();
     const inputs = document.querySelectorAll('[data-k="name"]'); const last = [...inputs].find(i => i.value === 'New team'); last?.focus(); last?.select();
   });

@@ -343,3 +343,14 @@ body.concrete{background:#0d0d0d url('/assets/concrete.svg') center/cover fixed}
 .admin-logo{width:46px;height:40px;display:grid;place-items:center;flex-shrink:0}.admin-logo img{max-width:46px;max-height:40px;object-fit:contain}
 .admin-input.logo{width:170px}
 .admin-table{min-width:1040px}
+/* Big faded team logo in the middle third of each card */
+.sc-mark{position:absolute;left:44%;width:30%;top:-18%;bottom:-18%;background:var(--logo) center/contain no-repeat;opacity:.5;pointer-events:none;filter:saturate(.9)}
+.seed-card>.sc-logo,.seed-card>.sc-name,.seed-card>.sc-numbers{position:relative;z-index:1}
+/* Animated two-color team names */
+@keyframes name-flow{to{background-position:200% center}}
+.sc-name strong{font-size:18px;font-weight:900;letter-spacing:.3px;background:linear-gradient(90deg,var(--p,#fff),var(--s,#ccc),var(--p,#fff));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 1px 0 #000) drop-shadow(0 0 1px #000) drop-shadow(0 2px 4px #000c);animation:name-flow 4s linear infinite}
+.tier-playoffs .sc-name strong{font-size:23px}
+@media(max-width:650px){.sc-name strong{font-size:15px}.tier-playoffs .sc-name strong{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.sc-name strong{animation:none}}
+.admin-pair{display:flex;gap:6px}
+.admin-table{min-width:1120px}
