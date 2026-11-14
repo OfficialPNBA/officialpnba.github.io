@@ -29,3 +29,10 @@ document.querySelectorAll('[data-filter-region]').forEach(region=>{
   region.querySelector('[data-reset]')?.addEventListener('click',()=>{if(search)search.value='';if(week)week.value='all';region.querySelector('[data-filter="all"]')?.click();});
 });
 document.querySelector('[data-timezone]')?.addEventListener('change',event=>{const timeZone=event.target.value==='local'?Intl.DateTimeFormat().resolvedOptions().timeZone:event.target.value;document.querySelectorAll('[data-time]').forEach(time=>{time.textContent=new Intl.DateTimeFormat('en-US',{timeZone,weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(time.dataset.time));});});
+
+document.querySelectorAll('[data-standings]').forEach(board=>{
+  const buttons=[...board.querySelectorAll('[data-conf]')];const views=[...board.querySelectorAll('[data-conf-view]')];
+  function show(key){buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.conf===key)));views.forEach(v=>v.hidden=v.dataset.confView!==key);try{history.replaceState(null,'','#'+key);}catch{}}
+  buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.conf)));
+  const start=location.hash.slice(1);if(buttons.some(b=>b.dataset.conf===start))show(start);
+});
