@@ -23,14 +23,14 @@ export const posts = [
 ];
 // Standings spotlight: one card shows beside the standings and it rotates to the next one on every page refresh.
 // { id, player, teamId, image, look: 'fire' | 'stinker' | 'dnp',
-//   stats: { pts, ast, reb, min, to } (any can be left out), opponentId (for 'dnp': the team they missed) }
+//   stats: { pts, ast, reb, min, to } (any can be left out), opponentId (team they played, or missed for 'dnp'), date ('YYYY-MM-DD') }
 export const spotlights = [
   { id:'spitboy-56', player:'Spitboy', teamId:'minnesota-sabers', image:'/assets/spotlight/spitboy.webp', look:'fire',
-    stats:{ pts:56, ast:10, reb:7, min:28, to:0 } },
+    opponentId:'boston-rebels', date:'2026-11-13', stats:{ pts:56, ast:10, reb:7, min:28, to:0 } },
   { id:'spitboy-zero', player:'Spitboy', teamId:'minnesota-sabers', image:'/assets/spotlight/spitboy.webp', look:'stinker',
-    stats:{ pts:0, ast:0, reb:1, to:5 } },
+    opponentId:'chicago-vortex', date:'2026-11-12', stats:{ pts:0, ast:0, reb:1, to:5 } },
   { id:'spitboy-dnp', player:'Spitboy', teamId:'minnesota-sabers', image:'/assets/spotlight/spitboy.webp', look:'dnp',
-    opponentId:'washington-griffins' }
+    opponentId:'washington-griffins', date:'2026-11-11' }
 ];
 // Article: { id, title, category, summary, image, body, url, download }
 export const media = [

@@ -446,7 +446,7 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .standings-board{position:relative}
 /* wide screens: spotlight column on the left of the board; smaller screens: compact card above it */
 @media(min-width:1400px){
-.standings-board{display:grid;grid-template-columns:clamp(280px,20vw,360px) minmax(0,1fr);column-gap:28px;align-items:start;margin-inline:calc(50% - min(1060px,50vw - 20px))}
+.standings-board{display:grid;grid-template-columns:clamp(300px,calc(60vw - 600px),820px) minmax(0,1fr);column-gap:28px;align-items:start;margin-inline:calc(50% - min(1400px,50vw - 20px))}
 .standings-board>*{grid-column:2}
 .standings-board>.spotlight-rail{grid-column:1;grid-row:1 / span 3;align-self:stretch}
 }
@@ -502,3 +502,30 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .spot-badge{position:absolute;z-index:4;left:50%;bottom:14px;transform:translateX(-50%) rotate(-4deg);font:700 46px/1 var(--display);letter-spacing:3px;color:#fff;padding:6px 18px;border:3px solid #ff2a2a;border-radius:8px;background:#2a0505d9;text-shadow:0 0 10px #ff2a2a,0 0 22px #ff2a2a;box-shadow:0 0 18px #ff2a2acc,0 0 40px #ff2a2a66,inset 0 0 14px #ff2a2a66;animation:badge-glow 1.8s ease-in-out infinite;white-space:nowrap}
 @keyframes badge-glow{0%,100%{box-shadow:0 0 18px #ff2a2acc,0 0 40px #ff2a2a66,inset 0 0 14px #ff2a2a66}50%{box-shadow:0 0 8px #ff2a2a88,0 0 18px #ff2a2a33,inset 0 0 8px #ff2a2a44}}
 @media(prefers-reduced-motion:reduce){.spot-flames i,.spot-emoji i,.spot-badge{animation:none}.spot-emoji{display:none}}
+/* Spotlight v2: bigger, scales with its column; team logo by the name; opponent + date line */
+.spotlight-rail{container-type:inline-size}
+@media(min-width:1400px){
+.spotlight-rail .spot-stage{height:min(105cqw,calc(100vh - 560px))}
+.spotlight-rail .spot-player{height:94%;width:auto;max-width:96%;object-fit:contain}
+.spotlight-rail .spot-name{font-size:clamp(40px,13cqw,120px)}
+.spotlight-rail .spot-who img{width:clamp(44px,13cqw,120px);height:clamp(44px,13cqw,120px)}
+.spotlight-rail .spot-kicker{font-size:clamp(10px,2.2cqw,18px)}
+.spotlight-rail .spot-vs{font-size:clamp(14px,3.6cqw,30px)}
+.spotlight-rail .spot-vs img{width:clamp(30px,8cqw,72px);height:clamp(30px,8cqw,72px)}
+.spotlight-rail .spot-stats dd{font-size:clamp(28px,8.5cqw,76px)}
+.spotlight-rail .spot-stats dt{font-size:clamp(10px,2cqw,16px)}
+.spotlight-rail .spot-stats{gap:clamp(6px,1.4cqw,14px)}
+.spotlight-rail .spot-badge{font-size:clamp(40px,11cqw,110px);border-width:clamp(3px,.8cqw,6px)}
+.spotlight-rail .spot-emoji i{font-size:clamp(34px,8cqw,80px)}
+.spotlight-rail .spotlight figcaption{padding:clamp(16px,3cqw,30px)}
+}
+.spot-who{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px}
+.spot-who img{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 4px 8px #000a)}
+.spot-who .spot-name{margin:0}
+.spot-vs{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 10px;margin-top:10px;font:700 15px/1.1 var(--display);letter-spacing:1px}
+.spot-vs img{width:30px;height:30px;object-fit:contain}
+.spot-vs-word{color:#a2a8b2;font-size:.8em;text-transform:uppercase}
+.spot-vs time{flex-basis:100%;text-align:center;font:600 .62em/1 League,sans-serif;letter-spacing:2px;color:#a2a8b2;text-transform:uppercase}
+.spot-vs.dnp .spot-vs-team{color:var(--opp2)}
+.spot-dnp-tag{background:#ff2a2a;color:#fff;padding:3px 8px;border-radius:4px;font-size:.8em;letter-spacing:1.5px}
+@media(max-width:1399px){.spotlight-rail .spot-who,.spotlight-rail .spot-vs{justify-content:flex-start}.spotlight-rail .spot-vs time{text-align:left}}
