@@ -379,3 +379,10 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .post-text b{font-weight:800;color:#fff}
 .post-image{width:100%;height:auto;margin-top:16px;border-radius:14px;border:1px solid #2c2f35;aspect-ratio:16/9;object-fit:cover}
 @media(max-width:650px){.post{grid-template-columns:96px minmax(0,1fr);gap:14px;padding:16px 14px}.post-avatar{width:84px;height:84px}.post-name{font-size:14px}.post-handle,.post-side time{font-size:11px}.post-text{font-size:17px}}
+/* Seed placement number to the left of each team card */
+.seed-row{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;gap:12px;min-height:0}
+.seed-row>.seed-card{height:100%}
+.seed-num{font-family:var(--display);font-size:44px;line-height:1;text-align:center;color:#fff;text-shadow:0 2px 0 #000,0 0 18px #0009;font-variant-numeric:tabular-nums}
+.tier-playoffs .seed-num{font-size:58px;color:var(--gold);text-shadow:0 2px 0 #000,0 0 22px #f5b63255}
+.tier-lottery .seed-num{color:#a3a8b0}
+@media(max-width:650px){.seed-row{grid-template-columns:36px minmax(0,1fr);gap:8px}.seed-num{font-size:30px}.tier-playoffs .seed-num{font-size:38px}}
