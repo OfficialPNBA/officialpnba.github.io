@@ -661,3 +661,9 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .drawer-roster li.filled:is(:hover,:focus-visible) .dr-id .dr-name .dr-pname{filter:drop-shadow(2px 0 0 #000) drop-shadow(-2px 0 0 #000) drop-shadow(0 2px 0 #000) drop-shadow(0 -2px 0 #000) drop-shadow(0 3px 3px #000a)}
 .drawer-roster li.filled:is(:hover,:focus-visible) :is(.dr-stat b){-webkit-text-stroke-width:5px}
 .team-drawer .role.owner{-webkit-text-stroke:0}
+
+/* Positions: white, bigger, heavier outline, team-color glow */
+.drawer-roster li.filled .dr-id .dr-pos{font-size:15px;color:#fff;-webkit-text-stroke:3.5px #000;paint-order:stroke fill;text-shadow:0 0 6px var(--team),0 0 12px color-mix(in srgb,var(--team) 70%,transparent)}
+.drawer-roster li.filled .dr-id .dr-pos em{text-shadow:none}
+.drawer-roster li.filled:is(:hover,:focus-visible) .dr-id .dr-pos{font-size:26px;-webkit-text-stroke-width:5px;text-shadow:0 0 10px var(--team),0 0 20px color-mix(in srgb,var(--team) 70%,transparent)}
+@container (max-width:620px){.drawer-roster li.filled:is(:hover,:focus-visible) .dr-id .dr-pos{font-size:20px}}
