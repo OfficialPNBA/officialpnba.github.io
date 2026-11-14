@@ -6,7 +6,7 @@
     "conference": "Western",
     "color": "#1d4ed8",
     "logo": "/assets/teams/denver-summit.webp",
-    "seed": null,
+    "seed": 1,
     "wins": 0,
     "losses": 0
   },
@@ -17,7 +17,7 @@
     "conference": "Western",
     "color": "#c81e2e",
     "logo": "/assets/teams/houston-apollos.webp",
-    "seed": null,
+    "seed": 2,
     "wins": 0,
     "losses": 0
   },
@@ -28,7 +28,7 @@
     "conference": "Western",
     "color": "#d9531a",
     "logo": "/assets/teams/los-angeles-ember.webp",
-    "seed": null,
+    "seed": 3,
     "wins": 0,
     "losses": 0
   },
@@ -39,7 +39,7 @@
     "conference": "Western",
     "color": "#6d28d9",
     "logo": "/assets/teams/minnesota-sabers.webp",
-    "seed": null,
+    "seed": 4,
     "wins": 0,
     "losses": 0
   },
@@ -50,7 +50,7 @@
     "conference": "Western",
     "color": "#c2410c",
     "logo": "/assets/teams/phoenix-redrocks.webp",
-    "seed": null,
+    "seed": 5,
     "wins": 0,
     "losses": 0
   },
@@ -61,7 +61,7 @@
     "conference": "Western",
     "color": "#c2367f",
     "logo": "/assets/teams/portland-bloom.webp",
-    "seed": null,
+    "seed": 6,
     "wins": 0,
     "losses": 0
   },
@@ -72,7 +72,7 @@
     "conference": "Western",
     "color": "#a3121f",
     "logo": "/assets/teams/sin-city-vice.webp",
-    "seed": null,
+    "seed": 7,
     "wins": 0,
     "losses": 0
   },
