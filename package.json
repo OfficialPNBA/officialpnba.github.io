@@ -1,0 +1,5 @@
+{
+  "name": "npba-league",
+  "private": true,
+  "scripts": { "build": "node build.mjs" }
+}
