@@ -9,5 +9,395 @@
     "owner": true,
     "lineup": "bench",
     "headshot": "/assets/headshots/spitboy.webp?v=1"
+  },
+  {
+    "id": "shy1oh",
+    "name": "shy1oh",
+    "teamId": "boston-rebels",
+    "headshot": "/assets/headshots/shy1oh.webp?v=1"
+  },
+  {
+    "id": "snmdlo",
+    "name": "Dlo",
+    "teamId": "boston-rebels",
+    "headshot": "/assets/headshots/snmdlo.webp?v=1"
+  },
+  {
+    "id": "ruesoof",
+    "name": "LOK",
+    "teamId": "boston-rebels",
+    "headshot": "/assets/headshots/ruesoof.webp?v=1"
+  },
+  {
+    "id": "druski",
+    "name": "Moob",
+    "teamId": "boston-rebels",
+    "headshot": "/assets/headshots/druski.webp?v=1"
+  },
+  {
+    "id": "snowwhfvvv",
+    "name": "Snoww (Monster123255)",
+    "teamId": "boston-rebels",
+    "headshot": "/assets/headshots/snowwhfvvv.webp?v=1"
+  },
+  {
+    "id": "asl98989898989898",
+    "name": "asl",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/asl98989898989898.webp?v=1"
+  },
+  {
+    "id": "dominvcc",
+    "name": "dom (Dominvc)",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/dominvcc.webp?v=1"
+  },
+  {
+    "id": "sjuc",
+    "name": "eyes (wipedangels)",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/sjuc.webp?v=1"
+  },
+  {
+    "id": "linc00",
+    "name": "linc",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/linc00.webp?v=1"
+  },
+  {
+    "id": "fatibatilati",
+    "name": "Mahad (Xlegobat)",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/fatibatilati.webp?v=1"
+  },
+  {
+    "id": "nanoprodigyofficial",
+    "name": "Nano",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/nanoprodigyofficial.webp?v=1"
+  },
+  {
+    "id": "rahimisdagoat",
+    "name": "rahimisdagoat",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/rahimisdagoat.webp?v=1"
+  },
+  {
+    "id": "boomwhackers",
+    "name": "tmc",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/boomwhackers.webp?v=1"
+  },
+  {
+    "id": "zaysontv",
+    "name": "zays",
+    "teamId": "detroit-drift",
+    "headshot": "/assets/headshots/zaysontv.webp?v=1"
+  },
+  {
+    "id": "tweakher",
+    "name": "calvinnnn (chaositles)",
+    "teamId": "charlotte-knights",
+    "headshot": "/assets/headshots/tweakher.webp?v=1"
+  },
+  {
+    "id": "fbgslimeee",
+    "name": "FBG",
+    "teamId": "charlotte-knights",
+    "headshot": "/assets/headshots/fbgslimeee.webp?v=1"
+  },
+  {
+    "id": "its5ainnit",
+    "name": "fye",
+    "teamId": "charlotte-knights",
+    "headshot": "/assets/headshots/its5ainnit.webp?v=1"
+  },
+  {
+    "id": "virusego",
+    "name": "Virus",
+    "teamId": "charlotte-knights",
+    "headshot": "/assets/headshots/virusego.webp?v=1"
+  },
+  {
+    "id": "mysticalcatches2",
+    "name": "Wister",
+    "teamId": "charlotte-knights",
+    "headshot": "/assets/headshots/mysticalcatches2.webp?v=1"
+  },
+  {
+    "id": "fr0stss",
+    "name": "fr0stss",
+    "teamId": "sin-city-vice",
+    "headshot": "/assets/headshots/fr0stss.webp?v=1"
+  },
+  {
+    "id": "vicecitylark",
+    "name": "Lark",
+    "teamId": "sin-city-vice",
+    "headshot": "/assets/headshots/vicecitylark.webp?v=1"
+  },
+  {
+    "id": "nadeers",
+    "name": "nadeer (svake)",
+    "teamId": "sin-city-vice",
+    "headshot": "/assets/headshots/nadeers.webp?v=1"
+  },
+  {
+    "id": "soulninetynine",
+    "name": "soul",
+    "teamId": "sin-city-vice",
+    "headshot": "/assets/headshots/soulninetynine.webp?v=1"
+  },
+  {
+    "id": "zeeko13",
+    "name": "zane",
+    "teamId": "sin-city-vice",
+    "headshot": "/assets/headshots/zeeko13.webp?v=1"
+  },
+  {
+    "id": "devhourr",
+    "name": "drx (devhourr)",
+    "teamId": "houston-apollos",
+    "headshot": "/assets/headshots/devhourr.webp?v=1"
+  },
+  {
+    "id": "mdntseries",
+    "name": "J",
+    "teamId": "houston-apollos",
+    "headshot": "/assets/headshots/mdntseries.webp?v=1"
+  },
+  {
+    "id": "blackdud-e",
+    "name": "k",
+    "teamId": "houston-apollos",
+    "headshot": "/assets/headshots/blackdud-e.webp?v=1"
+  },
+  {
+    "id": "syncco",
+    "name": "kimani gaulden",
+    "teamId": "houston-apollos",
+    "headshot": "/assets/headshots/syncco.webp?v=1"
+  },
+  {
+    "id": "anbn",
+    "name": "oli",
+    "teamId": "houston-apollos",
+    "headshot": "/assets/headshots/anbn.webp?v=1"
+  },
+  {
+    "id": "z-888",
+    "name": "z.",
+    "teamId": "houston-apollos",
+    "headshot": "/assets/headshots/z-888.webp?v=1"
+  },
+  {
+    "id": "vision7443",
+    "name": "Vision",
+    "teamId": "minnesota-sabers",
+    "headshot": "/assets/headshots/vision7443.webp?v=1"
+  },
+  {
+    "id": "cenzation",
+    "name": "cenzation",
+    "teamId": "washington-griffins",
+    "headshot": "/assets/headshots/cenzation.webp?v=1"
+  },
+  {
+    "id": "disrupchin",
+    "name": "disruption",
+    "teamId": "washington-griffins",
+    "headshot": "/assets/headshots/disrupchin.webp?v=1"
+  },
+  {
+    "id": "ymmitbro-jr",
+    "name": "ymmit",
+    "teamId": "new-york-empire",
+    "headshot": "/assets/headshots/ymmitbro-jr.webp?v=1"
+  },
+  {
+    "id": "tfpr",
+    "name": "uhlersi",
+    "teamId": "los-angeles-ember",
+    "headshot": "/assets/headshots/tfpr.webp?v=1"
+  },
+  {
+    "id": "quicstop",
+    "name": "ummi",
+    "teamId": "los-angeles-ember",
+    "headshot": "/assets/headshots/quicstop.webp?v=1"
+  },
+  {
+    "id": "houndingyou",
+    "name": "uunrul",
+    "teamId": "los-angeles-ember",
+    "headshot": "/assets/headshots/houndingyou.webp?v=1"
+  },
+  {
+    "id": "chos3nthe1",
+    "name": "Chocho",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/chos3nthe1.webp?v=1"
+  },
+  {
+    "id": "imdabiggestdog",
+    "name": "drdo",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/imdabiggestdog.webp?v=1"
+  },
+  {
+    "id": "newaccountthh",
+    "name": "max",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/newaccountthh.webp?v=1"
+  },
+  {
+    "id": "mrmiy4gi",
+    "name": "Miyagi",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/mrmiy4gi.webp?v=1"
+  },
+  {
+    "id": "miyu6i",
+    "name": "miyu6i",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/miyu6i.webp?v=1"
+  },
+  {
+    "id": "koni0865",
+    "name": "phi",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/koni0865.webp?v=1"
+  },
+  {
+    "id": "zukichi1",
+    "name": "v",
+    "teamId": "phoenix-redrocks",
+    "headshot": "/assets/headshots/zukichi1.webp?v=1"
+  },
+  {
+    "id": "fuknig3",
+    "name": "GreenFN",
+    "teamId": "portland-bloom",
+    "headshot": "/assets/headshots/fuknig3.webp?v=1"
+  },
+  {
+    "id": "baqez",
+    "name": "heysean.",
+    "teamId": "portland-bloom",
+    "headshot": "/assets/headshots/baqez.webp?v=1"
+  },
+  {
+    "id": "dontletlooksfoolu",
+    "name": "she loves me i hate her",
+    "teamId": "portland-bloom",
+    "headshot": "/assets/headshots/dontletlooksfoolu.webp?v=1"
+  },
+  {
+    "id": "anxious-xc56vb4xz",
+    "name": "sick",
+    "teamId": "portland-bloom",
+    "headshot": "/assets/headshots/anxious-xc56vb4xz.webp?v=1"
+  },
+  {
+    "id": "rxchrome",
+    "name": "vvs (theejufu123)",
+    "teamId": "portland-bloom",
+    "headshot": "/assets/headshots/rxchrome.webp?v=1"
+  },
+  {
+    "id": "e88-d",
+    "name": "eeeeeeee",
+    "teamId": "denver-summit",
+    "headshot": "/assets/headshots/e88-d.webp?v=1"
+  },
+  {
+    "id": "funnybear6",
+    "name": "funnybear6",
+    "teamId": "denver-summit",
+    "headshot": "/assets/headshots/funnybear6.webp?v=1"
+  },
+  {
+    "id": "yvngmarjae",
+    "name": "marjae",
+    "teamId": "denver-summit",
+    "headshot": "/assets/headshots/yvngmarjae.webp?v=1"
+  },
+  {
+    "id": "norri2x",
+    "name": "Peace .",
+    "teamId": "denver-summit",
+    "headshot": "/assets/headshots/norri2x.webp?v=1"
+  },
+  {
+    "id": "planets",
+    "name": "Quazi",
+    "teamId": "denver-summit",
+    "headshot": "/assets/headshots/planets.webp?v=1"
+  },
+  {
+    "id": "guardmxde",
+    "name": "GuardMxde",
+    "teamId": "chicago-vortex",
+    "headshot": "/assets/headshots/guardmxde.webp?v=1"
+  },
+  {
+    "id": "limitlesskjay",
+    "name": "motion",
+    "teamId": "chicago-vortex",
+    "headshot": "/assets/headshots/limitlesskjay.webp?v=1"
+  },
+  {
+    "id": "zanom",
+    "name": "zanom",
+    "teamId": "chicago-vortex",
+    "headshot": "/assets/headshots/zanom.webp?v=1"
+  },
+  {
+    "id": "sukiyno",
+    "name": "sukiyno",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/sukiyno.webp?v=1"
+  },
+  {
+    "id": "4re1",
+    "name": "joh",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/4re1.webp?v=1"
+  },
+  {
+    "id": "maglcc",
+    "name": "m",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/maglcc.webp?v=1"
+  },
+  {
+    "id": "okurrences",
+    "name": "okur",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/okurrences.webp?v=1"
+  },
+  {
+    "id": "lefthandbully",
+    "name": "Onnatkar",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/lefthandbully.webp?v=1"
+  },
+  {
+    "id": "pluds",
+    "name": "Pluds",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/pluds.webp?v=1"
+  },
+  {
+    "id": "yoroof",
+    "name": "rufus",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/yoroof.webp?v=1"
+  },
+  {
+    "id": "tzuu",
+    "name": "tobi",
+    "teamId": "miami-makos",
+    "headshot": "/assets/headshots/tzuu.webp?v=1"
   }
 ]
