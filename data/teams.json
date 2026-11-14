@@ -22,8 +22,8 @@
     "seed": 2,
     "wins": 0,
     "losses": 0,
-    "primary": "#ff4d4d",
-    "secondary": "#22d3ee"
+    "primary": "#22e5ff",
+    "secondary": "#f4f7fb"
   },
   {
     "id": "los-angeles-ember",
@@ -87,8 +87,8 @@
     "seed": 7,
     "wins": 0,
     "losses": 0,
-    "primary": "#ff5a5a",
-    "secondary": "#fbbf24"
+    "primary": "#ff2fb0",
+    "secondary": "#ffd23f"
   },
   {
     "id": "boston-rebels",
@@ -126,8 +126,8 @@
     "seed": 3,
     "wins": 0,
     "losses": 0,
-    "primary": "#22d3ee",
-    "secondary": "#a855f7"
+    "primary": "#8e44ec",
+    "secondary": "#eef1f5"
   },
   {
     "id": "detroit-drift",
@@ -152,8 +152,8 @@
     "seed": 5,
     "wins": 0,
     "losses": 0,
-    "primary": "#2dd4bf",
-    "secondary": "#fb923c"
+    "primary": "#2ee8d0",
+    "secondary": "#39d96b"
   },
   {
     "id": "new-york-empire",
@@ -178,7 +178,7 @@
     "seed": 7,
     "wins": 0,
     "losses": 0,
-    "primary": "#fbbf24",
-    "secondary": "#ef4444"
+    "primary": "#8a5530",
+    "secondary": "#f2b632"
   }
 ]
