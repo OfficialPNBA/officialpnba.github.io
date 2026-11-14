@@ -104,14 +104,14 @@ function spotlightCards(){
   const statLabels=[['pts','PTS'],['ast','AST'],['reb','REB'],['min','MIN'],['to','TO']];
   const cards=spotlights.map((sp,i)=>{const t=team(sp.teamId)||{};const opp=team(sp.opponentId);
     const stats=sp.look==='dnp'?'':`<dl class="spot-stats">${statLabels.filter(([k])=>sp.stats?.[k]!=null).map(([k,l])=>`<div><dt>${l}</dt><dd>${esc(sp.stats[k])}</dd></div>`).join('')}</dl>`;
-    const head=sp.look==='fire'?'<span class="spot-tag">ON FIRE <span aria-hidden="true">🔥</span></span>':sp.look==='stinker'?'<span class="spot-tag">ROUGH NIGHT <span aria-hidden="true">💨</span></span>':'<span class="spot-tag">DID NOT PLAY</span>';
-    const dnp=sp.look==='dnp'&&opp?`<div class="spot-dnp">${url(opp.logo)?`<img src="${url(opp.logo)}" alt="" width="64" height="64">`:''}<span>DNP <small>vs</small> <b>${esc(opp.name)}</b></span></div>`:'';
+    const when=sp.date&&Number.isFinite(Date.parse(sp.date+'T12:00:00Z'))?new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(sp.date+'T12:00:00Z')):'';
+    const vs=opp?`<div class="spot-vs${sp.look==='dnp'?' dnp':''}">${sp.look==='dnp'?'<b class="spot-dnp-tag">DNP</b>':''}<span class="spot-vs-word">vs</span>${url(opp.logo)?`<img src="${url(opp.logo)}" alt="" width="48" height="48">`:''}<span class="spot-vs-team">${esc(opp.name)}</span>${when?`<time datetime="${esc(sp.date)}">${esc(when)}</time>`:''}</div>`:(when?`<div class="spot-vs"><time datetime="${esc(sp.date)}">${esc(when)}</time></div>`:'');
     const badge=sp.look==='stinker'?'<span class="spot-badge">STINKER</span>':sp.look==='dnp'?'<span class="spot-badge">MISSING</span>':'';
     const fx=sp.look==='fire'?'<span class="spot-flames" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="spot-emoji" aria-hidden="true"><i>🔥</i><i>🔥</i><i>🔥</i></span>':sp.look==='stinker'?'<span class="spot-emoji stink" aria-hidden="true"><i>💨</i><i>💨</i><i>🤢</i></span>':'';
     const label=sp.look==='dnp'?`${sp.player} did not play versus ${opp?.name||'their opponent'}`:`${sp.player}: ${statLabels.filter(([k])=>sp.stats?.[k]!=null).map(([k,l])=>sp.stats[k]+' '+l).join(', ')}`;
     return `<figure class="spotlight look-${esc(sp.look)}" data-spotlight="${i}"${i?' hidden':''} aria-label="${esc(label)}" style="--team:${hx(t.color,'#6d28d9')};--p:${hx(t.primary,'#c084fc')};--opp:${hx(opp?.color,'#4a2a14')};--opp2:${hx(opp?.secondary,'#f2b632')}">
 <div class="spot-stage">${sp.look==='dnp'&&opp&&url(opp.logo)?`<img class="spot-opp-mark" src="${url(opp.logo)}" alt="" aria-hidden="true">`:''}${fx}<img class="spot-player" src="${url(sp.image)}" alt="" width="291" height="700">${badge}</div>
-<figcaption><span class="spot-kicker">${url(t.logo)?`<img src="${url(t.logo)}" alt="" width="28" height="28">`:''}LAST GAME</span><strong class="spot-name">${esc(sp.player)}</strong>${head}${stats}${dnp}</figcaption></figure>`;}).join('');
+<figcaption><span class="spot-kicker">LAST GAME</span><div class="spot-who">${url(t.logo)?`<img src="${url(t.logo)}" alt="${esc(t.name||'')}" width="64" height="64">`:''}<strong class="spot-name">${esc(sp.player)}</strong></div>${vs}${stats}</figcaption></figure>`;}).join('');
   return `<aside class="spotlight-rail" aria-label="Player spotlight">${cards}</aside>`;
 }
 function standingsPage(){
