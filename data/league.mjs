@@ -10,6 +10,13 @@ export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSp
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
 export const games = [];
+// Post: league-insider style message shown at the top of Media (message above, picture below).
+// { id, name, handle (no @), avatar, date ('YYYY-MM-DD'), text, image, imageAlt }
+export const posts = [
+  { id:'welcome-post', name:'Spitboy', handle:'spitboy', avatar:'/assets/media/spitboy.webp', date:'2026-11-14',
+    text:'Welcome To The League! Media Will Provide Storylines, League Updates, and Other Information to Keep Up With the Season. I look Forward to Provide Game Articles, Power Rankings, and Even Show some of the Insane Season Stats. Who Will Win Awards? Who Will Become the Biggest League Villain? What will Happen Next?',
+    image:'/assets/media/welcome-post.webp', imageAlt:'NPBA Super Conference logo' }
+];
 // Article: { id, title, category, summary, image, body, url, download }
 export const media = [
   { id:'welcome-to-npba', title:'A new home for the game.', category:'Announcements',
