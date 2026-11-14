@@ -5,13 +5,17 @@ export const league = { name:'NPBA', fullName:'National Practical Basketball Ass
 // Team: { id, name, abbreviation, conference ('Super'), logo, color ('#hex' card color),
 //        seed (number or null for blank), wins, losses (numbers; when set they replace records from games) }
 export const teams = JSON.parse(readFileSync(new URL('./teams.json', import.meta.url), 'utf8'));
+// Players live in data/players.json (edited from /admin/). Player: { id, name, teamId (null = free agent),
+//   position, number, formerTeamId (last team, shown for free agents) }
+export const players = JSON.parse(readFileSync(new URL('./players.json', import.meta.url), 'utf8'));
 // One NPBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
 export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSpots:4 };
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
 export const games = [];
 // Post: league-insider style message shown at the top of Media (message above, picture below).
-// { id, name, handle (no @), avatar, date ('YYYY-MM-DD'), text (wrap words in **double stars** to bold them), image, imageAlt }
+// { id, name, handle (no @), avatar, date ('YYYY-MM-DD'), text (wrap words in **double stars** to bold them), image, imageAlt,
+//   teamIds: [] (optional: teams this post is about; team/player names in the text are matched too) }
 export const posts = [
   { id:'welcome-post', name:'Spitboy', handle:'spitboy', avatar:'/assets/media/spitboy.webp', date:'2026-11-14',
     text:'Welcome To The **League**! Media Will Provide **Storylines**, **League Updates**, and Other Information to Keep Up With the **Season**. I look Forward to Provide **Game Articles**, **Power Rankings**, and Even Show some of the **Insane Season Stats**. Who Will Win **Awards**? Who Will Become the **Biggest League Villain**? **What will Happen Next?**',

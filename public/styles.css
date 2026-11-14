@@ -391,3 +391,51 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .tier-playoffs .seed-num{width:58px;height:58px;font-size:40px;border-color:var(--gold);background:linear-gradient(160deg,#f5b63226,#00000066);box-shadow:0 0 0 1px #000,0 0 16px 2px #f5b63280,0 0 32px 4px #f5b63233,inset 0 0 12px #f5b63230}
 .tier-lottery .seed-num{border-color:#ffffffa6}
 @media(max-width:650px){.seed-num{width:34px;height:34px;font-size:22px;border-radius:6px}.tier-playoffs .seed-num{width:36px;height:36px;font-size:24px}}
+/* Standings: expandable team drawer (roster + latest media) */
+.seed-row{grid-template-rows:auto auto;row-gap:0}
+.seed-row>.seed-card{cursor:pointer;transition:transform .15s,filter .15s}
+.seed-row>.seed-card:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.seed-row>.seed-card:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.seed-row>.seed-card::before{content:'ROSTER ▾';position:absolute;right:20px;bottom:8px;z-index:2;font:700 10px/1 League,sans-serif;letter-spacing:1.5px;color:#fff;opacity:0;transition:opacity .15s;text-shadow:0 1px 3px #000}
+.seed-row>.seed-card:hover::before,.seed-row>.seed-card:focus-visible::before{opacity:.85}
+.seed-row>.seed-card[aria-expanded=true]::before{content:'CLOSE ▴';opacity:.85}
+.seed-row.open .seed-num{align-self:start;margin-top:22px}
+.tier-cards:has(.seed-row.open){grid-auto-rows:auto!important}
+.team-drawer{grid-column:2;display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:-4px;padding:18px 18px 16px;background:#0b0c0ef0;border:2px solid #000;border-top:0;border-radius:0 0 8px 8px;box-shadow:0 10px 24px #000a;animation:drawer-in .18s ease-out}
+.team-drawer[hidden]{display:none}
+@keyframes drawer-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.drawer-col h4{font:700 15px/1 var(--display);letter-spacing:1.5px;color:var(--gold);margin:0 0 10px;display:flex;gap:8px;align-items:baseline}
+.drawer-col h4 small{font:600 10px League,sans-serif;color:#8b939e;letter-spacing:1px}
+.drawer-roster{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-height:260px;overflow:auto}
+.drawer-roster li{display:grid;grid-template-columns:42px 1fr auto;gap:8px;align-items:center;padding:6px 8px;background:#ffffff08;border-radius:4px;font-size:14px}
+.dr-num{color:var(--gold);font-weight:700}.dr-pos{color:#8b939e;font-size:12px;font-weight:600}
+.drawer-empty{color:#8b939e;font-size:13px}
+.drawer-news{display:flex;gap:10px;padding:10px;background:#ffffff08;border:1px solid #2a2d33;border-radius:8px;transition:border-color .15s}
+.drawer-news:hover{border-color:var(--gold)}
+.drawer-news img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.drawer-news b{font-size:14px}.drawer-news small{color:#8b939e}
+.dn-text{display:block;margin-top:4px;font:italic 500 14px/1.45 Barlow,League,sans-serif;color:#d6d9de}
+@media(max-width:650px){.team-drawer{grid-template-columns:1fr;padding:14px 12px}}
+/* Players page */
+.player-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.player-card{--team:#2a2d33;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:8px;border:2px solid #000;background:linear-gradient(105deg,color-mix(in srgb,var(--team) 55%,#0b0c0e),#121417 85%);box-shadow:0 4px 14px #0006}
+.player-card>img{width:44px;height:44px;object-fit:contain;flex-shrink:0}
+.pc-fa{width:44px;height:44px;display:grid;place-items:center;border:2px dashed #6b7280;border-radius:50%;font:700 14px var(--display);color:#c9ccd2;flex-shrink:0}
+.player-card.free-agent{background:#121417;border-color:#2a2d33}
+.pc-main{min-width:0;flex:1;display:flex;flex-direction:column}
+.pc-main strong{font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pc-main span{font-size:12px;color:#a2a8b2}
+.player-card.free-agent .pc-main span{color:var(--gold)}
+.pc-meta{display:flex;flex-direction:column;align-items:flex-end;font-size:12px;color:#a2a8b2}
+.pc-meta b{font:700 22px/1 var(--display);color:#fff}
+/* Admin: Teams / Players sections */
+.admin-sections{display:flex;gap:8px;margin-bottom:14px}
+.admin-tab{background:#111;border:1px solid #33363d;color:#c9ccd2;padding:10px 18px;border-radius:4px;font-weight:700;font-size:14px;letter-spacing:.5px}
+.admin-tab[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#111}
+.admin-players-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+.admin-search{flex:1;max-width:360px;margin:0}
+.admin-table.players{min-width:760px}
+.admin-input.team{min-width:200px}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;padding:4px 9px;border-radius:999px;text-transform:uppercase}
+.pill.signed{background:#14532d;color:#86efac}.pill.fa{background:#3f2a06;color:var(--gold)}
+.former{display:block;color:#8b939e;font-size:11px;margin-top:3px}

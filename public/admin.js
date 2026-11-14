@@ -14,6 +14,8 @@
     clear: () => { try { localStorage.removeItem(KEY); localStorage.removeItem('npba-admin'); } catch {} },
   };
   let token = store.get(), sha = null, saved = [], teams = [], logos = [];
+  let pSha = null, pSaved = [], players = [], section = 'teams', pQuery = '';
+  const PFILE = 'data/players.json';
   const MAX = 14; // one Super Conference of 14 teams
   fetch('/assets/teams/logos.json', { cache: 'no-store' }).then(r => r.json()).then(l => { logos = l; if (teams.length) render(); }).catch(() => {});
 
@@ -31,7 +33,17 @@
     return o;
   });
   const serialize = list => JSON.stringify(clean(list), null, 2) + '\n';
-  const dirty = () => serialize(teams) !== serialize(saved);
+  const pClean = list => list.map(p => {
+    const o = { id: p.id, name: String(p.name || '').trim(), teamId: p.teamId || null };
+    if (p.position) o.position = String(p.position).trim().toUpperCase();
+    if (p.number !== '' && p.number != null) o.number = String(p.number).trim();
+    if (!o.teamId && p.formerTeamId) o.formerTeamId = p.formerTeamId;
+    return o;
+  });
+  const pSerialize = list => JSON.stringify(pClean(list), null, 2) + '\n';
+  const teamsDirty = () => serialize(teams) !== serialize(saved);
+  const playersDirty = () => pSerialize(players) !== pSerialize(pSaved);
+  const dirty = () => teamsDirty() || playersDirty();
 
   function msg(el, text, kind = '') { el.textContent = text; el.dataset.kind = kind; }
 
@@ -63,7 +75,31 @@
     sha = f.sha;
     saved = JSON.parse(decode(f.content) || '[]');
     teams = structuredClone(saved);
-    render();
+    const pr = await gh(`/contents/${PFILE}?ref=main`, { cache: 'no-store' });
+    if (pr.status === 404) { pSha = null; pSaved = []; }
+    else if (!pr.ok) throw new Error(`Could not load players (${pr.status}).`);
+    else { const pf = await pr.json(); pSha = pf.sha; pSaved = JSON.parse(decode(pf.content) || '[]'); }
+    players = structuredClone(pSaved);
+    render(); renderPlayers();
+  }
+
+  function renderPlayers() {
+    const rows = $('[data-player-rows]');
+    const q = pQuery.trim().toLowerCase();
+    const tname = id => teams.find(t => t.id === id)?.name || '';
+    const shown = players.map((p, i) => ({ p, i }))
+      .filter(({ p }) => !q || [p.name, tname(p.teamId), tname(p.formerTeamId), p.teamId ? '' : 'free agent'].join(' ').toLowerCase().includes(q))
+      .sort((a, b) => (a.p.teamId ? 0 : 1) - (b.p.teamId ? 0 : 1) || tname(a.p.teamId).localeCompare(tname(b.p.teamId)) || a.p.name.localeCompare(b.p.name));
+    const teamOpts = p => `<option value="">Free Agent</option>${[...teams].sort((a, b) => a.name.localeCompare(b.name)).map(t => `<option value="${esc(t.id)}"${t.id === p.teamId ? ' selected' : ''}>${esc(t.name)}</option>`).join('')}`;
+    rows.innerHTML = shown.map(({ p, i }) => `<tr data-pi="${i}">
+      <td><input class="admin-input wide" data-pk="name" value="${esc(p.name)}" placeholder="Player name" aria-label="Player name"></td>
+      <td><select class="admin-input team" data-pk="teamId" aria-label="Team">${teamOpts(p)}</select></td>
+      <td><input class="admin-input abbr" data-pk="position" value="${esc(p.position || '')}" maxlength="3" placeholder="PG" aria-label="Position"></td>
+      <td><input class="admin-input num" data-pk="number" value="${esc(p.number ?? '')}" maxlength="3" placeholder="0" aria-label="Number"></td>
+      <td>${p.teamId ? '<span class="pill signed">Signed</span>' : `<span class="pill fa">Free Agent</span>${p.formerTeamId && tname(p.formerTeamId) ? `<small class="former">formerly ${esc(tname(p.formerTeamId))}</small>` : ''}`}</td>
+      <td><button class="admin-x" data-premove title="Remove player" aria-label="Remove ${esc(p.name)}">✕</button></td></tr>`).join('');
+    $('[data-player-empty]').hidden = players.length > 0;
+    status();
   }
 
   function seedOptions(t) {
@@ -93,6 +129,7 @@
   function problems() {
     const out = [];
     teams.forEach(t => { if (!t.name.trim()) out.push('Every team needs a name.'); });
+    players.forEach(p => { if (!String(p.name || '').trim()) out.push('Every player needs a name.'); });
     const seeds = teams.filter(t => Number.isFinite(t.seed)).map(t => t.seed);
     const dup = seeds.find((s, i) => seeds.indexOf(s) !== i);
     if (dup) out.push(`Two teams are both seed #${dup}.`);
@@ -114,13 +151,26 @@
       // ids follow names for new teams; keep existing ids stable
       const used = new Set();
       teams.forEach(t => { if (!t.id) { let id = slug(t.name), n = 2; while (used.has(id) || teams.some(o => o !== t && o.id === id)) id = `${slug(t.name)}-${n++}`; t.id = id; } used.add(t.id); });
-      const body = { message: 'Update standings from the admin panel', content: encode(serialize(teams)), sha, branch: 'main' };
-      const r = await gh(`/contents/${FILE}`, { method: 'PUT', body: JSON.stringify(body) });
-      if (r.status === 409 || r.status === 422) throw new Error('Someone else saved first. Reload the page to get the latest teams, then make your change again.');
-      if (!r.ok) throw new Error(`Save failed (GitHub said ${r.status}).`);
-      sha = (await r.json()).content.sha;
-      saved = structuredClone(clean(teams)); teams = structuredClone(saved);
-      render();
+      if (teamsDirty()) {
+        const body = { message: 'Update standings from the admin panel', content: encode(serialize(teams)), sha, branch: 'main' };
+        const r = await gh(`/contents/${FILE}`, { method: 'PUT', body: JSON.stringify(body) });
+        if (r.status === 409 || r.status === 422) throw new Error('Someone else saved first. Reload the page to get the latest teams, then make your change again.');
+        if (!r.ok) throw new Error(`Save failed (GitHub said ${r.status}).`);
+        sha = (await r.json()).content.sha;
+        saved = structuredClone(clean(teams)); teams = structuredClone(saved);
+      }
+      if (playersDirty()) {
+        const ids = new Set();
+        players.forEach(p => { if (!p.id) { let id = slug(p.name), n = 2; while (ids.has(id) || players.some(o => o !== p && o.id === id)) id = `${slug(p.name)}-${n++}`; p.id = id; } ids.add(p.id); });
+        const body = { message: 'Update players from the admin panel', content: encode(pSerialize(players)), branch: 'main' };
+        if (pSha) body.sha = pSha;
+        const r = await gh(`/contents/${PFILE}`, { method: 'PUT', body: JSON.stringify(body) });
+        if (r.status === 409 || r.status === 422) throw new Error('Someone else saved players first. Reload the page, then make your change again.');
+        if (!r.ok) throw new Error(`Saving players failed (GitHub said ${r.status}).`);
+        pSha = (await r.json()).content.sha;
+        pSaved = structuredClone(pClean(players)); players = structuredClone(pSaved);
+      }
+      render(); renderPlayers();
       msg($('[data-save-msg]'), 'Saved! The standings page updates in about a minute.', 'ok');
     } catch (e) {
       msg($('[data-save-msg]'), e.message, 'error'); btn.disabled = false;
@@ -135,7 +185,29 @@
     render();
     const inputs = document.querySelectorAll('[data-k="name"]'); const last = [...inputs].find(i => i.value === 'New team'); last?.focus(); last?.select();
   });
-  $('[data-revert]').addEventListener('click', () => { teams = structuredClone(saved); render(); });
+  $('[data-revert]').addEventListener('click', () => { teams = structuredClone(saved); players = structuredClone(pSaved); render(); renderPlayers(); });
+  const showSection = key => { section = key; document.querySelectorAll('[data-section]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.section === key))); document.querySelectorAll('[data-section-view]').forEach(v => v.hidden = v.dataset.sectionView !== key); $('[data-add]').hidden = key !== 'teams'; };
+  document.querySelectorAll('[data-section]').forEach(b => b.addEventListener('click', () => showSection(b.dataset.section)));
+  $('[data-player-search]').addEventListener('input', e => { pQuery = e.target.value; renderPlayers(); });
+  $('[data-add-player]').addEventListener('click', () => {
+    players.push({ id: '', name: '', teamId: null });
+    pQuery = ''; $('[data-player-search]').value = ''; renderPlayers();
+    const empty = [...document.querySelectorAll('[data-pk="name"]')].find(i => !i.value); empty?.focus();
+  });
+  const prows = $('[data-player-rows]');
+  const pUpdate = e => {
+    const tr = e.target.closest('tr'); const k = e.target.dataset.pk; if (!tr || !k) return;
+    const p = players[+tr.dataset.pi];
+    if (k === 'teamId') { const v = e.target.value || null; if (!v && p.teamId) p.formerTeamId = p.teamId; if (v) delete p.formerTeamId; p.teamId = v; renderPlayers(); return; }
+    p[k] = e.target.value; status();
+  };
+  prows.addEventListener('input', e => { if (e.target.tagName !== 'SELECT') pUpdate(e); });
+  prows.addEventListener('change', e => { if (e.target.tagName === 'SELECT') pUpdate(e); });
+  prows.addEventListener('click', e => {
+    if (!e.target.closest('[data-premove]')) return;
+    const p = players[+e.target.closest('tr').dataset.pi];
+    if (confirm(`Remove ${p.name || 'this player'} from the player index? To make them a free agent instead, set their team to Free Agent.`)) { players.splice(players.indexOf(p), 1); renderPlayers(); }
+  });
   $('[data-save]').addEventListener('click', save);
   const rows = $('[data-rows]');
   const update = e => {
