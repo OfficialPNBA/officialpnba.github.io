@@ -48,13 +48,13 @@ const stat=id=>games.filter(g=>g.status==='final'&&Number.isFinite(g.homeScore)&
 const rankings=[...teams].sort((a,b)=>(a.officialRank??Infinity)-(b.officialRank??Infinity)||a.name.localeCompare(b.name));
 
 function heroCast(){
-  const slots=[{x:30,h:80,z:6},{x:18.5,h:70,z:5},{x:7.5,h:60,z:4}];
-  const list=[...bannerPlayers]; if(list.length%2) list.push(null);
-  const cards=list.slice(0,6).map((p,i)=>{const side=i%2?'right':'left';const slot=slots[Math.floor(i/2)];const x=side==='left'?slot.x:100-slot.x;
-    const style=`--x:${x}%;--h:${slot.h}%;--z:${slot.z};--d:${(0.15+Math.floor(i/2)*0.18).toFixed(2)}s;--c:${p?p.color:'#f5b632'}`;
-    if(!p) return `<div class="cast-card cast-${side} cast-tease" style="${style}" aria-hidden="true"><span class="cast-q">?</span><span class="cast-label">Next franchise</span></div>`;
-    return `<figure class="cast-card cast-${side}" style="${style}"><img src="${p.image}" alt="${esc(p.team)} player" loading="eager" decoding="async"><figcaption class="cast-label">${esc(p.team)}</figcaption></figure>`;}).join('');
-  return `<div class="hero-cast">${cards}</div>`;
+  // Free-standing players around the logo: no panels, no words. Rows go inner → outer on each side.
+  const slots=[{x:29.5,h:86,z:6},{x:17.5,h:74,z:5},{x:7.5,h:64,z:4}];
+  const sides={left:bannerPlayers.filter(p=>p.side!=='right'),right:bannerPlayers.filter(p=>p.side==='right')};
+  const figs=[];
+  for(const side of ['left','right']) sides[side].slice(0,3).forEach((p,i)=>{const s=slots[i];const x=(side==='left'?s.x+(p.shift||0):100-s.x-(p.shift||0)).toFixed(1);
+    figs.push(`<figure class="cast cast-${side}" style="--x:${x}%;--h:${(s.h*(p.scale||1)).toFixed(1)}%;--z:${s.z};--d:${(0.2+i*0.16).toFixed(2)}s;--c:${p.color}"><div class="cast-spot" aria-hidden="true"></div><img src="${p.image}" alt="${esc(p.team)} franchise owner" loading="eager" decoding="async"></figure>`);});
+  return `<div class="hero-cast">${figs.join('')}</div>`;
 }
 function home(){return `<section class="hero" aria-label="National Practical Basketball Association"><div class="hero-court" aria-hidden="true"></div><div class="hero-rays" aria-hidden="true"></div><div class="hero-stage">${heroCast()}<div class="hero-visual"><div class="hero-glow" aria-hidden="true"></div><div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div><img class="hero-logo" src="/assets/npba-logo.png" width="1254" height="1254" alt="NPBA — National Practical Basketball Association" fetchpriority="high"></div></div></section>
 <div class="quick-strip"><div class="shell quick-links"><a href="/standings/"><span class="quick-number">01</span><span><small>THE COMPETITION</small><strong>League standings</strong></span>${icon('arrow')}</a><a href="/schedule/"><span class="quick-number">02</span><span><small>THE NEXT POSSESSION</small><strong>Official schedule</strong></span>${icon('arrow')}</a><a href="/transactions/"><span class="quick-number">03</span><span><small>THE LATEST MOVES</small><strong>League transactions</strong></span>${icon('arrow')}</a></div></div>

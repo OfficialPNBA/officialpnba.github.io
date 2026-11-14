@@ -27,9 +27,11 @@ export const transactions = [];
 // logo outward and alternating left/right. Image goes in public/assets/banner/.
 // Player: { team, image, color }. An odd count adds a "next franchise" teaser panel.
 export const bannerPlayers = [
-  { team:'Washington Griffins', image:'/assets/banner/griffins.webp', color:'#d4213d' },
-  { team:'Miami Makos', image:'/assets/banner/makos.webp', color:'#1fc2b2' },
-  { team:'Minnesota Sabers', image:'/assets/banner/sabers.webp', color:'#8b4cf0' },
-  { team:'Chicago Vortex', image:'/assets/banner/vortex.webp', color:'#3f74ff' },
-  { team:'Ember', image:'/assets/banner/ember.webp', color:'#f06a1f' }
+  // Order: left side inner → outer, then right side inner → outer. scale = size relative to a standing player.
+  { team:'Chicago Vortex', image:'/assets/banner/vortex.webp', color:'#22d3c5', side:'left', scale:1 },
+  { team:'Minnesota Sabers', image:'/assets/banner/sabers.webp', color:'#8b4cf0', side:'left', scale:1 },
+  { team:'Los Angeles Ember', image:'/assets/banner/ember.webp', color:'#f06a1f', side:'left', scale:1 },
+  { team:'Charlotte Knights', image:'/assets/banner/knights.webp', color:'#1fbf6a', side:'right', scale:1 },
+  { team:'Sin City Vice', image:'/assets/banner/vice.webp', color:'#e0233a', side:'right', scale:.9, shift:1 },
+  { team:'Phoenix Redrocks', image:'/assets/banner/redrocks.webp', color:'#e0482a', side:'right', scale:.95, shift:1.5 }
 ];
