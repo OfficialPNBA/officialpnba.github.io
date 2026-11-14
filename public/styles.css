@@ -439,3 +439,6 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.8px;padding:4px 9px;border-radius:999px;text-transform:uppercase}
 .pill.signed{background:#14532d;color:#86efac}.pill.fa{background:#3f2a06;color:var(--gold)}
 .former{display:block;color:#8b939e;font-size:11px;margin-top:3px}
+/* Community panel: buttons only, no wording */
+.community-panel{grid-template-columns:1fr;padding:24px 28px}
+.community-links{max-width:640px;margin-inline:auto;width:100%}
