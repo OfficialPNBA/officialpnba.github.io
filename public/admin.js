@@ -13,7 +13,8 @@
     set: v => { try { localStorage.setItem(KEY, v); localStorage.setItem('npba-admin', '1'); } catch {} },
     clear: () => { try { localStorage.removeItem(KEY); localStorage.removeItem('npba-admin'); } catch {} },
   };
-  let token = store.get(), sha = null, saved = [], teams = [], tab = 'all';
+  let token = store.get(), sha = null, saved = [], teams = [], tab = 'all', logos = [];
+  fetch('/assets/teams/logos.json', { cache: 'no-store' }).then(r => r.json()).then(l => { logos = l; if (teams.length) render(); }).catch(() => {});
 
   const gh = (path, opts = {}) => fetch(API + path, { ...opts, headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28', ...(opts.headers || {}) } });
   const decode = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, '')), c => c.charCodeAt(0)));
@@ -76,6 +77,7 @@
     const shown = teams.map((t, i) => ({ t, i })).filter(({ t }) => tab === 'all' || confKey(t.conference) === tab)
       .sort((a, b) => (confKey(a.t.conference) === confKey(b.t.conference) ? 0 : confKey(a.t.conference) === 'west' ? -1 : 1) || (a.t.seed ?? 99) - (b.t.seed ?? 99) || a.t.name.localeCompare(b.t.name));
     rows.innerHTML = shown.map(({ t, i }) => `<tr data-i="${i}" class="${confKey(t.conference)}">
+      <td><div class="logo-cell"><span class="admin-logo">${t.logo ? `<img src="${esc(t.logo)}" alt="">` : ''}</span><select class="admin-input logo" data-k="logo" aria-label="Logo"><option value="">No logo</option>${logos.map(l => `<option value="${esc(l.logo)}"${l.logo === t.logo ? ' selected' : ''}>${esc(l.name)}</option>`).join('')}${t.logo && !logos.some(l => l.logo === t.logo) ? `<option value="${esc(t.logo)}" selected>Current logo</option>` : ''}</select></div></td>
       <td><input class="admin-input wide" data-k="name" value="${esc(t.name)}" placeholder="Team name" aria-label="Team name"></td>
       <td><input class="admin-input abbr" data-k="abbreviation" value="${esc(t.abbreviation)}" maxlength="4" placeholder="ABC" aria-label="Abbreviation"></td>
       <td><select class="admin-input" data-k="conference" aria-label="Conference"><option value="Western"${confKey(t.conference) === 'west' ? ' selected' : ''}>Western</option><option value="Eastern"${confKey(t.conference) === 'east' ? ' selected' : ''}>Eastern</option></select></td>
@@ -147,7 +149,7 @@
     if (k === 'seed') v = v === '' ? null : +v;
     if (k === 'wins' || k === 'losses') v = Math.max(0, Math.min(99, parseInt(v, 10) || 0));
     t[k] = v;
-    if (k === 'conference' || k === 'seed') render(); else status();
+    if (k === 'conference' || k === 'seed' || k === 'logo') render(); else status();
   };
   rows.addEventListener('input', e => { if (e.target.tagName !== 'SELECT') update(e); });
   rows.addEventListener('change', update);
