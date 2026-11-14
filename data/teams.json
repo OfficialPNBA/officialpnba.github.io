@@ -83,7 +83,7 @@
     "conference": "Eastern",
     "color": "#b91c2c",
     "logo": "/assets/teams/boston-rebels.webp",
-    "seed": null,
+    "seed": 1,
     "wins": 0,
     "losses": 0
   },
@@ -94,7 +94,7 @@
     "conference": "Eastern",
     "color": "#15803d",
     "logo": "/assets/teams/charlotte-knights.webp",
-    "seed": null,
+    "seed": 2,
     "wins": 0,
     "losses": 0
   },
@@ -105,7 +105,7 @@
     "conference": "Eastern",
     "color": "#0f9a9a",
     "logo": "/assets/teams/chicago-vortex.webp",
-    "seed": null,
+    "seed": 3,
     "wins": 0,
     "losses": 0
   },
@@ -116,7 +116,7 @@
     "conference": "Eastern",
     "color": "#4b5563",
     "logo": "/assets/teams/detroit-drift.webp",
-    "seed": null,
+    "seed": 4,
     "wins": 0,
     "losses": 0
   },
@@ -127,7 +127,7 @@
     "conference": "Eastern",
     "color": "#0e7c86",
     "logo": "/assets/teams/miami-makos.webp",
-    "seed": null,
+    "seed": 5,
     "wins": 0,
     "losses": 0
   },
@@ -138,7 +138,7 @@
     "conference": "Eastern",
     "color": "#7d8c0f",
     "logo": "/assets/teams/new-york-empire.webp",
-    "seed": null,
+    "seed": 6,
     "wins": 0,
     "losses": 0
   },
@@ -149,7 +149,7 @@
     "conference": "Eastern",
     "color": "#7a1f2b",
     "logo": "/assets/teams/washington-griffins.webp",
-    "seed": null,
+    "seed": 7,
     "wins": 0,
     "losses": 0
   }
