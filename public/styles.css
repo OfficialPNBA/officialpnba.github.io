@@ -354,3 +354,8 @@ body.concrete{background:#0d0d0d url('/assets/concrete.svg') center/cover fixed}
 @media(prefers-reduced-motion:reduce){.sc-name strong{animation:none}}
 .admin-pair{display:flex;gap:6px}
 .admin-table{min-width:1120px}
+/* White flash sweeping left to right across team names */
+.sc-name strong{position:relative;align-self:flex-start;max-width:100%}
+.sc-name strong::after{content:attr(data-n);position:absolute;inset:0;white-space:inherit;background:linear-gradient(105deg,transparent 42%,#fff 50%,transparent 58%) no-repeat;background-size:250% 100%;background-position:150% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:name-flash 3.5s ease-in-out infinite;pointer-events:none}
+@keyframes name-flash{0%{background-position:150% 0}35%,100%{background-position:-50% 0}}
+@media(prefers-reduced-motion:reduce){.sc-name strong::after{animation:none;display:none}}
