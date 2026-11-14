@@ -671,3 +671,4 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 /* Positions use the Imperator font */
 @font-face{font-family:Imperator;src:url('/fonts/imperator-bold.ttf') format('truetype');font-weight:400 900;font-display:swap}
 .drawer-roster li.filled .dr-posn{font-family:Imperator,ImpactClub,serif;font-weight:700;letter-spacing:1.5px}
+.drawer-roster li.filled .dr-pos em{font-family:Imperator,ImpactClub,serif;font-weight:700;letter-spacing:1px}
