@@ -2,11 +2,11 @@ import { readFileSync } from 'node:fs';
 // Publish confirmed league information only.
 export const league = { name:'NPBA', fullName:'National Practical Basketball Association', discordUrl:null, robloxUrl:null };
 // Teams live in data/teams.json so the Admin page (/admin/) can edit and save them.
-// Team: { id, name, abbreviation, conference ('Western' or 'Eastern'), logo, color ('#hex' card color),
+// Team: { id, name, abbreviation, conference ('Super'), logo, color ('#hex' card color),
 //        seed (number or null for blank), wins, losses (numbers; when set they replace records from games) }
 export const teams = JSON.parse(readFileSync(new URL('./teams.json', import.meta.url), 'utf8'));
-// Standings per conference: 7 teams. Seeds 1-3 Playoffs, 4-5 Play-In, 6-7 Out Of Playoffs.
-export const standingsFormat = { teamsPerConference:7, playoffSpots:3, playInSpots:2 };
+// One NPBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
+export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSpots:4 };
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
 export const games = [];
