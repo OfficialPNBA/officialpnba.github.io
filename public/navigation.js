@@ -38,3 +38,11 @@ document.querySelectorAll('[data-standings]').forEach(board=>{
 });
 // Show admin-only controls (Edit Standings) to signed-in admins on this browser.
 try{if(localStorage.getItem('npba-admin'))document.querySelectorAll('[data-admin-only]').forEach(el=>el.hidden=false);}catch{}
+// Standings: click/tap a team card to open its roster and latest media (one open at a time).
+document.querySelectorAll('.seed-card[aria-controls]').forEach(card=>{
+  const toggle=()=>{const drawer=document.getElementById(card.getAttribute('aria-controls'));if(!drawer)return;const open=card.getAttribute('aria-expanded')!=='true';
+    document.querySelectorAll('.seed-card[aria-expanded="true"]').forEach(c=>{if(c!==card){c.setAttribute('aria-expanded','false');const d=document.getElementById(c.getAttribute('aria-controls'));if(d)d.hidden=true;c.closest('.seed-row')?.classList.remove('open');}});
+    card.setAttribute('aria-expanded',String(open));drawer.hidden=!open;card.closest('.seed-row')?.classList.toggle('open',open);};
+  card.addEventListener('click',toggle);
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
+});
