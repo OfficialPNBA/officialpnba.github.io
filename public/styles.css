@@ -667,3 +667,7 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .drawer-roster li.filled .dr-id .dr-pos em{text-shadow:none}
 .drawer-roster li.filled:is(:hover,:focus-visible) .dr-id .dr-pos{font-size:26px;-webkit-text-stroke-width:5px;text-shadow:0 0 10px var(--team),0 0 20px color-mix(in srgb,var(--team) 70%,transparent)}
 @container (max-width:620px){.drawer-roster li.filled:is(:hover,:focus-visible) .dr-id .dr-pos{font-size:20px}}
+
+/* Positions use the Imperator font */
+@font-face{font-family:Imperator;src:url('/fonts/imperator-bold.ttf') format('truetype');font-weight:400 900;font-display:swap}
+.drawer-roster li.filled .dr-posn{font-family:Imperator,ImpactClub,serif;font-weight:700;letter-spacing:1.5px}
