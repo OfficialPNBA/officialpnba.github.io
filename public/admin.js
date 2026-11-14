@@ -13,7 +13,8 @@
     set: v => { try { localStorage.setItem(KEY, v); localStorage.setItem('npba-admin', '1'); } catch {} },
     clear: () => { try { localStorage.removeItem(KEY); localStorage.removeItem('npba-admin'); } catch {} },
   };
-  let token = store.get(), sha = null, saved = [], teams = [], tab = 'all', logos = [];
+  let token = store.get(), sha = null, saved = [], teams = [], logos = [];
+  const MAX = 14; // one Super Conference of 14 teams
   fetch('/assets/teams/logos.json', { cache: 'no-store' }).then(r => r.json()).then(l => { logos = l; if (teams.length) render(); }).catch(() => {});
 
   const gh = (path, opts = {}) => fetch(API + path, { ...opts, headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28', ...(opts.headers || {}) } });
@@ -21,9 +22,8 @@
   const encode = str => { const bytes = new TextEncoder().encode(str); let bin = ''; bytes.forEach(b => bin += String.fromCharCode(b)); return btoa(bin); };
   const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'team';
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const confKey = c => /west/i.test(c || '') ? 'west' : /east/i.test(c || '') ? 'east' : '';
   const clean = list => list.map(t => {
-    const o = { id: t.id, name: t.name.trim(), abbreviation: (t.abbreviation || '').trim().toUpperCase(), conference: t.conference, color: t.color, primary: t.primary || '#ffffff', secondary: t.secondary || '#cccccc' };
+    const o = { id: t.id, name: t.name.trim(), abbreviation: (t.abbreviation || '').trim().toUpperCase(), conference: 'Super', color: t.color, primary: t.primary || '#ffffff', secondary: t.secondary || '#cccccc' };
     if (t.logo) o.logo = t.logo;
     o.seed = Number.isFinite(t.seed) ? t.seed : null;
     o.wins = Number.isFinite(t.wins) ? t.wins : 0;
@@ -68,19 +68,18 @@
 
   function seedOptions(t) {
     const out = ['<option value="">—</option>'];
-    for (let i = 1; i <= 7; i++) out.push(`<option value="${i}"${t.seed === i ? ' selected' : ''}>#${i}</option>`);
+    for (let i = 1; i <= Math.max(MAX, teams.length); i++) out.push(`<option value="${i}"${t.seed === i ? ' selected' : ''}>#${i}</option>`);
     return out.join('');
   }
 
   function render() {
     const rows = $('[data-rows]');
-    const shown = teams.map((t, i) => ({ t, i })).filter(({ t }) => tab === 'all' || confKey(t.conference) === tab)
-      .sort((a, b) => (confKey(a.t.conference) === confKey(b.t.conference) ? 0 : confKey(a.t.conference) === 'west' ? -1 : 1) || (a.t.seed ?? 99) - (b.t.seed ?? 99) || a.t.name.localeCompare(b.t.name));
-    rows.innerHTML = shown.map(({ t, i }) => `<tr data-i="${i}" class="${confKey(t.conference)}">
+    const shown = teams.map((t, i) => ({ t, i }))
+      .sort((a, b) => (a.t.seed ?? 99) - (b.t.seed ?? 99) || a.t.name.localeCompare(b.t.name));
+    rows.innerHTML = shown.map(({ t, i }) => `<tr data-i="${i}">
       <td><div class="logo-cell"><span class="admin-logo">${t.logo ? `<img src="${esc(t.logo)}" alt="">` : ''}</span><select class="admin-input logo" data-k="logo" aria-label="Logo"><option value="">No logo</option>${logos.map(l => `<option value="${esc(l.logo)}"${l.logo === t.logo ? ' selected' : ''}>${esc(l.name)}</option>`).join('')}${t.logo && !logos.some(l => l.logo === t.logo) ? `<option value="${esc(t.logo)}" selected>Current logo</option>` : ''}</select></div></td>
       <td><input class="admin-input wide" data-k="name" value="${esc(t.name)}" placeholder="Team name" aria-label="Team name"></td>
       <td><input class="admin-input abbr" data-k="abbreviation" value="${esc(t.abbreviation)}" maxlength="4" placeholder="ABC" aria-label="Abbreviation"></td>
-      <td><select class="admin-input" data-k="conference" aria-label="Conference"><option value="Western"${confKey(t.conference) === 'west' ? ' selected' : ''}>Western</option><option value="Eastern"${confKey(t.conference) === 'east' ? ' selected' : ''}>Eastern</option></select></td>
       <td><input type="color" class="admin-color" data-k="color" value="${/^#[0-9a-f]{6}$/i.test(t.color || '') ? t.color : '#3a3f47'}" aria-label="Card color"></td>
       <td><span class="admin-pair"><input type="color" class="admin-color" data-k="primary" value="${/^#[0-9a-f]{6}$/i.test(t.primary || '') ? t.primary : '#ffffff'}" aria-label="Name color 1"><input type="color" class="admin-color" data-k="secondary" value="${/^#[0-9a-f]{6}$/i.test(t.secondary || '') ? t.secondary : '#cccccc'}" aria-label="Name color 2"></span></td>
       <td><select class="admin-input seed" data-k="seed" aria-label="Seed">${seedOptions(t)}</select></td>
@@ -88,26 +87,22 @@
       <td><input type="number" min="0" max="99" class="admin-input num" data-k="losses" value="${Number.isFinite(t.losses) ? t.losses : 0}" aria-label="Losses"></td>
       <td><button class="admin-x" data-remove title="Remove team" aria-label="Remove ${esc(t.name)}">✕</button></td></tr>`).join('');
     $('[data-empty]').hidden = shown.length > 0;
-    document.querySelectorAll('[data-tab]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tab === tab)));
     status();
   }
 
   function problems() {
     const out = [];
     teams.forEach(t => { if (!t.name.trim()) out.push('Every team needs a name.'); });
-    for (const c of ['west', 'east']) {
-      const seeds = teams.filter(t => confKey(t.conference) === c && Number.isFinite(t.seed)).map(t => t.seed);
-      const dup = seeds.find((s, i) => seeds.indexOf(s) !== i);
-      if (dup) out.push(`Two ${c === 'west' ? 'Western' : 'Eastern'} teams are both seed #${dup}.`);
-      const n = teams.filter(t => confKey(t.conference) === c).length;
-      if (n > 7) out.push(`${c === 'west' ? 'Western' : 'Eastern'} has ${n} teams; the standings show 7.`);
-    }
+    const seeds = teams.filter(t => Number.isFinite(t.seed)).map(t => t.seed);
+    const dup = seeds.find((s, i) => seeds.indexOf(s) !== i);
+    if (dup) out.push(`Two teams are both seed #${dup}.`);
+    if (teams.length > MAX) out.push(`There are ${teams.length} teams; the standings are set up for ${MAX}.`);
     return [...new Set(out)];
   }
 
   function status() {
     const d = dirty(), p = problems();
-    $('[data-save]').disabled = !d || p.some(x => !x.includes('show 7'));
+    $('[data-save]').disabled = !d || p.some(x => !x.includes('set up for'));
     $('[data-revert]').disabled = !d;
     msg($('[data-save-msg]'), p.length ? p.join(' ') : d ? 'You have unsaved changes.' : 'No unsaved changes.', p.length ? 'error' : d ? 'warn' : '');
   }
@@ -136,13 +131,12 @@
   $('[data-signin-form]').addEventListener('submit', e => { e.preventDefault(); signIn(new FormData(e.target).get('key')); });
   $('[data-signout]').addEventListener('click', () => { if (dirty() && !confirm('Sign out without saving your changes?')) return; store.clear(); location.reload(); });
   $('[data-add]').addEventListener('click', () => {
-    teams.push({ id: '', name: 'New team', abbreviation: '', conference: tab === 'east' ? 'Eastern' : 'Western', color: '#3a3f47', primary: '#ffffff', secondary: '#cccccc', seed: null, wins: 0, losses: 0 });
+    teams.push({ id: '', name: 'New team', abbreviation: '', conference: 'Super', color: '#3a3f47', primary: '#ffffff', secondary: '#cccccc', seed: null, wins: 0, losses: 0 });
     render();
     const inputs = document.querySelectorAll('[data-k="name"]'); const last = [...inputs].find(i => i.value === 'New team'); last?.focus(); last?.select();
   });
   $('[data-revert]').addEventListener('click', () => { teams = structuredClone(saved); render(); });
   $('[data-save]').addEventListener('click', save);
-  document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => { tab = b.dataset.tab; render(); }));
   const rows = $('[data-rows]');
   const update = e => {
     const tr = e.target.closest('tr'); const k = e.target.dataset.k; if (!tr || !k) return;
@@ -150,7 +144,7 @@
     if (k === 'seed') v = v === '' ? null : +v;
     if (k === 'wins' || k === 'losses') v = Math.max(0, Math.min(99, parseInt(v, 10) || 0));
     t[k] = v;
-    if (k === 'conference' || k === 'seed' || k === 'logo') render(); else status();
+    if (k === 'seed' || k === 'logo') render(); else status();
   };
   rows.addEventListener('input', e => { if (e.target.tagName !== 'SELECT') update(e); });
   rows.addEventListener('change', update);
@@ -160,6 +154,5 @@
     if (confirm(`Remove ${t.name || 'this team'}? It disappears from the site after you save.`)) { teams.splice(teams.indexOf(t), 1); render(); }
   });
   window.addEventListener('beforeunload', e => { if (dirty()) { e.preventDefault(); e.returnValue = ''; } });
-  if (location.hash === '#east' || location.hash === '#west') tab = location.hash.slice(1);
   if (token) signIn(token);
 })();

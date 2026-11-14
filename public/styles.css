@@ -359,3 +359,10 @@ body.concrete{background:#0d0d0d url('/assets/concrete.svg') center/cover fixed}
 .sc-name strong::after{content:attr(data-n);position:absolute;inset:0;white-space:inherit;background:linear-gradient(105deg,transparent 42%,#fff 50%,transparent 58%) no-repeat;background-size:250% 100%;background-position:150% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:name-flash 3.5s ease-in-out infinite;pointer-events:none}
 @keyframes name-flash{0%{background-position:150% 0}35%,100%{background-position:-50% 0}}
 @media(prefers-reduced-motion:reduce){.sc-name strong::after{animation:none;display:none}}
+/* Super Conference: one standings view; admin-only button row */
+.conf-switch[hidden]{display:none}
+.conf-switch{grid-template-columns:repeat(2,1fr);max-width:520px}
+a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoration:none}
+.conf-btn.edit[aria-current=page]{background:var(--c);border-color:var(--c);color:var(--bg);border-style:solid}
+@media(max-width:650px){.conf-switch:has(.edit:not([hidden])){grid-template-columns:repeat(2,1fr)}.conf-btn.edit{grid-column:auto}}
+.conf-super .conf-logo{width:clamp(170px,22vw,280px)}
