@@ -380,9 +380,14 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .post-image{width:100%;height:auto;margin-top:16px;border-radius:14px;border:1px solid #2c2f35;aspect-ratio:16/9;object-fit:cover}
 @media(max-width:650px){.post{grid-template-columns:96px minmax(0,1fr);gap:14px;padding:16px 14px}.post-avatar{width:84px;height:84px}.post-name{font-size:14px}.post-handle,.post-side time{font-size:11px}.post-text{font-size:17px}}
 /* Seed placement number to the left of each team card */
-.seed-row{display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;gap:12px;min-height:0}
+.seed-row{display:grid;grid-template-columns:62px minmax(0,1fr);align-items:center;gap:12px;min-height:0}
 .seed-row>.seed-card{height:100%}
 .seed-num{font-family:var(--display);font-size:44px;line-height:1;text-align:center;color:#fff;text-shadow:0 2px 0 #000,0 0 18px #0009;font-variant-numeric:tabular-nums}
 .tier-playoffs .seed-num{font-size:58px;color:var(--gold);text-shadow:0 2px 0 #000,0 0 22px #f5b63255}
 .tier-lottery .seed-num{color:#a3a8b0}
 @media(max-width:650px){.seed-row{grid-template-columns:36px minmax(0,1fr);gap:8px}.seed-num{font-size:30px}.tier-playoffs .seed-num{font-size:38px}}
+/* Boxed seed numbers: gold glow for playoff spots, faint white glow for the rest */
+.seed-num{display:grid;place-items:center;align-self:center;width:52px;height:52px;border:2px solid #ffffffcc;border-radius:8px;background:linear-gradient(160deg,#ffffff14,#00000066);box-shadow:0 0 0 1px #000,0 0 10px 1px #ffffff40,inset 0 0 10px #ffffff1a;font-size:34px;padding-top:3px}
+.tier-playoffs .seed-num{width:58px;height:58px;font-size:40px;border-color:var(--gold);background:linear-gradient(160deg,#f5b63226,#00000066);box-shadow:0 0 0 1px #000,0 0 16px 2px #f5b63280,0 0 32px 4px #f5b63233,inset 0 0 12px #f5b63230}
+.tier-lottery .seed-num{border-color:#ffffffa6}
+@media(max-width:650px){.seed-num{width:34px;height:34px;font-size:22px;border-radius:6px}.tier-playoffs .seed-num{width:36px;height:36px;font-size:24px}}
