@@ -36,3 +36,5 @@ document.querySelectorAll('[data-standings]').forEach(board=>{
   buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.conf)));
   const start=location.hash.slice(1);if(buttons.some(b=>b.dataset.conf===start))show(start);
 });
+// Show admin-only controls (Edit Standings) to signed-in admins on this browser.
+try{if(localStorage.getItem('npba-admin'))document.querySelectorAll('[data-admin-only]').forEach(el=>el.hidden=false);}catch{}
