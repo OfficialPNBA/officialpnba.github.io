@@ -36,6 +36,8 @@
   const pClean = list => list.map(p => {
     const o = { id: p.id, name: String(p.name || '').trim(), teamId: p.teamId || null };
     if (p.position) o.position = String(p.position).trim().toUpperCase();
+    if (p.headshot) o.headshot = p.headshot;
+    ['overall', 'gp', 'min'].forEach(k => { const v = parseInt(p[k], 10); if (Number.isFinite(v) && v >= 0) o[k] = v; });
     if (p.number !== '' && p.number != null) o.number = String(p.number).trim();
     if (!o.teamId && p.formerTeamId) o.formerTeamId = p.formerTeamId;
     if (p.owner) o.owner = true;
@@ -45,7 +47,18 @@
   });
   const pSerialize = list => JSON.stringify(pClean(list), null, 2) + '\n';
   const teamsDirty = () => serialize(teams) !== serialize(saved);
-  const playersDirty = () => pSerialize(players) !== pSerialize(pSaved);
+  const pendingShots = new Map(); // player object -> {base64, preview}
+  const playersDirty = () => pendingShots.size > 0 || pSerialize(players) !== pSerialize(pSaved);
+  // shrink an uploaded picture to a 160x160 square (top-centred) webp
+  const toHeadshot = file => new Promise((res, rej) => {
+    const img = new Image(); img.onload = () => {
+      const S = 160, c = document.createElement('canvas'); c.width = c.height = S;
+      const side = Math.min(img.width, img.height), sx = (img.width - side) / 2, sy = img.height > img.width ? 0 : (img.height - side) / 2;
+      c.getContext('2d').drawImage(img, sx, sy, side, side, 0, 0, S, S);
+      const url = c.toDataURL('image/webp', 0.88); URL.revokeObjectURL(img.src);
+      res({ preview: url, base64: url.split(',')[1], ext: url.startsWith('data:image/webp') ? 'webp' : 'png' });
+    }; img.onerror = () => rej(new Error('That file is not a picture I can read.')); img.src = URL.createObjectURL(file);
+  });
   const dirty = () => teamsDirty() || playersDirty();
 
   function msg(el, text, kind = '') { el.textContent = text; el.dataset.kind = kind; }
@@ -97,7 +110,11 @@
     rows.innerHTML = shown.map(({ p, i }) => `<tr data-pi="${i}">
       <td><input class="admin-input wide" data-pk="name" value="${esc(p.name)}" placeholder="Player name" aria-label="Player name"></td>
       <td><select class="admin-input team" data-pk="teamId" aria-label="Team">${teamOpts(p)}</select></td>
-      <td><input class="admin-input abbr" data-pk="position" value="${esc(p.position || '')}" maxlength="3" placeholder="PG" aria-label="Position"></td>
+      <td><label class="shot-cell" title="Upload headshot"><span class="admin-shot">${pendingShots.get(p) ? `<img src="${pendingShots.get(p).preview}" alt="">` : p.headshot ? `<img src="${esc(p.headshot)}" alt="">` : '+'}</span><input type="file" accept="image/*" data-pshot hidden aria-label="Upload headshot"></label></td>
+      <td><input class="admin-input pos" data-pk="position" value="${esc(p.position || '')}" maxlength="14" placeholder="PG/SG" aria-label="Positions"></td>
+      <td><input type="number" min="0" max="99" class="admin-input num" data-pk="overall" value="${esc(p.overall ?? '')}" placeholder="–" aria-label="Overall"></td>
+      <td><input type="number" min="0" max="999" class="admin-input num" data-pk="gp" value="${esc(p.gp ?? '')}" placeholder="0" aria-label="Games played"></td>
+      <td><input type="number" min="0" max="99999" class="admin-input num wide-num" data-pk="min" value="${esc(p.min ?? '')}" placeholder="0" aria-label="Minutes played"></td>
       <td><div class="role-cell"><label class="role-chk"><input type="checkbox" data-pk="owner"${p.owner ? ' checked' : ''}> Owner</label><label class="role-chk"><input type="checkbox" data-pk="coach"${p.coach ? ' checked' : ''}> Coach</label><select class="admin-input lineup" data-pk="lineup" aria-label="Starter or bench"><option value="">—</option><option value="starter"${p.lineup === 'starter' ? ' selected' : ''}>Starter</option><option value="bench"${p.lineup === 'bench' ? ' selected' : ''}>Bench</option></select></div></td>
       <td><input class="admin-input num" data-pk="number" value="${esc(p.number ?? '')}" maxlength="3" placeholder="0" aria-label="Number"></td>
       <td>${p.teamId ? '<span class="pill signed">Signed</span>' : `<span class="pill fa">Free Agent</span>${p.formerTeamId && tname(p.formerTeamId) ? `<small class="former">formerly ${esc(tname(p.formerTeamId))}</small>` : ''}`}</td>
@@ -166,6 +183,16 @@
       if (playersDirty()) {
         const ids = new Set();
         players.forEach(p => { if (!p.id) { let id = slug(p.name), n = 2; while (ids.has(id) || players.some(o => o !== p && o.id === id)) id = `${slug(p.name)}-${n++}`; p.id = id; } ids.add(p.id); });
+        for (const [p, shot] of pendingShots) {
+          const path = `public/assets/headshots/${p.id}.${shot.ext}`;
+          const cur = await gh(`/contents/${path}?ref=main`);
+          const b = { message: `Headshot for ${p.name}`, content: shot.base64, branch: 'main' };
+          if (cur.ok) b.sha = (await cur.json()).sha;
+          const r = await gh(`/contents/${path}`, { method: 'PUT', body: JSON.stringify(b) });
+          if (!r.ok) throw new Error(`Uploading ${p.name}'s headshot failed (GitHub said ${r.status}).`);
+          p.headshot = `/assets/headshots/${p.id}.${shot.ext}?v=${Date.now().toString(36)}`;
+          pendingShots.delete(p);
+        }
         const body = { message: 'Update players from the admin panel', content: encode(pSerialize(players)), branch: 'main' };
         if (pSha) body.sha = pSha;
         const r = await gh(`/contents/${PFILE}`, { method: 'PUT', body: JSON.stringify(body) });
@@ -189,7 +216,7 @@
     render();
     const inputs = document.querySelectorAll('[data-k="name"]'); const last = [...inputs].find(i => i.value === 'New team'); last?.focus(); last?.select();
   });
-  $('[data-revert]').addEventListener('click', () => { teams = structuredClone(saved); players = structuredClone(pSaved); render(); renderPlayers(); });
+  $('[data-revert]').addEventListener('click', () => { pendingShots.clear(); teams = structuredClone(saved); players = structuredClone(pSaved); render(); renderPlayers(); });
   const showSection = key => { section = key; document.querySelectorAll('[data-section]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.section === key))); document.querySelectorAll('[data-section-view]').forEach(v => v.hidden = v.dataset.sectionView !== key); $('[data-add]').hidden = key !== 'teams'; };
   document.querySelectorAll('[data-section]').forEach(b => b.addEventListener('click', () => showSection(b.dataset.section)));
   $('[data-player-search]').addEventListener('input', e => { pQuery = e.target.value; renderPlayers(); });
@@ -208,11 +235,19 @@
     p[k] = e.target.value; status();
   };
   prows.addEventListener('input', e => { if (e.target.tagName !== 'SELECT' && e.target.type !== 'checkbox') pUpdate(e); });
-  prows.addEventListener('change', e => { if (e.target.tagName === 'SELECT' || e.target.type === 'checkbox') pUpdate(e); });
+  prows.addEventListener('change', async e => {
+    if (e.target.matches('[data-pshot]')) {
+      const f = e.target.files[0]; if (!f) return;
+      try { pendingShots.set(players[+e.target.closest('tr').dataset.pi], await toHeadshot(f)); renderPlayers(); }
+      catch (err) { msg($('[data-save-msg]'), err.message, 'error'); }
+      return;
+    }
+    if (e.target.tagName === 'SELECT' || e.target.type === 'checkbox') pUpdate(e);
+  });
   prows.addEventListener('click', e => {
     if (!e.target.closest('[data-premove]')) return;
     const p = players[+e.target.closest('tr').dataset.pi];
-    if (confirm(`Remove ${p.name || 'this player'} from the player index? To make them a free agent instead, set their team to Free Agent.`)) { players.splice(players.indexOf(p), 1); renderPlayers(); }
+    if (confirm(`Remove ${p.name || 'this player'} from the player index? To make them a free agent instead, set their team to Free Agent.`)) { pendingShots.delete(p); players.splice(players.indexOf(p), 1); renderPlayers(); }
   });
   $('[data-save]').addEventListener('click', save);
   const rows = $('[data-rows]');
