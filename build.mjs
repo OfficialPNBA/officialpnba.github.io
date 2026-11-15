@@ -1,4 +1,5 @@
-import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, rm, writeFile, readFile } from 'node:fs/promises';
+const rulesText = await readFile(new URL('./data/rules.txt', import.meta.url), 'utf8');
 import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, posts, players, spotlights } from './data/league.mjs';
 
 const pages = [
@@ -7,6 +8,7 @@ const pages = [
   { key:'schedule', path:'/schedule/', title:'Official Schedule', kicker:'On the court', description:'Find your next matchup, follow the results, and keep up with every tipoff.' },
   { key:'media', path:'/media/', title:'Media', kicker:'Beyond the scoreboard', description:'The stories, the highlights, and the identity of our league.' },
   { key:'players', path:'/players/', title:'Players', kicker:'The talent', description:'Search every signed player in the NPBA and see who is on the free-agent market.' },
+  { key:'rules', path:'/rules/', title:'League Rules', kicker:'The rulebook', description:'The official NPBA rulebook: enforcement, franchise owners, transactions, game rules, conduct, awards, and the penalty cheat sheet.' },
   { key:'transactions', path:'/transactions/', title:'Transactions', kicker:'Around the league', description:'Follow official signings, trades, releases, and roster moves.' },
 ];
 const adminPage={ key:'admin', path:'/admin/', title:'Admin' };
@@ -169,7 +171,33 @@ function adminBody(){return `<section class="admin shell"><header class="admin-h
 <div class="admin-app" data-app hidden><div class="admin-toolbar"><div class="conf-switch admin-switch" role="group" aria-label="Pages"><a class="conf-btn all" href="/standings/">Standings</a><span class="conf-btn edit" aria-current="page">${icon('lock')} Edit Standings</span></div><div class="admin-actions"><button class="admin-btn" data-add>+ Add team</button><button class="admin-btn ghost" data-signout>Sign out</button></div></div>
 <div class="admin-sections" role="group" aria-label="What to edit"><button class="admin-tab" data-section="teams" aria-pressed="true">Teams &amp; seeds</button><button class="admin-tab" data-section="players" aria-pressed="false">Players</button></div><div class="admin-card admin-table-wrap" data-section-view="teams"><table class="admin-table"><thead><tr><th>Logo</th><th>Team name</th><th>Abbr.</th><th>Card color</th><th>Name colors</th><th>Seed</th><th>Wins</th><th>Losses</th><th><span class="sr-only">Remove</span></th></tr></thead><tbody data-rows></tbody></table><p class="admin-empty" data-empty hidden>No teams yet. Click <b>+ Add team</b> to create one.</p></div><div class="admin-card admin-table-wrap" data-section-view="players" hidden><div class="admin-players-bar"><label class="admin-field admin-search"><span class="sr-only">Search players</span><input type="search" data-player-search placeholder="Search players…"></label><button class="admin-btn" data-add-player>+ Add player</button></div><table class="admin-table players"><thead><tr><th>Player name</th><th>Team</th><th>Headshot</th><th>Position(s)</th><th>OVR</th><th>GP</th><th>MIN</th><th>Role</th><th>Number</th><th>Status</th><th><span class="sr-only">Remove</span></th></tr></thead><tbody data-player-rows></tbody></table><p class="admin-empty" data-player-empty hidden>No players yet. Click <b>+ Add player</b> to sign your first one.</p></div>
 <div class="admin-savebar"><p class="admin-msg" data-save-msg role="status">No unsaved changes.</p><div><button class="admin-btn ghost" data-revert disabled>Undo changes</button><button class="admin-btn primary" data-save disabled>Save changes</button></div></div></div></section>`;}
-function innerPage(page){if(page.key==='schedule')return `<section class="schedule-stage" aria-label="Official Schedule"><img src="/assets/npba-logo.png" alt="" class="schedule-watermark" width="1254" height="1254" aria-hidden="true"><h1 class="schedule-soon"><span>Full Schedule</span><span>Coming Soon</span></h1></section>`;const contents={players:playersPage,standings:standingsPage,schedule:schedulePage,media:mediaPage,transactions:transactionsPage};return `<section class="page-hero">${page.key==='players'?`<div class="shell players-hero"><h1 class="players-title">Official Player List</h1><img src="/assets/npba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`:`<div class="shell"><div class="breadcrumb"><a href="/">Home</a><span>/</span><span>${page.title}</span></div><p class="eyebrow">${page.kicker.toUpperCase()}</p><h1>${page.title.toUpperCase()}<span>.</span></h1><p class="page-description">${page.description}</p><img src="/assets/npba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`}</section><div class="shell page-content">${contents[page.key]()}</div>${community()}`;}
+function rulesPage(){
+  const lines=rulesText.split('\n').map(l=>l.trimEnd());
+  const inl=t=>esc(t).replace(/(Rule |under |see )?(\b1\.9\b)/g,(m)=>`<a href="#npba-1-9">${m}</a>`);
+  let updated='',secs=[],cur=null,rule=null;
+  const target=()=>rule||cur;
+  for(const l of lines){
+    if(!l)continue;
+    if(l.startsWith('@updated '))updated=l.slice(9);
+    else if(l.startsWith('# ')){const [n,t]=l.slice(2).split(' | ');cur={n,t,id:n.toLowerCase(),rules:[],body:[]};secs.push(cur);rule=null;}
+    else if(l.startsWith('## ')){const [n,t]=l.slice(3).split(' | ');rule={n,t,id:n.toLowerCase().replace(/\./g,'-'),body:[]};cur.rules.push(rule);}
+    else if(l.startsWith('| ')){const [a,b]=l.slice(2).split(' | ');cur.body.push({row:[a,b]});}
+    else if(l.startsWith('> '))target().body.push({sub:l.slice(2)});
+    else if(l.startsWith('- ')){const t=l.slice(2),i=t.indexOf(':: ');target().body.push({li:i>0?{k:t.slice(0,i),v:t.slice(i+3)}:{v:t}});}
+    else target().body.push({p:l});
+  }
+  const body=items=>{let out='',list=[],rows=[];
+    const flush=()=>{if(list.length){out+=`<ul class="rule-list">${list.map(x=>`<li>${x.k?`<strong>${esc(x.k)}:</strong> `:''}${inl(x.v)}</li>`).join('')}</ul>`;list=[];}
+      if(rows.length){out+=`<div class="rule-table-wrap"><table class="rule-table"><thead><tr><th>Violation</th><th>Baseline consequence</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${inl(r[1])}</td></tr>`).join('')}</tbody></table></div>`;rows=[];}};
+    for(const it of items){if(it.li){list.push(it.li);continue;}if(it.row){rows.push(it.row);continue;}flush();
+      if(it.sub)out+=`<h4 class="rule-sub">${esc(it.sub)}</h4>`;else out+=`<p>${inl(it.p)}</p>`;}
+    flush();return out;};
+  const toc=`<nav class="rules-toc" aria-label="Rulebook sections"><h2>Contents</h2><ol>${secs.map(s=>`<li><a href="#${s.id}"><span>${esc(s.n)}</span>${esc(s.t)}</a></li>`).join('')}</ol></nav>`;
+  const sections=secs.map(s=>`<section class="rules-section" id="${s.id}"><h2 class="rules-h2"><span>${esc(s.n)}</span>${esc(s.t)}</h2>${body(s.body)}${s.rules.map(r=>`<article class="rule-card" id="${r.id}"><h3><span class="rule-num">${esc(r.n.replace('NPBA-',''))}</span>${esc(r.t)}</h3>${body(r.body)}</article>`).join('')}</section>`).join('');
+  return `<div class="rules-page"><div class="rules-head"><p class="rules-title">NPBA Official Rulebook</p><p class="rules-updated">Updated ${esc(updated)}</p></div><div class="rules-layout">${toc}<div class="rules-main">${sections}</div></div></div>`;
+}
+
+function innerPage(page){if(page.key==='schedule')return `<section class="schedule-stage" aria-label="Official Schedule"><img src="/assets/npba-logo.png" alt="" class="schedule-watermark" width="1254" height="1254" aria-hidden="true"><h1 class="schedule-soon"><span>Full Schedule</span><span>Coming Soon</span></h1></section>`;const contents={players:playersPage,standings:standingsPage,schedule:schedulePage,media:mediaPage,transactions:transactionsPage,rules:rulesPage};return `<section class="page-hero">${page.key==='players'?`<div class="shell players-hero"><h1 class="players-title">Official Player List</h1><img src="/assets/npba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`:`<div class="shell"><div class="breadcrumb"><a href="/">Home</a><span>/</span><span>${page.title}</span></div><p class="eyebrow">${page.kicker.toUpperCase()}</p><h1>${page.title.toUpperCase()}<span>.</span></h1><p class="page-description">${page.description}</p><img src="/assets/npba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`}</section><div class="shell page-content">${contents[page.key]()}</div>${community()}`;}
 
 await rm('dist',{recursive:true,force:true});
 await cp('public','dist',{recursive:true});

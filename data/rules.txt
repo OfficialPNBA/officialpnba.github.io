@@ -1,0 +1,193 @@
+@updated November 15th 2026
+# NPBA-1 | League-Wide Enforcement
+## NPBA-1.1 | Who this covers
+Everyone in NPBA: players, franchise owners (FOs), coaches, referees, and staff. It applies to games, scrimmages, transactions, and the NPBA Discord. A suspension means no NPBA participation of any kind, unless the written decision says otherwise.
+## NPBA-1.2 | Permanent bans
+A permanent NPBA ban also means a permanent ban from the NPBA Discord. Banned people can't come back through alt accounts or by using someone else. Permanent bans don't reset between seasons. (Temporary suspensions are covered in 7.1.)
+## NPBA-1.3 | Exploiting
+Anyone confirmed to have exploited in NPBA or any other competitive league (including other games) is permanently banned from NPBA and the Discord, even if it happened before they joined. Staff must verify who the person is and have real proof: footage, logs, an admission, or a documented ruling from another league. An accusation or a screenshot of an unsourced ban list is not enough.
+## NPBA-1.4 | Investigations
+- Staff must write down the allegation, the rule, the evidence, how identity was verified, and the outcome.
+- For serious, credible allegations, staff can pause someone's participation for up to 7 days. Going longer needs a documented extension.
+- Refusing or leaving a screenshare request is its own violation (see 1.11). It does not prove the person was cheating.
+- Staff can never ask for passwords or unrelated private files.
+## NPBA-1.5 | Decisions and appeals
+- Every decision must state the rule broken, a summary of the evidence, the penalty, the start date, and how to appeal.
+- Appeals must be filed within 7 days and are reviewed by a senior staff member who wasn't involved. Appealing does not pause the penalty.
+- A permanent exploiting ban can be reconsidered only for mistaken identity, important new evidence, or a process error.
+## NPBA-1.6 | Fair enforcement
+Staff must disclose conflicts of interest and can't rule on their own case or their own team. Everyone gets the same baseline penalties. A penalty can be raised only for deliberate concealment, repeated misconduct, or abuse of authority, and only with a written explanation and a majority vote (see 1.9).
+## NPBA-1.7 | Ban evasion
+Using another Roblox or Discord account to get around a ban or suspension is not allowed. Evading a permanent ban keeps the ban permanent. Knowingly helping someone evade can mean a one-season suspension, or a permanent ban if it's repeated or organized.
+## NPBA-1.8 | Fixing records
+When a violation is proven, staff can correct game results, standings, stats, awards, and playoff eligibility. If a game is found to have involved a confirmed exploiter or an ineligible player, the game's stats may be voided following a majority staff vote under 1.9. Teammates are not suspended just for being on the same roster as an offender.
+## NPBA-1.9 | Majority vote (how big penalties get decided)
+No single referee or staff member can hand out a major penalty on their own, under any rule in this book. Major penalties include forfeits, suspensions, permanent bans, roster disqualifications, replays, and result reversals. They need a recorded majority vote.
+- Who votes:: The assigned game referee plus all available, uninvolved staff on the case. One vote each. Conflicted staff can't vote.
+- Minimum to vote:: At least 3 voters, including at least 1 referee and 1 staff member. Abstentions don't count as votes.
+- To pass:: More than half of the votes cast. A tie means the penalty is not approved and the case stays open until a valid panel can vote.
+- "Available" means:: For live games, reachable within 10 minutes. For everything else, notified with a 24-hour voting window.
+- What a referee can do alone:: Make routine live calls, and pause play for technical problems, or suspected violations. These can't turn into major penalties without a vote.
+- Emergency holds:: Temporary holds under 1.4 are still allowed.
+- Paperwork:: Record the voters, votes, evidence, and outcome.
+- Priority:: This rule overrides anything else that sounds like a referee or staff member can act alone.
+## NPBA-1.10 | Watchlist
+NPBA can keep a confidential watchlist of players with credible, specific concerns that aren't proven yet. Being on it is not a guilty finding, a suspension, or a public accusation. The player can still play, but with extra checks.
+- Who can be listed:: Players with a documented cheating or exploiting history (not already banned under 1.3), credible reports or clips, suspicious account or identity changes, verified ban-evasion attempts, or repeated credible integrity complaints. Rumors, personal disputes, and unsupported accusations don't count.
+- How it works:: Adding or removing someone needs a majority vote (1.9), with the evidence and date recorded.
+- How long:: Staff vote on how long each listing lasts when the player is added. The minimum is 2 seasons. A player can't be removed before the minimum ends. After that, staff vote to remove them or extend the listing.
+- Privacy:: Only staff who need it for enforcement can see the list. Players can privately contest incorrect information.
+- Required full-screen share:: A watchlisted player must share their entire screen live with the referee or authorized staff for every game they play, from pregame verification until the game ends. Sharing only Roblox, a tab, or a single app does not count. No exceptions.
+- If they don't share:: If a watchlisted player refuses, stops sharing, hides the screen, or can't share their full screen, they can't play until it's fixed. A referee can pause play or block them from entering right away. Any forfeit or suspension still needs a 1.9 vote.
+- Limits:: Officials view the screen only for game integrity and never ask for passwords or unrelated private info. Staff may also review game footage, require reasonable account verification, and review reports.
+- If cheating is confirmed:: It's handled under 1.3, not left as a watchlist status.
+## NPBA-1.11 | Screenshare requests during games
+In any official game, the referee or authorized staff can tell any player (watchlisted or not) to share their entire screen right away to check for cheating, exploiting, account misuse, or other violations. Sharing only Roblox, a tab, or one app is not enough.
+- Stay until released:: Once a request is made, the player must stay in the game and be available until the official releases them. They can't leave, close Roblox, switch accounts, hide their screen, or turn off the stream. If they disconnect for any reason after the request, it counts as dodging it. The referee can pause play and hold the player out while the check is set up.
+- Penalty:: Refusing, leaving, disconnecting, or otherwise dodging a valid request gets the same penalty as confirmed exploiting (1.3): a permanent NPBA and Discord ban. A disconnect is treated as guilt. Crashes, Wi-Fi drops, and power outages are not excuses. The ban is issued after a majority vote (1.9).
+- Staff duties:: Save the request, timing, footage or logs, and the player's explanation. Look at the screen only to enforce rules.
+# NPBA-2 | Franchise Owner Rules
+## NPBA-2.1 | Disbanding
+A franchise can't disband mid-season without written league approval. An unapproved disband means a two-season ownership suspension, and abandoning scheduled games on purpose can also mean forfeits.
+## NPBA-2.2 | Stepping down
+Owners can step down between seasons with staff approval. An owner who quits mid-season without an approved emergency can't own or coach for two full seasons.
+## NPBA-2.3 | Owner responsibility
+An owner who knowingly signs, hides, or plays a banned or ineligible player forfeits the affected games, gets at least a two-season suspension, and can never own a franchise again. Repeated deliberate misconduct can lead to a permanent NPBA and Discord ban.
+## NPBA-2.4 | Alternate accounts
+Owners must verify player registration before games. An owner or coach who knowingly helps with alting gets a one-season suspension. The whole team is not suspended unless there's evidence they were involved.
+## NPBA-2.5 | Banned players
+Banned or suspended players can't be signed, rostered, or played in NPBA games or scrimmages. Accounts owned, controlled, or managed by banned players or confirmed exploiters are also prohibited from NPBA participation, even if someone else uses the account. Knowingly violating this rule brings the 2.3 penalties.
+## NPBA-2.6 | Minimum Games Played Requirement
+Every rostered player must play in at least 3 regular-season games unless they voluntarily opt out. FOs are responsible for giving players these opportunities. A game only counts if the player enters and actively participates in gameplay.
+- Opting out:: Players can voluntarily opt out by notifying NPBA staff. Opting out only removes the 3-game requirement. Players remain fully eligible for regular-season and playoff games and count toward the roster cap.
+- Rescheduling:: Opt-out players are treated like normal rostered players. Available opt-out players still count toward a legal lineup, and all rescheduling requests follow Rule 6.2.
+- Exceptions:: FOs and registered coaches are exempt. Late signings may have an adjusted requirement. FOs are not penalized if they can prove a player refused or was unavailable to play.
+- Player protection:: Players who are denied playing opportunities may report their FO to staff and request a release or trade.
+- Enforcement:: FOs who deliberately fail to provide playing opportunities may receive warnings or ownership suspensions. Major penalties require a majority vote under Rule 1.9.
+## NPBA-2.7 | Franchise Exploiting Accountability
+If a franchise is confirmed to have used exploiters in official NPBA games, the following penalties may apply following a documented majority staff vote under Rule 1.9.
+- FO Blacklist:: The FO may be blacklisted from owning or managing an NPBA franchise.
+- Player Eligibility:: A blacklisted FO may still play as a regular player unless personally involved in exploiting or otherwise suspended.
+- Team Disbandment:: The franchise may be disbanded, and its roster dissolved.
+- Innocent Players:: Players uninvolved in exploiting remain eligible to sign with other franchises.
+# NPBA-3 | Transactions and Eligibility
+## NPBA-3.1 | Roster cap
+Teams can't go over the published roster cap. A transaction that goes over is invalid until it's fixed.
+## NPBA-3.2 | Staff roster slots
+Franchise owners and head coaches count toward the roster cap. They don't have to play.
+## NPBA-3.3 | Trade requests
+A player can ask for a trade before the deadline, but a request doesn't force a trade. Both teams and the player must agree, and staff must approve that the trade is legal and the rosters comply.
+## NPBA-3.4 | While a trade request is pending
+The player stays on their team and must keep playing as normal, unless staff grants a temporary exemption.
+## NPBA-3.5 | Signing deadline
+Players must be on the official roster at least one full hour before tip-off. Late or backdated signings are invalid. If an ineligible player plays, the team forfeits.
+# NPBA-4 | Game Rules
+## NPBA-4.1 | Recording
+Official games must be recorded or streamed to YouTube by an approved recorder, and the video must show the whole game. If there's no reliable footage, staff may order a replay, and unverified stats are void.
+## NPBA-4.2 | Hosting and entry
+The assigned referee hosts. If they're unavailable, the home team hosts under staff supervision. Only authorized players, referees, and approved staff can enter the locked arena. Late players can join at halftime unless a temporary technical exception is approved. A disputed exception needs a 1.9 vote.
+## NPBA-4.3 | Servers
+Allowed regions are NA East, NA Central, and NA West. If teams disagree, use NA East if available. If an EU player is playing, use NA East unless both teams and the referee approve another region in writing before tip-off.
+## NPBA-4.4 | Game settings
+Four six-minute quarters, with fouls, free throws, and intros all on. If the settings are wrong, fix them if it's caught before halftime. Whether to replay or resume needs a 1.9 vote based on documented impact.
+## NPBA-4.5 | Bugs
+A referee can stop play for a major glitch and make a temporary fix. A disputed, major change to the game needs a 1.9 vote. No team may use a known bug on purpose.
+## NPBA-4.6 | Lineup
+Every lineup needs at least one guard (PG/SG) and one big (PF/C). If a lineup breaks this, the referee stops play and the team has 10 minutes to fix it. If they don't, they forfeit.
+## NPBA-4.7 | Voice channels
+Active players must stay in their team's voice channel. Outsiders can't join team channels (with the exception of ACTIVE streamers). A first violation must be corrected right away. A forfeit for deliberate abuse or repeat violations needs a 1.9 vote.
+## NPBA-4.8 | Forfeit timer
+A team has 15 minutes after the official game announcement to field a legal lineup. An extension needs a 1.9 vote and is allowed only for documented late announcements, platform outages, or staff-caused delays.
+## NPBA-4.9 | Body-blocking
+Intentional body-blocking is not allowed (using L2 counts as body-blocking). A referee can call an immediate turnover/removal of points for something they see. Disputed or bigger penalties need a 1.9 vote. Send clips to the referee during the game. Staff can still look into serious or repeated cases later.
+## NPBA-4.10 | Builds
+Players can't change builds after first entering an official game. One exception: a team can change ONE player's build if that's the only way to meet the lineup rule in 4.6.
+- Tell the referee during a stoppage, and get approval before the player re-enters.
+- Only the build needed to fix the lineup can be changed.
+- One player per team per game, and never for strategy or convenience.
+- Any other unauthorized build change can lead to a team forfeit, but only after a 1.9 vote.
+## NPBA-4.11 | Fouls
+A player fouls out at six fouls and can't return. Knowingly bringing a fouled-out player back means a forfeit and a one-game suspension for that player.
+## NPBA-4.12 | Mercy rule
+From the second half on, a 31-point lead ends the game immediately. The score and stats at that moment are final.
+## NPBA-4.13 | Playoff challenges
+Each team gets one referee challenge per playoff game. Submit a clip within 3 minutes. A failed challenge is used up.
+## NPBA-4.14 | Stoppages
+Everyone must follow referee-ordered stoppages right away. A first violation gets a warning and the advantage is reversed. A forfeit or suspension for deliberate or repeated refusal needs a 1.9 vote.
+## NPBA-4.15 | Avatar and Accessory Restrictions
+Players must use appropriate avatars during official NPBA games.
+- Mascot costumes, banana suits, and other bizarre or oversized outfits are prohibited.
+- Accessories that are excessively large, distracting, or interfere with gameplay are not allowed.
+- Players must remove prohibited outfits or accessories before participating.
+- Players who refuse to comply may be removed from the game and face further punishment.
+## NPBA-4.16 | Stats Export Requirement
+All official NPBA games must have their stats exported. Any game without exported stats will automatically be redone, regardless of the final result.
+## NPBA-4.17 | Cheating and Suspended Player Forfeits
+If a player is confirmed to have been exploiting, cheating, or is suspended from NPBA, all games they previously participated in will result in a forfeit for their team, and all stats from those games will be voided.
+This applies even if the player was not cheating or suspended at the time of those games.
+All penalties must be approved by a majority staff vote under Rule 1.9.
+# NPBA-5 | Player Conduct and Accounts
+## NPBA-5.1 | One account
+Each player must use their one approved Roblox account. Changes need written staff approval before playing. Using an unapproved account means a one-season suspension and ineligibility.
+## NPBA-5.2 | Account sharing
+Account sharing is prohibited in NPBA, except for Vecolt University grinding services. This exception does not allow anyone to play NPBA games, scrimmages, or other league activities on another player's account. If account sharing or playing on another person's account is suspected, evidence that other users have signed in to the account may be considered during an investigation, but is not proof of a violation by itself. All knowingly involved participants in unauthorized account sharing receive a one-season suspension. Ban evasion is handled under 1.7.
+## NPBA-5.3 | Verification
+Once athlete verification is turned on and publicly announced, unverified players can't play. Playing an unverified player means a forfeit.
+## NPBA-5.4 | Tabbing or lightbar abuse
+Deliberately manipulating the game window or interface to gain an advantage is not allowed. First offense: one-game suspension. Second: one-season suspension. Repeated or exploit-level misconduct: permanent ban after evidence review.
+## NPBA-5.5 | Exploiting
+Unauthorized executors, scripts, modified clients, injected tools, or similar cheating are not allowed. Confirmed cases are punished under 1.3. Any player who attempts to cheat or exploit, even if unsuccessful, may receive punishment following a majority staff vote under Rule 1.9. All attempts must be supported by sufficient evidence.
+## NPBA-5.6 | Harassment and interference
+Threats, targeted harassment, doxxing, discriminatory abuse, match fixing, bribery, and interfering with investigations are not allowed. Penalties run from a one-game suspension to a permanent NPBA and Discord ban, depending on how serious it is.
+## NPBA-5.7 | Scamming and restitution
+Scamming means taking money, Robux, items, or services through deception, not delivering after being paid when there's evidence of dishonest intent, or pretending to be someone else to get something. A good-faith dispute, a delay, or an unproven accusation is not automatically scamming. Staff review the terms, receipts, messages, delivery records, and both sides' stories.
+- If it's proven:: After a 1.9 vote, the offender is suspended from NPBA and put under the read-only Discord restrictions in 7.1.
+- How it ends:: When the victim confirms they were fully repaid or the original deal is completed, and staff verify it by majority vote.
+- No buying out:: Payments to NPBA, referees, or staff can't replace paying back the victim. Any private settlement must be voluntary and documented.
+- While suspended:: The offender can use only the private appeal/restitution channel.
+- More trouble:: Continued lying, retaliation, or evasion can bring extra penalties, including a permanent ban if separately justified and approved under 1.9.
+- If it can't be resolved:: If repayment can't be completed or is disputed, staff must issue a documented review instead of accepting a random "bail" payment.
+## NPBA-5.8 | Exploiting Outside of NPBA
+Players caught exploiting or cheating in Practical Basketball (PB) or other Roblox games may be permanently banned from NPBA.
+> Ban reasons include
+- PB game bans for "Exploiting/Cheating."
+- Game bans from other Ro-Ball games for "Exploiting/Cheating."
+- Other confirmed evidence of exploiting or cheating.
+> Enforcement
+- All bans must be supported by verified evidence and approved by a majority staff vote under Rule 1.9.
+- Banned players must be removed from their NPBA roster.
+## NPBA-5.9 | Barcode Usernames
+Players are not allowed to use barcode usernames in NPBA.
+## NPBA-5.10 | Theft of NPBA Assets
+Stealing, leaking, copying, or using NPBA-owned assets without permission is prohibited. This includes league graphics, logos, documents, game files, and other original NPBA materials. Using AI to rewrite, modify, or adapt the NPBA rulebook for another league without permission also counts as theft of NPBA assets.
+Confirmed violations result in a permanent NPBA ban, subject to a majority staff vote under Rule 1.9.
+# NPBA-6 | Awards and Scheduling
+## NPBA-6.1 | Award eligibility
+Players must play at least half of the scheduled regular-season games to qualify for season awards. Banned or ineligible players can't receive awards. Any player who receives a suspension during the current NPBA season is automatically ineligible for all individual awards for that season.
+## NPBA-6.2 | Rescheduling
+Ask to reschedule more than one hour before tip-off. Inside that hour, both owners or head coaches must agree and staff must approve. The new time must be specific; "TBD" doesn't count.
+## NPBA-6.3 | Scheduling disputes
+If no reschedule is approved, the original time stands. Not showing up starts the forfeit timer. Staff-caused delays and platform outages may justify a documented exception.
+# NPBA-7 | Server and Administration Rules
+## NPBA-7.1 | Discord during a suspension
+Suspended members can still read announcements and general info channels (where possible). They can't post, react, use threads, send attachments, speak in voice, stream, or take part in any NPBA activity. Staff give them a restricted Suspended role and remove conflicting permissions. They can contact staff only through an approved private appeal or support channel. Permanent bans mean full removal from the Discord. All major sanctions need a 1.9 vote.
+## NPBA-7.2 | Zero tolerance
+Every proven violation gets the published penalty or corrective action. Staff can't look the other way because of rank, popularity, team, or friendship. Zero tolerance does not mean everything is a permanent ban. Penalties follow the rulebook. Stronger sanctions for serious or repeated misconduct need a 1.9 vote. Staff must document violations, votes, and actions. Retaliating against good-faith reporters or witnesses is prohibited.
+## NPBA-7.3 | Official announcements
+Only published rules, schedules, deadlines, roster caps, and formal staff rulings are binding. Rule changes must include an effective date and be announced before they're enforced.
+## NPBA-7.4 | Reports
+Reports should include the date, who was involved, the rule you think was broken, and any evidence. Knowingly fake reports can mean a one-season suspension. Honest reports made in good faith are protected.
+# NPBA-8 | Penalty Cheat Sheet
+| Confirmed exploiting (any league) | Permanent NPBA + Discord ban
+| Permanent NPBA ban | Permanent Discord ban automatically
+| Unauthorized alternate account | One-season suspension (permanent if ban evasion)
+| Account sharing | One-season suspension
+| Refusing, leaving, disconnecting, or dodging a screenshare request | Permanent NPBA + Discord ban (after 1.9 vote)
+| Knowingly fielding a banned player | Forfeit + 2-season suspension + permanent FO ban
+| Unauthorized build change | Team forfeit after 1.9 vote (4.10 lineup exception applies)
+| Fouled-out player returns | Forfeit + one-game player suspension
+| Ineligible player in an official game | Team forfeit
+| First tabbing offense | One-game suspension
+| Repeated tabbing | One-season suspension
+| Watchlist placement | Monitoring only, no automatic punishment (1.9 vote; minimum 2 seasons)
+| Confirmed scamming | Suspension + read-only Discord until repaid or deal completed (1.9 vote)
