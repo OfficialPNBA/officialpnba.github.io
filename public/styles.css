@@ -672,8 +672,9 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 .schedule-stage{position:relative;min-height:calc(100vh - 140px);overflow:hidden}
 .schedule-watermark{position:fixed;left:50%;top:calc(50% + 60px);width:min(90vw,78vh);height:auto;transform:translate(-50%,-50%) rotate(-12deg);opacity:.12;pointer-events:none;z-index:0}
 body.schedule-blank .utility,body.schedule-blank .footer{position:relative;z-index:2}
-.schedule-soon{position:fixed;left:50%;top:calc(50% + 60px);transform:translate(-50%,-50%);z-index:1;margin:0;width:min(94vw,1100px);text-align:center;font-family:Imperator,ImpactClub,serif;font-weight:700;text-transform:uppercase;line-height:1.05;letter-spacing:.02em;font-size:clamp(38px,7.2vw,104px);pointer-events:none}
-.schedule-soon span{display:block;background:linear-gradient(90deg,#5c0008,#ff1f2e,#ff7a7a,#ff1f2e,#8a0010,#ff1f2e,#5c0008);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:soonFlow 4s linear infinite,soonGlow 2.4s ease-in-out infinite alternate}
+.schedule-soon{position:fixed;left:50%;top:calc(50% + 60px);transform:translate(-50%,-50%);z-index:1;margin:0;width:min(94vw,1100px);text-align:center;font-family:Imperator,ImpactClub,serif;font-weight:700;text-transform:uppercase;line-height:1.05;letter-spacing:.02em;font-size:clamp(38px,7.2vw,104px);pointer-events:none;animation:soonFloat 6s ease-in-out infinite alternate}
+.schedule-soon span{display:block;background:linear-gradient(90deg,#5c0008,#ff1f2e,#ff7a7a,#ff1f2e,#8a0010,#ff1f2e,#5c0008);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:2px #000;paint-order:stroke fill;animation:soonFlow 12s linear infinite,soonGlow 3.5s ease-in-out infinite alternate}
 @keyframes soonFlow{to{background-position:300% 0}}
+@keyframes soonFloat{from{transform:translate(-50%,calc(-50% - 5px))}to{transform:translate(-50%,calc(-50% + 5px))}}
 @keyframes soonGlow{from{filter:drop-shadow(0 0 6px #ff1f2e99) drop-shadow(0 0 18px #ff000055)}to{filter:drop-shadow(0 0 12px #ff3b48cc) drop-shadow(0 0 34px #ff000099)}}
-@media (prefers-reduced-motion:reduce){.schedule-soon span{animation:none}}
+@media (prefers-reduced-motion:reduce){.schedule-soon,.schedule-soon span{animation:none}}
