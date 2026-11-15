@@ -678,3 +678,16 @@ body.schedule-blank .utility,body.schedule-blank .footer{position:relative;z-ind
 @keyframes soonFloat{from{transform:translate(-50%,calc(-50% - 5px))}to{transform:translate(-50%,calc(-50% + 5px))}}
 @keyframes soonGlow{from{filter:drop-shadow(0 0 6px #ff1f2e99) drop-shadow(0 0 18px #ff000055)}to{filter:drop-shadow(0 0 12px #ff3b48cc) drop-shadow(0 0 34px #ff000099)}}
 @media (prefers-reduced-motion:reduce){.schedule-soon,.schedule-soon span{animation:none}}
+
+/* Players page: sort dropdown + ranked team groups */
+.players-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.pview-select select{appearance:none;-webkit-appearance:none;min-width:260px;height:46px;padding:0 44px 0 16px;font:700 14px/1 League,sans-serif;letter-spacing:.5px;color:var(--gold);background:#0b0c0e url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23f5b632' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 16px center;border:1px solid var(--gold);border-radius:4px;cursor:pointer}
+.pview-select select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.pview-select option{color:#fff;background:#121418}
+.players-toolbar .search-box{flex:1;min-width:220px}
+.pview[hidden],.pteam[hidden],.player-card[hidden]{display:none!important}
+.pteam{margin-bottom:34px}
+.pteam-head{margin-bottom:14px}
+.pteam-head .seed-card{cursor:default;min-height:96px}
+.pteam-empty{color:#8b939e;font-size:14px;margin:0 0 0 74px}
+@media(max-width:650px){.pview-select,.pview-select select{width:100%;min-width:0}.pteam-empty{margin-left:44px}}
