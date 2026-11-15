@@ -43,13 +43,13 @@
     "name": "Cleveland Cavaliers",
     "abbreviation": "CLE",
     "conference": "Super",
-    "color": "#860038",
+    "color": "#FDBB30",
     "logo": "/assets/teams/cleveland-cavaliers.webp?v=1",
     "seed": 4,
     "wins": 0,
     "losses": 0,
-    "primary": "#FDBB30",
-    "secondary": "#FFFFFF"
+    "primary": "#FFFFFF",
+    "secondary": "#E5E7EB"
   },
   {
     "id": "miami-heat",
@@ -82,26 +82,26 @@
     "name": "New York Knicks",
     "abbreviation": "NYK",
     "conference": "Super",
-    "color": "#006BB6",
+    "color": "#F58426",
     "logo": "/assets/teams/new-york-knicks.webp?v=1",
     "seed": 7,
     "wins": 0,
     "losses": 0,
-    "primary": "#F58426",
-    "secondary": "#BEC0C2"
+    "primary": "#FFFFFF",
+    "secondary": "#D1D5DB"
   },
   {
     "id": "denver-nuggets",
     "name": "Denver Nuggets",
     "abbreviation": "DEN",
     "conference": "Super",
-    "color": "#0E2240",
+    "color": "#FEC524",
     "logo": "/assets/teams/denver-nuggets.webp?v=1",
     "seed": 8,
     "wins": 0,
     "losses": 0,
-    "primary": "#FEC524",
-    "secondary": "#FFFFFF"
+    "primary": "#FFFFFF",
+    "secondary": "#E5E7EB"
   },
   {
     "id": "minnesota-timberwolves",
