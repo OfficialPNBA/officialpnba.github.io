@@ -745,3 +745,8 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 @media(max-width:900px){.rules-layout{grid-template-columns:1fr}.rules-toc{position:static}.rules-toc ol{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.rules-toc ol{grid-template-columns:1fr}.rule-card{padding:16px}.rule-card h3{font-size:16px}}
 @media(max-width:620px){.rule-table{min-width:0}.rule-table thead{display:none}.rule-table tr{display:block;padding:12px 14px;border-bottom:1px solid #23262b}.rule-table td{display:block;padding:0;border:0;width:auto!important}.rule-table td:last-child{margin-top:4px;padding-left:12px;border-left:2px solid var(--gold)}}
+/* Team names: bigger, bolder shadow so team-color gradients read on any card */
+.seed-card .sc-name strong{font-size:21px;filter:drop-shadow(0 0 1px #fff8) drop-shadow(0 0 1.5px #000) drop-shadow(0 0 1.5px #000) drop-shadow(0 3px 6px #000)}
+.tier-playoffs .seed-card .sc-name strong{font-size:26px}
+@media(max-width:650px){.seed-card .sc-name strong{font-size:17px}.tier-playoffs .seed-card .sc-name strong{font-size:20px}}
+.seed-card .sc-name strong{filter:drop-shadow(0 0 1px var(--no,#000)) drop-shadow(0 0 1px var(--no,#000)) drop-shadow(0 0 .5px var(--no,#000)) drop-shadow(0 3px 5px #000b)}
