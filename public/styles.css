@@ -445,11 +445,6 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 /* Standings: player spotlight in the empty space left of the board */
 .standings-board{position:relative}
 /* wide screens: spotlight column on the left of the board; smaller screens: compact card above it */
-@media(min-width:1400px){
-.standings-board{display:grid;grid-template-columns:clamp(300px,calc(60vw - 600px),820px) minmax(0,1fr);column-gap:28px;align-items:start;margin-inline:calc(50% - min(1400px,50vw - 20px))}
-.standings-board>*{grid-column:2}
-.standings-board>.spotlight-rail{grid-column:1;grid-row:1 / span 3;align-self:stretch}
-}
 @media(max-width:1399px){
 .spotlight-rail{margin-bottom:22px}
 .spotlight{display:grid;grid-template-columns:200px 1fr;align-items:center;max-width:760px;margin-inline:auto;position:relative;top:auto}
