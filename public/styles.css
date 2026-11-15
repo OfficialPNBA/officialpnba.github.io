@@ -750,3 +750,9 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .tier-playoffs .seed-card .sc-name strong{font-size:26px}
 @media(max-width:650px){.seed-card .sc-name strong{font-size:17px}.tier-playoffs .seed-card .sc-name strong{font-size:20px}}
 .seed-card .sc-name strong{filter:drop-shadow(0 0 1px var(--no,#000)) drop-shadow(0 0 1px var(--no,#000)) drop-shadow(0 0 .5px var(--no,#000)) drop-shadow(0 3px 5px #000b)}
+
+/* Roster dropdown: Understory font (positions + jersey # stay Imperator) */
+@font-face{font-family:Understory;src:url('/fonts/understory.otf') format('opentype');font-display:swap}
+.team-drawer h4,.team-drawer h4 small,.team-drawer .drawer-roster,.dr-slot,.dr-head i,.team-drawer .role,.drawer-roster .dr-name,.drawer-roster .dr-stats,.drawer-roster .dr-stats *{font-family:Understory,ImpactClub,Impact,sans-serif}
+/* Understory demo is missing some digits: keep numbers in ImpactClub */
+.dr-slot,.team-drawer h4 small,.drawer-roster .dr-stats,.drawer-roster .dr-stats *{font-family:ImpactClub,Impact,sans-serif}
