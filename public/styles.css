@@ -691,3 +691,9 @@ body.schedule-blank .utility,body.schedule-blank .footer{position:relative;z-ind
 .pteam-head .seed-card{cursor:default;min-height:96px}
 .pteam-empty{color:#8b939e;font-size:14px;margin:0 0 0 74px}
 @media(max-width:650px){.pview-select,.pview-select select{width:100%;min-width:0}.pteam-empty{margin-left:44px}}
+
+/* Players page header uses the Lalek Hex font */
+@font-face{font-family:LalekHex;src:url('/fonts/lalek-hex.ttf') format('truetype');font-display:swap}
+body[data-page="players"] .page-hero :is(.eyebrow,h1,.page-description,.breadcrumb){font-family:LalekHex,var(--display),sans-serif;font-weight:400}
+body[data-page="players"] .page-hero h1{letter-spacing:2px}
+body[data-page="players"] .page-hero .page-description{font-size:17px;letter-spacing:.5px}
