@@ -50,3 +50,15 @@ document.querySelectorAll('.seed-card[aria-controls]').forEach(card=>{
 (()=>{const cards=[...document.querySelectorAll('[data-spotlight]')];if(cards.length<2)return;
   let n;try{n=(parseInt(localStorage.getItem('npba-spotlight')||'-1',10)+1)%cards.length;localStorage.setItem('npba-spotlight',String(n));}catch{n=Math.floor(Math.random()*cards.length);}
   if(!Number.isFinite(n))n=0;cards.forEach((c,i)=>c.hidden=i!==n);})();
+
+// Players page: sort dropdown (Alphabetical / By Ranked Team / Free Agents) + search
+(()=>{const root=document.querySelector('[data-players]');if(!root)return;
+  const sel=root.querySelector('[data-pview-select]'),q=root.querySelector('[data-search]'),none=root.querySelector('[data-pnone]');
+  try{const saved=localStorage.getItem('npba-pview');if(saved&&sel.querySelector(`option[value="${saved}"]`))sel.value=saved;}catch{}
+  const apply=()=>{const v=sel.value,term=(q?.value||'').trim().toLowerCase();let shown=0;
+    root.querySelectorAll('[data-pview]').forEach(view=>{const on=view.dataset.pview===v;view.hidden=!on;if(!on)return;
+      view.querySelectorAll('.player-card').forEach(c=>{const m=!term||(c.dataset.searchValue||'').toLowerCase().includes(term);c.hidden=!m;if(m)shown++;});
+      view.querySelectorAll('[data-pgroup]').forEach(g=>{g.hidden=!!term&&!g.querySelector('.player-card:not([hidden])');});});
+    if(none)none.hidden=!(term&&!shown);};
+  sel.addEventListener('change',()=>{try{localStorage.setItem('npba-pview',sel.value)}catch{}apply();});
+  q?.addEventListener('input',apply);apply();})();
