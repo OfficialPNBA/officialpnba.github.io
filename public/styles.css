@@ -667,3 +667,8 @@ a.conf-btn{display:flex;align-items:center;justify-content:center;text-decoratio
 @font-face{font-family:Imperator;src:url('/fonts/imperator-bold.ttf') format('truetype');font-weight:400 900;font-display:swap}
 .drawer-roster li.filled .dr-posn{font-family:Imperator,ImpactClub,serif;font-weight:700;letter-spacing:1.5px}
 .drawer-roster li.filled .dr-pos em{font-family:Imperator,ImpactClub,serif;font-weight:700;letter-spacing:1px}
+
+/* Schedule page: blank stage on cracked concrete with a full-screen faint logo */
+.schedule-stage{position:relative;min-height:calc(100vh - 140px);overflow:hidden}
+.schedule-watermark{position:fixed;left:50%;top:calc(50% + 60px);width:min(90vw,78vh);height:auto;transform:translate(-50%,-50%) rotate(-12deg);opacity:.12;pointer-events:none;z-index:0}
+body.schedule-blank .utility,body.schedule-blank .footer{position:relative;z-index:2}
