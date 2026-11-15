@@ -23,7 +23,8 @@
     "wins": 0,
     "losses": 0,
     "primary": "#FFFFFF",
-    "secondary": "#D1D5DB"
+    "secondary": "#000000",
+    "nameOutline": "#FFFFFF"
   },
   {
     "id": "philadelphia-76ers",
@@ -35,8 +36,8 @@
     "seed": 3,
     "wins": 0,
     "losses": 0,
-    "primary": "#FFFFFF",
-    "secondary": "#D1D5DB"
+    "primary": "#ED174C",
+    "secondary": "#FFFFFF"
   },
   {
     "id": "cleveland-cavaliers",
@@ -48,8 +49,9 @@
     "seed": 4,
     "wins": 0,
     "losses": 0,
-    "primary": "#FFFFFF",
-    "secondary": "#E5E7EB"
+    "primary": "#860038",
+    "secondary": "#041E42",
+    "nameOutline": "#FFFFFF"
   },
   {
     "id": "miami-heat",
@@ -75,7 +77,7 @@
     "wins": 0,
     "losses": 0,
     "primary": "#FFFFFF",
-    "secondary": "#D1D5DB"
+    "secondary": "#777D84"
   },
   {
     "id": "new-york-knicks",
@@ -87,8 +89,8 @@
     "seed": 7,
     "wins": 0,
     "losses": 0,
-    "primary": "#FFFFFF",
-    "secondary": "#D1D5DB"
+    "primary": "#006BB6",
+    "secondary": "#FFFFFF"
   },
   {
     "id": "denver-nuggets",
@@ -100,8 +102,9 @@
     "seed": 8,
     "wins": 0,
     "losses": 0,
-    "primary": "#FFFFFF",
-    "secondary": "#E5E7EB"
+    "primary": "#0E2240",
+    "secondary": "#8B2131",
+    "nameOutline": "#FFFFFF"
   },
   {
     "id": "minnesota-timberwolves",
@@ -114,7 +117,7 @@
     "wins": 0,
     "losses": 0,
     "primary": "#78BE20",
-    "secondary": "#FFFFFF"
+    "secondary": "#9EA2A2"
   },
   {
     "id": "oklahoma-city-thunder",
@@ -140,7 +143,8 @@
     "wins": 0,
     "losses": 0,
     "primary": "#FFFFFF",
-    "secondary": "#D1D5DB"
+    "secondary": "#000000",
+    "nameOutline": "#FFFFFF"
   },
   {
     "id": "golden-state-warriors",
@@ -166,7 +170,7 @@
     "wins": 0,
     "losses": 0,
     "primary": "#FFFFFF",
-    "secondary": "#D1D5DB"
+    "secondary": "#C4CED4"
   },
   {
     "id": "memphis-grizzlies",
@@ -179,6 +183,7 @@
     "wins": 0,
     "losses": 0,
     "primary": "#F5B112",
-    "secondary": "#FFFFFF"
+    "secondary": "#12173F",
+    "nameOutline": "#FFFFFF"
   }
 ]
