@@ -5,12 +5,12 @@
     "abbreviation": "BOS",
     "conference": "Super",
     "color": "#007A33",
-    "logo": "",
+    "logo": "/assets/teams/boston-celtics.webp?v=1",
     "seed": 1,
     "wins": 0,
     "losses": 0,
-    "primary": "#007A33",
-    "secondary": "#BA9653"
+    "primary": "#BA9653",
+    "secondary": "#FFFFFF"
   },
   {
     "id": "chicago-bulls",
@@ -18,12 +18,12 @@
     "abbreviation": "CHI",
     "conference": "Super",
     "color": "#CE1141",
-    "logo": "",
+    "logo": "/assets/teams/chicago-bulls.webp?v=1",
     "seed": 2,
     "wins": 0,
     "losses": 0,
-    "primary": "#CE1141",
-    "secondary": "#ffffff"
+    "primary": "#FFFFFF",
+    "secondary": "#D1D5DB"
   },
   {
     "id": "philadelphia-76ers",
@@ -31,12 +31,12 @@
     "abbreviation": "PHI",
     "conference": "Super",
     "color": "#006BB6",
-    "logo": "",
+    "logo": "/assets/teams/philadelphia-76ers.webp?v=1",
     "seed": 3,
     "wins": 0,
     "losses": 0,
-    "primary": "#006BB6",
-    "secondary": "#ED174C"
+    "primary": "#FFFFFF",
+    "secondary": "#D1D5DB"
   },
   {
     "id": "cleveland-cavaliers",
@@ -44,12 +44,12 @@
     "abbreviation": "CLE",
     "conference": "Super",
     "color": "#860038",
-    "logo": "",
+    "logo": "/assets/teams/cleveland-cavaliers.webp?v=1",
     "seed": 4,
     "wins": 0,
     "losses": 0,
-    "primary": "#860038",
-    "secondary": "#FDBB30"
+    "primary": "#FDBB30",
+    "secondary": "#FFFFFF"
   },
   {
     "id": "miami-heat",
@@ -57,25 +57,25 @@
     "abbreviation": "MIA",
     "conference": "Super",
     "color": "#98002E",
-    "logo": "",
+    "logo": "/assets/teams/miami-heat.webp?v=1",
     "seed": 5,
     "wins": 0,
     "losses": 0,
     "primary": "#F9A01B",
-    "secondary": "#ffffff"
+    "secondary": "#FFFFFF"
   },
   {
     "id": "brooklyn-nets",
     "name": "Brooklyn Nets",
     "abbreviation": "BKN",
     "conference": "Super",
-    "color": "#3a3a3a",
-    "logo": "",
+    "color": "#000000",
+    "logo": "/assets/teams/brooklyn-nets.webp?v=1",
     "seed": 6,
     "wins": 0,
     "losses": 0,
-    "primary": "#ffffff",
-    "secondary": "#a1a1aa"
+    "primary": "#FFFFFF",
+    "secondary": "#D1D5DB"
   },
   {
     "id": "new-york-knicks",
@@ -83,12 +83,12 @@
     "abbreviation": "NYK",
     "conference": "Super",
     "color": "#006BB6",
-    "logo": "",
+    "logo": "/assets/teams/new-york-knicks.webp?v=1",
     "seed": 7,
     "wins": 0,
     "losses": 0,
     "primary": "#F58426",
-    "secondary": "#ffffff"
+    "secondary": "#BEC0C2"
   },
   {
     "id": "denver-nuggets",
@@ -96,12 +96,12 @@
     "abbreviation": "DEN",
     "conference": "Super",
     "color": "#0E2240",
-    "logo": "",
+    "logo": "/assets/teams/denver-nuggets.webp?v=1",
     "seed": 8,
     "wins": 0,
     "losses": 0,
     "primary": "#FEC524",
-    "secondary": "#8B2131"
+    "secondary": "#FFFFFF"
   },
   {
     "id": "minnesota-timberwolves",
@@ -109,12 +109,12 @@
     "abbreviation": "MIN",
     "conference": "Super",
     "color": "#0C2340",
-    "logo": "",
+    "logo": "/assets/teams/minnesota-timberwolves.webp?v=1",
     "seed": 9,
     "wins": 0,
     "losses": 0,
     "primary": "#78BE20",
-    "secondary": "#9EA2A2"
+    "secondary": "#FFFFFF"
   },
   {
     "id": "oklahoma-city-thunder",
@@ -122,7 +122,7 @@
     "abbreviation": "OKC",
     "conference": "Super",
     "color": "#007AC1",
-    "logo": "",
+    "logo": "/assets/teams/oklahoma-city-thunder.webp?v=1",
     "seed": 10,
     "wins": 0,
     "losses": 0,
@@ -134,13 +134,13 @@
     "name": "Portland Trail Blazers",
     "abbreviation": "POR",
     "conference": "Super",
-    "color": "#C8102E",
-    "logo": "",
+    "color": "#E03A3E",
+    "logo": "/assets/teams/portland-trail-blazers.webp?v=1",
     "seed": 11,
     "wins": 0,
     "losses": 0,
-    "primary": "#E03A3E",
-    "secondary": "#ffffff"
+    "primary": "#FFFFFF",
+    "secondary": "#D1D5DB"
   },
   {
     "id": "golden-state-warriors",
@@ -148,12 +148,12 @@
     "abbreviation": "GSW",
     "conference": "Super",
     "color": "#1D428A",
-    "logo": "",
+    "logo": "/assets/teams/golden-state-warriors.webp?v=1",
     "seed": 12,
     "wins": 0,
     "losses": 0,
     "primary": "#FFC72C",
-    "secondary": "#ffffff"
+    "secondary": "#FFFFFF"
   },
   {
     "id": "houston-rockets",
@@ -161,12 +161,12 @@
     "abbreviation": "HOU",
     "conference": "Super",
     "color": "#CE1141",
-    "logo": "",
+    "logo": "/assets/teams/houston-rockets.webp?v=1",
     "seed": 13,
     "wins": 0,
     "losses": 0,
-    "primary": "#CE1141",
-    "secondary": "#C4CED4"
+    "primary": "#FFFFFF",
+    "secondary": "#D1D5DB"
   },
   {
     "id": "memphis-grizzlies",
@@ -174,11 +174,11 @@
     "abbreviation": "MEM",
     "conference": "Super",
     "color": "#5D76A9",
-    "logo": "",
+    "logo": "/assets/teams/memphis-grizzlies.webp?v=1",
     "seed": 14,
     "wins": 0,
     "losses": 0,
-    "primary": "#5D76A9",
-    "secondary": "#F5B112"
+    "primary": "#F5B112",
+    "secondary": "#FFFFFF"
   }
 ]
