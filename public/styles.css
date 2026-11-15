@@ -697,3 +697,6 @@ body.schedule-blank .utility,body.schedule-blank .footer{position:relative;z-ind
 body[data-page="players"] .page-hero :is(.eyebrow,h1,.page-description,.breadcrumb){font-family:LalekHex,var(--display),sans-serif;font-weight:400}
 body[data-page="players"] .page-hero h1{letter-spacing:2px}
 body[data-page="players"] .page-hero .page-description{font-size:17px;letter-spacing:.5px}
+/* Players hero: single big "Official Player List" title */
+body[data-page="players"] .players-hero{padding-top:40px;padding-bottom:48px}
+body[data-page="players"] .page-hero h1.players-title{font:400 clamp(64px,11vw,216px)/.95 LalekHex,var(--display),sans-serif;letter-spacing:4px;margin:0;color:#f4f1ea;-webkit-text-stroke:clamp(6px,.9vw,14px) #000;paint-order:stroke fill;filter:drop-shadow(0 0 14px #f5b632aa) drop-shadow(0 0 34px #f5b63266);text-transform:uppercase;max-width:100%}
