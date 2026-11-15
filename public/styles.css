@@ -756,3 +756,6 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .team-drawer h4,.team-drawer h4 small,.team-drawer .drawer-roster,.dr-slot,.dr-head i,.team-drawer .role,.drawer-roster .dr-name,.drawer-roster .dr-stats,.drawer-roster .dr-stats *{font-family:Understory,ImpactClub,Impact,sans-serif}
 /* Understory demo is missing some digits: keep numbers in ImpactClub */
 .dr-slot,.team-drawer h4 small,.drawer-roster .dr-stats,.drawer-roster .dr-stats *{font-family:ImpactClub,Impact,sans-serif}
+.seed-card .sc-name strong{font-size:calc(21px * var(--ns,1))}
+.tier-playoffs .seed-card .sc-name strong{font-size:calc(26px * var(--ns,1))}
+@media(max-width:650px){.seed-card .sc-name strong{font-size:calc(17px * var(--ns,1))}.tier-playoffs .seed-card .sc-name strong{font-size:calc(20px * var(--ns,1))}}
