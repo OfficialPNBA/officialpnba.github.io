@@ -38,14 +38,23 @@ document.querySelectorAll('[data-standings]').forEach(board=>{
 });
 // Show admin-only controls (Edit Standings) to signed-in admins on this browser.
 try{if(localStorage.getItem('npba-admin'))document.querySelectorAll('[data-admin-only]').forEach(el=>el.hidden=false);}catch{}
-// Standings: click/tap a team card to open its roster and latest media (one open at a time).
-document.querySelectorAll('.seed-card[aria-controls]').forEach(card=>{
-  const toggle=()=>{const drawer=document.getElementById(card.getAttribute('aria-controls'));if(!drawer)return;const open=card.getAttribute('aria-expanded')!=='true';
-    document.querySelectorAll('.seed-card[aria-expanded="true"]').forEach(c=>{if(c!==card){c.setAttribute('aria-expanded','false');const d=document.getElementById(c.getAttribute('aria-controls'));if(d)d.hidden=true;c.closest('.seed-row')?.classList.remove('open');}});
-    card.setAttribute('aria-expanded',String(open));drawer.hidden=!open;card.closest('.seed-row')?.classList.toggle('open',open);};
-  card.addEventListener('click',toggle);
-  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
-});
+// Standings: hover (mouse) previews a team's roster; click/tap pins it open (one open at a time).
+(()=>{const cards=[...document.querySelectorAll('.seed-card[aria-controls]')];if(!cards.length)return;
+  const canHover=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  const drawerOf=c=>document.getElementById(c.getAttribute('aria-controls'));
+  const set=(c,open,pinned)=>{const d=drawerOf(c);if(!d)return;c.setAttribute('aria-expanded',String(open));c.dataset.pinned=open&&pinned?'1':'';d.hidden=!open;c.closest('.seed-row')?.classList.toggle('open',open);};
+  const closeOthers=c=>cards.forEach(o=>{if(o!==c&&o.getAttribute('aria-expanded')==='true')set(o,false);});
+  cards.forEach(card=>{const row=card.closest('.seed-row');let tOpen,tClose;
+    const toggle=()=>{clearTimeout(tOpen);clearTimeout(tClose);const isOpen=card.getAttribute('aria-expanded')==='true',pinned=card.dataset.pinned==='1';
+      if(isOpen&&pinned){set(card,false);return;}closeOthers(card);set(card,true,true);};
+    card.addEventListener('click',toggle);
+    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
+    if(canHover&&row){
+      row.addEventListener('mouseenter',()=>{clearTimeout(tClose);if(card.getAttribute('aria-expanded')==='true')return;
+        tOpen=setTimeout(()=>{if(cards.some(o=>o!==card&&o.dataset.pinned==='1'))return;closeOthers(card);set(card,true,false);},260);});
+      row.addEventListener('mouseleave',()=>{clearTimeout(tOpen);if(card.dataset.pinned==='1')return;tClose=setTimeout(()=>{if(card.dataset.pinned!=='1')set(card,false);},220);});
+    }});
+})();
 // Standings spotlight: show the next card on each page load (cycles through all of them).
 (()=>{const cards=[...document.querySelectorAll('[data-spotlight]')];if(cards.length<2)return;
   let n;try{n=(parseInt(localStorage.getItem('npba-spotlight')||'-1',10)+1)%cards.length;localStorage.setItem('npba-spotlight',String(n));}catch{n=Math.floor(Math.random()*cards.length);}
@@ -57,8 +66,8 @@ document.querySelectorAll('.seed-card[aria-controls]').forEach(card=>{
   try{const saved=localStorage.getItem('npba-pview');if(saved&&sel.querySelector(`option[value="${saved}"]`))sel.value=saved;}catch{}
   const apply=()=>{const v=sel.value,term=(q?.value||'').trim().toLowerCase();let shown=0;
     root.querySelectorAll('[data-pview]').forEach(view=>{const on=view.dataset.pview===v;view.hidden=!on;if(!on)return;
-      view.querySelectorAll('.player-card').forEach(c=>{const m=!term||(c.dataset.searchValue||'').toLowerCase().includes(term);c.hidden=!m;if(m)shown++;});
-      view.querySelectorAll('[data-pgroup]').forEach(g=>{g.hidden=!!term&&!g.querySelector('.player-card:not([hidden])');});});
+      view.querySelectorAll('.player-card,[data-rp-search]').forEach(c=>{const m=!term||(c.dataset.searchValue||c.dataset.rpSearch||'').toLowerCase().includes(term);c.hidden=!m;if(m)shown++;});
+      view.querySelectorAll('[data-pgroup]').forEach(g=>{g.hidden=!!term&&!g.querySelector('.player-card:not([hidden]),[data-rp-search]:not([hidden])');});});
     if(none)none.hidden=!(term&&!shown);};
   sel.addEventListener('change',()=>{try{localStorage.setItem('npba-pview',sel.value)}catch{}apply();});
   q?.addEventListener('input',apply);apply();})();

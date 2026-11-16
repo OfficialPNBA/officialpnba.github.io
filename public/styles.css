@@ -793,3 +793,38 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .tier-playoffs .sc-lbl{font-size:11px}
 @media(max-width:650px){.seed-row{grid-template-columns:40px minmax(0,1fr)}.seed-num{font-size:24px!important}.tier-playoffs .seed-num{font-size:28px!important}.seed-row>.seed-card{padding-left:18px}.seed-card{clip-path:polygon(0 0,100% 0,calc(100% - 16px) 100%,0 100%);padding-right:26px}.sc-lbl{font-size:8px;letter-spacing:1.5px}}
 @media(max-width:650px){.tier-playoffs .sc-logo,.tier-playoffs .sc-logo img,.sc-logo,.sc-logo img{width:54px;height:54px}.seed-card{gap:10px}.seed-card .sc-name strong{font-size:calc(17px * var(--ns,1));text-overflow:clip;overflow:visible;white-space:normal}.tier-playoffs .seed-card .sc-name strong{font-size:calc(19px * var(--ns,1))}.tier-playoffs .sc-record{font-size:38px}}
+/* Roster panel v2 (standings drop-down + Players by-team view) */
+.admin-input.rbx{display:block;margin-top:4px;font-size:12px;opacity:.85}
+.seed-row>.seed-card[aria-expanded=true]:not([data-pinned="1"])::before{content:'CLICK TO PIN'}
+.team-drawer.v2{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:14px;margin-top:-4px;background:#0b0c0e;border:0;border-top:3px solid var(--team);border-radius:0 0 10px 10px;box-shadow:0 14px 30px #000b}
+.team-drawer.v2[hidden]{display:none}
+.rp{--team:#3a3f47;position:relative;background:linear-gradient(180deg,#14161a,#0f1013);border:1px solid #23262b;border-left:3px solid var(--team);border-radius:8px;padding:14px 16px 12px;min-width:0;font-family:League,system-ui,sans-serif}
+.rp-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 0 8px}
+.rp-head h4,.team-drawer.v2 .rp-head h4{margin:0;font:700 22px/1 var(--display);font-style:italic;letter-spacing:1px;color:var(--gold);text-transform:uppercase}
+.rp-count{font:600 12px/1 League,sans-serif;letter-spacing:1px;color:#8b939e}
+.rp-list{list-style:none;margin:0;padding:0}
+.rp-row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:9px 2px;border-top:1px solid #ffffff12}
+.rp-row:first-child{border-top:0}
+.rp-av{width:40px;height:40px;border-radius:50%;overflow:hidden;background:#1d2024;box-shadow:0 0 0 2px color-mix(in srgb,var(--team) 70%,#000);display:grid;place-items:center}
+.rp-av img{width:100%;height:100%;object-fit:cover;object-position:top}
+.rp-av i{font:600 14px League,sans-serif;font-style:normal;color:#cfd3d9}
+.rp-id{display:flex;flex-direction:column;gap:2px;min-width:0}
+.rp-name{display:flex;align-items:center;gap:6px;min-width:0}
+.rp-dn{font:600 15px/1.2 League,system-ui,sans-serif;color:#f4f3ef;text-shadow:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rp-user{font:400 12px/1.2 League,system-ui,sans-serif;color:#8b939e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rp-badge{flex-shrink:0;font:700 10px/1 League,sans-serif;letter-spacing:.8px;text-transform:uppercase;padding:3px 6px;border-radius:4px;background:#ffffff14;color:#d5d8dd}
+.rp-badge.cap{background:var(--gold);color:#111;padding:3px 5px}
+.rp-badge.own{background:#f5b6322b;color:var(--gold-light)}
+.rp-meta{display:flex;align-items:center;gap:10px;font:500 12px/1 League,sans-serif;color:#a2a8b2;white-space:nowrap}
+.rp-meta b{font-weight:700;color:#f4f3ef}
+.rp-ovr{color:#f4f3ef;font-weight:700}.rp-ovr small{font-size:10px;color:#8b939e;letter-spacing:.8px}
+.rp-open{display:flex;align-items:center;gap:8px;margin:6px 0 0;padding:10px 2px 2px;border-top:1px dashed #ffffff1c;font:500 13px/1 League,sans-serif;color:#8b939e}
+.rp-dot{width:8px;height:8px;border-radius:50%;background:var(--team);box-shadow:0 0 0 2px #ffffff1a}
+.rp-empty{display:grid;justify-items:center;text-align:center;gap:6px;padding:22px 12px 18px;border:1px dashed #ffffff1f;border-radius:8px;background:radial-gradient(ellipse at 50% 0,color-mix(in srgb,var(--team) 18%,transparent),transparent 70%)}
+.rp-empty img{width:56px;height:56px;object-fit:contain;opacity:.9;filter:drop-shadow(0 2px 6px #000)}
+.rp-empty strong{font:700 15px/1.2 League,sans-serif;color:#f4f3ef;letter-spacing:.3px}
+.rp-empty span{font:500 13px/1.2 League,sans-serif;color:#8b939e}
+.rp-media .drawer-news{font-family:League,system-ui,sans-serif}
+.pteam>.rp{margin-left:74px}
+@media(max-width:760px){.team-drawer.v2{grid-template-columns:1fr;padding:10px}.pteam>.rp{margin-left:44px}}
+@media(max-width:520px){.rp{padding:12px}.rp-row{grid-template-columns:36px minmax(0,1fr);row-gap:4px}.rp-av{width:36px;height:36px}.rp-meta{grid-column:2;gap:8px}.rp-meta:empty{display:none}.pteam>.rp{margin-left:0}}
