@@ -761,3 +761,35 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 @media(max-width:650px){.seed-card .sc-name strong{font-size:calc(17px * var(--ns,1))}.tier-playoffs .seed-card .sc-name strong{font-size:calc(20px * var(--ns,1))}}
 /* Team names: solid white (shimmer flash kept), bigger dark shadow */
 .seed-card .sc-name strong{background:#fff;-webkit-background-clip:text;background-clip:text;animation:none;filter:drop-shadow(0 0 1.5px #000) drop-shadow(0 0 1.5px #000) drop-shadow(0 3px 4px #000) drop-shadow(0 6px 12px #000c)}
+
+/* ===== Ranking card v2: broadcast style ===== */
+.seed-row{gap:0;grid-template-columns:58px minmax(0,1fr)}
+.seed-num{align-self:stretch!important;width:auto!important;height:auto!important;margin:0!important;border:0!important;border-radius:6px 0 0 6px!important;padding:0 8px 0 0!important;display:grid;place-items:center;font:italic 700 34px/1 var(--display)!important;color:#0b0c0e!important;text-shadow:none!important;background:linear-gradient(160deg,#f4f3ef,#b9bcc2)!important;box-shadow:none!important;clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);position:relative;z-index:2}
+.tier-playoffs .seed-num{font-size:44px!important;background:linear-gradient(160deg,#ffe08a,#f5b632 55%,#c98a12)!important}
+.tier-lottery .seed-num{background:linear-gradient(160deg,#9aa0a8,#5d636c)!important;color:#0b0c0e!important}
+.seed-row>.seed-card{margin-left:-12px;padding-left:24px}
+.seed-row.open .seed-num{margin-top:0!important}
+.seed-card,.seed-card.ghost{border:0;border-radius:0 6px 6px 0;clip-path:polygon(0 0,100% 0,calc(100% - 28px) 100%,0 100%);padding-right:44px;
+  background:linear-gradient(110deg,color-mix(in srgb,var(--team) 86%,#fff) 0%,var(--team) 38%,color-mix(in srgb,var(--team) 52%,#000) 100%);
+  box-shadow:inset 0 -5px 0 var(--p,#fff),inset 0 1px 0 #ffffff30}
+.seed-card:after{background:linear-gradient(180deg,#ffffff1f,transparent 50%),repeating-linear-gradient(115deg,transparent 0 14px,#ffffff06 14px 16px)}
+.tier-playoffs .seed-card{animation:none;box-shadow:inset 0 -6px 0 var(--p,#fff),inset 0 1px 0 #ffffff30}
+.tier-playoffs .seed-row{filter:drop-shadow(0 0 10px #f5b63238)}
+.seed-row>.seed-card:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.seed-row>.seed-card::before{right:52px}
+/* watermark: big, cropped off the right edge, faint */
+.sc-mark{left:auto;right:-7%;width:46%;top:-38%;bottom:-38%;opacity:.16;transform:rotate(-10deg);filter:grayscale(.2) brightness(1.4)}
+/* logo: no circle, soft shadow */
+.sc-monogram{background:none;border:0}
+.sc-logo img{filter:drop-shadow(0 4px 8px #000a)}
+/* name: broadcast display font */
+.seed-card .sc-name strong{font-family:var(--display);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.6px;line-height:1;font-size:calc(30px * var(--ns,1))}
+.tier-playoffs .seed-card .sc-name strong{font-size:calc(38px * var(--ns,1))}
+@media(max-width:650px){.seed-card .sc-name strong{font-size:calc(21px * var(--ns,1))}.tier-playoffs .seed-card .sc-name strong{font-size:calc(25px * var(--ns,1))}}
+/* scoreboard record */
+.sc-numbers{align-items:center}
+.sc-record{font-style:italic}
+.sc-lbl{font:700 10px/1 League,Arial,sans-serif;letter-spacing:2.5px;color:#ffffffcc;margin-top:4px;text-shadow:0 1px 2px #000}
+.tier-playoffs .sc-lbl{font-size:11px}
+@media(max-width:650px){.seed-row{grid-template-columns:40px minmax(0,1fr)}.seed-num{font-size:24px!important}.tier-playoffs .seed-num{font-size:28px!important}.seed-row>.seed-card{padding-left:18px}.seed-card{clip-path:polygon(0 0,100% 0,calc(100% - 16px) 100%,0 100%);padding-right:26px}.sc-lbl{font-size:8px;letter-spacing:1.5px}}
+@media(max-width:650px){.tier-playoffs .sc-logo,.tier-playoffs .sc-logo img,.sc-logo,.sc-logo img{width:54px;height:54px}.seed-card{gap:10px}.seed-card .sc-name strong{font-size:calc(17px * var(--ns,1));text-overflow:clip;overflow:visible;white-space:normal}.tier-playoffs .seed-card .sc-name strong{font-size:calc(19px * var(--ns,1))}.tier-playoffs .sc-record{font-size:38px}}
