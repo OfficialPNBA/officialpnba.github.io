@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "vision",
+    "name": "Vision",
+    "teamId": "chicago-bulls",
+    "position": "PG/SG",
+    "overall": 99,
+    "owner": true,
+    "roblox": "spitboy",
+    "lineup": "starter"
+  }
+]
