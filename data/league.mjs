@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 // Publish confirmed league information only.
-export const league = { name:'NPBA', fullName:'National Practical Basketball Association', discordUrl:null, robloxUrl:null };
+export const league = { name:'RNBA', fullName:'Roblox National Basketball Association', discordUrl:null, robloxUrl:null };
 // Teams live in data/teams.json so the Admin page (/admin/) can edit and save them.
 // Team: { id, name, abbreviation, conference ('Super'), logo, color ('#hex' card color),
 //        seed (number or null for blank), wins, losses (numbers; when set they replace records from games) }
@@ -9,7 +9,7 @@ export const teams = JSON.parse(readFileSync(new URL('./teams.json', import.meta
 //   position, number, formerTeamId (last team, shown for free agents),
 //   owner (true = Franchise Owner), coach (true = Head Coach), lineup ('starter' | 'bench' | null) }
 export const players = JSON.parse(readFileSync(new URL('./players.json', import.meta.url), 'utf8'));
-// One NPBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
+// One RNBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
 export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSpots:4 };
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
@@ -20,7 +20,7 @@ export const games = [];
 export const posts = [
   { id:'welcome-post', name:'Spitboy', handle:'spitboy', avatar:'/assets/media/spitboy.webp', date:'2026-11-14',
     text:'Welcome To The **League**! Media Will Provide **Storylines**, **League Updates**, and Other Information to Keep Up With the **Season**. I look Forward to Provide **Game Articles**, **Power Rankings**, and Even Show some of the **Insane Season Stats**. Who Will Win **Awards**? Who Will Become the **Biggest League Villain**? **What will Happen Next?**',
-    image:'/assets/media/welcome-post.webp', imageAlt:'NPBA logo' }
+    image:'/assets/media/welcome-post.webp', imageAlt:'RNBA logo' }
 ];
 // Standings spotlight: one card shows beside the standings and it rotates to the next one on every page refresh.
 // { id, player, teamId, image, look: 'fire' | 'stinker' | 'dnp',
@@ -35,16 +35,16 @@ export const spotlights = [
 ];
 // Article: { id, title, category, summary, image, body, url, download }
 export const media = [
-  { id:'welcome-to-npba', title:'A new home for the game.', category:'Announcements',
-    summary:'Meet the new NPBA league hub. The competition, the community, and every next possession — in one place.',
+  { id:'welcome-to-rnba', title:'A new home for the game.', category:'Announcements',
+    summary:'Meet the new RNBA league hub. The competition, the community, and every next possession — in one place.',
     image:'/assets/rnba-logo.png', body:[
-      'Welcome to the official home of the National Practical Basketball Association, a Practical Basketball league on Roblox.',
+      'Welcome to the official home of the Roblox National Basketball Association, a basketball league on Roblox.',
       'This is your place to follow the standings, find upcoming matchups, catch league coverage, and keep up with roster moves. Official teams, schedules, and results will appear as they are published.',
-      'The new gold, silver, and black NPBA badge leads the way. Find it in Brand assets, ready to download with a transparent background.'
+      'The new red, white, and blue RNBA badge leads the way. Find it in Brand assets, ready to download with a transparent background.'
     ]
   },
-  { id:'official-npba-badge', title:'The mark of our league.', category:'Brand assets',
-    summary:'The official NPBA badge. Gold basketball, silver lettering, and a transparent background.',
+  { id:'official-rnba-badge', title:'The mark of our league.', category:'Brand assets',
+    summary:'The official RNBA badge. Red, white, and blue on a black shield, with a transparent background.',
     image:'/assets/rnba-logo.png', download:'/assets/rnba-logo.png' }
 ];
 // Transaction: { id, title, type, date, teamIds, players, summary,
