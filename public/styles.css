@@ -759,3 +759,5 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .seed-card .sc-name strong{font-size:calc(21px * var(--ns,1))}
 .tier-playoffs .seed-card .sc-name strong{font-size:calc(26px * var(--ns,1))}
 @media(max-width:650px){.seed-card .sc-name strong{font-size:calc(17px * var(--ns,1))}.tier-playoffs .seed-card .sc-name strong{font-size:calc(20px * var(--ns,1))}}
+/* Team names: solid white (shimmer flash kept), bigger dark shadow */
+.seed-card .sc-name strong{background:#fff;-webkit-background-clip:text;background-clip:text;animation:none;filter:drop-shadow(0 0 1.5px #000) drop-shadow(0 0 1.5px #000) drop-shadow(0 3px 4px #000) drop-shadow(0 6px 12px #000c)}
