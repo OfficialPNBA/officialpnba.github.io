@@ -76,7 +76,7 @@ const search=placeholder=>`<label class="search-box">${icon('search')}<input typ
 function empty(symbol,title,text,extra=''){return `<div class="empty-state"><div class="empty-emblem">${icon(symbol)}</div><p class="eyebrow">RNBA LEAGUE CENTER</p><h2>${title}</h2><p>${text}</p>${extra}</div>`;}
 const noResults='<div class="no-results" data-no-results hidden><h2>No matches found</h2><p>Try another filter or search term.</p><button class="button outline" data-reset>Reset filters <span aria-hidden="true">→</span></button></div>';
 const ROSTER_SLOTS=15;
-const roleRank=p=>p.owner?0:p.coach?1:p.lineup==='starter'?2:p.lineup==='bench'?3:4;
+const roleRank=p=>p.owner?0:p.coach?1:p.captain?1.5:p.lineup==='starter'?2:p.lineup==='bench'?3:4;
 const roster=id=>players.filter(p=>p.teamId===id).sort((a,b)=>roleRank(a)-roleRank(b)||(Number(a.number)||999)-(Number(b.number)||999)||a.name.localeCompare(b.name));
 const roleTags=p=>[p.owner&&'<b class="role owner">Franchise Owner</b>',p.coach&&'<b class="role coach">Head Coach</b>',p.lineup==='starter'&&'<b class="role starter">Starter</b>',p.lineup==='bench'&&'<b class="role bench">Bench</b>'].filter(Boolean).join('');
 const nick=t=>t.name.split(' ').slice(-1)[0];
@@ -89,17 +89,25 @@ function mentions(t){
     ...media.map(m=>({kind:'media',date:m.date||'',id:m.id,who:m.category,title:m.title,text:[m.title,m.summary,...(m.body||[])].join(' '),ids:m.teamIds}))];
   return items.filter(i=>hit(i.text,i.ids)).sort((a,b)=>String(b.date).localeCompare(String(a.date)))[0];
 }
-function teamDrawer(t){
-  const r=roster(t.id);const m=mentions(t);
-  const slots=Array.from({length:Math.max(ROSTER_SLOTS,r.length)},(_,i)=>r[i]);
-  const tc=/^#[0-9a-f]{3,8}$/i.test(t.color||'')?t.color:'#3a3f47';
-  const stat=(v,l)=>`<span class="dr-stat"><b>${v!=null&&v!==''?esc(v):'–'}</b><small>${l}</small></span>`;
-  const initials=n=>esc(String(n||'?').split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase());
-  const list=`<ol class="drawer-roster">${slots.map((p,i)=>p?`<li tabindex="0" class="filled ${p.owner||p.coach?'staff':p.lineup||''}"><span class="dr-slot">${i+1}</span><span class="dr-head">${p.headshot?`<img src="${esc(p.headshot)}" alt="" loading="lazy">`:`<i>${initials(p.name)}</i>`}</span><span class="dr-id"><span class="dr-name">${t.logo?`<img class="dr-logo" src="${esc(t.logo)}" alt="">`:''}<span class="dr-pname">${esc(p.name)}</span></span><span class="dr-pos">${p.number!=null&&p.number!==''?`<em>#${esc(p.number)}</em>`:''}<span class="dr-posn">${esc((p.position||'').split(/[\/, ]+/).filter(Boolean).join(' / '))}</span></span></span><span class="dr-stats">${stat(p.overall,'OVR')}${stat(p.gp,'GP')}${stat(p.min,'MIN')}</span><span class="dr-roles">${roleTags(p)}</span></li>`:`<li class="open"><span class="dr-slot">${i+1}</span><span class="dr-head"></span><span class="dr-id"><span class="dr-name">Open slot</span></span></li>`).join('')}</ol>`;
-  const news=m?`<a class="drawer-news" href="/media/#${esc(m.id)}">${m.avatar?`<img src="${url(m.avatar)}" alt="" width="40" height="40">`:''}<span><b>${esc(m.who)}</b>${m.handle?` <small>@${esc(m.handle)}</small>`:''}<span class="dn-text">${esc(m.title?m.title+' ':'')}${esc(m.text.length>220?m.text.slice(0,217).trim()+'…':m.text).slice(0,260)}</span></span></a>`:'<p class="drawer-empty">No media about this team yet.</p>';
-  return `<div class="team-drawer" id="drawer-${esc(t.id)}" style="--team:${tc};--p1:${esc(t.primary||'#fff')};--p2:${esc(t.secondary||t.primary||'#fff')}" hidden><div class="drawer-col roster-col"><h4>ROSTER <small>${r.length} / ${ROSTER_SLOTS}</small></h4>${list}</div><div class="drawer-col"><h4>LATEST MEDIA</h4>${news}</div></div>`;
-}
 const hxc=(v,d)=>/^#[0-9a-f]{3,8}$/i.test(v||'')?v:d;
+// Roster panel (standings drop-down + Players "by team" view)
+const pinitials=n=>esc(String(n||'?').split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase());
+const robloxUser=p=>{const u=String(p.roblox||p.username||'').replace(/^@/,'').trim();return u&&u.toLowerCase()!==String(p.name||'').toLowerCase()?u:'';};
+function rosterPanel(t,{search=false}={}){
+  const r=roster(t.id);const open=Math.max(0,ROSTER_SLOTS-r.length);
+  const badges=p=>[p.captain&&'<b class="rp-badge cap" title="Captain">C</b>',p.owner&&'<b class="rp-badge own">Owner</b>',p.coach&&'<b class="rp-badge coach">Coach</b>'].filter(Boolean).join('');
+  const meta=p=>[p.number!=null&&p.number!==''?`<b>#${esc(p.number)}</b>`:'',p.position?`<span>${esc(String(p.position).split(/[\/, ]+/).filter(Boolean).join(' / '))}</span>`:'',Number.isFinite(p.overall)?`<span class="rp-ovr">${esc(p.overall)} <small>OVR</small></span>`:''].filter(Boolean).join('');
+  const row=p=>{const u=robloxUser(p);return `<li class="rp-row${p.captain?' is-cap':''}"${search?` data-rp-search="${esc([p.name,u,t.name].join(' ').toLowerCase())}"`:''}><span class="rp-av">${p.headshot?`<img src="${esc(p.headshot)}" alt="" loading="lazy" width="40" height="40">`:`<i>${pinitials(p.name)}</i>`}</span><span class="rp-id"><span class="rp-name"><span class="rp-dn">${esc(p.name)}</span>${badges(p)}</span>${u?`<span class="rp-user">@${esc(u)}</span>`:''}</span><span class="rp-meta">${meta(p)}</span></li>`;};
+  const body=r.length?`<ul class="rp-list">${r.map(row).join('')}</ul>${open?`<p class="rp-open"><span class="rp-dot" aria-hidden="true"></span>${open} roster spot${open===1?'':'s'} available</p>`:''}`
+    :`<div class="rp-empty">${url(t.logo)?`<img src="${url(t.logo)}" alt="" width="56" height="56" loading="lazy">`:''}<strong>No players signed yet</strong><span>${ROSTER_SLOTS} roster spots available</span></div>`;
+  return `<section class="rp" style="--team:${hxc(t.color,'#3a3f47')}"><header class="rp-head"><h4>TEAM ROSTER</h4><span class="rp-count">${r.length} / ${ROSTER_SLOTS}</span></header>${body}</section>`;
+}
+function teamDrawer(t){
+  const m=mentions(t);
+  const tc=hxc(t.color,'#3a3f47');
+  const news=m?`<a class="drawer-news" href="/media/#${esc(m.id)}">${m.avatar?`<img src="${url(m.avatar)}" alt="" width="40" height="40">`:''}<span><b>${esc(m.who)}</b>${m.handle?` <small>@${esc(m.handle)}</small>`:''}<span class="dn-text">${esc(m.title?m.title+' ':'')}${esc(m.text.length>220?m.text.slice(0,217).trim()+'…':m.text).slice(0,260)}</span></span></a>`:'<p class="drawer-empty">No media about this team yet.</p>';
+  return `<div class="team-drawer v2" id="drawer-${esc(t.id)}" style="--team:${tc}" hidden>${rosterPanel(t)}<section class="rp rp-media"><header class="rp-head"><h4>LATEST MEDIA</h4></header>${news}</section></div>`;
+}
 const teamRecord=t=>Number.isFinite(t.wins)||Number.isFinite(t.losses)?{w:t.wins||0,l:t.losses||0}:stat(t.id);
 const recPct=s=>s.w+s.l?s.w/(s.w+s.l):0;
 const rankTeams=list=>list.map(t=>({t,s:teamRecord(t)})).sort((a,b)=>(a.t.seed??Infinity)-(b.t.seed??Infinity)||recPct(b.s)-recPct(a.s)||b.s.w-a.s.w||(a.t.officialRank??Infinity)-(b.t.officialRank??Infinity)||a.t.name.localeCompare(b.t.name));
@@ -113,7 +121,7 @@ function playersPage(){
   const fa=players.filter(p=>!team(p.teamId)).sort(byName);
   const grid=list=>`<div class="player-grid">${list.map(pcard).join('')}</div>`;
   const ranked=rankTeams(teams);
-  const groups=ranked.map((x,i)=>{const r=players.filter(p=>p.teamId===x.t.id).sort((a,b)=>roleRank(a)-roleRank(b)||byName(a,b));return `<section class="pteam ${i<(standingsFormat.playoffSpots||6)?'tier-playoffs':''}" data-pgroup><div class="seed-row pteam-head"><span class="seed-num" aria-label="Rank ${i+1}">${i+1}</span>${seedCardHTML(x)}</div>${r.length?grid(r):'<p class="pteam-empty">No signed players yet.</p>'}</section>`;}).join('');
+  const groups=ranked.map((x,i)=>{return `<section class="pteam ${i<(standingsFormat.playoffSpots||6)?'tier-playoffs':''}" data-pgroup><div class="seed-row pteam-head"><span class="seed-num" aria-label="Rank ${i+1}">${i+1}</span>${seedCardHTML(x)}</div>${rosterPanel(x.t,{search:true})}</section>`;}).join('');
   const views=`<div class="pview" data-pview="alpha">${grid([...players].sort(byName))}</div><div class="pview" data-pview="team" hidden>${groups}</div><div class="pview" data-pview="fa" hidden>${fa.length?grid(fa):'<p class="pteam-empty">No free agents right now.</p>'}</div>`;
   return `<section class="players-board" data-players><div class="filter-toolbar page-toolbar players-toolbar"><label class="pview-select"><span class="sr-only">Sort players</span><select data-pview-select><option value="alpha">Alphabetical (${players.length})</option><option value="team">By Ranked Team (High to Low)</option><option value="fa">Free Agents (${fa.length})</option></select></label>${search('Search players or teams')}</div>${views}<p class="pteam-empty" data-pnone hidden>No players match your search.</p>`+`${!players.length?`<div class="data-panel">${empty('ball','THE PLAYER INDEX IS COMING.','Signed players and free agents will appear here as teams build their rosters.',link('View the standings','/standings/','button outline'))}</div>`:''}</section>`;
 }

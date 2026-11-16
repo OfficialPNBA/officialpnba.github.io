@@ -42,6 +42,8 @@
     if (!o.teamId && p.formerTeamId) o.formerTeamId = p.formerTeamId;
     if (p.owner) o.owner = true;
     if (p.coach) o.coach = true;
+    if (p.captain) o.captain = true;
+    { const u = String(p.roblox || '').replace(/^@/, '').trim(); if (u) o.roblox = u; }
     if (p.lineup === 'starter' || p.lineup === 'bench') o.lineup = p.lineup;
     return o;
   });
@@ -108,14 +110,14 @@
       .sort((a, b) => (a.p.teamId ? 0 : 1) - (b.p.teamId ? 0 : 1) || tname(a.p.teamId).localeCompare(tname(b.p.teamId)) || a.p.name.localeCompare(b.p.name));
     const teamOpts = p => `<option value="">Free Agent</option>${[...teams].sort((a, b) => a.name.localeCompare(b.name)).map(t => `<option value="${esc(t.id)}"${t.id === p.teamId ? ' selected' : ''}>${esc(t.name)}</option>`).join('')}`;
     rows.innerHTML = shown.map(({ p, i }) => `<tr data-pi="${i}">
-      <td><input class="admin-input wide" data-pk="name" value="${esc(p.name)}" placeholder="Player name" aria-label="Player name"></td>
+      <td><input class="admin-input wide" data-pk="name" value="${esc(p.name)}" placeholder="Display name" aria-label="Display name"><input class="admin-input wide rbx" data-pk="roblox" value="${esc(p.roblox || '')}" placeholder="@Roblox username" aria-label="Roblox username"></td>
       <td><select class="admin-input team" data-pk="teamId" aria-label="Team">${teamOpts(p)}</select></td>
       <td><label class="shot-cell" title="Upload headshot"><span class="admin-shot">${pendingShots.get(p) ? `<img src="${pendingShots.get(p).preview}" alt="">` : p.headshot ? `<img src="${esc(p.headshot)}" alt="">` : '+'}</span><input type="file" accept="image/*" data-pshot hidden aria-label="Upload headshot"></label></td>
       <td><input class="admin-input pos" data-pk="position" value="${esc(p.position || '')}" maxlength="14" placeholder="PG/SG" aria-label="Positions"></td>
       <td><input type="number" min="0" max="99" class="admin-input num" data-pk="overall" value="${esc(p.overall ?? '')}" placeholder="–" aria-label="Overall"></td>
       <td><input type="number" min="0" max="999" class="admin-input num" data-pk="gp" value="${esc(p.gp ?? '')}" placeholder="0" aria-label="Games played"></td>
       <td><input type="number" min="0" max="99999" class="admin-input num wide-num" data-pk="min" value="${esc(p.min ?? '')}" placeholder="0" aria-label="Minutes played"></td>
-      <td><div class="role-cell"><label class="role-chk"><input type="checkbox" data-pk="owner"${p.owner ? ' checked' : ''}> Owner</label><label class="role-chk"><input type="checkbox" data-pk="coach"${p.coach ? ' checked' : ''}> Coach</label><select class="admin-input lineup" data-pk="lineup" aria-label="Starter or bench"><option value="">—</option><option value="starter"${p.lineup === 'starter' ? ' selected' : ''}>Starter</option><option value="bench"${p.lineup === 'bench' ? ' selected' : ''}>Bench</option></select></div></td>
+      <td><div class="role-cell"><label class="role-chk"><input type="checkbox" data-pk="owner"${p.owner ? ' checked' : ''}> Owner</label><label class="role-chk"><input type="checkbox" data-pk="coach"${p.coach ? ' checked' : ''}> Coach</label><label class="role-chk"><input type="checkbox" data-pk="captain"${p.captain ? ' checked' : ''}> Captain</label><select class="admin-input lineup" data-pk="lineup" aria-label="Starter or bench"><option value="">—</option><option value="starter"${p.lineup === 'starter' ? ' selected' : ''}>Starter</option><option value="bench"${p.lineup === 'bench' ? ' selected' : ''}>Bench</option></select></div></td>
       <td><input class="admin-input num" data-pk="number" value="${esc(p.number ?? '')}" maxlength="3" placeholder="0" aria-label="Number"></td>
       <td>${p.teamId ? '<span class="pill signed">Signed</span>' : `<span class="pill fa">Free Agent</span>${p.formerTeamId && tname(p.formerTeamId) ? `<small class="former">formerly ${esc(tname(p.formerTeamId))}</small>` : ''}`}</td>
       <td><button class="admin-x" data-premove title="Remove player" aria-label="Remove ${esc(p.name)}">✕</button></td></tr>`).join('');
@@ -230,7 +232,7 @@
     const tr = e.target.closest('tr'); const k = e.target.dataset.pk; if (!tr || !k) return;
     const p = players[+tr.dataset.pi];
     if (k === 'teamId') { const v = e.target.value || null; if (!v && p.teamId) p.formerTeamId = p.teamId; if (v) delete p.formerTeamId; p.teamId = v; renderPlayers(); return; }
-    if (k === 'owner' || k === 'coach') { p[k] = e.target.checked; status(); return; }
+    if (k === 'owner' || k === 'coach' || k === 'captain') { p[k] = e.target.checked; status(); return; }
     if (k === 'lineup') { p.lineup = e.target.value || null; status(); return; }
     p[k] = e.target.value; status();
   };
