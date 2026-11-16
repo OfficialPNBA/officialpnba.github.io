@@ -63,3 +63,9 @@ export const bannerPlayers = [
   { team:'Sin City Vice', image:'/assets/banner/vice.webp', color:'#e0233a', side:'right', scale:.9, shift:1 },
   { team:'Phoenix Redrocks', image:'/assets/banner/redrocks.webp', color:'#e0482a', side:'right', scale:.95, shift:1.5 }
 ];
+// Homepage hub: the leagues on the revolving logo carousel (front to back).
+// logo: image path (null shows a "coming soon" placeholder badge). href: where "Enter" goes (null = not open yet).
+export const hubLeagues = [
+  { id:'rnba', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/rnba-logo.png', href:'/standings/', color:'#f5b632' },
+  { id:'league-2', name:'League Two', fullName:'Second league coming soon', logo:null, href:null, color:'#6fa8ff' },
+];

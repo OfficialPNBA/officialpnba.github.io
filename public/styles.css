@@ -828,3 +828,49 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .pteam>.rp{margin-left:74px}
 @media(max-width:760px){.team-drawer.v2{grid-template-columns:1fr;padding:10px}.pteam>.rp{margin-left:44px}}
 @media(max-width:520px){.rp{padding:12px}.rp-row{grid-template-columns:36px minmax(0,1fr);row-gap:4px}.rp-av{width:36px;height:36px}.rp-meta{grid-column:2;gap:8px}.rp-meta:empty{display:none}.pteam>.rp{margin-left:0}}
+
+/* Homepage league hub: revolving globe of league logos */
+.hub{--accent:#f5b632;display:flex;flex-direction:column;align-items:center;padding:28px 0 26px;min-height:clamp(560px,calc(100svh - 122px),900px);user-select:none;-webkit-user-select:none}
+.hub .hero-rays{-webkit-mask:radial-gradient(circle at 50% 48%,#000 0 8%,#0008 25%,transparent 55%);mask:radial-gradient(circle at 50% 48%,#000 0 8%,#0008 25%,transparent 55%)}
+.hub-top{position:relative;z-index:5;text-align:center}
+.hub-top h1{font:700 clamp(30px,3.4vw,50px)/1.05 var(--display);margin-top:8px;letter-spacing:.5px}
+.hub-top h1>span{color:var(--accent);transition:color .5s}
+.hub-stage{position:relative;z-index:4;width:min(1400px,100%);flex:1;min-height:clamp(300px,44svh,520px);cursor:grab;touch-action:pan-y;outline:none}
+.hub.is-dragging .hub-stage{cursor:grabbing}
+.hub-stage:focus-visible{outline:2px dashed #ffffff30;outline-offset:-10px}
+.hub-globe{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hub-floor{position:absolute;left:50%;bottom:2%;width:min(70%,760px);height:16%;translate:-50% 0;border-radius:50%;background:radial-gradient(ellipse at 50% 50%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 68%);filter:blur(6px);pointer-events:none;transition:background .6s}
+.hub-item{position:absolute;left:50%;top:50%;display:grid;place-items:center;will-change:transform,opacity,filter;transform:translate(-50%,-50%);-webkit-tap-highlight-color:transparent;outline:none}
+.hub:not(.is-ready) .hub-item:not([data-i="0"]){opacity:0}
+.hub:not(.is-ready) .hub-item{width:min(42vw,52svh);height:min(42vw,52svh)}
+.hub-item img,.hub-placeholder{width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 22px 30px #000c) drop-shadow(0 0 28px color-mix(in srgb,var(--c) 30%,transparent))}
+.hub-item.is-front img{animation:hub-float 5s ease-in-out infinite}
+.hub-item:focus-visible .hub-halo{opacity:1}
+.hub-halo{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c) 32%,transparent),transparent 65%);opacity:.75;z-index:-1;pointer-events:none}
+.hub-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4%;color:var(--c)}
+.hub-placeholder svg{width:78%;height:auto;font-family:var(--display)}
+.hub-placeholder>span{font:600 clamp(10px,1.1vw,15px)/1 League,sans-serif;letter-spacing:3px;color:#cfd6e2}
+.hub-captions{position:relative;z-index:5;display:grid;text-align:center;min-height:136px}
+.hub-caption{grid-area:1/1;opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s;pointer-events:none;display:flex;flex-direction:column;align-items:center}
+.hub-caption.is-active{opacity:1;transform:none;pointer-events:auto}
+.hub-count{font-size:10px;letter-spacing:2.5px;color:#939ead}
+.hub-caption h2{font:700 clamp(34px,4vw,60px)/1 var(--display);margin-top:6px;color:#fff;text-shadow:0 0 30px color-mix(in srgb,var(--accent) 45%,transparent)}
+.hub-full{font-size:13px;color:#a8b1bf;margin-top:6px}
+.hub-caption .button{margin-top:16px}
+.hub-soon{cursor:default;color:#cfd6e2;letter-spacing:1.5px}
+.hub-controls{position:relative;z-index:5;display:flex;align-items:center;gap:18px;margin-top:16px}
+.hub-arrow{width:42px;height:42px;display:grid;place-items:center;border:1px solid #3a3d42;background:#111316cc;color:var(--white);border-radius:50%;transition:border-color .2s,color .2s}
+.hub-arrow:hover{border-color:var(--accent);color:var(--accent)}
+.hub-arrow[data-dir="-1"] .icon{transform:scaleX(-1)}
+.hub-arrow .icon{width:18px;height:18px}
+.hub-dots{display:flex;gap:9px}
+.hub-dot{width:9px;height:9px;border-radius:50%;background:#3d424a;border:0;padding:0;transition:background .3s,width .3s}
+.hub-dot.is-active{background:var(--accent);width:26px;border-radius:5px}
+.hub-hint{position:absolute;z-index:5;left:50%;top:calc(50% + 30px);translate:-50% 0;display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#d8dde5;background:#0d0e10b3;border:1px solid #ffffff1a;padding:8px 14px;border-radius:20px;pointer-events:none;transition:opacity .5s;animation:hub-hint 2.4s ease-in-out 1.2s infinite;backdrop-filter:blur(4px)}
+.hub-hint>span{width:18px;height:18px;border:1.5px solid currentColor;border-radius:50%;position:relative}
+.hub-hint>span:after{content:'';position:absolute;inset:4px;border-radius:50%;background:currentColor}
+.hub.was-used .hub-hint{opacity:0;animation:none}
+@keyframes hub-float{50%{translate:0 -10px}}
+@keyframes hub-hint{0%,100%{transform:translateX(0)}50%{transform:translateX(-26px)}}
+@media(max-width:700px){.hub{padding:20px 0 22px;min-height:0}.hub-top h1{font-size:30px}.hub-top .eyebrow{font-size:9px}.hub-stage{flex:none;height:min(92vw,360px);min-height:0}.hub-captions{min-height:140px}.hub-caption h2{font-size:38px}.hub-full{font-size:12px;padding-inline:18px}.hub-hint{top:auto;bottom:6%;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.hub-item.is-front img,.hub-hint{animation:none}}
