@@ -4,7 +4,11 @@
 // it is kept only in this browser.
 (() => {
   const REPO = 'OfficialPNBA/officialpnba.github.io';
-  const FILE = 'data/teams.json';
+  // ?league=2 edits the second (red logo) league's standings.
+  const LEAGUE = new URLSearchParams(location.search).get('league') === '2' ? 2 : 1;
+  const FILE = LEAGUE === 2 ? 'data/teams-2.json' : 'data/teams.json';
+  document.querySelectorAll('[data-league-pick]').forEach(a => { if (+a.dataset.leaguePick === LEAGUE) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  document.querySelectorAll('[data-league-standings]').forEach(a => { a.href = LEAGUE === 2 ? '/league-2/standings/' : '/standings/'; });
   const API = `https://api.github.com/repos/${REPO}`;
   const KEY = 'npba-admin-key';
   const $ = s => document.querySelector(s);

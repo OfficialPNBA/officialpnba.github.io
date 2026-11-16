@@ -67,5 +67,5 @@ export const bannerPlayers = [
 // logo: image path (null shows a "coming soon" placeholder badge). href: where "Enter" goes (null = not open yet).
 export const hubLeagues = [
   { id:'rnba', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/rnba-logo.png', href:'/standings/', color:'#f5b632' },
-  { id:'league-2', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/league2-logo.png', href:null, color:'#e5262b' },
+  { id:'league-2', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/league2-logo.png', href:'/league-2/standings/', color:'#e5262b' },
 ];

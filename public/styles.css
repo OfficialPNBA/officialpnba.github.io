@@ -874,3 +874,9 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 @keyframes hub-hint{0%,100%{transform:translateX(0)}50%{transform:translateX(-26px)}}
 @media(max-width:700px){.hub{padding:20px 0 22px;min-height:0}.hub-top h1{font-size:30px}.hub-top .eyebrow{font-size:9px}.hub-stage{flex:none;height:min(92vw,360px);min-height:0}.hub-captions{min-height:140px}.hub-caption h2{font-size:38px}.hub-full{font-size:12px;padding-inline:18px}.hub-hint{top:auto;bottom:6%;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.hub-item.is-front img,.hub-hint{animation:none}}
+/* Admin: pick which league's standings to edit */
+.admin-league{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.admin-league>span{font-size:10px;letter-spacing:1.6px;color:#939ead;text-transform:uppercase;margin-right:4px}
+.admin-league a{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border:1px solid #3a3d42;font-size:12px;color:#c9d0da;background:#111316}
+.admin-league a img{width:28px;height:28px;object-fit:contain}
+.admin-league a[aria-current]{border-color:var(--gold);color:var(--white);background:#dbab3114}
