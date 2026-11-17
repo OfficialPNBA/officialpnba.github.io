@@ -1007,3 +1007,13 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .hub-arrow.hub-arrow-shield:active{transform:scale(.94)}
 .hub-arrow.hub-arrow-shield:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
 .server-hub .hub-controls{gap:22px}
+/* Server Hub title artwork: shoots in, slams, then breathes (bright/dim every ~4.5s) */
+.server-hub h1.slam-art{display:block;width:min(780px,56vw,calc((100svh - 88px)*.85));margin:0 auto;line-height:0}
+.slam-art-wrap{position:relative;display:block}
+.slam-title-img{position:relative;z-index:2;display:block;width:100%;height:auto;animation:artIn .52s cubic-bezier(.18,.9,.32,1.15) .6s both,artGlow 4.5s ease-in-out 1.7s infinite}
+.slam-ghost-img{position:absolute;inset:0;z-index:1;width:100%;height:auto;opacity:0;filter:blur(4px) sepia(1) saturate(4) hue-rotate(-12deg);animation:ghostLeft .6s ease-out .6s both}
+.slam-ghost-img+.slam-ghost-img{animation-delay:.66s}
+@keyframes artIn{0%{transform:translateX(-120vw) skewX(-24deg) scaleX(1.6);opacity:0;filter:blur(10px) brightness(1.6)}60%{transform:translateX(3%) skewX(8deg) scaleX(.95);opacity:1;filter:blur(0) brightness(1.4)}80%{transform:translateX(-1%) skewX(-2deg)}100%{transform:none;opacity:1;filter:brightness(1) drop-shadow(0 0 0 #ffb10000)}}
+@keyframes artGlow{0%,100%{filter:brightness(1) drop-shadow(0 0 0 #ffb10000)}50%{filter:brightness(1.22) drop-shadow(0 0 18px #ffb100b0) drop-shadow(0 0 42px #ff7a0070)}}
+@media(max-width:650px){.server-hub h1.slam-art{width:94vw}}
+@media(prefers-reduced-motion:reduce){.slam-title-img,.slam-ghost-img{animation:none!important}.slam-ghost-img{display:none}}
