@@ -8,5 +8,83 @@
     "owner": true,
     "roblox": "spitboy",
     "lineup": "starter"
+  },
+  {
+    "id": "owner-pam-celtics",
+    "name": "Pam",
+    "teamId": "boston-celtics",
+    "owner": true
+  },
+  {
+    "id": "owner-b-76ers",
+    "name": "b",
+    "teamId": "philadelphia-76ers",
+    "owner": true
+  },
+  {
+    "id": "owner-p-nets",
+    "name": "p",
+    "teamId": "brooklyn-nets",
+    "owner": true
+  },
+  {
+    "id": "owner-envi-knicks",
+    "name": "Envi",
+    "teamId": "new-york-knicks",
+    "owner": true
+  },
+  {
+    "id": "owner-steezo-cavaliers",
+    "name": "steezo",
+    "teamId": "cleveland-cavaliers",
+    "owner": true
+  },
+  {
+    "id": "owner-kimani-gaulden-heat",
+    "name": "kimani gaulden",
+    "teamId": "miami-heat",
+    "owner": true
+  },
+  {
+    "id": "owner-z-timberwolves",
+    "name": "z",
+    "teamId": "minnesota-timberwolves",
+    "owner": true
+  },
+  {
+    "id": "owner-runfrmzen-blazers",
+    "name": "runfrmzen",
+    "teamId": "portland-trail-blazers",
+    "owner": true
+  },
+  {
+    "id": "owner-iso-thunder",
+    "name": "iso",
+    "teamId": "oklahoma-city-thunder",
+    "owner": true
+  },
+  {
+    "id": "owner-tai-nuggets",
+    "name": "tai",
+    "teamId": "denver-nuggets",
+    "owner": true
+  },
+  {
+    "id": "owner-sony-grizzlies",
+    "name": "Sony",
+    "teamId": "memphis-grizzlies",
+    "owner": true
+  },
+  {
+    "id": "owner-js-rockets",
+    "name": "js",
+    "teamId": "houston-rockets",
+    "owner": true
+  },
+  {
+    "id": "owner-y-warriors",
+    "name": "y",
+    "teamId": "golden-state-warriors",
+    "owner": true
   }
 ]
