@@ -927,3 +927,30 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 }
 @media(prefers-reduced-motion:reduce){.sched-title span,.week-head span{animation:none}}
 @supports not (color:color-mix(in srgb,red 50%,blue)){.mc-team{background:var(--team)}}
+
+/* Community: Discord server invite card (banner + server icon + blurple join button) */
+.community-links:has(.discord-card){grid-template-columns:1fr}
+.discord-card{--blurple:#5865f2;position:relative;display:block;width:100%;padding:0;border:1px solid #2b2d35;border-radius:16px;background:#1e1f24;color:#fff;font:inherit;text-align:left;cursor:pointer;overflow:hidden;box-shadow:0 18px 40px #0007;transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
+.discord-card:hover,.discord-card:focus-visible{transform:translateY(-3px);border-color:#5865f2aa;box-shadow:0 22px 50px #000a,0 0 0 1px #5865f255,0 0 46px #5865f240}
+.discord-card:focus-visible{outline:2px solid var(--blurple);outline-offset:3px}
+.dc-banner{position:relative;display:block;aspect-ratio:1160/592;overflow:hidden;background:#111}
+.dc-banner img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.001);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s}
+.dc-banner:after{content:'';position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(to bottom,transparent,#1e1f24f2)}
+.discord-card:hover .dc-banner img{transform:scale(1.07);filter:saturate(1.15) brightness(1.06)}
+.dc-shine{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,transparent 35%,#ffffff2e 50%,transparent 65%);transform:translateX(-120%);pointer-events:none}
+.discord-card:hover .dc-shine{transform:translateX(120%);transition:transform .9s ease}
+.dc-icon{position:absolute;z-index:2;left:22px;bottom:40px;width:88px;height:88px;border-radius:24px;background:#1e1f24;border:5px solid #1e1f24;box-shadow:0 8px 20px #0008;display:grid;place-items:center}
+.dc-icon img{width:100%;height:100%;object-fit:contain;border-radius:18px;background:radial-gradient(circle,#2a2b31,#141519)}
+.dc-online{position:absolute;right:-6px;bottom:-6px;width:24px;height:24px;border-radius:50%;background:#23a55a;border:5px solid #1e1f24}
+.dc-online:after{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid #23a55a;animation:dcPulse 2s ease-out infinite}
+@keyframes dcPulse{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.dc-join{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;margin:14px 18px 18px 126px;min-height:56px;padding:0 22px;border-radius:10px;background:var(--blurple);box-shadow:0 4px 0 #3c45a5,0 10px 24px #5865f24d;transition:background .2s,box-shadow .2s,transform .15s}
+.dc-join strong{font-size:17px;font-weight:700;letter-spacing:.2px;white-space:nowrap}
+.dc-join .icon{width:24px;height:24px;color:#fff;flex-shrink:0}
+.dc-join .icon:last-child{width:15px;height:15px;opacity:.85;transition:transform .2s}
+.discord-card:hover .dc-join{background:#6a75ff;box-shadow:0 4px 0 #3c45a5,0 0 32px #5865f2a6}
+.discord-card:hover .dc-join .icon:last-child{transform:translate(2px,-2px)}
+.discord-card:active .dc-join{transform:translateY(3px);box-shadow:0 1px 0 #3c45a5,0 6px 16px #5865f24d}
+@media(max-width:650px){.discord-card{border-radius:14px}.dc-icon{left:14px;bottom:36px;width:68px;height:68px;border-radius:19px;border-width:4px}.dc-icon img{border-radius:14px}.dc-online{width:20px;height:20px;border-width:4px;right:-5px;bottom:-5px}.dc-join{margin:12px 12px 14px 96px;min-height:50px;padding:0 10px;gap:8px}.dc-join strong{font-size:13.5px}.dc-join .icon{width:20px;height:20px}.dc-join .icon:last-child{display:none}}
+@media(max-width:380px){.dc-join strong{font-size:13px}.dc-join{padding:0 10px;margin-left:90px}}
+@media(prefers-reduced-motion:reduce){.discord-card,.dc-banner img,.dc-join{transition:none}.dc-online:after{animation:none}.discord-card:hover .dc-shine{transition:none}}
