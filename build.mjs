@@ -45,7 +45,12 @@ function communityAction(kind,label){
   const content=`${icon(kind)}<span><strong>${label}</strong><small>${url(destination)?(kind==='discord'?'Join the conversation':'Step onto the court'):'Official link coming soon'}</small></span>${icon('external')}`;
   return url(destination)?`<a class="community-link ${kind}" href="${url(destination)}" target="_blank" rel="noopener noreferrer">${content}</a>`:`<button class="community-link ${kind}" data-dialog="${kind}-dialog">${content}</button>`;
 }
-function community(){return `<section class="shell community-wrap" id="community" aria-labelledby="community-heading"><div class="community-panel"><h2 id="community-heading" class="sr-only">RNBA community links</h2><div class="community-links">${communityAction('discord','Official Discord')}${communityAction('roblox','Official Roblox')}</div></div></section>`;}
+function discordCard(){
+  const destination=url(league.discordUrl);
+  const inner=`<span class="dc-banner"><img src="/assets/discord-banner.webp" width="1160" height="592" alt="" loading="lazy" draggable="false"><span class="dc-shine" aria-hidden="true"></span></span><span class="dc-icon" aria-hidden="true"><img src="/assets/league2-logo.png" width="1254" height="1254" alt="" loading="lazy" draggable="false"><i class="dc-online"></i></span><span class="dc-join">${icon('discord')}<strong>Official Discord Server</strong>${icon('external')}</span>`;
+  return destination?`<a class="discord-card" href="${destination}" target="_blank" rel="noopener noreferrer">${inner}</a>`:`<button type="button" class="discord-card" data-dialog="discord-dialog">${inner}</button>`;
+}
+function community(){return `<section class="shell community-wrap" id="community" aria-labelledby="community-heading"><div class="community-panel"><h2 id="community-heading" class="sr-only">RNBA community links</h2><div class="community-links">${discordCard()}${communityAction('roblox','Official Roblox')}</div></div></section>`;}
 function dialogs(){return ['discord','roblox'].map(kind=>`<dialog id="${kind}-dialog" aria-labelledby="${kind}-title"><button class="dialog-close" data-close aria-label="Close">${icon('close')}</button><span class="dialog-icon">${icon(kind)}</span><p class="eyebrow">THE RNBA COMMUNITY</p><h2 id="${kind}-title">${kind==='discord'?'The conversation starts soon.':'See you on the court.'}</h2><p>The official RNBA ${kind==='discord'?'Discord invite':'Roblox link'} hasn’t been published yet. Check back here for the verified destination.</p><button class="button" data-close>Got it ${icon('arrow')}</button></dialog>`).join('');}
 function layout(page,body){
   const title=page.key==='home'?'RNBA | Roblox National Basketball Association':`${page.title} | RNBA`;
