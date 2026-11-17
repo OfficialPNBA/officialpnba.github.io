@@ -19,7 +19,7 @@
   };
   let token = store.get(), sha = null, saved = [], teams = [], logos = [];
   let pSha = null, pSaved = [], players = [], section = 'teams', pQuery = '';
-  const PFILE = 'data/players.json';
+  const PFILE = LEAGUE === 2 ? 'data/players-2.json' : 'data/players.json';
   const MAX = LEAGUE === 2 ? 10 : 14; // league 1: 14 teams; red league 2: 10 teams
   fetch('/assets/teams/logos.json', { cache: 'no-store' }).then(r => r.json()).then(l => { logos = l; if (teams.length) render(); }).catch(() => {});
 
