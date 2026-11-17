@@ -114,6 +114,6 @@ export const bannerPlayers = [
 // Homepage hub: the leagues on the revolving logo carousel (front to back).
 // logo: image path (null shows a "coming soon" placeholder badge). href: where "Enter" goes (null = not open yet).
 export const hubLeagues = [
-  { id:'rnba', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/rnba-logo.png', href:'/standings/', color:'#f5b632' },
-  { id:'league-2', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/league2-logo.png', href:'/league-2/standings/', color:'#e5262b' },
+  { id:'rnba', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/rnba-logo.png', href:'/standings/', color:'#f5b632', discordUrl:'https://discord.gg/k3NgzhHYrb', discordName:'Roblox National Basketball Association™ (Practical Basketball)', discordBanner:null },
+  { id:'league-2', name:'RNBA', fullName:'Roblox National Basketball Association', logo:'/assets/league2-logo.png', href:'/league-2/standings/', color:'#e5262b', discordUrl:'https://discord.gg/officialrnba', discordName:'RNBA™ (Season 15)', discordBanner:'/assets/discord-banner.webp' },
 ];
