@@ -9,6 +9,8 @@ export const teams = JSON.parse(readFileSync(new URL('./teams.json', import.meta
 //   position, number, formerTeamId (last team, shown for free agents),
 //   owner (true = Franchise Owner), coach (true = Head Coach), lineup ('starter' | 'bench' | null) }
 export const players = JSON.parse(readFileSync(new URL('./players.json', import.meta.url), 'utf8'));
+// Red RNBA league (league 2) players, from the S15 Mastersheet. Edited from /admin/?league=2.
+export const players2 = JSON.parse(readFileSync(new URL('./players-2.json', import.meta.url), 'utf8'));
 // One RNBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
 export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSpots:4 };
 // Red RNBA league: 10 teams. Seeds 1-7 playoffs, 8-9 play-in, 10 out.

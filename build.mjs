@@ -1,7 +1,7 @@
 import { cp, mkdir, rm, writeFile, readFile } from 'node:fs/promises';
 const teams2 = JSON.parse(await readFile(new URL('./data/teams-2.json', import.meta.url), 'utf8'));
 const rulesText = await readFile(new URL('./data/rules.txt', import.meta.url), 'utf8');
-import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, standingsFormat2, posts, players, spotlights, hubLeagues } from './data/league.mjs';
+import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, standingsFormat2, posts, players, players2, spotlights, hubLeagues } from './data/league.mjs';
 
 const pages = [
   { key:'home', path:'/', title:'Home' },
@@ -80,7 +80,7 @@ function empty(symbol,title,text,extra=''){return `<div class="empty-state"><div
 const noResults='<div class="no-results" data-no-results hidden><h2>No matches found</h2><p>Try another filter or search term.</p><button class="button outline" data-reset>Reset filters <span aria-hidden="true">→</span></button></div>';
 const ROSTER_SLOTS=15;
 const roleRank=p=>p.owner?0:p.coach?1:p.captain?1.5:p.lineup==='starter'?2:p.lineup==='bench'?3:4;
-const roster=id=>players.filter(p=>p.teamId===id).sort((a,b)=>roleRank(a)-roleRank(b)||(Number(a.number)||999)-(Number(b.number)||999)||a.name.localeCompare(b.name));
+const roster=id=>[...players,...players2].filter(p=>p.teamId===id).sort((a,b)=>roleRank(a)-roleRank(b)||(Number(a.number)||999)-(Number(b.number)||999)||a.name.localeCompare(b.name));
 const roleTags=p=>[p.owner&&'<b class="role owner">Franchise Owner</b>',p.coach&&'<b class="role coach">Head Coach</b>',p.lineup==='starter'&&'<b class="role starter">Starter</b>',p.lineup==='bench'&&'<b class="role bench">Bench</b>'].filter(Boolean).join('');
 const nick=t=>t.name.split(' ').slice(-1)[0];
 const plain=s=>String(s||'').replace(/\*\*/g,'');

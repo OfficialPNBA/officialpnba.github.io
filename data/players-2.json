@@ -1,0 +1,323 @@
+[
+  {
+    "id": "jemenision",
+    "name": "Jemenision",
+    "teamId": "kansas-city-outlaws",
+    "owner": true
+  },
+  {
+    "id": "space",
+    "name": "Space",
+    "teamId": "kansas-city-outlaws",
+    "coach": true
+  },
+  {
+    "id": "63wic",
+    "name": "63wic",
+    "teamId": "kansas-city-outlaws"
+  },
+  {
+    "id": "jontey",
+    "name": "Jontey",
+    "teamId": "kansas-city-outlaws"
+  },
+  {
+    "id": "zyfnn",
+    "name": "Zyfnn",
+    "teamId": "kansas-city-outlaws"
+  },
+  {
+    "id": "o-slns",
+    "name": "o_slns",
+    "teamId": "kansas-city-outlaws"
+  },
+  {
+    "id": "qzytex",
+    "name": "qZytex",
+    "teamId": "kansas-city-outlaws"
+  },
+  {
+    "id": "xeno",
+    "name": "xeno",
+    "teamId": "kansas-city-outlaws"
+  },
+  {
+    "id": "peak",
+    "name": "Peak",
+    "teamId": "kyoto-panthers",
+    "owner": true
+  },
+  {
+    "id": "rubifyings",
+    "name": "Rubifyings",
+    "teamId": "kyoto-panthers"
+  },
+  {
+    "id": "shakerings",
+    "name": "Shakerings",
+    "teamId": "kyoto-panthers"
+  },
+  {
+    "id": "tristan",
+    "name": "Tristan",
+    "teamId": "kyoto-panthers"
+  },
+  {
+    "id": "tytapsfrr",
+    "name": "Tytapsfrr",
+    "teamId": "kyoto-panthers"
+  },
+  {
+    "id": "viapayed",
+    "name": "Viapayed",
+    "teamId": "kyoto-panthers"
+  },
+  {
+    "id": "strangerthings",
+    "name": "strangerthings",
+    "teamId": "kyoto-panthers"
+  },
+  {
+    "id": "fearisalwaysnear",
+    "name": "FearIsAlwaysNear",
+    "teamId": "minnesota-aurora",
+    "owner": true
+  },
+  {
+    "id": "61o2",
+    "name": "61o2",
+    "teamId": "minnesota-aurora"
+  },
+  {
+    "id": "hexaraa",
+    "name": "Hexaraa",
+    "teamId": "minnesota-aurora"
+  },
+  {
+    "id": "iock4444",
+    "name": "Iock4444",
+    "teamId": "minnesota-aurora"
+  },
+  {
+    "id": "mpak",
+    "name": "Mpak",
+    "teamId": "minnesota-aurora"
+  },
+  {
+    "id": "mari",
+    "name": "mari",
+    "teamId": "minnesota-aurora"
+  },
+  {
+    "id": "rosewood",
+    "name": "rosewood",
+    "teamId": "minnesota-aurora"
+  },
+  {
+    "id": "works0g",
+    "name": "Works0g",
+    "teamId": "oklahoma-city-chiefs",
+    "owner": true
+  },
+  {
+    "id": "slapclosed",
+    "name": "slapclosed",
+    "teamId": "oklahoma-city-chiefs",
+    "coach": true
+  },
+  {
+    "id": "0bon",
+    "name": "0bon",
+    "teamId": "oklahoma-city-chiefs"
+  },
+  {
+    "id": "duderdee33",
+    "name": "DuderDee33",
+    "teamId": "oklahoma-city-chiefs"
+  },
+  {
+    "id": "feel-n",
+    "name": "Feel_n",
+    "teamId": "oklahoma-city-chiefs"
+  },
+  {
+    "id": "ivject",
+    "name": "ivject",
+    "teamId": "oklahoma-city-chiefs"
+  },
+  {
+    "id": "pkzvq",
+    "name": "pkzvq",
+    "teamId": "oklahoma-city-chiefs"
+  },
+  {
+    "id": "qvionix",
+    "name": "qVionix",
+    "teamId": "oklahoma-city-chiefs"
+  },
+  {
+    "id": "sony",
+    "name": "Sony",
+    "teamId": "roseville-reapers",
+    "owner": true
+  },
+  {
+    "id": "drakefinatic",
+    "name": "drakefinatic",
+    "teamId": "roseville-reapers",
+    "coach": true
+  },
+  {
+    "id": "poulpop337",
+    "name": "Poulpop337",
+    "teamId": "roseville-reapers"
+  },
+  {
+    "id": "kurumi",
+    "name": "kurumi",
+    "teamId": "roseville-reapers"
+  },
+  {
+    "id": "myportfolio",
+    "name": "myportfolio",
+    "teamId": "roseville-reapers"
+  },
+  {
+    "id": "v6spi",
+    "name": "v6spi",
+    "teamId": "roseville-reapers"
+  },
+  {
+    "id": "jaier",
+    "name": "Jaier",
+    "teamId": "san-diego-hounds",
+    "owner": true
+  },
+  {
+    "id": "w3rln",
+    "name": "w3rln",
+    "teamId": "san-diego-hounds",
+    "coach": true
+  },
+  {
+    "id": "3itg",
+    "name": "3itg",
+    "teamId": "san-diego-hounds"
+  },
+  {
+    "id": "derrick",
+    "name": "Derrick",
+    "teamId": "san-diego-hounds"
+  },
+  {
+    "id": "fearsmercy",
+    "name": "FearsMercy",
+    "teamId": "san-diego-hounds"
+  },
+  {
+    "id": "myst",
+    "name": "Myst",
+    "teamId": "san-diego-hounds"
+  },
+  {
+    "id": "dual1ty",
+    "name": "dual1ty",
+    "teamId": "seattle-supernovas",
+    "owner": true
+  },
+  {
+    "id": "jahn",
+    "name": "Jahn",
+    "teamId": "seattle-supernovas",
+    "coach": true
+  },
+  {
+    "id": "esmart2011",
+    "name": "esmart2011",
+    "teamId": "sinaloa-sinners",
+    "owner": true
+  },
+  {
+    "id": "sucharecklessguy",
+    "name": "sucharecklessguy",
+    "teamId": "sinaloa-sinners",
+    "coach": true
+  },
+  {
+    "id": "hellbelove",
+    "name": "HellBeLove",
+    "teamId": "sinaloa-sinners"
+  },
+  {
+    "id": "l-0wk",
+    "name": "L_0wk",
+    "teamId": "sinaloa-sinners"
+  },
+  {
+    "id": "obscurnitai",
+    "name": "obscurnitaI",
+    "teamId": "sinaloa-sinners"
+  },
+  {
+    "id": "yhr6",
+    "name": "yhr6",
+    "teamId": "sinaloa-sinners"
+  },
+  {
+    "id": "aupkf",
+    "name": "Aupkf",
+    "teamId": "tampa-bay-buzz",
+    "owner": true
+  },
+  {
+    "id": "cacti",
+    "name": "Cacti",
+    "teamId": "tampa-bay-buzz"
+  },
+  {
+    "id": "chemicalninja",
+    "name": "Chemicalninja",
+    "teamId": "tampa-bay-buzz"
+  },
+  {
+    "id": "standonds",
+    "name": "standonds",
+    "teamId": "vancouver-nighthawks",
+    "owner": true
+  },
+  {
+    "id": "2i08",
+    "name": "2i08",
+    "teamId": "vancouver-nighthawks"
+  },
+  {
+    "id": "ant",
+    "name": "Ant",
+    "teamId": "vancouver-nighthawks"
+  },
+  {
+    "id": "ardesire",
+    "name": "ArDesire",
+    "teamId": "vancouver-nighthawks"
+  },
+  {
+    "id": "tjaykun",
+    "name": "Tjaykun",
+    "teamId": "vancouver-nighthawks"
+  },
+  {
+    "id": "iikobe24",
+    "name": "iiKobe24",
+    "teamId": "vancouver-nighthawks"
+  },
+  {
+    "id": "vaeruki",
+    "name": "vaeruki",
+    "teamId": "vancouver-nighthawks"
+  },
+  {
+    "id": "zzzkami10",
+    "name": "zzzkami10",
+    "teamId": "vancouver-nighthawks"
+  }
+]
