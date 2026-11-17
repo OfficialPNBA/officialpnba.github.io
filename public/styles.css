@@ -1017,3 +1017,7 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 @keyframes artGlow{0%,100%{filter:brightness(1) drop-shadow(0 0 0 #ffb10000)}50%{filter:brightness(1.22) drop-shadow(0 0 18px #ffb100b0) drop-shadow(0 0 42px #ff7a0070)}}
 @media(max-width:650px){.server-hub h1.slam-art{width:94vw}}
 @media(prefers-reduced-motion:reduce){.slam-title-img,.slam-ghost-img{animation:none!important}.slam-ghost-img{display:none}}
+/* Server Hub: league picker starts blurred and slowly comes into focus (clear at ~7s) */
+.server-hub .hub-stage,.server-hub .hub-controls{animation:hubFocus 7s cubic-bezier(.45,0,.35,1) both}
+@keyframes hubFocus{0%{opacity:0;filter:blur(28px);transform:scale(.96)}12%{opacity:1;filter:blur(24px)}35%{filter:blur(18px);transform:scale(.98)}100%{opacity:1;filter:blur(0);transform:none}}
+@media(prefers-reduced-motion:reduce){.server-hub .hub-stage,.server-hub .hub-controls{animation:none!important}}
