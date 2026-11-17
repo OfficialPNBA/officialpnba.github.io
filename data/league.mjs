@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 // Publish confirmed league information only.
-export const league = { name:'RNBA', fullName:'Roblox National Basketball Association', discordUrl:null, robloxUrl:null };
+export const league = { name:'RNBA', fullName:'Roblox National Basketball Association', discordUrl:'https://discord.gg/officialrnba', robloxUrl:null };
 // Teams live in data/teams.json so the Admin page (/admin/) can edit and save them.
 // Team: { id, name, abbreviation, conference ('Super'), logo, color ('#hex' card color),
 //        seed (number or null for blank), wins, losses (numbers; when set they replace records from games) }
