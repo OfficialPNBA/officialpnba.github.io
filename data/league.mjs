@@ -11,6 +11,8 @@ export const teams = JSON.parse(readFileSync(new URL('./teams.json', import.meta
 export const players = JSON.parse(readFileSync(new URL('./players.json', import.meta.url), 'utf8'));
 // One RNBA Super Conference: 14 teams. Seeds 1-6 Playoffs, 7-10 Play-In, 11-14 Out Of Playoffs.
 export const standingsFormat = { teamsPerConference:14, playoffSpots:6, playInSpots:4 };
+// Red RNBA league: 10 teams. Seeds 1-7 playoffs, 8-9 play-in, 10 out.
+export const standingsFormat2 = { teamsPerConference:10, playoffSpots:7, playInSpots:2 };
 // Game: { id, week, homeId, awayId, tipoff (ISO with offset), status,
 //         homeScore, awayScore, replayUrl }. Status: scheduled | final | postponed.
 // Listed in order: first team shown on the left (awayId), second on the right (homeId). No tipoff = time TBA.

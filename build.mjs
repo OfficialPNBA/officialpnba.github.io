@@ -1,7 +1,7 @@
 import { cp, mkdir, rm, writeFile, readFile } from 'node:fs/promises';
 const teams2 = JSON.parse(await readFile(new URL('./data/teams-2.json', import.meta.url), 'utf8'));
 const rulesText = await readFile(new URL('./data/rules.txt', import.meta.url), 'utf8');
-import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, posts, players, spotlights, hubLeagues } from './data/league.mjs';
+import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, standingsFormat2, posts, players, spotlights, hubLeagues } from './data/league.mjs';
 
 const pages = [
   { key:'home', path:'/', title:'Home' },
@@ -146,7 +146,7 @@ function spotlightCards(){
 }
 function standingsPage(lg={teams,standings:'/standings/',admin:'/admin/'}){
   // Card-style standings for the single RNBA Super Conference: Playoffs / Play-In / Out Of Playoffs tiers.
-  const {playoffSpots=6,playInSpots=4,teamsPerConference=14}=standingsFormat;
+  const {playoffSpots=6,playInSpots=4,teamsPerConference=14}=lg.format||standingsFormat;
   const pct=s=>s.w+s.l?s.w/(s.w+s.l):0;
   const rec=t=>Number.isFinite(t.wins)||Number.isFinite(t.losses)?{w:t.wins||0,l:t.losses||0}:stat(t.id);
   const order=list=>list.map(t=>({t,s:rec(t)})).sort((a,b)=>(a.t.seed??Infinity)-(b.t.seed??Infinity)||pct(b.s)-pct(a.s)||b.s.w-a.s.w||(a.t.officialRank??Infinity)-(b.t.officialRank??Infinity)||a.t.name.localeCompare(b.t.name));
@@ -224,7 +224,7 @@ await rm('dist',{recursive:true,force:true});
 await cp('public','dist',{recursive:true});
 for(const page of pages){navLeague=page.key==='standings'?{standings:'/standings/'}:null;await mkdir(`dist${page.path}`,{recursive:true});await writeFile(`dist${page.path}index.html`,layout(page,page.key==='home'?home():innerPage(page)));}
 // Second league (red RNBA logo): its own copy of the standings, reached only from its logo on the homepage hub.
-{const L2={standings:'/league-2/standings/',admin:'/admin/?league=2'};navLeague=L2;const page={...pages.find(p=>p.key==='standings'),path:L2.standings};
+{const L2={standings:'/league-2/standings/',admin:'/admin/?league=2',format:standingsFormat2};navLeague=L2;const page={...pages.find(p=>p.key==='standings'),path:L2.standings};
 const html=layout(page,innerPage(page).replace(/<div class="breadcrumb">[\s\S]*?<\/div>/,'<div class="breadcrumb"><a href="/">Home</a><span>/</span><span>Standings</span></div>')).replace(standingsPage(),standingsPage({teams:teams2,...L2})).replaceAll('/assets/rnba-logo.png','/assets/league2-logo.png');
 await mkdir(`dist${L2.standings}`,{recursive:true});await writeFile(`dist${L2.standings}index.html`,html);navLeague=null;}
 await mkdir('dist/admin',{recursive:true});await writeFile('dist/admin/index.html',layout(adminPage,adminBody()).replace('</body>',`<script src="/admin.js?v=${BUILD}"></script></body>`).replace('<meta name="description"','<meta name="robots" content="noindex"><meta name="description"'));

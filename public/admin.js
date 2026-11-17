@@ -20,7 +20,7 @@
   let token = store.get(), sha = null, saved = [], teams = [], logos = [];
   let pSha = null, pSaved = [], players = [], section = 'teams', pQuery = '';
   const PFILE = 'data/players.json';
-  const MAX = 14; // one Super Conference of 14 teams
+  const MAX = LEAGUE === 2 ? 10 : 14; // league 1: 14 teams; red league 2: 10 teams
   fetch('/assets/teams/logos.json', { cache: 'no-store' }).then(r => r.json()).then(l => { logos = l; if (teams.length) render(); }).catch(() => {});
 
   const gh = (path, opts = {}) => fetch(API + path, { ...opts, headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}`, 'X-GitHub-Api-Version': '2022-11-28', ...(opts.headers || {}) } });
