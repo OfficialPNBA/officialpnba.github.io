@@ -53,13 +53,6 @@
     "headshot": "https://cdn.discordapp.com/avatars/546816182888693760/54f310a721adc74313974d60a59300e0.webp?size=128"
   },
   {
-    "id": "owner-z-timberwolves",
-    "name": "z",
-    "teamId": "minnesota-timberwolves",
-    "owner": true,
-    "headshot": "https://cdn.discordapp.com/avatars/972398364735967242/11504a57ed70f6872b7a2e4e7f72d696.webp?size=128"
-  },
-  {
     "id": "owner-runfrmzen-blazers",
     "name": "runfrmzen",
     "teamId": "portland-trail-blazers",
@@ -100,5 +93,12 @@
     "teamId": "golden-state-warriors",
     "owner": true,
     "headshot": "https://cdn.discordapp.com/avatars/818538815911493673/d651757ab03f29ddada5cabffeea1973.webp?size=128"
+  },
+  {
+    "id": "owner-hahahahahahhaahahaha-timberwolves",
+    "name": "hahahahahahhaahahaha",
+    "teamId": "minnesota-timberwolves",
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1315571888147402824/b4b80b376e4fca8b7862720f3e3c489c.webp?size=128"
   }
 ]
