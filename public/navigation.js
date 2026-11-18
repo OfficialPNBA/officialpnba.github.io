@@ -38,6 +38,10 @@ document.querySelectorAll('[data-standings]').forEach(board=>{
 });
 // Show admin-only controls (Edit Standings) to signed-in admins on this browser.
 try{if(localStorage.getItem('npba-admin'))document.querySelectorAll('[data-admin-only]').forEach(el=>el.hidden=false);}catch{}
+// Locked pages (Schedule, Media, League Rules, Transactions): public sees a lock screen; signed-in admins are taken to the real page.
+try{if(localStorage.getItem('npba-admin')){const S='/staff-7q4k2x/';
+  document.querySelectorAll('a[data-locked]').forEach(a=>{a.href=S+a.dataset.locked+'/';});
+  const lp=document.querySelector('[data-locked-page]');if(lp)location.replace(S+lp.dataset.lockedPage+'/'+location.hash);}}catch{}
 // Standings: hover (mouse) previews a team's roster; click/tap pins it open (one open at a time).
 (()=>{const cards=[...document.querySelectorAll('.seed-card[aria-controls]')];if(!cards.length)return;
   const canHover=matchMedia('(hover:hover) and (pointer:fine)').matches;

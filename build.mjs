@@ -37,7 +37,10 @@ const team = id => teams.find(t=>t.id===id);
 const teamName = id => esc(team(id)?.name||id||'To be announced');
 const brand = (footer=false) => `<a class="brand${footer?' brand-footer':''}" href="/" aria-label="RNBA home"><img src="/assets/rnba-logo.png" width="48" height="48" alt=""><span><strong>RNBA<span class="brand-point">.</span></strong><small>${footer?'Roblox National Basketball Association':'THE OFFICIAL LEAGUE HUB'}</small></span></a>`;
 let navLeague = null; // set while building a league's own pages: { standings: '/…/standings/' }
-const nav = active => pages.map(p=>{const path=p.key==='standings'?(navLeague?.standings||p.path):p.path;return `<a href="${path}"${p.key===active?' aria-current="page"':''}>${p.title}</a>`;}).join('');
+// Pages locked to the public (Michael, 2026-11-17). Public URL shows a lock screen; the real page is built under STAFF and opened for signed-in admins by navigation.js.
+const LOCKED=new Set(['schedule','media','rules','transactions']);
+const STAFF='/staff-7q4k2x/';
+const nav = active => pages.map(p=>{const path=p.key==='standings'?(navLeague?.standings||p.path):p.path;const lk=LOCKED.has(p.key);return `<a href="${path}"${lk?` data-locked="${p.key}"`:''}${p.key===active?' aria-current="page"':''}>${lk?'<span class="nav-lock" aria-hidden="true">🔒</span> ':''}${p.title}${lk?'<span class="sr-only"> (locked)</span>':''}</a>`;}).join('');
 const link = (label,path,kind='button',symbol='arrow') => `<a class="${kind}" href="${path}">${label}${icon(symbol)}</a>`;
 
 function communityAction(kind,label){
@@ -228,7 +231,11 @@ function innerPage(page){if(page.key==='schedule')return scheduleBoard();const c
 
 await rm('dist',{recursive:true,force:true});
 await cp('public','dist',{recursive:true});
-for(const page of pages){navLeague=page.key==='standings'?{standings:'/standings/',hub:hubLeagues[0]}:null;await mkdir(`dist${page.path}`,{recursive:true});await writeFile(`dist${page.path}index.html`,layout(page,page.key==='home'?home():innerPage(page)));}
+const lockScreen=page=>`<section class="shell page-content locked-page" data-locked-page="${page.key}">${empty('lock','THIS PAGE IS LOCKED.',`${esc(page.title)} isn’t open to the public yet. Check back soon.`,link('Back to Server Hub','/','button gold'))}</section>`;
+const noindex=html=>html.replace('<meta name="description"','<meta name="robots" content="noindex"><meta name="description"');
+for(const page of pages){navLeague=page.key==='standings'?{standings:'/standings/',hub:hubLeagues[0]}:null;await mkdir(`dist${page.path}`,{recursive:true});
+  if(LOCKED.has(page.key)){await writeFile(`dist${page.path}index.html`,noindex(layout(page,lockScreen(page))).replace(' class="concrete schedule-blank"',' class="concrete"'));const sp=`${STAFF}${page.key}/`;await mkdir(`dist${sp}`,{recursive:true});await writeFile(`dist${sp}index.html`,noindex(layout(page,innerPage(page))));}
+  else await writeFile(`dist${page.path}index.html`,layout(page,page.key==='home'?home():innerPage(page)));}
 // Second league (red RNBA logo): its own copy of the standings, reached only from its logo on the homepage hub.
 {const L2={standings:'/league-2/standings/',admin:'/admin/?league=2',format:standingsFormat2,hub:hubLeagues[1]};navLeague=L2;const page={...pages.find(p=>p.key==='standings'),path:L2.standings};
 const html=layout(page,innerPage(page).replace(/<div class="breadcrumb">[\s\S]*?<\/div>/,'<div class="breadcrumb"><a href="/">Server Hub</a><span>/</span><span>Standings</span></div>')).replace(standingsPage(),standingsPage({teams:teams2,...L2})).replaceAll('/assets/rnba-logo.png','/assets/league2-logo.png');
