@@ -7,84 +7,98 @@
     "overall": 99,
     "owner": true,
     "roblox": "spitboy",
-    "lineup": "starter"
+    "lineup": "starter",
+    "headshot": "https://cdn.discordapp.com/avatars/189856067436544000/2e773bd8cad897d043bcdf689cf3188d.webp?size=128"
   },
   {
     "id": "owner-pam-celtics",
     "name": "Pam",
     "teamId": "boston-celtics",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1121587846600470629/d2e82a38b74cb1425b63761466405796.webp?size=128"
   },
   {
     "id": "owner-b-76ers",
     "name": "b",
     "teamId": "philadelphia-76ers",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1251347973716054046/ec66ef027969531b0a4a91250d69de3d.webp?size=128"
   },
   {
     "id": "owner-p-nets",
     "name": "p",
     "teamId": "brooklyn-nets",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1367809568603901975/09405aaa4aeeb9b6bde15641643a71c7.webp?size=128"
   },
   {
     "id": "owner-envi-knicks",
     "name": "Envi",
     "teamId": "new-york-knicks",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/693277314401959996/34f3a7ea86a53aad41d9384e91c71752.webp?size=128"
   },
   {
     "id": "owner-steezo-cavaliers",
     "name": "steezo",
     "teamId": "cleveland-cavaliers",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1428165626781892728/51e34039154c514589cdb2080bbb8334.webp?size=128"
   },
   {
     "id": "owner-kimani-gaulden-heat",
     "name": "kimani gaulden",
     "teamId": "miami-heat",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/546816182888693760/54f310a721adc74313974d60a59300e0.webp?size=128"
   },
   {
     "id": "owner-z-timberwolves",
     "name": "z",
     "teamId": "minnesota-timberwolves",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/972398364735967242/11504a57ed70f6872b7a2e4e7f72d696.webp?size=128"
   },
   {
     "id": "owner-runfrmzen-blazers",
     "name": "runfrmzen",
     "teamId": "portland-trail-blazers",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1387637384945995860/7270e5ddd42cf9312f27badd4de6a299.webp?size=128"
   },
   {
     "id": "owner-iso-thunder",
     "name": "iso",
     "teamId": "oklahoma-city-thunder",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1160996665268916326/053ac2ee7a1c89ffa58dc71cb29e6eae.webp?size=128"
   },
   {
     "id": "owner-tai-nuggets",
     "name": "tai",
     "teamId": "denver-nuggets",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/829043600469524481/481015d4840edef00d62d39d2e57bed9.webp?size=128"
   },
   {
     "id": "owner-sony-grizzlies",
     "name": "Sony",
     "teamId": "memphis-grizzlies",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1131854170933166082/d94e410d64697e59db5429d13e77a5d5.webp?size=128"
   },
   {
     "id": "owner-js-rockets",
     "name": "js",
     "teamId": "houston-rockets",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1137837663169290370/7aefce859d0eeb37f0412977d6863040.webp?size=128"
   },
   {
     "id": "owner-y-warriors",
     "name": "y",
     "teamId": "golden-state-warriors",
-    "owner": true
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/818538815911493673/d651757ab03f29ddada5cabffeea1973.webp?size=128"
   }
 ]
