@@ -1030,3 +1030,7 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 
 /* Locked nav tabs */
 .nav-lock{font-size:.85em;filter:grayscale(.2)}
+
+/* Schedule headings: Michael's Edges font (replaces Imperator) */
+@font-face{font-family:Edges;src:url('/fonts/edges.ttf') format('truetype');font-display:swap}
+.sched-title,.week-head{font-family:Edges,ImpactClub,serif;font-weight:400;letter-spacing:.04em}
