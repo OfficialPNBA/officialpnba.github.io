@@ -1027,3 +1027,6 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .rp-row.is-owner .rp-dn,.player-card.is-owner .pc-main strong{color:var(--owner-role)}
 .role.owner{background:#5efff61f;color:var(--owner-role);box-shadow:inset 0 0 0 1px #5efff659}
 .rp-badge.own{background:#5efff624;color:var(--owner-role)}
+
+/* Locked nav tabs */
+.nav-lock{font-size:.85em;filter:grayscale(.2)}
