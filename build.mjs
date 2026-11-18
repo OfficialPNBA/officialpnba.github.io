@@ -37,7 +37,7 @@ const team = id => teams.find(t=>t.id===id);
 const teamName = id => esc(team(id)?.name||id||'To be announced');
 const brand = (footer=false) => `<a class="brand${footer?' brand-footer':''}" href="/" aria-label="RNBA home"><img src="/assets/rnba-logo.png" width="48" height="48" alt=""><span><strong>RNBA<span class="brand-point">.</span></strong><small>${footer?'Roblox National Basketball Association':'THE OFFICIAL LEAGUE HUB'}</small></span></a>`;
 let navLeague = null; // set while building a league's own pages: { standings: '/…/standings/' }
-const nav = active => pages.filter(p=>p.key!=='standings'||navLeague).map(p=>{const path=p.key==='standings'?navLeague.standings:p.path;return `<a href="${path}"${p.key===active?' aria-current="page"':''}>${p.title}</a>`;}).join('');
+const nav = active => pages.map(p=>{const path=p.key==='standings'?(navLeague?.standings||p.path):p.path;return `<a href="${path}"${p.key===active?' aria-current="page"':''}>${p.title}</a>`;}).join('');
 const link = (label,path,kind='button',symbol='arrow') => `<a class="${kind}" href="${path}">${label}${icon(symbol)}</a>`;
 
 function communityAction(kind,label){
