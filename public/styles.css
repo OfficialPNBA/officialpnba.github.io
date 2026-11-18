@@ -1034,3 +1034,12 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 /* Schedule headings: Michael's Edges font (replaces Imperator) */
 @font-face{font-family:Edges;src:url('/fonts/edges.ttf') format('truetype');font-display:swap}
 .sched-title,.week-head{font-family:Edges,ImpactClub,serif;font-weight:400;letter-spacing:.04em}
+
+/* Locked Week 7 (set from standings after Week 6) */
+.week-jump a.wk-locked{background:linear-gradient(160deg,#5a5d63,#2c2f34);color:#e9e9ea}
+.week-locked-note{margin:-6px 0 14px;font:600 15px/1.3 League,system-ui,sans-serif;color:#c9ccd2;letter-spacing:.3px}
+.mc-team.mystery{background:repeating-linear-gradient(115deg,#1a1d22 0 14px,#15171b 14px 28px)}
+.mc-team.mystery .mc-logo b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:2px dashed #ffffff40;color:#ffffffa0;font-size:22px}
+.mc-team.mystery .mc-name strong{color:#ffffff80;letter-spacing:4px}
+.match-card.locked{opacity:.85}
+.match-card.locked .mc-vs{font-size:15px}
