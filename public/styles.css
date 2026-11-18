@@ -1043,3 +1043,6 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .mc-team.mystery .mc-name strong{color:#ffffff80;letter-spacing:4px}
 .match-card.locked{opacity:.85}
 .match-card.locked .mc-vs{font-size:15px}
+
+/* Schedule names: always a dark outline (white nameOutline made Bulls/Cavs/Grizzlies/Blazers look glowy) */
+.mc-name strong{filter:drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000) drop-shadow(0 2px 3px #000c)}
