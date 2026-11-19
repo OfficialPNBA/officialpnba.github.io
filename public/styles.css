@@ -1079,3 +1079,7 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .account-facts .discord-logo{width:15px;height:15px;color:#8b94ff}
 .account-actions{display:flex;flex-direction:column;gap:10px}.account-actions .button{width:100%}
 @media(max-width:650px){.account-card{padding:30px 20px}.account-card h1{font-size:36px}}
+
+/* Media page: cleared, just a large faint RNBA logo */
+.media-stage{min-height:calc(100vh - 140px);display:grid;place-items:center;padding:40px 16px;overflow:hidden}
+.media-watermark{width:min(86vw,70vh);height:auto;opacity:.12;pointer-events:none;user-select:none}
