@@ -40,7 +40,7 @@ const teamName = id => esc(team(id)?.name||id||'To be announced');
 const brand = (footer=false) => `<a class="brand${footer?' brand-footer':''}" href="/" aria-label="RNBA home"><img src="/assets/rnba-logo.png" width="48" height="48" alt=""><span><strong>RNBA<span class="brand-point">.</span></strong><small>${footer?'Roblox National Basketball Association':'THE OFFICIAL LEAGUE HUB'}</small></span></a>`;
 let navLeague = null; // set while building a league's own pages: { standings: '/…/standings/' }
 // Pages locked to the public (Michael, 2026-11-17). Public URL shows a lock screen; the real page is built under STAFF and opened for signed-in admins by navigation.js.
-const LOCKED=new Set(['media','rules','transactions']);
+const LOCKED=new Set(['rules','transactions']); // Media unlocked 2026-11-19
 // Partly public pages: public copy hides vaulted content; admins are sent to the full staff copy. Schedule: only Week 1 is public.
 const VAULT=new Set(['schedule']);const SCHEDULE_PUBLIC_WEEKS=1;let vaultMode=false;
 const STAFF='/staff-7q4k2x/';
