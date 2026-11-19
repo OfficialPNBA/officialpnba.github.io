@@ -1080,6 +1080,13 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .account-actions{display:flex;flex-direction:column;gap:10px}.account-actions .button{width:100%}
 @media(max-width:650px){.account-card{padding:30px 20px}.account-card h1{font-size:36px}}
 
-/* Media page: cleared, just a large faint RNBA logo */
-.media-stage{min-height:calc(100vh - 140px);display:grid;place-items:center;padding:40px 16px;overflow:hidden}
-.media-watermark{width:min(86vw,70vh);height:auto;opacity:.12;pointer-events:none;user-select:none}
+/* Media page: S1 Combine headline card over a large faint RNBA logo */
+.media-stage{position:relative;min-height:calc(100vh - 140px);padding:40px 0 60px}
+.media-watermark{position:fixed;left:50%;top:calc(50% + 60px);transform:translate(-50%,-50%);width:min(86vw,70vh);height:auto;opacity:.12;pointer-events:none;user-select:none;z-index:0}
+.media-headline{position:relative;z-index:1;max-width:1000px;margin:0 auto}
+.media-headline .seed-card{cursor:default}
+.media-headline .seed-card::before{display:none}
+.media-headline .sc-name{margin:0;font:inherit}
+.media-headline .seed-card .sc-name strong{text-transform:uppercase;white-space:normal}
+.media-headline .seed-num{font-size:30px}
+@media(max-width:650px){.media-stage{padding:28px 16px 48px}.media-headline .seed-num{font-size:18px}}
