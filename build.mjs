@@ -41,8 +41,8 @@ const brand = (footer=false) => `<a class="brand${footer?' brand-footer':''}" hr
 let navLeague = null; // set while building a league's own pages: { standings: '/…/standings/' }
 // Pages locked to the public (Michael, 2026-11-17). Public URL shows a lock screen; the real page is built under STAFF and opened for signed-in admins by navigation.js.
 const LOCKED=new Set(['rules','transactions']); // Media unlocked 2026-11-19
-// Partly public pages: public copy hides vaulted content; admins are sent to the full staff copy. Schedule: only Week 1 is public.
-const VAULT=new Set(['schedule']);const SCHEDULE_PUBLIC_WEEKS=1;let vaultMode=false;
+// Partly public pages: public copy hides vaulted content; admins are sent to the full staff copy. Schedule fully public since 2026-11-19 (add 'schedule' back to vault it).
+const VAULT=new Set([]);const SCHEDULE_PUBLIC_WEEKS=1;let vaultMode=false;
 const STAFF='/staff-7q4k2x/';
 const nav = active => pages.map(p=>{const path=p.key==='standings'?(navLeague?.standings||p.path):p.path;const lk=LOCKED.has(p.key);return `<a href="${path}"${lk?` data-locked="${p.key}"`:''}${p.key===active?' aria-current="page"':''}>${lk?'<span class="nav-lock" aria-hidden="true">🔒</span> ':''}${p.title}${lk?'<span class="sr-only"> (locked)</span>':''}</a>`;}).join('');
 const link = (label,path,kind='button',symbol='arrow') => `<a class="${kind}" href="${path}">${label}${icon(symbol)}</a>`;
