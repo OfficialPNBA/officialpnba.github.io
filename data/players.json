@@ -231,5 +231,29 @@
     "name": "Envi",
     "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/693277314401959996/34f3a7ea86a53aad41d9384e91c71752.webp?size=128"
+  },
+  {
+    "id": "berrywt",
+    "name": "Santi",
+    "teamId": "chicago-bulls",
+    "headshot": "https://cdn.discordapp.com/avatars/481976417119240213/69b21ecd55458260d74afc644f6b3205.webp?size=128"
+  },
+  {
+    "id": "k2uq",
+    "name": "vamp",
+    "teamId": "brooklyn-nets",
+    "headshot": "https://cdn.discordapp.com/avatars/853269481836904468/dd8ba8dde20f633668e0f39374941583.webp?size=128"
+  },
+  {
+    "id": "zukichi1",
+    "name": "v",
+    "teamId": "golden-state-warriors",
+    "headshot": "https://cdn.discordapp.com/avatars/711364345757433957/ed37d820456f0b742e19703fa3d8063b.webp?size=128"
+  },
+  {
+    "id": "newaccountthh",
+    "name": "max",
+    "teamId": "golden-state-warriors",
+    "headshot": "https://cdn.discordapp.com/avatars/1051304198832144524/aec776c61a523093cb0d809743b3cf34.webp?size=128"
   }
 ]
