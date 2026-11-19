@@ -193,8 +193,17 @@ const combineTop5=[
   {name:'LeBewwy',stats:[['36','PTS'],['4','AST'],['1','TO'],['64.0%','FG']]},
   {name:'VINSH',stats:[['8','AST'],['3','BLK',true],['3','STL',true],['2','TO'],['100%','FG',true]]},
   {name:'selffcare',stats:[['15','AST',true],['11','PTS'],['1','TO'],['71.4%','FG']]}];
-const combineVideo=''; // e.g. '/assets/media/combine-top5.mp4'
-const combineCards=()=>`<ol class="combine-list">${combineTop5.map((p,i)=>`<li class="seed-row pteam-head"><span class="seed-num" aria-label="Rank ${i+1}">${i+1}</span><article class="seed-card combine-card" style="--team:${p.home?'#b3121f':'#1d4fc4'};--p:#ffffff;--s:#ffffff;--logo:url('/assets/rnba-logo.png')"><span class="sc-mark" aria-hidden="true"></span><span class="sc-logo"><img src="/assets/rnba-logo.png" alt="" width="64" height="64"></span><span class="sc-name"><strong data-n="${esc(p.name)}">${esc(p.name)}</strong>${p.home?'<small class="cb-win">✅ WIN</small>':''}</span><span class="cb-stats">${p.stats.map(([v,l,b])=>`<span class="cb-stat${b?' best':''}"><b>${esc(v)}</b><small>${esc(l)}</small></span>`).join('')}</span></article></li>`).join('')}</ol>`;
+// 6-11 shown as half-size cards. 0 TO and 4 REB tie for best of all 11 -> green.
+const combineRest=[
+  {name:'legendsneverdieboi21',stats:[['16','PTS'],['2','BLK'],['0','TO',true],['80.0%','FG']]},
+  {name:'YungKB3X',home:true,stats:[['10','PTS'],['3/3','3PT'],['0','TO',true],['75.0%','FG']]},
+  {name:'Kila',home:true,stats:[['7','PTS'],['7','AST'],['4','REB',true],['2','TO'],['60.0%','FG']]},
+  {name:'0bon',stats:[['9','PTS'],['4','AST'],['3/5','3PT'],['2','TO'],['50.0%','FG']]},
+  {name:'frxgrances',home:true,stats:[['9','PTS'],['4','AST'],['0','TO',true],['37.5%','FG']]},
+  {name:'idontknowanideafor',home:true,stats:[['3','PTS'],['2','AST'],['1','STL'],['2','TO'],['25.0%','FG']]}];
+const combineVideo='/assets/media/combine-top5.mp4';
+const combineCard=(p,n)=>`<li class="seed-row pteam-head"><span class="seed-num" aria-label="Rank ${n}">${n}</span><article class="seed-card combine-card" style="--team:${p.home?'#b3121f':'#1d4fc4'};--p:#ffffff;--s:#ffffff;--logo:url('/assets/rnba-logo.png')"><span class="sc-mark" aria-hidden="true"></span><span class="sc-logo"><img src="/assets/rnba-logo.png" alt="" width="64" height="64"></span><span class="sc-name"><strong data-n="${esc(p.name)}">${esc(p.name)}</strong></span>${p.home?'<img class="cb-win-logo" src="/assets/rnba-logo.png" alt="Won the combine game" title="Won the combine game" width="40" height="40">':''}<span class="cb-stats">${p.stats.map(([v,l,b])=>`<span class="cb-stat${b?' best':''}"><b>${esc(v)}</b><small>${esc(l)}</small></span>`).join('')}</span></article></li>`;
+const combineCards=()=>`<ol class="combine-list">${combineTop5.map((p,i)=>combineCard(p,i+1)).join('')}</ol><ol class="combine-list combine-mini">${combineRest.map((p,i)=>combineCard(p,i+6)).join('')}</ol>`;
 const mediaBlank=()=>`<section class="media-stage"><img src="/assets/rnba-logo.png" alt="" class="media-watermark" width="1254" height="1254" aria-hidden="true"><div class="tier-playoffs media-headline"><div class="seed-row pteam-head"><span class="seed-num">S1</span><article class="seed-card" style="--team:#b3121f;--p:#ffffff;--s:#f5b632;--logo:url('/assets/rnba-logo.png')"><span class="sc-mark" aria-hidden="true"></span><span class="sc-logo"><img src="/assets/rnba-logo.png" alt="" width="64" height="64"></span><h1 class="sc-name"><strong data-n="S1 Combine Performance Rankings">S1 Combine Performance Rankings</strong></h1></article></div>${combineVideo?`<div class="combine-video"><video src="${combineVideo}" controls playsinline preload="metadata" poster="/assets/media/combine-thumb.jpg"></video></div>`:''}${combineCards()}</div></section>`;
 function mediaPage(){
   const categories=['Announcements','Highlights','Brand assets',...media.map(m=>m.category)];
