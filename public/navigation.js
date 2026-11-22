@@ -56,7 +56,7 @@ try{if(localStorage.getItem('npba-admin')){const S='/staff-7q4k2x/';
     if(canHover&&row){
       row.addEventListener('mouseenter',()=>{clearTimeout(tClose);if(card.getAttribute('aria-expanded')==='true')return;
         tOpen=setTimeout(()=>{if(cards.some(o=>o!==card&&o.dataset.pinned==='1'))return;closeOthers(card);set(card,true,false);},260);});
-      row.addEventListener('mouseleave',()=>{clearTimeout(tOpen);if(card.dataset.pinned==='1')return;tClose=setTimeout(()=>{if(card.dataset.pinned!=='1')set(card,false);},220);});
+      row.addEventListener('mouseleave',e=>{if(e.relatedTarget?.closest?.('.dc-menu'))return;clearTimeout(tOpen);if(card.dataset.pinned==='1')return;tClose=setTimeout(()=>{if(card.dataset.pinned!=='1')set(card,false);},220);});
     }});
 })();
 // Standings spotlight: show the next card on each page load (cycles through all of them).
@@ -79,7 +79,8 @@ try{if(localStorage.getItem('npba-admin')){const S='/staff-7q4k2x/';
   const close=()=>{if(menu)menu.hidden=true;cur?.classList.remove('is-open');cur=null;};
   const open=(el,x,y)=>{if(!menu){menu=document.createElement('div');menu.className='dc-menu';menu.setAttribute('role','menu');menu.hidden=true;
       menu.innerHTML='<a role="menuitem" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Z" transform="translate(-2 0)"/></svg><span>Message On Discord</span></a>';
-      document.body.appendChild(menu);menu.addEventListener('click',close);}
+      document.body.appendChild(menu);menu.addEventListener('click',close);
+      menu.addEventListener('mouseleave',e=>{const row=cur?.closest('.seed-row');if(!row||row.contains(e.relatedTarget))return;close();row.dispatchEvent(new MouseEvent('mouseleave',{relatedTarget:e.relatedTarget}));});}
     close();cur=el;el.classList.add('is-open');
     menu.querySelector('a').href='https://discord.com/users/'+el.dataset.discordId;
     menu.hidden=false;const w=menu.offsetWidth,h=menu.offsetHeight;
