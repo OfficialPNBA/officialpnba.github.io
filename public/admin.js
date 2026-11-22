@@ -65,7 +65,44 @@
       res({ preview: url, base64: url.split(',')[1], ext: url.startsWith('data:image/webp') ? 'webp' : 'png' });
     }; img.onerror = () => rej(new Error('That file is not a picture I can read.')); img.src = URL.createObjectURL(file);
   });
-  const dirty = () => teamsDirty() || playersDirty();
+  // Box scores (league 1 only): data/boxscores.json, read by the Leaderboards page.
+  const BFILE = 'data/boxscores.json';
+  let bSha = null, bSaved = [], box = [], bIdx = 0;
+  const BSTATS = ['pts', 'ast', 'reb', 'blk', 'stl'], BSHOTS = [['fg', 'fgm', 'fga'], ['3p', 'tpm', 'tpa'], ['ft', 'ftm', 'fta']], BTAIL = ['tov', 'fls', 'pm'];
+  const n0 = v => { const x = parseInt(v, 10); return Number.isFinite(x) ? x : 0; };
+  const bClean = list => list.map(g => ({ id: g.id, week: n0(g.week) || 1, date: g.date || '', homeId: g.homeId || '', awayId: g.awayId || '', homeScore: n0(g.homeScore), awayScore: n0(g.awayScore),
+    ...Object.fromEntries(['home', 'away'].map(side => [side, (g[side] || []).filter(l => String(l.name || '').trim()).map(l => {
+      const o = { name: String(l.name).trim(), pos: String(l.pos || '').trim().toUpperCase() };
+      [...BSTATS, 'fgm', 'fga', 'tpm', 'tpa', 'ftm', 'fta', 'tov', 'fls'].forEach(k => o[k] = Math.max(0, n0(l[k])));
+      o.pm = n0(l.pm); return o; })])) }));
+  const bSerialize = list => JSON.stringify(bClean(list), null, 2) + '\n';
+  const boxDirty = () => LEAGUE === 1 && bSerialize(box) !== bSerialize(bSaved);
+  const blankLine = () => ({ name: '', pos: '' });
+  const gameLabel = g => { const tn = id => teams.find(t => t.id === id)?.abbreviation || teams.find(t => t.id === id)?.name || '?'; return `Week ${g.week || '?'}: ${tn(g.awayId)} @ ${tn(g.homeId)}${g.homeScore || g.awayScore ? ` (${g.awayScore}-${g.homeScore})` : ''}`; };
+  function renderBox() {
+    if (LEAGUE !== 1) return;
+    const pick = $('[data-box-pick]'), ed = $('[data-box-editor]');
+    bIdx = Math.min(bIdx, box.length - 1);
+    pick.innerHTML = box.map((g, i) => `<option value="${i}"${i === bIdx ? ' selected' : ''}>${esc(gameLabel(g))}</option>`).join('');
+    pick.hidden = $('[data-box-del]').hidden = !box.length; $('[data-box-empty]').hidden = box.length > 0;
+    const g = box[bIdx]; if (!g) { ed.innerHTML = ''; status(); return; }
+    const topts = sel => `<option value="">Pick a team</option>${[...teams].sort((a, b) => a.name.localeCompare(b.name)).map(t => `<option value="${esc(t.id)}"${t.id === sel ? ' selected' : ''}>${esc(t.name)}</option>`).join('')}`;
+    const sum = side => (g[side] || []).reduce((a, l) => a + n0(l.pts), 0);
+    const num = (k, v, w = '') => `<input class="admin-input num box-num${w}" data-bk="${k}" value="${esc(v ?? '')}" inputmode="numeric" placeholder="0" aria-label="${k.toUpperCase()}">`;
+    const table = side => `<h3 class="box-side">${side === 'home' ? 'Home' : 'Away'}: ${esc(teams.find(t => t.id === g[side + 'Id'])?.name || 'pick a team above')} <small>players' points add up to ${sum(side)}</small></h3>
+      <table class="admin-table box-table"><thead><tr><th>Player</th><th>Pos</th>${BSTATS.map(k => `<th>${k}</th>`).join('')}<th>FG</th><th>3P</th><th>FT</th><th>TOV</th><th>FLS</th><th>+/-</th><th><span class="sr-only">Remove</span></th></tr></thead><tbody>
+      ${(g[side] || []).map((l, i) => `<tr data-bside="${side}" data-bi="${i}"><td><input class="admin-input wide" data-bk="name" value="${esc(l.name)}" placeholder="Name" aria-label="Player name"></td><td><input class="admin-input box-pos" data-bk="pos" value="${esc(l.pos || '')}" maxlength="3" placeholder="PG" aria-label="Position"></td>
+        ${BSTATS.map(k => `<td>${num(k, l[k])}</td>`).join('')}${BSHOTS.map(([k, m, a]) => `<td><input class="admin-input box-shot" data-bk="${k}" value="${l[m] != null || l[a] != null ? `${n0(l[m])}/${n0(l[a])}` : ''}" placeholder="0/0" aria-label="${k.toUpperCase()} made/attempted"></td>`).join('')}
+        ${BTAIL.map(k => `<td>${num(k, l[k])}</td>`).join('')}<td><button class="admin-x" data-brem title="Remove line" aria-label="Remove line">✕</button></td></tr>`).join('')}
+      </tbody></table><button class="admin-btn ghost box-addline" data-baddline="${side}">+ Add player line</button>`;
+    ed.innerHTML = `<div class="box-meta"><label class="admin-field"><span>Week</span><input class="admin-input num" data-bg="week" value="${esc(g.week)}" inputmode="numeric"></label><label class="admin-field"><span>Date</span><input type="date" class="admin-input" data-bg="date" value="${esc(g.date)}"></label>
+      <label class="admin-field"><span>Away team</span><select class="admin-input" data-bg="awayId">${topts(g.awayId)}</select></label><label class="admin-field"><span>Away score</span><input class="admin-input num" data-bg="awayScore" value="${esc(g.awayScore)}" inputmode="numeric"></label>
+      <label class="admin-field"><span>Home team</span><select class="admin-input" data-bg="homeId">${topts(g.homeId)}</select></label><label class="admin-field"><span>Home score</span><input class="admin-input num" data-bg="homeScore" value="${esc(g.homeScore)}" inputmode="numeric"></label></div>
+      <div class="admin-table-wrap">${table('home')}${table('away')}</div>`;
+    status();
+  }
+  if (LEAGUE !== 1) document.querySelectorAll('[data-box-tab]').forEach(b => b.hidden = true);
+  const dirty = () => teamsDirty() || playersDirty() || boxDirty();
 
   function msg(el, text, kind = '') { el.textContent = text; el.dataset.kind = kind; }
 
@@ -102,7 +139,14 @@
     else if (!pr.ok) throw new Error(`Could not load players (${pr.status}).`);
     else { const pf = await pr.json(); pSha = pf.sha; pSaved = JSON.parse(decode(pf.content) || '[]'); }
     players = structuredClone(pSaved);
-    render(); renderPlayers();
+    if (LEAGUE === 1) {
+      const br = await gh(`/contents/${BFILE}?ref=main`, { cache: 'no-store' });
+      if (br.status === 404) { bSha = null; bSaved = []; }
+      else if (!br.ok) throw new Error(`Could not load box scores (${br.status}).`);
+      else { const bf = await br.json(); bSha = bf.sha; bSaved = JSON.parse(decode(bf.content) || '[]'); }
+      box = structuredClone(bSaved);
+    }
+    render(); renderPlayers(); renderBox();
   }
 
   function renderPlayers() {
@@ -157,6 +201,7 @@
     const out = [];
     teams.forEach(t => { if (!t.name.trim()) out.push('Every team needs a name.'); });
     players.forEach(p => { if (!String(p.name || '').trim()) out.push('Every player needs a name.'); });
+    box.forEach(g => { if (!g.homeId || !g.awayId) out.push('Every box score needs a home and away team.'); else if (g.homeId === g.awayId) out.push('A box score has the same team as home and away.'); });
     const seeds = teams.filter(t => Number.isFinite(t.seed)).map(t => t.seed);
     const dup = seeds.find((s, i) => seeds.indexOf(s) !== i);
     if (dup) out.push(`Two teams are both seed #${dup}.`);
@@ -207,7 +252,17 @@
         pSha = (await r.json()).content.sha;
         pSaved = structuredClone(pClean(players)); players = structuredClone(pSaved);
       }
-      render(); renderPlayers();
+      if (boxDirty()) {
+        box.forEach(g => { if (!g.id) { let id = `w${n0(g.week) || 1}-${slug(g.awayId)}-at-${slug(g.homeId)}`, k = 2; const base = id; while (box.some(o => o !== g && o.id === id)) id = `${base}-${k++}`; g.id = id; } });
+        const body = { message: 'Update box scores from the admin panel', content: encode(bSerialize(box)), branch: 'main' };
+        if (bSha) body.sha = bSha;
+        const r = await gh(`/contents/${BFILE}`, { method: 'PUT', body: JSON.stringify(body) });
+        if (r.status === 409 || r.status === 422) throw new Error('Someone else saved box scores first. Reload the page, then make your change again.');
+        if (!r.ok) throw new Error(`Saving box scores failed (GitHub said ${r.status}).`);
+        bSha = (await r.json()).content.sha;
+        bSaved = structuredClone(bClean(box)); box = structuredClone(bSaved);
+      }
+      render(); renderPlayers(); renderBox();
       msg($('[data-save-msg]'), 'Saved! The standings page updates in about a minute.', 'ok');
     } catch (e) {
       msg($('[data-save-msg]'), e.message, 'error'); btn.disabled = false;
@@ -222,8 +277,8 @@
     render();
     const inputs = document.querySelectorAll('[data-k="name"]'); const last = [...inputs].find(i => i.value === 'New team'); last?.focus(); last?.select();
   });
-  $('[data-revert]').addEventListener('click', () => { pendingShots.clear(); teams = structuredClone(saved); players = structuredClone(pSaved); render(); renderPlayers(); });
-  const showSection = key => { section = key; document.querySelectorAll('[data-section]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.section === key))); document.querySelectorAll('[data-section-view]').forEach(v => v.hidden = v.dataset.sectionView !== key); $('[data-add]').hidden = key !== 'teams'; };
+  $('[data-revert]').addEventListener('click', () => { pendingShots.clear(); teams = structuredClone(saved); players = structuredClone(pSaved); box = structuredClone(bSaved); render(); renderPlayers(); renderBox(); });
+  const showSection = key => { section = key; document.querySelectorAll('[data-section]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.section === key))); document.querySelectorAll('[data-section-view]').forEach(v => v.hidden = v.dataset.sectionView !== key); $('[data-add]').hidden = key !== 'teams'; if (key === 'box') renderBox(); };
   document.querySelectorAll('[data-section]').forEach(b => b.addEventListener('click', () => showSection(b.dataset.section)));
   $('[data-player-search]').addEventListener('input', e => { pQuery = e.target.value; renderPlayers(); });
   $('[data-add-player]').addEventListener('click', () => {
@@ -256,6 +311,36 @@
     if (confirm(`Remove ${p.name || 'this player'} from the player index? To make them a free agent instead, set their team to Free Agent.`)) { pendingShots.delete(p); players.splice(players.indexOf(p), 1); renderPlayers(); }
   });
   $('[data-save]').addEventListener('click', save);
+  if (LEAGUE === 1) {
+    $('[data-box-pick]').addEventListener('change', e => { bIdx = +e.target.value; renderBox(); });
+    $('[data-box-add]').addEventListener('click', () => {
+      const week = Math.max(1, ...box.map(g => n0(g.week)));
+      box.push({ id: '', week, date: new Date().toISOString().slice(0, 10), homeId: '', awayId: '', homeScore: 0, awayScore: 0, home: Array.from({ length: 5 }, blankLine), away: Array.from({ length: 5 }, blankLine) });
+      bIdx = box.length - 1; renderBox();
+    });
+    $('[data-box-del]').addEventListener('click', () => { const g = box[bIdx]; if (g && confirm(`Delete the box score for ${gameLabel(g)}? Its stats come off the Leaderboards after you save.`)) { box.splice(bIdx, 1); bIdx = Math.max(0, bIdx - 1); renderBox(); } });
+    const ed = $('[data-box-editor]');
+    const bUpdate = e => {
+      const g = box[bIdx]; if (!g) return;
+      const gk = e.target.dataset.bg;
+      if (gk) { g[gk] = gk.endsWith('Id') || gk === 'date' ? e.target.value : e.target.value.replace(/[^\d]/g, ''); if (e.type === 'change') renderBox(); else { $('[data-box-pick]').options[bIdx].text = gameLabel(g); status(); } return; }
+      const tr = e.target.closest('tr[data-bside]'), k = e.target.dataset.bk; if (!tr || !k) return;
+      const l = g[tr.dataset.bside][+tr.dataset.bi]; const v = e.target.value;
+      const shot = BSHOTS.find(x => x[0] === k);
+      if (shot) { const [m, a] = v.split(/[\/\-\s]+/); l[shot[1]] = n0(m); l[shot[2]] = n0(a); }
+      else if (k === 'name' || k === 'pos') l[k] = v;
+      else l[k] = k === 'pm' ? v.replace(/[^\d\-+]/g, '') : v.replace(/[^\d]/g, '');
+      if (k === 'pts' && e.type === 'change') renderBox(); else status();
+    };
+    ed.addEventListener('input', e => { if (e.target.tagName !== 'SELECT') bUpdate(e); });
+    ed.addEventListener('change', bUpdate);
+    ed.addEventListener('click', e => {
+      const add = e.target.closest('[data-baddline]'); const g = box[bIdx]; if (!g) return;
+      if (add) { (g[add.dataset.baddline] ||= []).push(blankLine()); renderBox(); return; }
+      const rm = e.target.closest('[data-brem]'); if (!rm) return;
+      const tr = rm.closest('tr'); g[tr.dataset.bside].splice(+tr.dataset.bi, 1); renderBox();
+    });
+  }
   const rows = $('[data-rows]');
   const update = e => {
     const tr = e.target.closest('tr'); const k = e.target.dataset.k; if (!tr || !k) return;

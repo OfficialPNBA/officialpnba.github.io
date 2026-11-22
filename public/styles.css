@@ -1138,3 +1138,41 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .dc-menu a:hover,.dc-menu a:focus-visible{background:#5865f2;color:#fff;outline:0}
 .dc-menu svg{width:18px;height:18px;flex:none}
 @keyframes dcPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+/* Leaderboards page (2026-11-22) */
+.lb-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.lb-tabs{display:flex;gap:8px}
+.lb-tab{background:#111;border:1px solid #33363d;color:#c9ccd2;padding:10px 20px;border-radius:4px;font-family:var(--display);font-size:18px;letter-spacing:1px;text-transform:uppercase}
+.lb-tab[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#111}
+.lb-note{color:var(--muted);font-size:13px;letter-spacing:.5px}
+.lb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.lb-card{background:linear-gradient(180deg,#16181c,#0f1013);border:1px solid var(--line);border-radius:10px;padding:16px 16px 12px;box-shadow:0 6px 20px #0007;display:flex;flex-direction:column}
+.lb-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:2px solid var(--gold);padding-bottom:8px;margin-bottom:10px}
+.lb-head h3{font-family:var(--display);font-size:22px;letter-spacing:1px;text-transform:uppercase;line-height:1.1}
+.lb-key{color:var(--gold);font-weight:700;font-size:12px;letter-spacing:1.5px}
+.lb-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.lb-row{--team:#3a3f47;display:grid;grid-template-columns:26px 36px minmax(0,1fr) auto;align-items:center;gap:10px;padding:6px 10px;border-radius:6px;background:linear-gradient(100deg,color-mix(in srgb,var(--team) 35%,#0b0c0e),#121417 80%);border:1px solid #000}
+.lb-rank{font-family:var(--display);font-size:20px;color:#a3a8b0;text-align:center;font-variant-numeric:tabular-nums}
+.lb-logo img,.lb-nologo{width:36px;height:36px;object-fit:contain;display:block}
+.lb-name{min-width:0;display:flex;flex-direction:column;line-height:1.2}
+.lb-name strong{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-name small{color:#b5b9c0;font-size:11px;letter-spacing:.5px}
+.lb-val{font-family:var(--display);font-size:22px;font-variant-numeric:tabular-nums}
+.lb-leader{padding:10px 12px;grid-template-columns:30px 48px minmax(0,1fr) auto;border-color:var(--gold);box-shadow:0 0 14px #f5b63233}
+.lb-leader .lb-rank{color:var(--gold);font-size:26px}
+.lb-leader .lb-logo img{width:48px;height:48px}
+.lb-leader .lb-name strong{font-size:17px}
+.lb-leader .lb-val{font-size:30px;color:var(--gold)}
+.lb-more{margin-top:10px;align-self:center;background:none;color:var(--muted);font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:6px 10px}
+.lb-more:hover{color:var(--white)}
+.lb-empty{color:var(--muted)}
+@media(max-width:650px){.lb-grid{grid-template-columns:1fr}.lb-tab{font-size:15px;padding:9px 14px}}
+.lb-top .lb-rank{color:var(--gold)}
+.lb-pct .lb-val{font-size:19px}.lb-leader.lb-pct .lb-val{font-size:24px}
+/* Admin: box scores */
+.box-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.box-bar .admin-field{min-width:260px;margin:0}
+.box-help{margin:10px 0 14px}
+.box-meta{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:12px}.box-meta .admin-input.num{width:100%}
+.box-side{font-family:var(--display);font-size:20px;letter-spacing:1px;margin:16px 6px 4px;text-transform:uppercase}.box-side small{font-family:League,Arial,sans-serif;font-size:12px;color:var(--muted);letter-spacing:0;text-transform:none;margin-left:8px}
+.admin-table.box-table{min-width:1100px}.box-table th{text-transform:uppercase}.box-table td{padding:5px 4px}
+.box-table .admin-input{padding:8px 6px}.box-table .admin-input.box-num{width:56px}.box-table .box-pos{width:54px;text-transform:uppercase}.box-table .box-shot{width:72px}.box-table .admin-input.wide{min-width:170px}
+.box-addline{margin:8px 6px 4px}
