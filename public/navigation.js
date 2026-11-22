@@ -75,3 +75,18 @@ try{if(localStorage.getItem('npba-admin')){const S='/staff-7q4k2x/';
     if(none)none.hidden=!(term&&!shown);};
   sel.addEventListener('change',()=>{try{localStorage.setItem('npba-pview',sel.value)}catch{}apply();});
   q?.addEventListener('input',apply);apply();})();
+(()=>{let menu,cur;
+  const close=()=>{if(menu)menu.hidden=true;cur?.classList.remove('is-open');cur=null;};
+  const open=(el,x,y)=>{if(!menu){menu=document.createElement('div');menu.className='dc-menu';menu.setAttribute('role','menu');menu.hidden=true;
+      menu.innerHTML='<a role="menuitem" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2Z" transform="translate(-2 0)"/></svg><span>Message On Discord</span></a>';
+      document.body.appendChild(menu);menu.addEventListener('click',close);}
+    close();cur=el;el.classList.add('is-open');
+    menu.querySelector('a').href='https://discord.com/users/'+el.dataset.discordId;
+    menu.hidden=false;const w=menu.offsetWidth,h=menu.offsetHeight;
+    menu.style.left=Math.max(8,Math.min(x,innerWidth-w-8))+'px';menu.style.top=Math.max(8,Math.min(y,innerHeight-h-8))+'px';
+    menu.querySelector('a').focus({preventScroll:true});};
+  const at=el=>{const r=el.getBoundingClientRect();return[r.left,r.bottom+6];};
+  document.addEventListener('contextmenu',e=>{const el=e.target.closest?.('.dc-mention');if(!el)return;e.preventDefault();open(el,e.clientX,e.clientY);});
+  document.addEventListener('click',e=>{const el=e.target.closest?.('.dc-mention');if(el){e.preventDefault();e.stopPropagation();if(cur===el)return close();open(el,...at(el));return;}if(menu&&!menu.contains(e.target))close();},true);
+  document.addEventListener('keydown',e=>{const el=e.target.closest?.('.dc-mention');if(el&&(e.key==='Enter'||e.key===' '||e.key==='ContextMenu')){e.preventDefault();open(el,...at(el));}else if(e.key==='Escape')close();});
+  addEventListener('scroll',close,{passive:true});addEventListener('resize',close);})();

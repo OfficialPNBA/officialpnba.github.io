@@ -1128,3 +1128,13 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 @media(max-width:650px){.media-headline .combine-mini .seed-card{flex-wrap:wrap}.combine-mini .cb-stats{width:100%}.combine-mini .cb-stat{flex:1}.cb-win-logo{width:30px;height:30px}}
 .media-headline .combine-mini .seed-row{grid-template-columns:38px minmax(0,1fr)}
 .media-headline .combine-mini .seed-num{width:38px!important;font-size:17px!important;letter-spacing:-1px;padding-right:4px}
+/* Discord-style blue mention names + "Message On Discord" menu */
+.rp-dn.dc-mention,.rp-row.is-owner .rp-dn.dc-mention{color:#c9cdfb;background:#5865f24d;border-radius:4px;padding:0 3px;cursor:pointer;transition:background .12s,color .12s}
+.rp-dn.dc-mention::before{content:'@'}
+.rp-dn.dc-mention:hover,.rp-dn.dc-mention:focus-visible,.rp-dn.dc-mention.is-open{background:#5865f2;color:#fff;outline:0}
+.dc-menu{position:fixed;z-index:9999;min-width:188px;padding:6px;background:#111214;border:1px solid #ffffff14;border-radius:8px;box-shadow:0 8px 24px #000a;font:500 14px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;animation:dcPop .12s ease-out}
+.dc-menu[hidden]{display:none}
+.dc-menu a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:4px;color:#dbdee1;text-decoration:none}
+.dc-menu a:hover,.dc-menu a:focus-visible{background:#5865f2;color:#fff;outline:0}
+.dc-menu svg{width:18px;height:18px;flex:none}
+@keyframes dcPop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
