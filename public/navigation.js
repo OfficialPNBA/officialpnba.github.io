@@ -91,3 +91,12 @@ try{if(localStorage.getItem('npba-admin')){const S='/staff-7q4k2x/';
   document.addEventListener('click',e=>{const el=e.target.closest?.('.dc-mention');if(el){e.preventDefault();e.stopPropagation();if(cur===el)return close();open(el,...at(el));return;}if(menu&&!menu.contains(e.target))close();},true);
   document.addEventListener('keydown',e=>{const el=e.target.closest?.('.dc-mention');if(el&&(e.key==='Enter'||e.key===' '||e.key==='ContextMenu')){e.preventDefault();open(el,...at(el));}else if(e.key==='Escape')close();});
   addEventListener('scroll',close,{passive:true});addEventListener('resize',close);})();
+// Leaderboards: Season Totals / Per Game tabs + "Show all" on each card
+(()=>{const root=document.querySelector('[data-leaderboards]');if(!root)return;
+  const tabs=[...root.querySelectorAll('[data-lb-tab]')];
+  const pick=k=>{tabs.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lbTab===k)));root.querySelectorAll('[data-lb-view]').forEach(v=>v.hidden=v.dataset.lbView!==k);try{localStorage.setItem('rnba-lb-tab',k)}catch{}};
+  tabs.forEach(b=>b.addEventListener('click',()=>pick(b.dataset.lbTab)));
+  try{const s=localStorage.getItem('rnba-lb-tab');if(s==='season'||s==='game')pick(s);}catch{}
+  root.addEventListener('click',e=>{const b=e.target.closest('[data-lb-more]');if(!b)return;const open=b.getAttribute('aria-expanded')!=='true';
+    b.closest('.lb-card').querySelectorAll('[data-lb-extra]').forEach(li=>li.hidden=!open);b.setAttribute('aria-expanded',String(open));
+    b.textContent=open?'Show top 5':`Show all ${b.closest('.lb-card').querySelectorAll('.lb-row').length}`;});})();
