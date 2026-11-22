@@ -48,7 +48,7 @@
     "logo": "/assets/teams/cleveland-cavaliers.webp?v=1",
     "seed": 4,
     "wins": 0,
-    "losses": 0,
+    "losses": 1,
     "primary": "#860038",
     "secondary": "#041E42",
     "nameOutline": "#FFFFFF"
@@ -168,7 +168,7 @@
     "color": "#CE1141",
     "logo": "/assets/teams/houston-rockets.webp?v=1",
     "seed": 13,
-    "wins": 0,
+    "wins": 1,
     "losses": 0,
     "primary": "#FFFFFF",
     "secondary": "#C4CED4"
