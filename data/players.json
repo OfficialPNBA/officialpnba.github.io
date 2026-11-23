@@ -1,27 +1,12 @@
 [
   {
-    "id": "jinyxez",
-    "name": "jinyxez",
+    "id": "osirius10",
+    "name": "osirius",
     "teamId": "boston-celtics",
-    "headshot": "https://cdn.discordapp.com/avatars/607513143278698497/2cc4077896dde9d1b8527f5f1d6da3fe.webp?size=128",
-    "discordId": "607513143278698497",
-    "discord": "jinyxez"
-  },
-  {
-    "id": "projxctsxint",
-    "name": "sxint",
-    "teamId": "boston-celtics",
-    "headshot": "https://cdn.discordapp.com/avatars/758111084548063243/b0a7a2aeea0b0ee07848fd42bdecedc1.webp?size=128",
-    "discordId": "758111084548063243",
-    "discord": "projxctsxint"
-  },
-  {
-    "id": "moncable",
-    "name": "Moncable",
-    "teamId": "boston-celtics",
-    "headshot": "https://cdn.discordapp.com/avatars/1128679436460490903/9b00ef10d0e90643625cab9e8876d47f.webp?size=128",
-    "discordId": "1128679436460490903",
-    "discord": "moncable"
+    "headshot": "https://cdn.discordapp.com/avatars/1333599265154662434/a8a39610a2cae6ae8d697282f7dc7c2b.webp?size=128",
+    "owner": true,
+    "discordId": "1333599265154662434",
+    "discord": "osirius10"
   },
   {
     "id": "krymzn",
@@ -32,21 +17,20 @@
     "discord": ".krymzn."
   },
   {
+    "id": "moncable",
+    "name": "Moncable",
+    "teamId": "boston-celtics",
+    "headshot": "https://cdn.discordapp.com/avatars/1128679436460490903/9b00ef10d0e90643625cab9e8876d47f.webp?size=128",
+    "discordId": "1128679436460490903",
+    "discord": "moncable"
+  },
+  {
     "id": "k5rtii",
     "name": "noid4l bumper",
     "teamId": "boston-celtics",
     "headshot": "https://cdn.discordapp.com/avatars/1183516797102723203/22ae28df4b7c3937dda94185ac1fb779.webp?size=128",
     "discordId": "1183516797102723203",
     "discord": "k5rtii"
-  },
-  {
-    "id": "osirius10",
-    "name": "osirius",
-    "teamId": "boston-celtics",
-    "headshot": "https://cdn.discordapp.com/avatars/1333599265154662434/a8a39610a2cae6ae8d697282f7dc7c2b.webp?size=128",
-    "owner": true,
-    "discordId": "1333599265154662434",
-    "discord": "osirius10"
   },
   {
     "id": "ranchero209-53836",
@@ -57,28 +41,45 @@
     "discord": "ranchero209__53836"
   },
   {
+    "id": "projxctsxint",
+    "name": "sxint",
+    "teamId": "boston-celtics",
+    "headshot": "https://cdn.discordapp.com/avatars/758111084548063243/b0a7a2aeea0b0ee07848fd42bdecedc1.webp?size=128",
+    "discordId": "758111084548063243",
+    "discord": "projxctsxint"
+  },
+  {
+    "id": "jinyxez",
+    "name": "jinyxez",
+    "teamId": "boston-celtics",
+    "headshot": "https://cdn.discordapp.com/avatars/607513143278698497/2cc4077896dde9d1b8527f5f1d6da3fe.webp?size=128",
+    "discordId": "607513143278698497",
+    "discord": "jinyxez"
+  },
+  {
+    "id": "owner-p-nets",
+    "name": "p",
+    "teamId": "brooklyn-nets",
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1367809568603901975/6cec0015278641ddb4b2f7601c0e89b3.webp?size=128",
+    "discordId": "1367809568603901975",
+    "discord": "ohhsame"
+  },
+  {
+    "id": "monkey-rex",
+    "name": "E9",
+    "teamId": "brooklyn-nets",
+    "headshot": "https://cdn.discordapp.com/avatars/1261141143538634904/7863d88a22511dd3cedd1f6028fe826e.webp?size=128",
+    "discordId": "1261141143538634904",
+    "discord": "monkey_rex"
+  },
+  {
     "id": "justflow",
     "name": "Flow",
     "teamId": "brooklyn-nets",
     "discordId": "445413479562870784",
     "discord": "justflow_",
     "headshot": "https://cdn.discordapp.com/avatars/445413479562870784/41c1f53b431a28016f2682c3fde672de.webp?size=128"
-  },
-  {
-    "id": "s8nck",
-    "name": "s",
-    "teamId": "brooklyn-nets",
-    "headshot": "https://cdn.discordapp.com/avatars/833162169772277821/591b9ade28417f3ce612f8c9f3e7ca97.webp?size=128",
-    "discordId": "833162169772277821",
-    "discord": "s8nck"
-  },
-  {
-    "id": "k2uq",
-    "name": "vamp",
-    "teamId": "brooklyn-nets",
-    "headshot": "https://cdn.discordapp.com/avatars/853269481836904468/c3ccc626ee0f53861e50e61cf5c8ae4e.webp?size=128",
-    "discordId": "853269481836904468",
-    "discord": "k2uq"
   },
   {
     "id": "muahahahahahahahahaha",
@@ -99,12 +100,20 @@
     "discord": "hmmm03225"
   },
   {
-    "id": "monkey-rex",
-    "name": "E9",
+    "id": "s8nck",
+    "name": "s",
     "teamId": "brooklyn-nets",
-    "headshot": "https://cdn.discordapp.com/avatars/1261141143538634904/7863d88a22511dd3cedd1f6028fe826e.webp?size=128",
-    "discordId": "1261141143538634904",
-    "discord": "monkey_rex"
+    "headshot": "https://cdn.discordapp.com/avatars/833162169772277821/591b9ade28417f3ce612f8c9f3e7ca97.webp?size=128",
+    "discordId": "833162169772277821",
+    "discord": "s8nck"
+  },
+  {
+    "id": "k2uq",
+    "name": "vamp",
+    "teamId": "brooklyn-nets",
+    "headshot": "https://cdn.discordapp.com/avatars/853269481836904468/c3ccc626ee0f53861e50e61cf5c8ae4e.webp?size=128",
+    "discordId": "853269481836904468",
+    "discord": "k2uq"
   },
   {
     "id": "george0603",
@@ -113,15 +122,6 @@
     "headshot": "https://cdn.discordapp.com/avatars/1279295872307298314/03e142a05ad6795733b01ab5b23a7ce0.webp?size=128",
     "discordId": "1279295872307298314",
     "discord": "george0603_"
-  },
-  {
-    "id": "owner-p-nets",
-    "name": "p",
-    "teamId": "brooklyn-nets",
-    "owner": true,
-    "headshot": "https://cdn.discordapp.com/avatars/1367809568603901975/142fb16fece9590eedaf5bdc27e3c3ee.webp?size=128",
-    "discordId": "1367809568603901975",
-    "discord": "ohhsame"
   },
   {
     "id": "vision",
@@ -135,6 +135,38 @@
     "headshot": "https://cdn.discordapp.com/avatars/189856067436544000/2e773bd8cad897d043bcdf689cf3188d.webp?size=128",
     "discordId": "189856067436544000",
     "discord": "vision7443"
+  },
+  {
+    "id": "defencse",
+    "name": "RoundTripSki",
+    "teamId": "chicago-bulls",
+    "headshot": "https://cdn.discordapp.com/avatars/1511234497616810055/43affdee66aae985a614da92bea18258.webp?size=128",
+    "discordId": "1511234497616810055",
+    "discord": "defencse."
+  },
+  {
+    "id": "ethaneezy",
+    "name": "Hoodlum E",
+    "teamId": "chicago-bulls",
+    "headshot": "https://cdn.discordapp.com/avatars/1207436774243049473/bc5d7fa85d63032d7e73b18a2086c5c1.webp?size=128",
+    "discordId": "1207436774243049473",
+    "discord": "ethaneezy."
+  },
+  {
+    "id": "loqqins",
+    "name": "loq",
+    "teamId": "chicago-bulls",
+    "headshot": "https://cdn.discordapp.com/avatars/793552863372247092/18e5ba7fa841db4d17ddb2c129b8a68f.webp?size=128",
+    "discordId": "793552863372247092",
+    "discord": "loqqins"
+  },
+  {
+    "id": "owner-pam-celtics",
+    "name": "Pam",
+    "teamId": "chicago-bulls",
+    "headshot": "https://cdn.discordapp.com/avatars/1121587846600470629/d2e82a38b74cb1425b63761466405796.webp?size=128",
+    "discordId": "1121587846600470629",
+    "discord": "pam1285"
   },
   {
     "id": "lifestylebrazy",
@@ -153,14 +185,6 @@
     "discord": "berrywt"
   },
   {
-    "id": "owner-pam-celtics",
-    "name": "Pam",
-    "teamId": "chicago-bulls",
-    "headshot": "https://cdn.discordapp.com/avatars/1121587846600470629/d2e82a38b74cb1425b63761466405796.webp?size=128",
-    "discordId": "1121587846600470629",
-    "discord": "pam1285"
-  },
-  {
     "id": "owner-runfrmzen-blazers",
     "name": "runfrmzen",
     "teamId": "chicago-bulls",
@@ -169,36 +193,21 @@
     "discord": "stolenscam"
   },
   {
-    "id": "defencse",
-    "name": "RoundTripSki",
+    "id": "mybootytickles",
+    "name": "᲼",
     "teamId": "chicago-bulls",
-    "headshot": "https://cdn.discordapp.com/avatars/1511234497616810055/43affdee66aae985a614da92bea18258.webp?size=128",
-    "discordId": "1511234497616810055",
-    "discord": "defencse."
+    "headshot": "https://cdn.discordapp.com/avatars/1275459252072349749/a5560b176800cffb2fb1aa4a7c4bbc40.webp?size=128",
+    "discordId": "1275459252072349749",
+    "discord": "mybootytickles"
   },
   {
-    "id": "ohshitcold",
-    "name": "ohshitcold",
+    "id": "owner-steezo-cavaliers",
+    "name": "steezo",
     "teamId": "cleveland-cavaliers",
-    "headshot": "https://cdn.discordapp.com/avatars/762872816181706773/a_f7a32b26ee3d077edcd0ba01d16712f3.webp?size=128",
-    "discordId": "762872816181706773",
-    "discord": "ohshitcold"
-  },
-  {
-    "id": "mareeiswashedd",
-    "name": "assistmerchant",
-    "teamId": "cleveland-cavaliers",
-    "headshot": "https://cdn.discordapp.com/avatars/924114076228001802/66b0c23abac00e69cbdae6bf7eb23c12.webp?size=128",
-    "discordId": "924114076228001802",
-    "discord": "mareeiswashedd"
-  },
-  {
-    "id": "chefnumber1",
-    "name": "not my whoa",
-    "teamId": "cleveland-cavaliers",
-    "headshot": "https://cdn.discordapp.com/avatars/1018246255736012953/e53d5463102305d3c645dffc5c6747fb.webp?size=128",
-    "discordId": "1018246255736012953",
-    "discord": "chefnumber1"
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1428165626781892728/82fe9a2656eebb28fb34720c70bb4d15.webp?size=128",
+    "discordId": "1428165626781892728",
+    "discord": "steezofelt"
   },
   {
     "id": "gigadude13",
@@ -207,6 +216,14 @@
     "headshot": "https://cdn.discordapp.com/avatars/1226273246450552882/26bf5f450a1e2a4f8e295bab55107c87.webp?size=128",
     "discordId": "1226273246450552882",
     "discord": "gigadude13"
+  },
+  {
+    "id": "mareeiswashedd",
+    "name": "assistmerchant",
+    "teamId": "cleveland-cavaliers",
+    "headshot": "https://cdn.discordapp.com/avatars/924114076228001802/66b0c23abac00e69cbdae6bf7eb23c12.webp?size=128",
+    "discordId": "924114076228001802",
+    "discord": "mareeiswashedd"
   },
   {
     "id": "frxgrances",
@@ -219,23 +236,28 @@
     "discord": "frxgrances"
   },
   {
-    "id": "myvengeances",
-    "name": "myvengeances",
+    "id": "luvians",
+    "name": "luvians",
     "teamId": "cleveland-cavaliers",
-    "position": "SG",
-    "overall": 99,
-    "headshot": "https://cdn.discordapp.com/guilds/1566558045151043754/users/1331766883417981101/avatars/c9d49d4c6b2c83b67816913efc1ed939.webp?size=128",
-    "discordId": "1331766883417981101",
-    "discord": "myvengeances"
+    "headshot": "https://cdn.discordapp.com/avatars/1467248930386477377/b97fd7465a16970c913ed85245c39a88.webp?size=128",
+    "discordId": "1467248930386477377",
+    "discord": "luvians"
   },
   {
-    "id": "owner-steezo-cavaliers",
-    "name": "steezo",
+    "id": "chefnumber1",
+    "name": "not my whoa",
     "teamId": "cleveland-cavaliers",
-    "owner": true,
-    "headshot": "https://cdn.discordapp.com/avatars/1428165626781892728/82fe9a2656eebb28fb34720c70bb4d15.webp?size=128",
-    "discordId": "1428165626781892728",
-    "discord": "steezofelt"
+    "headshot": "https://cdn.discordapp.com/avatars/1018246255736012953/e53d5463102305d3c645dffc5c6747fb.webp?size=128",
+    "discordId": "1018246255736012953",
+    "discord": "chefnumber1"
+  },
+  {
+    "id": "ohshitcold",
+    "name": "ohshitcold",
+    "teamId": "cleveland-cavaliers",
+    "headshot": "https://cdn.discordapp.com/avatars/762872816181706773/a_f7a32b26ee3d077edcd0ba01d16712f3.webp?size=128",
+    "discordId": "762872816181706773",
+    "discord": "ohshitcold"
   },
   {
     "id": "geeanz",
@@ -246,36 +268,14 @@
     "discord": "geeanz"
   },
   {
-    "id": "luvians",
-    "name": "luvians",
+    "id": "myvengeances",
+    "name": "myvengeances",
     "teamId": "cleveland-cavaliers",
-    "headshot": "https://cdn.discordapp.com/avatars/1467248930386477377/b97fd7465a16970c913ed85245c39a88.webp?size=128",
-    "discordId": "1467248930386477377",
-    "discord": "luvians"
-  },
-  {
-    "id": "rubalations",
-    "name": "rubalations",
-    "teamId": "denver-nuggets",
-    "headshot": "https://cdn.discordapp.com/avatars/341651910937280523/835e07db28ed97e512946c86d4feaf52.webp?size=128",
-    "discordId": "341651910937280523",
-    "discord": "rubalations"
-  },
-  {
-    "id": "kbeezy-3",
-    "name": "YungKB3X",
-    "teamId": "denver-nuggets",
-    "headshot": "https://cdn.discordapp.com/avatars/453675603011305473/3a64929f7e05f0cd9eb213d1539f84f5.webp?size=128",
-    "discordId": "453675603011305473",
-    "discord": "kbeezy_3"
-  },
-  {
-    "id": "zhnq",
-    "name": "Jay",
-    "teamId": "denver-nuggets",
-    "headshot": "https://cdn.discordapp.com/avatars/697549301546745927/a37ba2a07050247809d2b05317fe03f7.webp?size=128",
-    "discordId": "697549301546745927",
-    "discord": "zhnq"
+    "position": "SG",
+    "overall": 99,
+    "headshot": "https://cdn.discordapp.com/guilds/1566558045151043754/users/1331766883417981101/avatars/c9d49d4c6b2c83b67816913efc1ed939.webp?size=128",
+    "discordId": "1331766883417981101",
+    "discord": "myvengeances"
   },
   {
     "id": "owner-tai-nuggets",
@@ -287,21 +287,76 @@
     "discord": "t6_ai"
   },
   {
+    "id": "dont-ask-me-none",
+    "name": "DontAskSlither",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/1259664286729371763/31d3e83e8cebf37f471e0c230ce632a1.webp?size=128",
+    "discordId": "1259664286729371763",
+    "discord": "dont_ask_me_none"
+  },
+  {
+    "id": "trispaid",
+    "name": "fye",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/569987098766213129/a_65a3948719712233e7846a7fde88a0b1.webp?size=128",
+    "discordId": "569987098766213129",
+    "discord": "trispaid"
+  },
+  {
+    "id": "lllcjlll",
+    "name": "grail",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/1335428603466354690/a69e806946f71edd961b7fcee8324825.webp?size=128",
+    "discordId": "1335428603466354690",
+    "discord": "lllcjlll."
+  },
+  {
+    "id": "zhnq",
+    "name": "Jay",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/697549301546745927/a37ba2a07050247809d2b05317fe03f7.webp?size=128",
+    "discordId": "697549301546745927",
+    "discord": "zhnq"
+  },
+  {
+    "id": "keasim",
+    "name": "Keasim",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/216594624507150336/468186ef296a0d850c218a7def93ae83.webp?size=128",
+    "discordId": "216594624507150336",
+    "discord": "keasim"
+  },
+  {
+    "id": "theresnoemotion",
+    "name": "prne",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/795400993465434143/a_2494727c652d9c679a65c49b1d0342e9.webp?size=128",
+    "discordId": "795400993465434143",
+    "discord": "theresnoemotion"
+  },
+  {
     "id": "ourtruestory",
     "name": "gratitude",
     "teamId": "denver-nuggets",
-    "headshot": "https://cdn.discordapp.com/avatars/1540190053907697794/b71ea1b6effee99b55ab4b16c0723506.webp?size=128",
+    "headshot": "https://cdn.discordapp.com/avatars/1540190053907697794/333522a507ebe3addca06d93e2dceee7.webp?size=128",
     "discordId": "1540190053907697794",
     "discord": "ourtruestory"
   },
   {
-    "id": "zukichi1",
-    "name": "v",
-    "teamId": "golden-state-warriors",
-    "headshot": "https://cdn.discordapp.com/avatars/711364345757433957/ed37d820456f0b742e19703fa3d8063b.webp?size=128",
-    "discordId": "711364345757433957",
-    "discord": "zukichi1",
-    "roblox": "Vinsh"
+    "id": "kbeezy-3",
+    "name": "YungKB3X",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/453675603011305473/3a64929f7e05f0cd9eb213d1539f84f5.webp?size=128",
+    "discordId": "453675603011305473",
+    "discord": "kbeezy_3"
+  },
+  {
+    "id": "rubalations",
+    "name": "rubalations",
+    "teamId": "denver-nuggets",
+    "headshot": "https://cdn.discordapp.com/avatars/341651910937280523/835e07db28ed97e512946c86d4feaf52.webp?size=128",
+    "discordId": "341651910937280523",
+    "discord": "rubalations"
   },
   {
     "id": "owner-y-warriors",
@@ -321,44 +376,21 @@
     "discord": "newaccountthh"
   },
   {
-    "id": "j9shwa",
-    "name": "joshua",
-    "teamId": "houston-rockets",
-    "headshot": "https://cdn.discordapp.com/avatars/640280668982739012/9ea45f7eebd226801b1a63e9c465614f.webp?size=128",
-    "discordId": "640280668982739012",
-    "discord": "j9shwa"
+    "id": "7oi5",
+    "name": "Racks",
+    "teamId": "golden-state-warriors",
+    "headshot": "https://cdn.discordapp.com/avatars/1368665786486624277/5a1bfe0faf324c4371abee2ef563e727.webp?size=128",
+    "discordId": "1368665786486624277",
+    "discord": "7oi5"
   },
   {
-    "id": "ry3nnn",
-    "name": "ry3nnn",
-    "teamId": "houston-rockets",
-    "discordId": "701999484837822525",
-    "discord": "ry3nnn_",
-    "roblox": "ZilixFN"
-  },
-  {
-    "id": "nayai",
-    "name": "nayai",
-    "teamId": "houston-rockets",
-    "headshot": "https://cdn.discordapp.com/avatars/920678163049222174/4e10863c328ca33c36f0672c1677c72c.webp?size=128",
-    "discordId": "920678163049222174",
-    "discord": "nayai"
-  },
-  {
-    "id": "k9insane",
-    "name": "BIG BOG K9",
-    "teamId": "houston-rockets",
-    "headshot": "https://cdn.discordapp.com/avatars/1035769460973391974/5445ffd7ffb201a98393cbdf684ea4b1.webp?size=128",
-    "discordId": "1035769460973391974",
-    "discord": "k9insane"
-  },
-  {
-    "id": "ed28n",
-    "name": "Nebula",
-    "teamId": "houston-rockets",
-    "headshot": "https://cdn.discordapp.com/avatars/1128899895181459546/78151749ea2ae0ab0b77775cbb667e01.webp?size=128",
-    "discordId": "1128899895181459546",
-    "discord": "ed28n"
+    "id": "zukichi1",
+    "name": "v",
+    "teamId": "golden-state-warriors",
+    "headshot": "https://cdn.discordapp.com/avatars/711364345757433957/ed37d820456f0b742e19703fa3d8063b.webp?size=128",
+    "discordId": "711364345757433957",
+    "discord": "zukichi1",
+    "roblox": "Vinsh"
   },
   {
     "id": "owner-js-rockets",
@@ -371,12 +403,12 @@
     "roblox": "praisegoddaily"
   },
   {
-    "id": "balenciagas1",
-    "name": "relays",
+    "id": "k9insane",
+    "name": "BIG BOG K9",
     "teamId": "houston-rockets",
-    "headshot": "https://cdn.discordapp.com/avatars/1226973042958405818/6a861cad518606d3813dcbcfaa2217cb.webp?size=128",
-    "discordId": "1226973042958405818",
-    "discord": "balenciagas1"
+    "headshot": "https://cdn.discordapp.com/avatars/1035769460973391974/5445ffd7ffb201a98393cbdf684ea4b1.webp?size=128",
+    "discordId": "1035769460973391974",
+    "discord": "k9insane"
   },
   {
     "id": "d6rrick",
@@ -387,20 +419,52 @@
     "discord": "d6rrick"
   },
   {
+    "id": "j9shwa",
+    "name": "joshua",
+    "teamId": "houston-rockets",
+    "headshot": "https://cdn.discordapp.com/avatars/640280668982739012/9ea45f7eebd226801b1a63e9c465614f.webp?size=128",
+    "discordId": "640280668982739012",
+    "discord": "j9shwa"
+  },
+  {
+    "id": "nayai",
+    "name": "nayai",
+    "teamId": "houston-rockets",
+    "headshot": "https://cdn.discordapp.com/avatars/920678163049222174/4e10863c328ca33c36f0672c1677c72c.webp?size=128",
+    "discordId": "920678163049222174",
+    "discord": "nayai"
+  },
+  {
+    "id": "ed28n",
+    "name": "Nebula",
+    "teamId": "houston-rockets",
+    "headshot": "https://cdn.discordapp.com/avatars/1128899895181459546/78151749ea2ae0ab0b77775cbb667e01.webp?size=128",
+    "discordId": "1128899895181459546",
+    "discord": "ed28n"
+  },
+  {
+    "id": "balenciagas1",
+    "name": "relays",
+    "teamId": "houston-rockets",
+    "headshot": "https://cdn.discordapp.com/avatars/1226973042958405818/6a861cad518606d3813dcbcfaa2217cb.webp?size=128",
+    "discordId": "1226973042958405818",
+    "discord": "balenciagas1"
+  },
+  {
+    "id": "ry3nnn",
+    "name": "ry3nnn",
+    "teamId": "houston-rockets",
+    "discordId": "701999484837822525",
+    "discord": "ry3nnn_",
+    "roblox": "ZilixFN"
+  },
+  {
     "id": "water-boy323",
     "name": "Waterboy",
     "teamId": "houston-rockets",
     "headshot": "https://cdn.discordapp.com/avatars/1573736920113090693/2017c7a400dc8be917a9f80c434ab05f.webp?size=128",
     "discordId": "1573736920113090693",
     "discord": "water_boy323"
-  },
-  {
-    "id": "z3k",
-    "name": "z3kiris",
-    "teamId": "memphis-grizzlies",
-    "headshot": "https://cdn.discordapp.com/avatars/738545066238410803/5813821e4573aa1ae24711af4880fb7c.webp?size=128",
-    "discordId": "738545066238410803",
-    "discord": ".z3k."
   },
   {
     "id": "owner-sony-grizzlies",
@@ -413,20 +477,12 @@
     "roblox": "sonyeeeeeyyyy"
   },
   {
-    "id": "toebewildin",
-    "name": "KING_ROCKET223",
+    "id": "mpix",
+    "name": "x_ympix",
     "teamId": "memphis-grizzlies",
-    "headshot": "https://cdn.discordapp.com/avatars/1202777967898398785/a_48bc0162bc5ff99179ea1a1c63be2bfe.webp?size=128",
-    "discordId": "1202777967898398785",
-    "discord": "toebewildin"
-  },
-  {
-    "id": "tay-playz1",
-    "name": "Visuシ",
-    "teamId": "memphis-grizzlies",
-    "discordId": "1279821197780975707",
-    "discord": "tay_playz1",
-    "headshot": "https://cdn.discordapp.com/avatars/1279821197780975707/47e013893460df3e7c661593004d01ac.webp?size=128"
+    "headshot": "https://cdn.discordapp.com/avatars/1513686241693007943/dfd267ad894a350ce2546e70972afb27.webp?size=128",
+    "discordId": "1513686241693007943",
+    "discord": "mpix__."
   },
   {
     "id": "i83corpse",
@@ -446,12 +502,45 @@
     "roblox": "dj2tufforu"
   },
   {
-    "id": "mpix",
-    "name": "x_ympix",
+    "id": "toebewildin",
+    "name": "KING_ROCKET223",
     "teamId": "memphis-grizzlies",
-    "headshot": "https://cdn.discordapp.com/avatars/1513686241693007943/dfd267ad894a350ce2546e70972afb27.webp?size=128",
-    "discordId": "1513686241693007943",
-    "discord": "mpix__."
+    "headshot": "https://cdn.discordapp.com/avatars/1202777967898398785/a_48bc0162bc5ff99179ea1a1c63be2bfe.webp?size=128",
+    "discordId": "1202777967898398785",
+    "discord": "toebewildin"
+  },
+  {
+    "id": "tay-playz1",
+    "name": "Visuシ",
+    "teamId": "memphis-grizzlies",
+    "discordId": "1279821197780975707",
+    "discord": "tay_playz1",
+    "headshot": "https://cdn.discordapp.com/avatars/1279821197780975707/47e013893460df3e7c661593004d01ac.webp?size=128"
+  },
+  {
+    "id": "z3k",
+    "name": "z3kiris",
+    "teamId": "memphis-grizzlies",
+    "headshot": "https://cdn.discordapp.com/avatars/738545066238410803/5813821e4573aa1ae24711af4880fb7c.webp?size=128",
+    "discordId": "738545066238410803",
+    "discord": ".z3k."
+  },
+  {
+    "id": "owner-kimani-gaulden-heat",
+    "name": "kimani gaulden",
+    "teamId": "miami-heat",
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/546816182888693760/54f310a721adc74313974d60a59300e0.webp?size=128",
+    "discordId": "546816182888693760",
+    "discord": "syncco"
+  },
+  {
+    "id": "dolways",
+    "name": "7",
+    "teamId": "miami-heat",
+    "headshot": "https://cdn.discordapp.com/avatars/535292420737335306/8ff78f95736bb20fdfa07109daad544d.webp?size=128",
+    "discordId": "535292420737335306",
+    "discord": "dolways."
   },
   {
     "id": "aura5",
@@ -470,53 +559,12 @@
     "discord": "devhourr"
   },
   {
-    "id": "dolways",
-    "name": "7",
-    "teamId": "miami-heat",
-    "headshot": "https://cdn.discordapp.com/avatars/535292420737335306/8ff78f95736bb20fdfa07109daad544d.webp?size=128",
-    "discordId": "535292420737335306",
-    "discord": "dolways."
-  },
-  {
-    "id": "owner-kimani-gaulden-heat",
-    "name": "kimani gaulden",
-    "teamId": "miami-heat",
-    "owner": true,
-    "headshot": "https://cdn.discordapp.com/avatars/546816182888693760/54f310a721adc74313974d60a59300e0.webp?size=128",
-    "discordId": "546816182888693760",
-    "discord": "syncco"
-  },
-  {
-    "id": "tendeds",
-    "name": "Tendeds",
-    "teamId": "miami-heat",
-    "discordId": "696106749052321892",
-    "discord": "tendeds",
-    "headshot": "https://cdn.discordapp.com/avatars/696106749052321892/a830ef6f684886114c4c69b0acef7ad1.webp?size=128"
-  },
-  {
-    "id": "anbn",
-    "name": "oli",
-    "teamId": "miami-heat",
-    "headshot": "https://cdn.discordapp.com/avatars/712757761594621974/513034fa2b03323c4272fd57591cd4ab.webp?size=128",
-    "discordId": "712757761594621974",
-    "discord": "anbn"
-  },
-  {
     "id": "mdntseries",
     "name": "J",
     "teamId": "miami-heat",
     "headshot": "https://cdn.discordapp.com/avatars/860999163684061184/0d4363dd3187e4de51e97578361c6401.webp?size=128",
     "discordId": "860999163684061184",
     "discord": "mdntseries."
-  },
-  {
-    "id": "z-888",
-    "name": "z.",
-    "teamId": "miami-heat",
-    "headshot": "https://cdn.discordapp.com/avatars/1078105280837071019/731566adfdb43e6fb415ea531ec0092b.webp?size=128",
-    "discordId": "1078105280837071019",
-    "discord": "z.888"
   },
   {
     "id": "blackdud-e",
@@ -527,6 +575,14 @@
     "discord": "blackdud_e"
   },
   {
+    "id": "anbn",
+    "name": "oli",
+    "teamId": "miami-heat",
+    "headshot": "https://cdn.discordapp.com/avatars/712757761594621974/513034fa2b03323c4272fd57591cd4ab.webp?size=128",
+    "discordId": "712757761594621974",
+    "discord": "anbn"
+  },
+  {
     "id": "strangelite",
     "name": "strangelite",
     "teamId": "miami-heat",
@@ -535,44 +591,37 @@
     "discord": "strangelite_"
   },
   {
-    "id": "hzsh",
-    "name": "harsh",
-    "teamId": "minnesota-timberwolves",
-    "headshot": "https://cdn.discordapp.com/avatars/291988085388869632/22b79b994a832a70492278d975076b4a.webp?size=128",
-    "discordId": "291988085388869632",
-    "discord": "hzsh"
+    "id": "tendeds",
+    "name": "Tendeds",
+    "teamId": "miami-heat",
+    "discordId": "696106749052321892",
+    "discord": "tendeds",
+    "headshot": "https://cdn.discordapp.com/avatars/696106749052321892/a830ef6f684886114c4c69b0acef7ad1.webp?size=128"
   },
   {
-    "id": "zadet",
-    "name": "zadet",
-    "teamId": "minnesota-timberwolves",
-    "headshot": "https://cdn.discordapp.com/avatars/317861499035189248/f05bc76234e2051359ffcbfed8f6b2d2.webp?size=128",
-    "discordId": "317861499035189248",
-    "discord": "zadet"
+    "id": "xdxdxdxdxdxpxp",
+    "name": "writhe",
+    "teamId": "miami-heat",
+    "headshot": "https://cdn.discordapp.com/avatars/750394225522376824/7a9bf3de05de11366d275d02d80d2568.webp?size=128",
+    "discordId": "750394225522376824",
+    "discord": "xdxdxdxdxdxpxp"
   },
   {
-    "id": "kingfrombelow",
-    "name": "Light Yagami",
-    "teamId": "minnesota-timberwolves",
-    "headshot": "https://cdn.discordapp.com/avatars/440233400696045568/6a8a9f37335466142abc9f733c454fe8.webp?size=128",
-    "discordId": "440233400696045568",
-    "discord": "kingfrombelow"
+    "id": "z-888",
+    "name": "z.",
+    "teamId": "miami-heat",
+    "headshot": "https://cdn.discordapp.com/avatars/1078105280837071019/731566adfdb43e6fb415ea531ec0092b.webp?size=128",
+    "discordId": "1078105280837071019",
+    "discord": "z.888"
   },
   {
-    "id": "phaze7585",
-    "name": "shootginobilli",
+    "id": "owner-hahahahahahhaahahaha-timberwolves",
+    "name": "hahahahahahhaahahaha",
     "teamId": "minnesota-timberwolves",
-    "headshot": "https://cdn.discordapp.com/avatars/507711441478877195/7aa0519eef251841709033a7d55d943d.webp?size=128",
-    "discordId": "507711441478877195",
-    "discord": "phaze7585"
-  },
-  {
-    "id": "5howtime-nate",
-    "name": "J1",
-    "teamId": "minnesota-timberwolves",
-    "headshot": "https://cdn.discordapp.com/avatars/698578839038853131/6c3566528be3f2d7a2ad28b29811b298.webp?size=128",
-    "discordId": "698578839038853131",
-    "discord": "5howtime_nate"
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1315571888147402824/80e3477639ef66e76583ebfe8fe48162.webp?size=128",
+    "discordId": "1315571888147402824",
+    "discord": "netgambler"
   },
   {
     "id": "mcxflxuxry",
@@ -583,12 +632,43 @@
     "discord": "mcxflxuxry"
   },
   {
+    "id": "hzsh",
+    "name": "harsh",
+    "teamId": "minnesota-timberwolves",
+    "headshot": "https://cdn.discordapp.com/avatars/291988085388869632/22b79b994a832a70492278d975076b4a.webp?size=128",
+    "discordId": "291988085388869632",
+    "discord": "hzsh"
+  },
+  {
+    "id": "5howtime-nate",
+    "name": "J1",
+    "teamId": "minnesota-timberwolves",
+    "headshot": "https://cdn.discordapp.com/avatars/698578839038853131/6c3566528be3f2d7a2ad28b29811b298.webp?size=128",
+    "discordId": "698578839038853131",
+    "discord": "5howtime_nate"
+  },
+  {
+    "id": "kingfrombelow",
+    "name": "Light Yagami",
+    "teamId": "minnesota-timberwolves",
+    "headshot": "https://cdn.discordapp.com/avatars/440233400696045568/6a8a9f37335466142abc9f733c454fe8.webp?size=128",
+    "discordId": "440233400696045568",
+    "discord": "kingfrombelow"
+  },
+  {
     "id": "sinsxvx",
     "name": "Cp3fan",
     "teamId": "minnesota-timberwolves",
     "discordId": "877314307329777715",
     "discord": "sinsxvx",
-    "headshot": "https://cdn.discordapp.com/avatars/877314307329777715/3a47a1d169fe859a6aa12f3e2adacf02.webp?size=128"
+    "headshot": "https://cdn.discordapp.com/avatars/877314307329777715/7b080e9e6970638395765d5281f3b124.webp?size=128"
+  },
+  {
+    "id": "mumitisgodly",
+    "name": "CrxshJ",
+    "teamId": "minnesota-timberwolves",
+    "discordId": "1323638171346538581",
+    "discord": "mumitisgodly"
   },
   {
     "id": "deodon",
@@ -599,28 +679,20 @@
     "discord": ".deodon"
   },
   {
-    "id": "monkeymaster1098",
-    "name": "Dat glue guy",
+    "id": "phaze7585",
+    "name": "shootginobilli",
     "teamId": "minnesota-timberwolves",
-    "headshot": "https://cdn.discordapp.com/avatars/1285448386669183080/74e6306652cdb8d243fa6a00dbdb2887.webp?size=128",
-    "discordId": "1285448386669183080",
-    "discord": "monkeymaster1098"
+    "headshot": "https://cdn.discordapp.com/avatars/507711441478877195/7aa0519eef251841709033a7d55d943d.webp?size=128",
+    "discordId": "507711441478877195",
+    "discord": "phaze7585"
   },
   {
-    "id": "owner-hahahahahahhaahahaha-timberwolves",
-    "name": "hahahahahahhaahahaha",
+    "id": "skycansell",
+    "name": "sky",
     "teamId": "minnesota-timberwolves",
-    "owner": true,
-    "headshot": "https://cdn.discordapp.com/avatars/1315571888147402824/80e3477639ef66e76583ebfe8fe48162.webp?size=128",
-    "discordId": "1315571888147402824",
-    "discord": "hahahahahahhaahahaha"
-  },
-  {
-    "id": "mumitisgodly",
-    "name": "CrxshJ",
-    "teamId": "minnesota-timberwolves",
-    "discordId": "1323638171346538581",
-    "discord": "mumitisgodly"
+    "headshot": "https://cdn.discordapp.com/avatars/1349838306313113665/de1ad15dea5282e557c0353ec7b2b2fd.webp?size=128",
+    "discordId": "1349838306313113665",
+    "discord": "skycansell"
   },
   {
     "id": "xoxo7nyzori42",
@@ -631,12 +703,12 @@
     "discord": "xoxo7nyzori42"
   },
   {
-    "id": "shielddecay",
-    "name": "shielddecay",
-    "teamId": "new-york-knicks",
-    "headshot": "https://cdn.discordapp.com/avatars/270647398089359372/a207a9d8f7b7ea40691354f2af164b39.webp?size=128",
-    "discordId": "270647398089359372",
-    "discord": "shielddecay"
+    "id": "zadet",
+    "name": "zadet",
+    "teamId": "minnesota-timberwolves",
+    "headshot": "https://cdn.discordapp.com/avatars/317861499035189248/f05bc76234e2051359ffcbfed8f6b2d2.webp?size=128",
+    "discordId": "317861499035189248",
+    "discord": "zadet"
   },
   {
     "id": "sheluvghoul",
@@ -656,6 +728,14 @@
     "headshot": "https://cdn.discordapp.com/avatars/1009991553789468722/1fe0f4dd826c8735603534e9c261e469.webp?size=128"
   },
   {
+    "id": "shielddecay",
+    "name": "shielddecay",
+    "teamId": "new-york-knicks",
+    "headshot": "https://cdn.discordapp.com/avatars/270647398089359372/a207a9d8f7b7ea40691354f2af164b39.webp?size=128",
+    "discordId": "270647398089359372",
+    "discord": "shielddecay"
+  },
+  {
     "id": "zek34christ",
     "name": "Zek3",
     "teamId": "new-york-knicks",
@@ -664,12 +744,21 @@
     "discord": "zek34christ"
   },
   {
-    "id": "zombie6385",
-    "name": "Zombie",
+    "id": "justleavemebeplease",
+    "name": "melo",
     "teamId": "oklahoma-city-thunder",
-    "headshot": "https://cdn.discordapp.com/avatars/759898737685954570/bcd81fcab206d40df096f93f35ebc1b0.webp?size=128",
-    "discordId": "759898737685954570",
-    "discord": "zombie6385"
+    "headshot": "https://cdn.discordapp.com/avatars/1168885619854934109/215a26d65f7bed3fb7e37e570970c713.webp?size=128",
+    "owner": true,
+    "discordId": "1168885619854934109",
+    "discord": "justleavemebeplease"
+  },
+  {
+    "id": "flabby-cat",
+    "name": "cat",
+    "teamId": "oklahoma-city-thunder",
+    "headshot": "https://cdn.discordapp.com/avatars/707765223569883177/11eba1d427fb9449731d2994fb2df8b8.webp?size=128",
+    "discordId": "707765223569883177",
+    "discord": "flabby.cat"
   },
   {
     "id": "dee9855",
@@ -678,6 +767,22 @@
     "headshot": "https://cdn.discordapp.com/avatars/868577628632793090/4f747d6715e103b34937b08bc9f27f2c.webp?size=128",
     "discordId": "868577628632793090",
     "discord": "dee9855"
+  },
+  {
+    "id": "chozenx",
+    "name": "Doyo",
+    "teamId": "oklahoma-city-thunder",
+    "headshot": "https://cdn.discordapp.com/avatars/1344036401640898645/a568addb16037c086ad39725d8edc90d.webp?size=128",
+    "discordId": "1344036401640898645",
+    "discord": "chozenx_"
+  },
+  {
+    "id": "leavemebeplease",
+    "name": "Makeswood",
+    "teamId": "oklahoma-city-thunder",
+    "headshot": "https://cdn.discordapp.com/avatars/1411119285375598592/da919bc59358854d5d62219c702368c2.webp?size=128",
+    "discordId": "1411119285375598592",
+    "discord": "leavemebeplease"
   },
   {
     "id": "realqazzy",
@@ -696,21 +801,53 @@
     "discord": "xiavenas"
   },
   {
-    "id": "justleavemebeplease",
-    "name": "melo",
+    "id": "zombie6385",
+    "name": "Zombie",
     "teamId": "oklahoma-city-thunder",
-    "headshot": "https://cdn.discordapp.com/avatars/1168885619854934109/215a26d65f7bed3fb7e37e570970c713.webp?size=128",
-    "owner": true,
-    "discordId": "1168885619854934109",
-    "discord": "justleavemebeplease"
+    "headshot": "https://cdn.discordapp.com/avatars/759898737685954570/bcd81fcab206d40df096f93f35ebc1b0.webp?size=128",
+    "discordId": "759898737685954570",
+    "discord": "zombie6385"
   },
   {
-    "id": "chozenx",
-    "name": "Doyo",
-    "teamId": "oklahoma-city-thunder",
-    "headshot": "https://cdn.discordapp.com/avatars/1344036401640898645/a568addb16037c086ad39725d8edc90d.webp?size=128",
-    "discordId": "1344036401640898645",
-    "discord": "chozenx_"
+    "id": "owner-b-76ers",
+    "name": "b",
+    "teamId": "philadelphia-76ers",
+    "owner": true,
+    "headshot": "https://cdn.discordapp.com/avatars/1251347973716054046/d9d9f5a4b24e8f90770cf1ae42da150c.webp?size=128",
+    "discordId": "1251347973716054046",
+    "discord": "0.981"
+  },
+  {
+    "id": "lakezs",
+    "name": "Flowers Bloom",
+    "teamId": "philadelphia-76ers",
+    "headshot": "https://cdn.discordapp.com/avatars/973572064004939806/a_a24531f51a087cf0b79fd25a838d30fc.webp?size=128",
+    "discordId": "973572064004939806",
+    "discord": "lakezs"
+  },
+  {
+    "id": "bredy2",
+    "name": "bred.y",
+    "teamId": "philadelphia-76ers",
+    "headshot": "https://cdn.discordapp.com/avatars/1210918613331218464/91fed6cc87904442d7f43238e5f773ca.webp?size=128",
+    "discordId": "1210918613331218464",
+    "discord": "bredy2"
+  },
+  {
+    "id": "p6c5",
+    "name": "Brucefuckedemoff",
+    "teamId": "philadelphia-76ers",
+    "headshot": "https://cdn.discordapp.com/avatars/1161133771790237817/60cd3a8e75cdc8d6e45961f419519de6.webp?size=128",
+    "discordId": "1161133771790237817",
+    "discord": "p6c5"
+  },
+  {
+    "id": "beatsinmyneck",
+    "name": "Cherryhill",
+    "teamId": "philadelphia-76ers",
+    "headshot": "https://cdn.discordapp.com/avatars/1223739478846210172/173a5d2aa206a4169ba6328929931597.webp?size=128",
+    "discordId": "1223739478846210172",
+    "discord": "beatsinmyneck"
   },
   {
     "id": "ttaua",
@@ -729,45 +866,12 @@
     "discord": "flawlesspc"
   },
   {
-    "id": "lakezs",
-    "name": "Flowers Bloom",
+    "id": "nmnico7",
+    "name": "NmNico",
     "teamId": "philadelphia-76ers",
-    "headshot": "https://cdn.discordapp.com/avatars/973572064004939806/a_a24531f51a087cf0b79fd25a838d30fc.webp?size=128",
-    "discordId": "973572064004939806",
-    "discord": "lakezs"
-  },
-  {
-    "id": "p6c5",
-    "name": "Brucefuckedemoff",
-    "teamId": "philadelphia-76ers",
-    "headshot": "https://cdn.discordapp.com/avatars/1161133771790237817/60cd3a8e75cdc8d6e45961f419519de6.webp?size=128",
-    "discordId": "1161133771790237817",
-    "discord": "p6c5"
-  },
-  {
-    "id": "bredy2",
-    "name": "bred.y",
-    "teamId": "philadelphia-76ers",
-    "headshot": "https://cdn.discordapp.com/avatars/1210918613331218464/91fed6cc87904442d7f43238e5f773ca.webp?size=128",
-    "discordId": "1210918613331218464",
-    "discord": "bredy2"
-  },
-  {
-    "id": "beatsinmyneck",
-    "name": "Cherryhill",
-    "teamId": "philadelphia-76ers",
-    "headshot": "https://cdn.discordapp.com/avatars/1223739478846210172/173a5d2aa206a4169ba6328929931597.webp?size=128",
-    "discordId": "1223739478846210172",
-    "discord": "beatsinmyneck"
-  },
-  {
-    "id": "owner-b-76ers",
-    "name": "b",
-    "teamId": "philadelphia-76ers",
-    "owner": true,
-    "headshot": "https://cdn.discordapp.com/avatars/1251347973716054046/d9d9f5a4b24e8f90770cf1ae42da150c.webp?size=128",
-    "discordId": "1251347973716054046",
-    "discord": "0.981"
+    "headshot": "https://cdn.discordapp.com/avatars/1426667471774941294/a6a4c44676e6a71dbf0d3c4e9d94d0f0.webp?size=128",
+    "discordId": "1426667471774941294",
+    "discord": "nmnico7"
   },
   {
     "id": "5srtp",
@@ -778,61 +882,108 @@
     "discord": "5srtp"
   },
   {
-    "id": "nmnico7",
-    "name": "NmNico",
-    "teamId": "philadelphia-76ers",
-    "headshot": "https://cdn.discordapp.com/avatars/1426667471774941294/a6a4c44676e6a71dbf0d3c4e9d94d0f0.webp?size=128",
-    "discordId": "1426667471774941294",
-    "discord": "nmnico7"
+    "id": "joshuaaaaaaaaaaaaaaaaaaaaaa",
+    "name": "joshua",
+    "teamId": "portland-trail-blazers",
+    "headshot": "https://cdn.discordapp.com/avatars/715554343172046949/ed17acf450db614af88e55a15b570c63.webp?size=128",
+    "discordId": "715554343172046949",
+    "discord": "joshuaaaaaaaaaaaaaaaaaaaaaa",
+    "owner": true
+  },
+  {
+    "id": "nationallytreasured",
+    "name": "japan",
+    "teamId": "portland-trail-blazers",
+    "headshot": "https://cdn.discordapp.com/avatars/1321705821696167958/aac3f18be1190beee44a5b3a1154234d.webp?size=128",
+    "discordId": "1321705821696167958",
+    "discord": "nationallytreasured"
+  },
+  {
+    "id": "ioveisposion",
+    "name": "luiss",
+    "teamId": "portland-trail-blazers",
+    "headshot": "https://cdn.discordapp.com/avatars/722523450970734718/1346084f02a2e652793c0ffcfd70cd80.webp?size=128",
+    "discordId": "722523450970734718",
+    "discord": "ioveisposion"
+  },
+  {
+    "id": "un2r",
+    "name": "The Masterpiece.",
+    "teamId": "portland-trail-blazers",
+    "headshot": "https://cdn.discordapp.com/avatars/1026507975269036112/ecfdaf9ebab9768ff34fe00b16f7f6b0.webp?size=128",
+    "discordId": "1026507975269036112",
+    "discord": "un2r"
+  },
+  {
+    "id": "xenkle",
+    "name": "xen",
+    "teamId": "portland-trail-blazers",
+    "headshot": "https://cdn.discordapp.com/avatars/665644980270006272/dd89d74f77f6fca81b35af8aed1f73c6.webp?size=128",
+    "discordId": "665644980270006272",
+    "discord": "xenkle"
+  },
+  {
+    "id": "monkeymaster1098",
+    "name": "Dat glue guy",
+    "teamId": null,
+    "headshot": "https://cdn.discordapp.com/avatars/1285448386669183080/74e6306652cdb8d243fa6a00dbdb2887.webp?size=128",
+    "discordId": "1285448386669183080",
+    "discord": "monkeymaster1098",
+    "formerTeamId": "minnesota-timberwolves"
   },
   {
     "id": "zaysontv",
     "name": "zays",
-    "teamId": "portland-trail-blazers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/guilds/1566558045151043754/users/371771356389572615/avatars/a_40f1cf6e2ce32b8b7eae40233fad317e.webp?size=128",
-    "owner": true,
     "discordId": "371771356389572615",
-    "discord": "zaysontv"
+    "discord": "zaysontv",
+    "formerTeamId": "portland-trail-blazers"
   },
   {
     "id": "jellyjdz",
     "name": "Jelly",
-    "teamId": "portland-trail-blazers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/459207779371057172/581c0e3893346153d1f57d28cb170195.webp?size=128",
     "discordId": "459207779371057172",
-    "discord": "jellyjdz"
+    "discord": "jellyjdz",
+    "formerTeamId": "portland-trail-blazers"
   },
   {
     "id": "soulninetynine",
     "name": "soul",
-    "teamId": "portland-trail-blazers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/610802223265480725/817bb81994526c857896b6a26fcddfbf.webp?size=128",
     "discordId": "610802223265480725",
-    "discord": "soulninetynine"
+    "discord": "soulninetynine",
+    "formerTeamId": "portland-trail-blazers"
   },
   {
     "id": "fatibatilati",
     "name": "Mahad",
-    "teamId": "portland-trail-blazers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/617436912025600043/df8cb4a55602692859cd70a2fed5aea4.webp?size=128",
     "discordId": "617436912025600043",
-    "discord": "fatibatilati"
+    "discord": "fatibatilati",
+    "formerTeamId": "portland-trail-blazers"
   },
   {
     "id": "nadeers",
     "name": "nadeers",
-    "teamId": "portland-trail-blazers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/688111017074622465/dfa76f372f7d64b3962b4d3e258f3686.webp?size=128",
     "discordId": "688111017074622465",
-    "discord": "nadeers"
+    "discord": "nadeers",
+    "formerTeamId": "portland-trail-blazers"
   },
   {
     "id": "dominvcc",
     "name": "dom",
-    "teamId": "portland-trail-blazers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/1473208621427986546/828ca53eb362044e79b38095491cb5bc.webp?size=128",
     "discordId": "1473208621427986546",
-    "discord": "dominvcc"
+    "discord": "dominvcc",
+    "formerTeamId": "portland-trail-blazers"
   },
   {
     "id": "luismazda",
