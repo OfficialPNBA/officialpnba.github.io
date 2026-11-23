@@ -95,10 +95,10 @@ export const media = [
     summary:'The official RNBA badge. Red, white, and blue on a black shield, with a transparent background.',
     image:'/assets/rnba-logo.png', download:'/assets/rnba-logo.png' }
 ];
-// Transaction: { id, title, type, date, teamIds, players, summary,
-//                received: [{ teamId, assets: [] }] }
-// Type: Trade | Signing | Release | Other.
-export const transactions = [];
+// Transactions live in data/transactions.json (the Discord bot appends to it).
+// Entry: { type: "Signing" | "Release", discordId, discord, roblox?, teamId (site team id, e.g. "boston-celtics"), at (ISO UTC time it really happened) }
+// Signings start a 72-hour release lock (shown as a live countdown on /transactions/).
+export const transactions = JSON.parse(readFileSync(new URL('./transactions.json', import.meta.url), 'utf8'));
 // Home page banner: players shown in panels around the logo, listed from the
 // logo outward and alternating left/right. Image goes in public/assets/banner/.
 // Player: { team, image, color }. An odd count adds a "next franchise" teaser panel.

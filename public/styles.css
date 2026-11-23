@@ -1182,3 +1182,11 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .rp-row.is-owner .rp-rbx:not(.is-unknown){color:var(--owner-role)}
 .rp-dc{display:flex;min-width:0}
 .rp-dc .rp-dn{font-size:12.5px;font-weight:500;line-height:1.35;max-width:100%}
+/* Transactions feeds (2026-11-23) */
+.tx-tabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}.tx-tabs button{font:700 15px/1 var(--display);letter-spacing:.5px;text-transform:uppercase;padding:13px 22px;background:#15171b;color:#aab3c0;border:1px solid var(--line);cursor:pointer}.tx-tabs button[aria-selected="true"]{background:#c8102e;color:#fff;border-color:#c8102e}
+.tx-feeds .page-toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.tx-note{font-size:12px;color:#9ba7b6;margin:0 0 14px}
+.tx-list{display:grid;gap:12px}.tx-card{display:grid;grid-template-columns:56px 1fr auto;gap:18px;align-items:center;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--tc)}
+.tx-logo{width:56px;height:56px;object-fit:contain}.tx-who{display:flex;flex-direction:column;gap:3px;min-width:0}.tx-team{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9ba7b6}.tx-rb{font:700 22px/1.1 var(--display);color:#fff;overflow-wrap:anywhere}.tx-dc{font-size:12px;color:#8ea1ff;width:max-content;max-width:100%;overflow-wrap:anywhere}
+.tx-status{display:flex;flex-direction:column;align-items:flex-end;gap:4px;text-align:right}.tx-label{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#e0a43a}.tx-clock{font:700 26px/1 var(--display);font-variant-numeric:tabular-nums;color:#fff}.tx-status small{font-size:10px;color:#8d97a5}
+.tx-card.is-open .tx-label{color:#3ddc84}.tx-card.is-open .tx-clock{font-size:20px;color:#d8ffe8}.tx-rel{background:#5a1a22;color:#ffb3bd}.tx-none{text-align:center;color:#9ba7b6;padding:30px 0}
+@media(max-width:650px){.tx-card{grid-template-columns:44px 1fr;gap:12px;padding:14px}.tx-logo{width:44px;height:44px}.tx-status{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:space-between;text-align:left;border-top:1px solid var(--line);padding-top:10px}.tx-rb{font-size:19px}.tx-clock{font-size:22px}.tx-tabs button{flex:1;padding:12px 10px;font-size:13px}}

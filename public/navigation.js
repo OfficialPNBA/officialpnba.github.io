@@ -100,3 +100,29 @@ try{if(localStorage.getItem('npba-admin')){const S='/staff-7q4k2x/';
   root.addEventListener('click',e=>{const b=e.target.closest('[data-lb-more]');if(!b)return;const open=b.getAttribute('aria-expanded')!=='true';
     b.closest('.lb-card').querySelectorAll('[data-lb-extra]').forEach(li=>li.hidden=!open);b.setAttribute('aria-expanded',String(open));
     b.textContent=open?'Show top 5':`Show all ${b.closest('.lb-card').querySelectorAll('.lb-row').length}`;});})();
+// Transactions: Release Feed / Signings Feed tabs, sort, search, and live 72-hour release-lock countdowns.
+(()=>{const root=document.querySelector('[data-tx]');if(!root)return;
+  const tabs=[...root.querySelectorAll('[data-tx-tab]')],q=root.querySelector('[data-search]'),none=root.querySelector('[data-tx-none]');
+  let cur='release';try{const s=localStorage.getItem('rnba-tx-tab');if(s==='signings'||s==='release')cur=s;}catch{}
+  const view=k=>root.querySelector(`[data-tx-view="${k}"]`);
+  const sorters={latest:(a,b)=>Date.parse(b.dataset.signed)-Date.parse(a.dataset.signed),oldest:(a,b)=>Date.parse(a.dataset.signed)-Date.parse(b.dataset.signed),
+    soonest:(a,b)=>(+a.dataset.unlock)-(+b.dataset.unlock),
+    available:(a,b)=>{const n=Date.now(),ra=+a.dataset.unlock<=n,rb=+b.dataset.unlock<=n;return ra!==rb?(ra?-1:1):(+a.dataset.unlock)-(+b.dataset.unlock);},
+    team:(a,b)=>a.dataset.team.localeCompare(b.dataset.team)||a.dataset.name.localeCompare(b.dataset.name),name:(a,b)=>a.dataset.name.localeCompare(b.dataset.name)};
+  const apply=()=>{tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.txTab===cur)));
+    root.querySelectorAll('[data-tx-view]').forEach(v=>v.hidden=v.dataset.txView!==cur);
+    root.querySelectorAll('[data-tx-sortwrap]').forEach(v=>v.hidden=v.dataset.txSortwrap!==cur);
+    const v=view(cur),list=v.querySelector('[data-tx-list]'),sel=root.querySelector(`[data-tx-sort="${cur}"]`);
+    const cards=[...list.children];cards.sort(sorters[sel.value]||sorters.latest).forEach(c=>list.appendChild(c));
+    const term=(q?.value||'').trim().toLowerCase();let shown=0;
+    cards.forEach(c=>{const m=!term||(c.dataset.searchValue||'').toLowerCase().includes(term);c.hidden=!m;if(m)shown++;});
+    if(none)none.hidden=!(term&&!shown);};
+  tabs.forEach(t=>t.addEventListener('click',()=>{cur=t.dataset.txTab;try{localStorage.setItem('rnba-tx-tab',cur)}catch{}apply();}));
+  root.querySelectorAll('[data-tx-sort]').forEach(s=>{try{const v=localStorage.getItem('rnba-tx-sort-'+s.dataset.txSort);if(v&&s.querySelector(`option[value="${v}"]`))s.value=v;}catch{}
+    s.addEventListener('change',()=>{try{localStorage.setItem('rnba-tx-sort-'+s.dataset.txSort,s.value)}catch{}apply();});});
+  q?.addEventListener('input',apply);
+  const pad=n=>String(n).padStart(2,'0');
+  const tick=()=>{const now=Date.now();root.querySelectorAll('.tx-status[data-unlock]').forEach(st=>{const left=+st.dataset.unlock-now,card=st.closest('.tx-card');
+    if(left>0){const s=Math.floor(left/1e3);st.querySelector('.tx-clock').textContent=`${pad(Math.floor(s/3600))}:${pad(Math.floor(s/60)%60)}:${pad(s%60)}`;st.querySelector('.tx-label').textContent='Release lock';card.classList.remove('is-open');}
+    else{const days=Math.floor((now-Date.parse(card.dataset.signed))/864e5);st.querySelector('.tx-label').textContent='Available For Release';st.querySelector('.tx-clock').textContent=`${days} day${days===1?'':'s'} on team`;card.classList.add('is-open');}});};
+  apply();tick();setInterval(tick,1000);})();
