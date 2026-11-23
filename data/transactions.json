@@ -1,1 +1,835 @@
-[]
+[
+ {
+  "type": "Signing",
+  "discordId": "1099769663732334742",
+  "discord": "dd0tnap",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-19T19:46:03Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1210918613331218464",
+  "discord": "bredy2",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-19T19:48:18Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1078105280837071019",
+  "discord": "z.888",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T19:54:31Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "531993805952516115",
+  "discord": "devhourr",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T19:56:52Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "860999163684061184",
+  "discord": "mdntseries.",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T19:59:50Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1375114628300013652",
+  "discord": "blackdud_e",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T20:18:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "712757761594621974",
+  "discord": "anbn",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T20:20:27Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "291988085388869632",
+  "discord": "hzsh",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-19T20:21:05Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "317861499035189248",
+  "discord": "zadet",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-19T20:27:14Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1317699131489255477",
+  "discord": "frxgrances",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-19T20:29:38Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1467248930386477377",
+  "discord": "luvians",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-19T20:33:26Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "535292420737335306",
+  "discord": "dolways.",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T20:57:47Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1249146416291647529",
+  "discord": "hmmm03225",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-19T21:06:19Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "833162169772277821",
+  "discord": "s8nck",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-19T21:08:05Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1261141143538634904",
+  "discord": "monkey_rex",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-19T21:08:24Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1519751444255870997",
+  "discord": "strangelite_",
+  "teamId": "miami-heat",
+  "at": "2026-11-19T21:25:24Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1018246255736012953",
+  "discord": "chefnumber1",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-19T22:03:04Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1331766883417981101",
+  "discord": "myvengeances",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-19T22:03:45Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1128899895181459546",
+  "discord": "ed28n",
+  "teamId": "houston-rockets",
+  "at": "2026-11-19T22:32:51Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1061510684803874887",
+  "discord": "muahahahahahahahahaha",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-19T22:36:07Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1513686241693007943",
+  "discord": "mpix__.",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-19T22:37:34Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1279295872307298314",
+  "discord": "george0603_",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-19T22:45:27Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "481976417119240213",
+  "discord": "berrywt",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-19T23:09:09Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1051304198832144524",
+  "discord": "newaccountthh",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-19T23:14:06Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "853269481836904468",
+  "discord": "k2uq",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-19T23:24:03Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "711364345757433957",
+  "discord": "zukichi1",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-19T23:33:09Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1511234497616810055",
+  "discord": "defencse.",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-19T23:53:32Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "474244500030488588",
+  "discord": "ttaua",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T00:02:25Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "280192552282488833",
+  "discord": "lifestylebrazy",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-20T00:04:27Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1426667471774941294",
+  "discord": "nmnico7",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T00:05:54Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1223739478846210172",
+  "discord": "beatsinmyneck",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T00:12:09Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1210918613331218464",
+  "discord": "bredy2",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T00:22:43Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "738545066238410803",
+  "discord": ".z3k.",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-20T00:24:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1202777967898398785",
+  "discord": "toebewildin",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-20T00:29:02Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1458613874008920117",
+  "discord": "geeanz",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-20T01:01:13Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "815746120717828156",
+  "discord": "flawlesspc",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T01:24:37Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "758111084548063243",
+  "discord": "projxctsxint",
+  "teamId": "boston-celtics",
+  "at": "2026-11-20T01:52:41Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1183516797102723203",
+  "discord": "k5rtii",
+  "teamId": "boston-celtics",
+  "at": "2026-11-20T01:53:17Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "607513143278698497",
+  "discord": "jinyxez",
+  "teamId": "boston-celtics",
+  "at": "2026-11-20T01:54:18Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1365371806550196296",
+  "discord": "ranchero209__53836",
+  "teamId": "boston-celtics",
+  "at": "2026-11-20T02:00:58Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1180946206084571218",
+  "discord": ".krymzn.",
+  "teamId": "boston-celtics",
+  "at": "2026-11-20T02:03:12Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1128679436460490903",
+  "discord": "moncable",
+  "teamId": "boston-celtics",
+  "at": "2026-11-20T02:03:44Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1121587846600470629",
+  "discord": "pam1285",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-20T02:28:44Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "924114076228001802",
+  "discord": "mareeiswashedd",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-20T03:52:49Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "507711441478877195",
+  "discord": "phaze7585",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-20T06:51:45Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1473208621427986546",
+  "discord": "dominvcc",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-20T14:28:10Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "688111017074622465",
+  "discord": "nadeers",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-20T18:12:05Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "617436912025600043",
+  "discord": "fatibatilati",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-20T18:31:22Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1452588040479309950",
+  "discord": "xoxo7nyzori42",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-20T20:20:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1285448386669183080",
+  "discord": "monkeymaster1098",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-20T20:20:32Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "920678163049222174",
+  "discord": "nayai",
+  "teamId": "houston-rockets",
+  "at": "2026-11-20T20:40:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "973572064004939806",
+  "discord": "lakezs",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T21:20:22Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1339855276643455050",
+  "discord": "5srtp",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-20T22:26:37Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1084369273645957130",
+  "discord": "xiavenas",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-21T00:07:05Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1449832332147167232",
+  "discord": "tg00061",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-21T00:08:46Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "913792322448265266",
+  "discord": "realqazzy",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-21T00:19:35Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1457270211093856463",
+  "discord": "bigsino__71754",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-21T02:02:25Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1323638171346538581",
+  "discord": "mumitisgodly",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-21T13:19:45Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "440233400696045568",
+  "discord": "kingfrombelow",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-21T13:43:25Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1219655293064057005",
+  "discord": "luismazda",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-21T15:40:58Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "698578839038853131",
+  "discord": "5howtime_nate",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-21T15:55:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "701999484837822525",
+  "discord": "ry3nnn_",
+  "teamId": "houston-rockets",
+  "at": "2026-11-21T16:13:46Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1573736920113090693",
+  "discord": "water_boy323",
+  "teamId": "houston-rockets",
+  "at": "2026-11-21T16:57:13Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "759898737685954570",
+  "discord": "zombie6385",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-21T17:08:50Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "913792322448265266",
+  "discord": "realqazzy",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-21T17:18:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "640280668982739012",
+  "discord": "j9shwa",
+  "teamId": "houston-rockets",
+  "at": "2026-11-21T18:13:21Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "813211286384017437",
+  "discord": "mcxflxuxry",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-21T18:13:26Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1335562323183796339",
+  "discord": "i83corpse",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-21T18:30:02Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1344036401640898645",
+  "discord": "chozenx_",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-21T18:57:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1226973042958405818",
+  "discord": "balenciagas1",
+  "teamId": "houston-rockets",
+  "at": "2026-11-21T19:21:20Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "868577628632793090",
+  "discord": "dee9855",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-21T19:57:41Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "610802223265480725",
+  "discord": "soulninetynine",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-21T23:11:43Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "990851902726111243",
+  "discord": ".deodon",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-21T23:25:54Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "459207779371057172",
+  "discord": "jellyjdz",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-21T23:37:10Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1161133771790237817",
+  "discord": "p6c5",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-21T23:57:48Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1035769460973391974",
+  "discord": "k9insane",
+  "teamId": "houston-rockets",
+  "at": "2026-11-22T03:05:06Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1226273246450552882",
+  "discord": "gigadude13",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-22T03:51:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1260079863768027146",
+  "discord": "d6rrick",
+  "teamId": "houston-rockets",
+  "at": "2026-11-22T03:51:22Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "762872816181706773",
+  "discord": "ohshitcold",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-22T03:59:12Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1461785460023103549",
+  "discord": "zek34christ",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-22T05:31:19Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "341651910937280523",
+  "discord": "rubalations",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-22T05:44:51Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1540190053907697794",
+  "discord": "ourtruestory",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-22T05:46:20Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "697549301546745927",
+  "discord": "zhnq",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-22T05:46:44Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "270647398089359372",
+  "discord": "shielddecay",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-22T05:47:35Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "453675603011305473",
+  "discord": "kbeezy_3",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-22T05:55:35Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1558986482935406675",
+  "discord": "chez0_00",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-22T06:06:21Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1009991553789468722",
+  "discord": "choppa_thatgoat",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-22T16:26:35Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1279821197780975707",
+  "discord": "tay_playz1",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-22T17:05:31Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1465051049298497726",
+  "discord": "marithegoat0811",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-22T17:17:52Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1448450977299693588",
+  "discord": "zdj6",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-22T17:45:24Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "696106749052321892",
+  "discord": "tendeds",
+  "teamId": "miami-heat",
+  "at": "2026-11-22T17:58:38Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "445413479562870784",
+  "discord": "justflow_",
+  "teamId": "brooklyn-nets",
+  "at": "2026-11-22T18:10:30Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1387637384945995860",
+  "discord": "stolenscam",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-22T18:41:28Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "877314307329777715",
+  "discord": "sinsxvx",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-22T18:44:55Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "395817577915482113",
+  "discord": "aura5",
+  "teamId": "miami-heat",
+  "at": "2026-11-22T19:21:27Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1321705821696167958",
+  "discord": "nationallytreasured",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-22T22:51:41Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1026507975269036112",
+  "discord": "un2r",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-22T22:51:41Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "722523450970734718",
+  "discord": "ioveisposion",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-22T22:51:41Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "665644980270006272",
+  "discord": "xenkle",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-22T22:51:41Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "707765223569883177",
+  "discord": "flabby.cat",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-22T23:35:44Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1411119285375598592",
+  "discord": "leavemebeplease",
+  "teamId": "oklahoma-city-thunder",
+  "at": "2026-11-22T23:36:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1349838306313113665",
+  "discord": "skycansell",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-22T23:41:24Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1368665786486624277",
+  "discord": "7oi5",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-23T00:03:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1275459252072349749",
+  "discord": "mybootytickles",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-23T00:36:53Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "750394225522376824",
+  "discord": "xdxdxdxdxdxpxp",
+  "teamId": "miami-heat",
+  "at": "2026-11-23T02:07:18Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "569987098766213129",
+  "discord": "trispaid",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-23T02:25:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "795400993465434143",
+  "discord": "theresnoemotion",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-23T02:25:36Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1335428603466354690",
+  "discord": "lllcjlll.",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-23T02:26:20Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1259664286729371763",
+  "discord": "dont_ask_me_none",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-23T02:26:26Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "793552863372247092",
+  "discord": "loqqins",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-23T02:29:20Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "216594624507150336",
+  "discord": "keasim",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-23T02:36:48Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1207436774243049473",
+  "discord": "ethaneezy.",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-23T02:43:47Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "688111017074622465",
+  "discord": "nadeers",
+  "teamId": "miami-heat",
+  "at": "2026-11-23T17:58:49Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "896502768775340042",
+  "discord": "ad1re",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-23T20:19:17Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "574592217675464724",
+  "discord": "ilovemoneybags1",
+  "teamId": "boston-celtics",
+  "at": "2026-11-23T20:20:21Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "813813874302255156",
+  "discord": "funny8256",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-23T20:31:04Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "648703094007529485",
+  "discord": "omlsync",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-23T21:12:03Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1032342520929189988",
+  "discord": "kamashi.p",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-23T21:27:45Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1391153025024004097",
+  "discord": "chunkymunky81",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-23T22:32:45Z"
+ }
+]

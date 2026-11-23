@@ -213,6 +213,8 @@ function mediaPage(){
 }
 // Transactions (public since 2026-11-23): Release Feed (72h release lock countdown, then "Available For Release" + days on team) and Signings Feed.
 const RELEASE_LOCK_MS=72*3600e3;
+// Signings before this time came from before /release existed (players moved by hand), so the Discord-synced roster decides if they're still on that team. After it, the bot's signings/releases are trusted as-is.
+const ROSTER_CHECK_BEFORE=Date.parse('2026-11-24T00:00:00Z');
 function transactionsPage(){
   const tx=transactions.filter(t=>t&&t.at&&!isNaN(Date.parse(t.at))).sort((a,b)=>Date.parse(b.at)-Date.parse(a.at));
   const byId=new Map(players.filter(p=>p.discordId).map(p=>[String(p.discordId),p]));
@@ -222,7 +224,7 @@ function transactionsPage(){
   const when=iso=>`<time data-et="${esc(iso)}" datetime="${esc(iso)}">${esc(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(iso)))}</time>`;
   // Release feed: each player's latest signing, if they're still on that team (players.json is the live roster) and haven't been released since.
   const seen=new Set(),active=[];
-  for(const t of tx){const k=String(t.discordId||t.discord);if(seen.has(k))continue;seen.add(k);if(t.type!=='Signing')continue;const p=byId.get(String(t.discordId));if(p&&p.teamId!==t.teamId)continue;active.push(t);}
+  for(const t of tx){const k=String(t.discordId||t.discord);if(seen.has(k))continue;seen.add(k);if(t.type!=='Signing')continue;const p=byId.get(String(t.discordId));if(p&&p.teamId!==t.teamId&&Date.parse(t.at)<ROSTER_CHECK_BEFORE)continue;active.push(t);}
   const sortSel=(name,opts)=>`<label class="select-label tx-sort">Sort<select data-tx-sort="${name}" aria-label="Sort ${name} feed">${opts.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select></label>`;
   const card=(t,body,extra='')=>{const w=who(t);const tm=team(t.teamId);return `<article class="tx-card" data-signed="${esc(t.at)}" data-team="${esc(tm?.name||'')}" data-name="${esc((w.roblox||w.discord).toLowerCase())}"${extra} data-search-value="${esc([w.roblox,w.discord,tm?.name,tm?.abbreviation].join(' '))}" style="--tc:${esc(tm?.color||'#c8102e')}">${logo(t.teamId)}<div class="tx-who"><span class="tx-team">${esc(tm?.name||t.teamId)}</span><strong class="tx-rb">${esc(w.roblox||'????')}</strong>${dc(w)}</div>${body}</article>`;};
   const releaseCards=active.map(t=>{const unlock=Date.parse(t.at)+RELEASE_LOCK_MS;return card(t,`<div class="tx-status" data-unlock="${unlock}"><span class="tx-label">Release lock</span><b class="tx-clock">--:--:--</b><small>Signed ${when(t.at)}</small></div>`,` data-unlock="${unlock}"`);}).join('');
