@@ -157,7 +157,7 @@
       {"name": "LeBewwy", "pos": "SG", "pts": 30, "ast": 7, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 15, "tpm": 9, "tpa": 11, "ftm": 1, "fta": 1, "tov": 1, "fls": 0, "pm": -8},
       {"name": "underr4te", "pos": "PF", "pts": 27, "ast": 1, "reb": 2, "blk": 1, "stl": 0, "fgm": 9, "fga": 11, "tpm": 6, "tpa": 8, "ftm": 3, "fta": 4, "tov": 0, "fls": 1, "pm": -8},
       {"name": "zPud", "pos": "C", "pts": 7, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 3, "fga": 5, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 1, "tov": 2, "fls": 1, "pm": 1},
-      {"name": "Defencse", "pos": "PF", "pts": 19, "ast": 1, "reb": 5, "blk": 0, "stl": 0, "fgm": 9, "fga": 11, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 4}
+      {"name": "Defencse", "pos": "PF", "pts": 23, "ast": 1, "reb": 5, "blk": 0, "stl": 0, "fgm": 11, "fga": 13, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 4}
     ]
   }
 ]
