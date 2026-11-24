@@ -136,5 +136,28 @@
       {"name": "miyu6i", "pos": "PF", "pts": 6, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 2, "fga": 4, "tpm": 2, "tpa": 3, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80},
       {"name": "Fearisalwaysgone", "pos": "C", "pts": 0, "ast": 0, "reb": 0, "blk": 0, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 2, "pm": 80}
     ]
+  },
+  {
+    "id": "w1-chi-at-den",
+    "week": 1,
+    "date": "2026-11-23",
+    "homeId": "denver-nuggets",
+    "awayId": "chicago-bulls",
+    "homeScore": 103,
+    "awayScore": 95,
+    "home": [
+      {"name": "BOXEDBYTAI", "pos": "PG", "pts": 60, "ast": 8, "reb": 1, "blk": 0, "stl": 2, "fgm": 22, "fga": 30, "tpm": 15, "tpa": 20, "ftm": 1, "fta": 3, "tov": 2, "fls": 0, "pm": 8},
+      {"name": "RaisingHelll", "pos": "PG", "pts": 16, "ast": 2, "reb": 1, "blk": 2, "stl": 0, "fgm": 6, "fga": 7, "tpm": 4, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 3, "pm": 8},
+      {"name": "fye1of1", "pos": "SG", "pts": 18, "ast": 2, "reb": 0, "blk": 0, "stl": 0, "fgm": 6, "fga": 8, "tpm": 6, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 8},
+      {"name": "Killer78634", "pos": "SF", "pts": 4, "ast": 2, "reb": 9, "blk": 1, "stl": 0, "fgm": 2, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 8},
+      {"name": "ourtruestory", "pos": "C", "pts": 5, "ast": 6, "reb": 3, "blk": 2, "stl": 0, "fgm": 2, "fga": 3, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 4, "pm": 8}
+    ],
+    "away": [
+      {"name": "IllegalSoccerMenace", "pos": "PG", "pts": 8, "ast": 14, "reb": 2, "blk": 0, "stl": 2, "fgm": 3, "fga": 8, "tpm": 0, "tpa": 3, "ftm": 2, "fta": 3, "tov": 0, "fls": 2, "pm": -8},
+      {"name": "LeBewwy", "pos": "SG", "pts": 30, "ast": 7, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 15, "tpm": 9, "tpa": 11, "ftm": 1, "fta": 1, "tov": 1, "fls": 0, "pm": -8},
+      {"name": "underr4te", "pos": "PF", "pts": 27, "ast": 1, "reb": 2, "blk": 1, "stl": 0, "fgm": 9, "fga": 11, "tpm": 6, "tpa": 8, "ftm": 3, "fta": 4, "tov": 0, "fls": 1, "pm": -8},
+      {"name": "zPud", "pos": "C", "pts": 7, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 3, "fga": 5, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 1, "tov": 2, "fls": 1, "pm": 1},
+      {"name": "Defencse", "pos": "PF", "pts": 19, "ast": 1, "reb": 5, "blk": 0, "stl": 0, "fgm": 9, "fga": 11, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 4}
+    ]
   }
 ]
