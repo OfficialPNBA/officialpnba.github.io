@@ -1,5 +1,6 @@
 import { cp, mkdir, rm, writeFile, readFile } from 'node:fs/promises';
 const teams2 = JSON.parse(await readFile(new URL('./data/teams-2.json', import.meta.url), 'utf8'));
+const bets = JSON.parse(await readFile(new URL('./data/bets.json', import.meta.url), 'utf8'));
 const boxscores = JSON.parse(await readFile(new URL('./data/boxscores.json', import.meta.url), 'utf8'));
 const rulesText = await readFile(new URL('./data/rules.txt', import.meta.url), 'utf8');
 import { league, teams, games, media, transactions, bannerPlayers, standingsFormat, standingsFormat2, posts, players, players2, spotlights, hubLeagues } from './data/league.mjs';
@@ -11,6 +12,7 @@ const pages = [
   { key:'media', path:'/media/', title:'Media', kicker:'Beyond the scoreboard', description:'The stories, the highlights, and the identity of our league.' },
   { key:'players', path:'/players/', title:'Players', kicker:'The talent', description:'Search every signed player in the RNBA and see who is on the free-agent market.' },
   { key:'leaderboards', path:'/leaderboards/', title:'Leaderboards', kicker:'Season statistics', description:'The RNBA stat leaders: season totals and per-game averages, updated from every final box score.' },
+  { key:'bets', path:'/bets/', title:'League Bets', kicker:'Over / Under', description:'Free Over/Under picks on this week’s props. Make your picks in #league-bets on Discord. The top 25% qualify for the cash-prize competition.' },
   { key:'rules', path:'/rules/', title:'League Rules', kicker:'The rulebook', description:'The official league rulebook: enforcement, franchise owners, transactions, game rules, conduct, awards, and the penalty cheat sheet.' },
   { key:'transactions', path:'/transactions/', title:'Transactions', kicker:'Around the league', description:'Every official signing, plus the 72-hour release lock for each newly signed player.' },
 ];
@@ -317,7 +319,25 @@ function leaderboardsPage(){
   const games=boxscores.length;
   return `<section class="lb-board" data-leaderboards><div class="lb-toolbar"><div class="lb-tabs" role="group" aria-label="Leaderboard type"><button type="button" class="lb-tab" data-lb-tab="season" aria-pressed="true">Season Totals</button><button type="button" class="lb-tab" data-lb-tab="game" aria-pressed="false">Per Game</button></div><p class="lb-note">${games} game${games===1?'':'s'} played · ${all.length} players</p></div>${['season','game'].map(gk=>`<div class="lb-grid" data-lb-view="${gk}"${gk==='game'?' hidden':''}>${C.filter(c=>c.g===gk).map(card).join('')}</div>`).join('')}</section>`;
 }
-function innerPage(page){if(page.key==='schedule')return scheduleBoard();if(page.key==='media')return mediaBlank();const contents={players:playersPage,standings:standingsPage,schedule:schedulePage,media:mediaPage,transactions:transactionsPage,rules:rulesPage,leaderboards:leaderboardsPage};return `<section class="page-hero">${page.key==='players'?`<div class="shell players-hero"><h1 class="players-title">Official Player List</h1><img src="/assets/rnba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`:`<div class="shell"><div class="breadcrumb"><a href="/">Server Hub</a><span>/</span><span>${page.title}</span></div><p class="eyebrow">${page.kicker.toUpperCase()}</p><h1>${page.title.toUpperCase()}<span>.</span></h1><p class="page-description">${page.description}</p><img src="/assets/rnba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`}</section><div class="shell page-content">${contents[page.key]()}</div>${community()}`;}
+// League Bets (Michael, 2026-11-24). data/bets.json is rewritten by the Discord bot (league_bets.py) with
+// Over/Under PERCENTAGES only. Never show pick counts or names here.
+function betsPage(){
+  const props=bets.props||[];
+  const pct=v=>Number.isFinite(v)?v:null;
+  const logoImg=(id,cls)=>{const t=team(id);return t&&url(t.logo)?`<img class="${cls}" src="${url(t.logo)}" alt="" loading="lazy">`:'';};
+  const card=p=>{const t=team(p.teamId),ts=(p.teams||[]).map(team);const c1=hxc((t||ts[0])?.color,'#3a3f47'),c2=hxc((t||ts[1])?.color,'#3a3f47');
+    const o=pct(p.over),u=pct(p.under),has=o!=null&&u!=null;const hasRes=p.result!=null&&p.result!=='';const win=hasRes?(Number(p.result)>Number(p.line)?'over':'under'):'';
+    const status=hasRes?`<span class="bet-status res">Final: ${esc(p.result)} · ${win.toUpperCase()} hits</span>`:p.locked?'<span class="bet-status lock">🔒 Locked</span>':'<span class="bet-status open">Open</span>';
+    const bgLogos=p.teamId?logoImg(p.teamId,'bet-bg one'):(p.teams||[]).map((id,i)=>logoImg(id,`bet-bg ${i?'right':'left'}`)).join('');
+    const subject=p.player?`<h3 class="bet-name">${esc(p.player)}</h3><p class="bet-sub">${esc(t?.name||'')}</p>`:`<h3 class="bet-name">${esc(p.label)}</h3><p class="bet-sub">${ts.map(x=>esc(x?.name||'')).join(' vs ')}</p>`;
+    const minis=p.teamId?logoImg(p.teamId,'bet-mini'):(p.teams||[]).map(id=>logoImg(id,'bet-mini')).join('');
+    const bar=has?`<div class="bet-bar" role="img" aria-label="Over ${o}%, Under ${u}%"><span class="bet-over${win==='over'?' hit':''}" style="flex:${Math.max(o,1)} 1 0"><b>OVER ${o}%</b></span><span class="bet-under${win==='under'?' hit':''}" style="flex:${Math.max(u,1)} 1 0"><b>UNDER ${u}%</b></span></div>`:'<div class="bet-bar empty"><span>No picks yet. Be the first in #league-bets.</span></div>';
+    return `<article class="bet-card${p.teamId?'':' split'}" style="--c1:${c1};--c2:${c2}">${bgLogos}<div class="bet-top"><span class="bet-game">${esc(p.game)}</span>${status}</div><div class="bet-who">${minis}<div>${subject}</div></div><p class="bet-line"><strong>O/U ${esc(p.line)}</strong><span>${esc(p.stat)}</span></p>${bar}</article>`;};
+  const discord=hubLeagues[0]?.discordUrl||'https://discord.gg/officialrnba';
+  const upd=bets.updated&&!isNaN(Date.parse(bets.updated))?`<p class="bets-updated">Updated <time datetime="${esc(bets.updated)}">${new Date(bets.updated).toUTCString().replace(' GMT',' UTC')}</time></p>`:'';
+  return `<section class="bets-board"><div class="bets-intro"><h2 class="bets-title">${esc(bets.title||'League Bets')}</h2><p>Pick <b>OVER</b> or <b>UNDER</b> on every prop with the buttons in <b>#league-bets</b> on Discord. It’s free. You can change a pick until the prop locks. The <b>top 25%</b> qualify for the cash-prize competition.</p><a class="button gold" href="${esc(discord)}" target="_blank" rel="noopener">Make your picks on Discord</a>${upd}</div>${props.length?`<div class="bets-grid">${props.map(card).join('')}</div>`:`<div class="data-panel">${empty('ball','NO PROPS POSTED YET.','This week’s Over/Under props will show up here.')}</div>`}<p class="bets-fine">Free to play. No money is wagered on this site or in Discord. Only the share of Over and Under picks is shown.</p></section>`;
+}
+function innerPage(page){if(page.key==='schedule')return scheduleBoard();if(page.key==='media')return mediaBlank();const contents={players:playersPage,standings:standingsPage,schedule:schedulePage,media:mediaPage,transactions:transactionsPage,rules:rulesPage,leaderboards:leaderboardsPage,bets:betsPage};return `<section class="page-hero">${page.key==='players'?`<div class="shell players-hero"><h1 class="players-title">Official Player List</h1><img src="/assets/rnba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`:`<div class="shell"><div class="breadcrumb"><a href="/">Server Hub</a><span>/</span><span>${page.title}</span></div><p class="eyebrow">${page.kicker.toUpperCase()}</p><h1>${page.title.toUpperCase()}<span>.</span></h1><p class="page-description">${page.description}</p><img src="/assets/rnba-logo.png" alt="" class="page-watermark" width="1254" height="1254" aria-hidden="true"></div>`}</section><div class="shell page-content">${contents[page.key]()}</div>${community()}`;}
 
 await rm('dist',{recursive:true,force:true});
 await cp('public','dist',{recursive:true});
