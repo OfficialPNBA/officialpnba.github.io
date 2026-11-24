@@ -833,10 +833,101 @@
   "at": "2026-11-23T22:32:45Z"
  },
  {
+  "type": "Signing",
+  "discordId": "1512225881572249761",
+  "discord": "mari031318",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-23T23:10:20Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "793763398059819018",
+  "discord": "driftyfx",
+  "teamId": "boston-celtics",
+  "at": "2026-11-23T23:29:38Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1003801754732875786",
+  "discord": "hatito_is_goated",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-23T23:36:12Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1186448095693783121",
+  "discord": "hee7385",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-24T00:26:42Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "309741007023505408",
+  "discord": "trickvsyou",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-24T00:28:31Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1477380116207374390",
+  "discord": "clntak",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-24T00:30:33Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1394596461114687576",
+  "discord": "z3shard",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-24T00:35:04Z"
+ },
+ {
   "type": "Release",
   "discordId": "701999484837822525",
   "discord": "ry3nnn_",
   "teamId": "houston-rockets",
   "at": "2026-11-24T00:49:45Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "884844164691410944",
+  "discord": "killer112779",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-24T00:57:56Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1472117475322761239",
+  "discord": "wokbacc",
+  "teamId": "golden-state-warriors",
+  "at": "2026-11-24T01:02:20Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1553839582552916060",
+  "discord": "ytqazifyyalt",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-24T01:36:44Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "723602700339511337",
+  "discord": "mayflower_citizen",
+  "teamId": "denver-nuggets",
+  "at": "2026-11-24T02:10:36Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "344250925801668608",
+  "discord": "limitlesskjay",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-24T03:56:39Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1533680184463462455",
+  "discord": "crucial08992",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-24T05:06:57Z"
  }
 ]
