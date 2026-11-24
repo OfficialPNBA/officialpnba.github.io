@@ -1225,3 +1225,5 @@ body[data-page="players"] .page-hero h1.players-title{font-family:LazyCoffee,Lal
 .bet-under{background:linear-gradient(90deg,#b3202f,#e0384a);justify-content:flex-end}
 .bet-bar .hit{box-shadow:inset 0 0 0 3px #ffd65a}
 .bet-bar.empty{align-items:center;justify-content:center;color:#cfcfcf;font-size:13px;padding:0 10px}
+.bet-g1{align-self:flex-start;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#fff;background:#000b;border:1px solid var(--gold);padding:4px 10px 4px 4px;border-radius:6px}
+.bet-g1 span{background:var(--gold);color:#111;padding:1px 6px;border-radius:4px;font-family:var(--display);letter-spacing:1px}

@@ -3,13 +3,149 @@
   "week": 2,
   "updated": null,
   "props": [
-    { "id": "w2-den-mia-total", "game": "DEN @ MIA", "teams": ["denver-nuggets", "miami-heat"], "player": null, "teamId": null, "label": "Total Points", "line": 208.5, "stat": "Combined Points", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-cle-min-28club", "game": "CLE @ MIN", "teams": ["cleveland-cavaliers", "minnesota-timberwolves"], "player": null, "teamId": null, "label": "Players Scoring 28+", "line": 3.5, "stat": "Players", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-k005r-pts", "game": "CHI @ PHI", "teams": ["chicago-bulls", "philadelphia-76ers"], "player": "k005r", "teamId": "philadelphia-76ers", "label": "Points", "line": 33.5, "stat": "Points", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-countertais-ast", "game": "BKN @ POR", "teams": ["brooklyn-nets", "portland-trail-blazers"], "player": "countertais", "teamId": "portland-trail-blazers", "label": "Assists", "line": 19.5, "stat": "Assists", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-zoomilations-reb", "game": "BOS @ NYK", "teams": ["boston-celtics", "new-york-knicks"], "player": "Zoomilations", "teamId": "boston-celtics", "label": "Rebounds", "line": 5.5, "stat": "Rebounds", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-itsgeetingreal-tov", "game": "CLE @ MIN", "teams": ["cleveland-cavaliers", "minnesota-timberwolves"], "player": "itsgeetingreal", "teamId": "cleveland-cavaliers", "label": "Turnovers", "line": 4.5, "stat": "Turnovers", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-underr4te-pts", "game": "CHI @ PHI", "teams": ["chicago-bulls", "philadelphia-76ers"], "player": "underr4te", "teamId": "chicago-bulls", "label": "Points", "line": 22.5, "stat": "Points", "over": null, "under": null, "locked": false, "result": null },
-    { "id": "w2-yamomsmain-pts", "game": "BKN @ POR", "teams": ["brooklyn-nets", "portland-trail-blazers"], "player": "YaMomsMain", "teamId": "brooklyn-nets", "label": "Points", "line": 14.5, "stat": "Points", "over": null, "under": null, "locked": false, "result": null }
+    {
+      "id": "w2-den-mia-total",
+      "game": "DEN @ MIA",
+      "teams": [
+        "denver-nuggets",
+        "miami-heat"
+      ],
+      "player": null,
+      "teamId": null,
+      "label": "Total Points",
+      "line": 208.5,
+      "stat": "Combined Points",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "DEN 103 + MIA 117 = 220"
+    },
+    {
+      "id": "w2-cle-min-28club",
+      "game": "CLE @ MIN",
+      "teams": [
+        "cleveland-cavaliers",
+        "minnesota-timberwolves"
+      ],
+      "player": null,
+      "teamId": null,
+      "label": "Players Scoring 28+",
+      "line": 3.5,
+      "stat": "Players",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "1 (CLE 0, MIN 1)"
+    },
+    {
+      "id": "w2-k005r-pts",
+      "game": "CHI @ PHI",
+      "teams": [
+        "chicago-bulls",
+        "philadelphia-76ers"
+      ],
+      "player": "k005r",
+      "teamId": "philadelphia-76ers",
+      "label": "Points",
+      "line": 33.5,
+      "stat": "Points",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "37 PTS"
+    },
+    {
+      "id": "w2-countertais-ast",
+      "game": "BKN @ POR",
+      "teams": [
+        "brooklyn-nets",
+        "portland-trail-blazers"
+      ],
+      "player": "countertais",
+      "teamId": "portland-trail-blazers",
+      "label": "Assists",
+      "line": 19.5,
+      "stat": "Assists",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "25 AST"
+    },
+    {
+      "id": "w2-zoomilations-reb",
+      "game": "BOS @ NYK",
+      "teams": [
+        "boston-celtics",
+        "new-york-knicks"
+      ],
+      "player": "Zoomilations",
+      "teamId": "boston-celtics",
+      "label": "Rebounds",
+      "line": 5.5,
+      "stat": "Rebounds",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "7 REB"
+    },
+    {
+      "id": "w2-itsgeetingreal-tov",
+      "game": "CLE @ MIN",
+      "teams": [
+        "cleveland-cavaliers",
+        "minnesota-timberwolves"
+      ],
+      "player": "itsgeetingreal",
+      "teamId": "cleveland-cavaliers",
+      "label": "Turnovers",
+      "line": 4.5,
+      "stat": "Turnovers",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "7 TOV"
+    },
+    {
+      "id": "w2-underr4te-pts",
+      "game": "CHI @ PHI",
+      "teams": [
+        "chicago-bulls",
+        "philadelphia-76ers"
+      ],
+      "player": "underr4te",
+      "teamId": "chicago-bulls",
+      "label": "Points",
+      "line": 22.5,
+      "stat": "Points",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "27 PTS"
+    },
+    {
+      "id": "w2-yamomsmain-pts",
+      "game": "BKN @ POR",
+      "teams": [
+        "brooklyn-nets",
+        "portland-trail-blazers"
+      ],
+      "player": "YaMomsMain",
+      "teamId": "brooklyn-nets",
+      "label": "Points",
+      "line": 14.5,
+      "stat": "Points",
+      "over": null,
+      "under": null,
+      "locked": false,
+      "result": null,
+      "g1": "10 PTS"
+    }
   ]
 }
