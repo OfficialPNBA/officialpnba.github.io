@@ -1,7 +1,7 @@
 {
   "title": "Week 2 Props",
   "week": 2,
-  "updated": "2026-11-24T20:37:00Z",
+  "updated": "2026-11-24T21:43:00Z",
   "props": [
     {
       "id": "w2-den-mia-total",
@@ -15,8 +15,8 @@
       "label": "Total Points",
       "line": 208.5,
       "stat": "Combined Points",
-      "over": 48,
-      "under": 52,
+      "over": 44,
+      "under": 56,
       "locked": false,
       "result": null,
       "g1": "DEN 103 + MIA 117 = 220"
@@ -33,8 +33,8 @@
       "label": "Players Scoring 28+",
       "line": 3.5,
       "stat": "Players",
-      "over": 43,
-      "under": 57,
+      "over": 40,
+      "under": 60,
       "locked": false,
       "result": null,
       "g1": "1 (CLE 0, MIN 1)"
@@ -51,8 +51,8 @@
       "label": "Points",
       "line": 33.5,
       "stat": "Points",
-      "over": 62,
-      "under": 38,
+      "over": 57,
+      "under": 43,
       "locked": false,
       "result": null,
       "g1": "37 PTS"
@@ -69,8 +69,8 @@
       "label": "Assists",
       "line": 19.5,
       "stat": "Assists",
-      "over": 35,
-      "under": 65,
+      "over": 37,
+      "under": 63,
       "locked": false,
       "result": null,
       "g1": "25 AST"
@@ -87,8 +87,8 @@
       "label": "Rebounds",
       "line": 5.5,
       "stat": "Rebounds",
-      "over": 71,
-      "under": 29,
+      "over": 74,
+      "under": 26,
       "locked": false,
       "result": null,
       "g1": "7 REB"
@@ -105,8 +105,8 @@
       "label": "Turnovers",
       "line": 4.5,
       "stat": "Turnovers",
-      "over": 27,
-      "under": 73,
+      "over": 29,
+      "under": 71,
       "locked": false,
       "result": null,
       "g1": "7 TOV"
@@ -123,8 +123,8 @@
       "label": "Points",
       "line": 22.5,
       "stat": "Points",
-      "over": 71,
-      "under": 29,
+      "over": 73,
+      "under": 27,
       "locked": false,
       "result": null,
       "g1": "27 PTS"
@@ -141,8 +141,8 @@
       "label": "Points",
       "line": 14.5,
       "stat": "Points",
-      "over": 59,
-      "under": 41,
+      "over": 64,
+      "under": 36,
       "locked": false,
       "result": null,
       "g1": "10 PTS"
