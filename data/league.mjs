@@ -29,7 +29,7 @@ export const games = [
   { id:'w2-g1', week:2, awayId:'memphis-grizzlies', homeId:'houston-rockets', status:'scheduled' },
   { id:'w2-g2', week:2, awayId:'oklahoma-city-thunder', homeId:'golden-state-warriors', status:'scheduled' },
   { id:'w2-g3', week:2, awayId:'cleveland-cavaliers', homeId:'minnesota-timberwolves', status:'scheduled' },
-  { id:'w2-g4', week:2, awayId:'chicago-bulls', homeId:'philadelphia-76ers', status:'scheduled' },
+  { id:'w2-g4', week:2, awayId:'philadelphia-76ers', homeId:'chicago-bulls', status:'final', awayScore:108, homeScore:101 },
   { id:'w2-g5', week:2, awayId:'brooklyn-nets', homeId:'portland-trail-blazers', status:'scheduled' },
   { id:'w2-g6', week:2, awayId:'denver-nuggets', homeId:'miami-heat', status:'scheduled' },
   { id:'w2-g7', week:2, awayId:'boston-celtics', homeId:'new-york-knicks', status:'scheduled' },
