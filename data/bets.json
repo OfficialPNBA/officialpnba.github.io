@@ -17,7 +17,7 @@
       "stat": "Combined Points",
       "over": 41,
       "under": 59,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "DEN 103 + MIA 117 = 220"
     },
@@ -35,7 +35,7 @@
       "stat": "Players",
       "over": 39,
       "under": 61,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "1 (CLE 0, MIN 1)"
     },
@@ -53,7 +53,7 @@
       "stat": "Points",
       "over": 55,
       "under": 45,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "37 PTS"
     },
@@ -71,7 +71,7 @@
       "stat": "Assists",
       "over": 41,
       "under": 59,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "25 AST"
     },
@@ -89,7 +89,7 @@
       "stat": "Rebounds",
       "over": 77,
       "under": 23,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "7 REB"
     },
@@ -107,7 +107,7 @@
       "stat": "Turnovers",
       "over": 33,
       "under": 67,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "7 TOV"
     },
@@ -125,7 +125,7 @@
       "stat": "Points",
       "over": 71,
       "under": 29,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "27 PTS"
     },
@@ -143,7 +143,7 @@
       "stat": "Points",
       "over": 64,
       "under": 36,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "10 PTS"
     }
