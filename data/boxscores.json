@@ -182,5 +182,27 @@
       {"name": "uh182481", "pos": "SF", "pts": 11, "ast": 3, "reb": 3, "blk": 1, "stl": 0, "fgm": 4, "fga": 4, "tpm": 3, "tpa": 3, "ftm": 0, "fta": 1, "tov": 0, "fls": 0, "pm": 7},
       {"name": "MellyFromDmv", "pos": "C", "pts": 17, "ast": 4, "reb": 8, "blk": 2, "stl": 0, "fgm": 8, "fga": 10, "tpm": 0, "tpa": 0, "ftm": 1, "fta": 2, "tov": 4, "fls": 2, "pm": 10}
     ]
+  },
+  {
+    "id": "w2-mia-at-den",
+    "week": 2,
+    "date": "2026-11-24",
+    "homeId": "denver-nuggets",
+    "awayId": "miami-heat",
+    "homeScore": 70,
+    "awayScore": 110,
+    "home": [
+      {"name": "BOXEDBYTAI", "pos": "PG", "pts": 34, "ast": 8, "reb": 1, "blk": 0, "stl": 1, "fgm": 13, "fga": 20, "tpm": 8, "tpa": 11, "ftm": 0, "fta": 2, "tov": 3, "fls": 1, "pm": -40},
+      {"name": "RaisingHelll", "pos": "PG", "pts": 19, "ast": 0, "reb": 1, "blk": 2, "stl": 0, "fgm": 8, "fga": 13, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 2, "pm": -40},
+      {"name": "truegrail", "pos": "SG", "pts": 2, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 1, "fga": 1, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -40},
+      {"name": "Killer78634", "pos": "SF", "pts": 0, "ast": 0, "reb": 2, "blk": 2, "stl": 0, "fgm": 0, "fga": 1, "tpm": 0, "tpa": 1, "ftm": 0, "fta": 0, "tov": 1, "fls": 3, "pm": -40}
+    ],
+    "away": [
+      {"name": "w6lk", "pos": "PG", "pts": 15, "ast": 20, "reb": 3, "blk": 0, "stl": 2, "fgm": 6, "fga": 7, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 40},
+      {"name": "AyJaqob", "pos": "SG", "pts": 9, "ast": 3, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 40},
+      {"name": "leywinoli", "pos": "SG", "pts": 37, "ast": 5, "reb": 0, "blk": 0, "stl": 0, "fgm": 13, "fga": 15, "tpm": 10, "tpa": 12, "ftm": 1, "fta": 1, "tov": 0, "fls": 0, "pm": 40},
+      {"name": "syncco", "pos": "SF", "pts": 26, "ast": 4, "reb": 4, "blk": 2, "stl": 0, "fgm": 9, "fga": 9, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 40},
+      {"name": "devhourr", "pos": "PF", "pts": 23, "ast": 0, "reb": 2, "blk": 1, "stl": 0, "fgm": 8, "fga": 13, "tpm": 3, "tpa": 6, "ftm": 4, "fta": 4, "tov": 2, "fls": 0, "pm": 40}
+    ]
   }
 ]
