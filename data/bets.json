@@ -1,7 +1,7 @@
 {
   "title": "Week 2 Props",
   "week": 2,
-  "updated": "2026-11-24T21:43:00Z",
+  "updated": "2026-11-24T23:58:00Z",
   "props": [
     {
       "id": "w2-den-mia-total",
@@ -15,9 +15,9 @@
       "label": "Total Points",
       "line": 208.5,
       "stat": "Combined Points",
-      "over": 44,
-      "under": 56,
-      "locked": false,
+      "over": 41,
+      "under": 59,
+      "locked": true,
       "result": null,
       "g1": "DEN 103 + MIA 117 = 220"
     },
@@ -33,9 +33,9 @@
       "label": "Players Scoring 28+",
       "line": 3.5,
       "stat": "Players",
-      "over": 40,
-      "under": 60,
-      "locked": false,
+      "over": 39,
+      "under": 61,
+      "locked": true,
       "result": null,
       "g1": "1 (CLE 0, MIN 1)"
     },
@@ -51,9 +51,9 @@
       "label": "Points",
       "line": 33.5,
       "stat": "Points",
-      "over": 57,
-      "under": 43,
-      "locked": false,
+      "over": 55,
+      "under": 45,
+      "locked": true,
       "result": null,
       "g1": "37 PTS"
     },
@@ -69,9 +69,9 @@
       "label": "Assists",
       "line": 19.5,
       "stat": "Assists",
-      "over": 37,
-      "under": 63,
-      "locked": false,
+      "over": 41,
+      "under": 59,
+      "locked": true,
       "result": null,
       "g1": "25 AST"
     },
@@ -87,9 +87,9 @@
       "label": "Rebounds",
       "line": 5.5,
       "stat": "Rebounds",
-      "over": 74,
-      "under": 26,
-      "locked": false,
+      "over": 77,
+      "under": 23,
+      "locked": true,
       "result": null,
       "g1": "7 REB"
     },
@@ -105,9 +105,9 @@
       "label": "Turnovers",
       "line": 4.5,
       "stat": "Turnovers",
-      "over": 29,
-      "under": 71,
-      "locked": false,
+      "over": 33,
+      "under": 67,
+      "locked": true,
       "result": null,
       "g1": "7 TOV"
     },
@@ -123,9 +123,9 @@
       "label": "Points",
       "line": 22.5,
       "stat": "Points",
-      "over": 73,
-      "under": 27,
-      "locked": false,
+      "over": 71,
+      "under": 29,
+      "locked": true,
       "result": null,
       "g1": "27 PTS"
     },
@@ -143,7 +143,7 @@
       "stat": "Points",
       "over": 64,
       "under": 36,
-      "locked": false,
+      "locked": true,
       "result": null,
       "g1": "10 PTS"
     }
