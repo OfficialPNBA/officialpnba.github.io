@@ -500,10 +500,11 @@
   {
     "id": "j9shwa",
     "name": "joshua",
-    "teamId": "houston-rockets",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/640280668982739012/9ea45f7eebd226801b1a63e9c465614f.webp?size=128",
     "discordId": "640280668982739012",
-    "discord": "j9shwa"
+    "discord": "j9shwa",
+    "formerTeamId": "houston-rockets"
   },
   {
     "id": "nayai",
