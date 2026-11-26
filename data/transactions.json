@@ -943,5 +943,215 @@
   "discord": "j9shwa",
   "teamId": "houston-rockets",
   "at": "2026-11-25T01:03:00Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "665644980270006272",
+  "discord": "xenkle",
+  "teamId": "portland-trail-blazers",
+  "at": "2026-11-24T21:23:38Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1214024626657693786",
+  "discord": "hoopzp13348",
+  "teamId": "philadelphia-76ers",
+  "at": "2026-11-24T23:31:35Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "640280668982739012",
+  "discord": "j9shwa",
+  "teamId": "chicago-bulls",
+  "at": "2026-11-25T01:38:13Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "990408062751875072",
+  "discord": "kmann_",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-25T23:33:07Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1032342520929189988",
+  "discord": "kamashi.p",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-25T23:33:59Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "424588827139637259",
+  "discord": "sheedyy",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-25T23:35:43Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "655530832106094601",
+  "discord": "suyuto",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-25T23:36:34Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1202777967898398785",
+  "discord": "toebewildin",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T00:00:31Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1448450977299693588",
+  "discord": "zdj6",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T00:00:43Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1279821197780975707",
+  "discord": "tay_playz1",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T00:01:00Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "317759799645175808",
+  "discord": "chriscringle33",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T00:24:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "794446892922699796",
+  "discord": "wonderofmk",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T00:36:10Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "836881005322436608",
+  "discord": "caspernoghost",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T01:59:57Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1096628901574357093",
+  "discord": "ihmt",
+  "teamId": "houston-rockets",
+  "at": "2026-11-26T03:27:58Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1352418785251823616",
+  "discord": "sotry",
+  "teamId": "minnesota-timberwolves",
+  "at": "2026-11-26T18:01:06Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "406310743370235914",
+  "discord": "kairesucks",
+  "teamId": "houston-rockets",
+  "at": "2026-11-26T20:27:01Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "474403904314933278",
+  "discord": "hochiminh5",
+  "teamId": "houston-rockets",
+  "at": "2026-11-26T20:27:17Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "552692074370039809",
+  "discord": "raspy2323",
+  "teamId": "houston-rockets",
+  "at": "2026-11-26T20:27:24Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "424381608783642625",
+  "discord": "dinkhaa",
+  "teamId": "houston-rockets",
+  "at": "2026-11-26T20:27:26Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "211532920781799424",
+  "discord": "caylen",
+  "teamId": "houston-rockets",
+  "at": "2026-11-26T20:33:00Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "836881005322436608",
+  "discord": "caspernoghost",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:14:01Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1513686241693007943",
+  "discord": "mpix__.",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:14:43Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "794446892922699796",
+  "discord": "wonderofmk",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:14:57Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1335562323183796339",
+  "discord": "i83corpse",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:15:09Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1533680184463462455",
+  "discord": "crucial08992",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:15:17Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "317759799645175808",
+  "discord": "chriscringle33",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:15:27Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "843514670849589258",
+  "discord": "loneeeeeeeeeeeeeee",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:15:35Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1003801754732875786",
+  "discord": "hatito_is_goated",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:15:44Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "738545066238410803",
+  "discord": ".z3k.",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:16:04Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1394596461114687576",
+  "discord": "z3shard",
+  "teamId": "memphis-grizzlies",
+  "at": "2026-11-26T23:16:13Z"
  }
 ]
