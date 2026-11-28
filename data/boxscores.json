@@ -31,18 +31,18 @@
     "homeScore": 121,
     "awayScore": 134,
     "home": [
-      {"name": "selffcare", "pos": "PG", "pts": 13, "ast": 7, "reb": 0, "blk": 0, "stl": 0, "fgm": 5, "fga": 9, "tpm": 1, "tpa": 3, "ftm": 2, "fta": 2, "tov": 2, "fls": 2, "pm": -13},
-      {"name": "indiearchive", "pos": "SG", "pts": 82, "ast": 9, "reb": 2, "blk": 0, "stl": 0, "fgm": 32, "fga": 41, "tpm": 18, "tpa": 24, "ftm": 0, "fta": 0, "tov": 4, "fls": 1, "pm": -13},
-      {"name": "MumitIsGodly", "pos": "SG", "pts": 12, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -13},
-      {"name": "SSkyCanSELL", "pos": "SF", "pts": 11, "ast": 6, "reb": 5, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": -13},
-      {"name": "Stealaboat", "pos": "PF", "pts": 3, "ast": 4, "reb": 6, "blk": 3, "stl": 0, "fgm": 1, "fga": 2, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 1, "pm": -13}
+      { "name": "selffcare", "pos": "PG", "pts": 13, "ast": 7, "reb": 0, "blk": 0, "stl": 0, "fgm": 5, "fga": 9, "tpm": 1, "tpa": 3, "ftm": 2, "fta": 2, "tov": 2, "fls": 2, "pm": -13 },
+      { "name": "indiearchive", "pos": "SG", "pts": 82, "ast": 9, "reb": 2, "blk": 0, "stl": 0, "fgm": 32, "fga": 41, "tpm": 18, "tpa": 24, "ftm": 0, "fta": 0, "tov": 4, "fls": 1, "pm": -13 },
+      { "name": "MumitIsGodly", "pos": "SG", "pts": 12, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -13 },
+      { "name": "SSkyCanSELL", "pos": "SF", "pts": 11, "ast": 6, "reb": 5, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": -13 },
+      { "name": "Stealaboat", "pos": "PF", "pts": 3, "ast": 4, "reb": 6, "blk": 3, "stl": 0, "fgm": 1, "fga": 2, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 1, "pm": -13 }
     ],
     "away": [
-      {"name": "SyncsDemise", "pos": "PG", "pts": 36, "ast": 1, "reb": 0, "blk": 0, "stl": 1, "fgm": 14, "fga": 18, "tpm": 8, "tpa": 11, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 13},
-      {"name": "countertais", "pos": "PG", "pts": 17, "ast": 25, "reb": 4, "blk": 0, "stl": 4, "fgm": 7, "fga": 7, "tpm": 1, "tpa": 1, "ftm": 2, "fta": 2, "tov": 0, "fls": 1, "pm": 13},
-      {"name": "HesACone", "pos": "SG", "pts": 35, "ast": 6, "reb": 2, "blk": 0, "stl": 0, "fgm": 12, "fga": 18, "tpm": 11, "tpa": 16, "ftm": 0, "fta": 0, "tov": 2, "fls": 3, "pm": 13},
-      {"name": "DesiredBuild", "pos": "PF", "pts": 13, "ast": 1, "reb": 2, "blk": 0, "stl": 0, "fgm": 5, "fga": 9, "tpm": 1, "tpa": 2, "ftm": 2, "fta": 2, "tov": 0, "fls": 1, "pm": 13},
-      {"name": "5nqz", "pos": "PF", "pts": 33, "ast": 3, "reb": 3, "blk": 2, "stl": 0, "fgm": 12, "fga": 13, "tpm": 9, "tpa": 10, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 13}
+      { "name": "SyncsDemise", "pos": "PG", "pts": 36, "ast": 1, "reb": 0, "blk": 0, "stl": 1, "fgm": 14, "fga": 18, "tpm": 8, "tpa": 11, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 13 },
+      { "name": "countertais", "pos": "PG", "pts": 17, "ast": 25, "reb": 4, "blk": 0, "stl": 4, "fgm": 7, "fga": 7, "tpm": 1, "tpa": 1, "ftm": 2, "fta": 2, "tov": 0, "fls": 1, "pm": 13 },
+      { "name": "HesACone", "pos": "SG", "pts": 35, "ast": 6, "reb": 2, "blk": 0, "stl": 0, "fgm": 12, "fga": 18, "tpm": 11, "tpa": 16, "ftm": 0, "fta": 0, "tov": 2, "fls": 3, "pm": 13 },
+      { "name": "DesiredBuild", "pos": "PF", "pts": 13, "ast": 1, "reb": 2, "blk": 0, "stl": 0, "fgm": 5, "fga": 9, "tpm": 1, "tpa": 2, "ftm": 2, "fta": 2, "tov": 0, "fls": 1, "pm": 13 },
+      { "name": "5nqz", "pos": "PF", "pts": 33, "ast": 3, "reb": 3, "blk": 2, "stl": 0, "fgm": 12, "fga": 13, "tpm": 9, "tpa": 10, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 13 }
     ]
   },
   {
@@ -54,18 +54,18 @@
     "homeScore": 98,
     "awayScore": 107,
     "home": [
-      {"name": "k005r", "pos": "PG", "pts": 37, "ast": 8, "reb": 4, "blk": 0, "stl": 5, "fgm": 13, "fga": 20, "tpm": 11, "tpa": 15, "ftm": 0, "fta": 1, "tov": 2, "fls": 0, "pm": -9},
-      {"name": "capzole", "pos": "SG", "pts": 17, "ast": 11, "reb": 0, "blk": 0, "stl": 0, "fgm": 5, "fga": 8, "tpm": 5, "tpa": 6, "ftm": 2, "fta": 2, "tov": 0, "fls": 3, "pm": -9},
-      {"name": "q2vvx", "pos": "SG", "pts": 6, "ast": 6, "reb": 1, "blk": 0, "stl": 0, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 1},
-      {"name": "uh182481", "pos": "SF", "pts": 18, "ast": 3, "reb": 0, "blk": 2, "stl": 0, "fgm": 6, "fga": 8, "tpm": 6, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 2, "pm": -9},
-      {"name": "MellyFromDmv", "pos": "C", "pts": 14, "ast": 2, "reb": 7, "blk": 3, "stl": 0, "fgm": 7, "fga": 16, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 4, "tov": 2, "fls": 4, "pm": -5}
+      { "name": "k005r", "pos": "PG", "pts": 37, "ast": 8, "reb": 4, "blk": 0, "stl": 5, "fgm": 13, "fga": 20, "tpm": 11, "tpa": 15, "ftm": 0, "fta": 1, "tov": 2, "fls": 0, "pm": -9 },
+      { "name": "capzole", "pos": "SG", "pts": 17, "ast": 11, "reb": 0, "blk": 0, "stl": 0, "fgm": 5, "fga": 8, "tpm": 5, "tpa": 6, "ftm": 2, "fta": 2, "tov": 0, "fls": 3, "pm": -9 },
+      { "name": "q2vvx", "pos": "SG", "pts": 6, "ast": 6, "reb": 1, "blk": 0, "stl": 0, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 1 },
+      { "name": "uh182481", "pos": "SF", "pts": 18, "ast": 3, "reb": 0, "blk": 2, "stl": 0, "fgm": 6, "fga": 8, "tpm": 6, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 2, "pm": -9 },
+      { "name": "MellyFromDmv", "pos": "C", "pts": 14, "ast": 2, "reb": 7, "blk": 3, "stl": 0, "fgm": 7, "fga": 16, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 4, "tov": 2, "fls": 4, "pm": -5 }
     ],
     "away": [
-      {"name": "alwaysmelovibes", "pos": "SG", "pts": 34, "ast": 9, "reb": 0, "blk": 0, "stl": 0, "fgm": 11, "fga": 18, "tpm": 8, "tpa": 10, "ftm": 4, "fta": 4, "tov": 0, "fls": 0, "pm": 9},
-      {"name": "1AspireZ", "pos": "SF", "pts": 23, "ast": 6, "reb": 6, "blk": 2, "stl": 0, "fgm": 9, "fga": 12, "tpm": 4, "tpa": 5, "ftm": 1, "fta": 3, "tov": 1, "fls": 0, "pm": 9},
-      {"name": "hotdoyo", "pos": "SF", "pts": 15, "ast": 6, "reb": 7, "blk": 6, "stl": 0, "fgm": 5, "fga": 9, "tpm": 5, "tpa": 9, "ftm": 0, "fta": 0, "tov": 2, "fls": 3, "pm": 9},
-      {"name": "delano19959ar", "pos": "SF", "pts": 17, "ast": 3, "reb": 0, "blk": 1, "stl": 0, "fgm": 7, "fga": 10, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 9},
-      {"name": "ZOMBIEKILLE234666", "pos": "SF", "pts": 18, "ast": 9, "reb": 2, "blk": 4, "stl": 0, "fgm": 9, "fga": 10, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 2, "fls": 2, "pm": 9}
+      { "name": "alwaysmelovibes", "pos": "SG", "pts": 34, "ast": 9, "reb": 0, "blk": 0, "stl": 0, "fgm": 11, "fga": 18, "tpm": 8, "tpa": 10, "ftm": 4, "fta": 4, "tov": 0, "fls": 0, "pm": 9 },
+      { "name": "1AspireZ", "pos": "SF", "pts": 23, "ast": 6, "reb": 6, "blk": 2, "stl": 0, "fgm": 9, "fga": 12, "tpm": 4, "tpa": 5, "ftm": 1, "fta": 3, "tov": 1, "fls": 0, "pm": 9 },
+      { "name": "hotdoyo", "pos": "SF", "pts": 15, "ast": 6, "reb": 7, "blk": 6, "stl": 0, "fgm": 5, "fga": 9, "tpm": 5, "tpa": 9, "ftm": 0, "fta": 0, "tov": 2, "fls": 3, "pm": 9 },
+      { "name": "delano19959ar", "pos": "SF", "pts": 17, "ast": 3, "reb": 0, "blk": 1, "stl": 0, "fgm": 7, "fga": 10, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 9 },
+      { "name": "ZOMBIEKILLE234666", "pos": "SF", "pts": 18, "ast": 9, "reb": 2, "blk": 4, "stl": 0, "fgm": 9, "fga": 10, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 2, "fls": 2, "pm": 9 }
     ]
   },
   {
@@ -77,18 +77,18 @@
     "homeScore": 105,
     "awayScore": 117,
     "home": [
-      {"name": "5097", "pos": "PG", "pts": 18, "ast": 13, "reb": 5, "blk": 0, "stl": 0, "fgm": 7, "fga": 8, "tpm": 4, "tpa": 4, "ftm": 0, "fta": 0, "tov": 5, "fls": 3, "pm": -12},
-      {"name": "sxdrecon", "pos": "SG", "pts": 24, "ast": 4, "reb": 1, "blk": 0, "stl": 0, "fgm": 8, "fga": 9, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 2, "fls": 1, "pm": -12},
-      {"name": "ireallylikeyeso", "pos": "SF", "pts": 29, "ast": 5, "reb": 2, "blk": 0, "stl": 1, "fgm": 11, "fga": 12, "tpm": 7, "tpa": 8, "ftm": 0, "fta": 0, "tov": 3, "fls": 2, "pm": -12},
-      {"name": "5ohaib", "pos": "PF", "pts": 11, "ast": 6, "reb": 5, "blk": 0, "stl": 0, "fgm": 5, "fga": 8, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -12},
-      {"name": "ma9k", "pos": "PF", "pts": 23, "ast": 6, "reb": 2, "blk": 0, "stl": 0, "fgm": 8, "fga": 12, "tpm": 6, "tpa": 8, "ftm": 1, "fta": 1, "tov": 1, "fls": 4, "pm": -12}
+      { "name": "5097", "pos": "PG", "pts": 18, "ast": 13, "reb": 5, "blk": 0, "stl": 0, "fgm": 7, "fga": 8, "tpm": 4, "tpa": 4, "ftm": 0, "fta": 0, "tov": 5, "fls": 3, "pm": -12 },
+      { "name": "sxdrecon", "pos": "SG", "pts": 24, "ast": 4, "reb": 1, "blk": 0, "stl": 0, "fgm": 8, "fga": 9, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 2, "fls": 1, "pm": -12 },
+      { "name": "ireallylikeyeso", "pos": "SF", "pts": 29, "ast": 5, "reb": 2, "blk": 0, "stl": 1, "fgm": 11, "fga": 12, "tpm": 7, "tpa": 8, "ftm": 0, "fta": 0, "tov": 3, "fls": 2, "pm": -12 },
+      { "name": "5ohaib", "pos": "PF", "pts": 11, "ast": 6, "reb": 5, "blk": 0, "stl": 0, "fgm": 5, "fga": 8, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -12 },
+      { "name": "ma9k", "pos": "PF", "pts": 23, "ast": 6, "reb": 2, "blk": 0, "stl": 0, "fgm": 8, "fga": 12, "tpm": 6, "tpa": 8, "ftm": 1, "fta": 1, "tov": 1, "fls": 4, "pm": -12 }
     ],
     "away": [
-      {"name": "w6lk", "pos": "PG", "pts": 6, "ast": 23, "reb": 0, "blk": 0, "stl": 6, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 22},
-      {"name": "syncco", "pos": "SG", "pts": 98, "ast": 3, "reb": 0, "blk": 0, "stl": 0, "fgm": 36, "fga": 48, "tpm": 24, "tpa": 32, "ftm": 2, "fta": 2, "tov": 1, "fls": 3, "pm": 12},
-      {"name": "leywinoli", "pos": "SG", "pts": 6, "ast": 2, "reb": 3, "blk": 0, "stl": 2, "fgm": 2, "fga": 5, "tpm": 2, "tpa": 5, "ftm": 0, "fta": 0, "tov": 2, "fls": 0, "pm": 12},
-      {"name": "qqayto", "pos": "SF", "pts": 3, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 1, "fga": 3, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 12},
-      {"name": "devhourr", "pos": "PF", "pts": 4, "ast": 3, "reb": 1, "blk": 1, "stl": 0, "fgm": 1, "fga": 1, "tpm": 1, "tpa": 1, "ftm": 1, "fta": 2, "tov": 0, "fls": 3, "pm": 12}
+      { "name": "w6lk", "pos": "PG", "pts": 6, "ast": 23, "reb": 0, "blk": 0, "stl": 6, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 22 },
+      { "name": "syncco", "pos": "SG", "pts": 98, "ast": 3, "reb": 0, "blk": 0, "stl": 0, "fgm": 36, "fga": 48, "tpm": 24, "tpa": 32, "ftm": 2, "fta": 2, "tov": 1, "fls": 3, "pm": 12 },
+      { "name": "leywinoli", "pos": "SG", "pts": 6, "ast": 2, "reb": 3, "blk": 0, "stl": 2, "fgm": 2, "fga": 5, "tpm": 2, "tpa": 5, "ftm": 0, "fta": 0, "tov": 2, "fls": 0, "pm": 12 },
+      { "name": "qqayto", "pos": "SF", "pts": 3, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 1, "fga": 3, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 12 },
+      { "name": "devhourr", "pos": "PF", "pts": 4, "ast": 3, "reb": 1, "blk": 1, "stl": 0, "fgm": 1, "fga": 1, "tpm": 1, "tpa": 1, "ftm": 1, "fta": 2, "tov": 0, "fls": 3, "pm": 12 }
     ]
   },
   {
@@ -100,18 +100,18 @@
     "homeScore": 94,
     "awayScore": 87,
     "home": [
-      {"name": "Moss_Vibes", "pos": "PG", "pts": 6, "ast": 22, "reb": 2, "blk": 2, "stl": 1, "fgm": 3, "fga": 5, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 7},
-      {"name": "puff8910", "pos": "SG", "pts": 25, "ast": 1, "reb": 0, "blk": 1, "stl": 0, "fgm": 9, "fga": 11, "tpm": 7, "tpa": 8, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 7},
-      {"name": "TheShadowGamer012", "pos": "SF", "pts": 9, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 3, "fga": 5, "tpm": 2, "tpa": 3, "ftm": 1, "fta": 1, "tov": 0, "fls": 0, "pm": 7},
-      {"name": "Zoomilations", "pos": "PF", "pts": 33, "ast": 1, "reb": 7, "blk": 0, "stl": 0, "fgm": 16, "fga": 18, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 7},
-      {"name": "jinyxez", "pos": "C", "pts": 21, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 9, "fga": 12, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 7}
+      { "name": "Moss_Vibes", "pos": "PG", "pts": 6, "ast": 22, "reb": 2, "blk": 2, "stl": 1, "fgm": 3, "fga": 5, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 7 },
+      { "name": "puff8910", "pos": "SG", "pts": 25, "ast": 1, "reb": 0, "blk": 1, "stl": 0, "fgm": 9, "fga": 11, "tpm": 7, "tpa": 8, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 7 },
+      { "name": "TheShadowGamer012", "pos": "SF", "pts": 9, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 3, "fga": 5, "tpm": 2, "tpa": 3, "ftm": 1, "fta": 1, "tov": 0, "fls": 0, "pm": 7 },
+      { "name": "Zoomilations", "pos": "PF", "pts": 33, "ast": 1, "reb": 7, "blk": 0, "stl": 0, "fgm": 16, "fga": 18, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 7 },
+      { "name": "jinyxez", "pos": "C", "pts": 21, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 9, "fga": 12, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 7 }
     ],
     "away": [
-      {"name": "heyarchive", "pos": "PG", "pts": 23, "ast": 7, "reb": 2, "blk": 0, "stl": 0, "fgm": 10, "fga": 15, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -7},
-      {"name": "Kila", "pos": "SG", "pts": 16, "ast": 5, "reb": 1, "blk": 0, "stl": 0, "fgm": 7, "fga": 11, "tpm": 2, "tpa": 4, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -7},
-      {"name": "jxstflow", "pos": "SG", "pts": 32, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 14, "fga": 22, "tpm": 3, "tpa": 9, "ftm": 1, "fta": 1, "tov": 0, "fls": 3, "pm": -7},
-      {"name": "YaMomsMain", "pos": "SF", "pts": 10, "ast": 9, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 4, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -7},
-      {"name": "e9mx", "pos": "C", "pts": 6, "ast": 4, "reb": 2, "blk": 1, "stl": 0, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -7}
+      { "name": "heyarchive", "pos": "PG", "pts": 23, "ast": 7, "reb": 2, "blk": 0, "stl": 0, "fgm": 10, "fga": 15, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -7 },
+      { "name": "Kila", "pos": "SG", "pts": 16, "ast": 5, "reb": 1, "blk": 0, "stl": 0, "fgm": 7, "fga": 11, "tpm": 2, "tpa": 4, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -7 },
+      { "name": "jxstflow", "pos": "SG", "pts": 32, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 14, "fga": 22, "tpm": 3, "tpa": 9, "ftm": 1, "fta": 1, "tov": 0, "fls": 3, "pm": -7 },
+      { "name": "YaMomsMain", "pos": "SF", "pts": 10, "ast": 9, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 4, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -7 },
+      { "name": "e9mx", "pos": "C", "pts": 6, "ast": 4, "reb": 2, "blk": 1, "stl": 0, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -7 }
     ]
   },
   {
@@ -123,18 +123,18 @@
     "homeScore": 20,
     "awayScore": 100,
     "home": [
-      {"name": "SheFW_PrinceP", "pos": "PG", "pts": 0, "ast": 0, "reb": 2, "blk": 0, "stl": 1, "fgm": 0, "fga": 1, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 3, "fls": 0, "pm": -80},
-      {"name": "Sonyeeeeeyyyy", "pos": "SF", "pts": 10, "ast": 2, "reb": 4, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 4, "fls": 0, "pm": -80},
-      {"name": "dj2tufforu", "pos": "PF", "pts": 0, "ast": 0, "reb": 2, "blk": 0, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 2, "fls": 1, "pm": -80},
-      {"name": "SnipersmokeXD", "pos": "PF", "pts": 10, "ast": 0, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 5, "fls": 0, "pm": -80},
-      {"name": "Centerrlowz", "pos": "C", "pts": 0, "ast": 0, "reb": 0, "blk": 0, "stl": 0, "fgm": 0, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -80}
+      { "name": "SheFW_PrinceP", "pos": "PG", "pts": 0, "ast": 0, "reb": 2, "blk": 0, "stl": 1, "fgm": 0, "fga": 1, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 3, "fls": 0, "pm": -80 },
+      { "name": "Sonyeeeeeyyyy", "pos": "SF", "pts": 10, "ast": 2, "reb": 4, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 4, "fls": 0, "pm": -80 },
+      { "name": "dj2tufforu", "pos": "PF", "pts": 0, "ast": 0, "reb": 2, "blk": 0, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 2, "fls": 1, "pm": -80 },
+      { "name": "SnipersmokeXD", "pos": "PF", "pts": 10, "ast": 0, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 5, "fls": 0, "pm": -80 },
+      { "name": "Centerrlowz", "pos": "C", "pts": 0, "ast": 0, "reb": 0, "blk": 0, "stl": 0, "fgm": 0, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -80 }
     ],
     "away": [
-      {"name": "WokBacc", "pos": "PG", "pts": 56, "ast": 4, "reb": 0, "blk": 0, "stl": 4, "fgm": 20, "fga": 21, "tpm": 16, "tpa": 17, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80},
-      {"name": "tkfo", "pos": "PG", "pts": 6, "ast": 18, "reb": 0, "blk": 0, "stl": 4, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 1, "pm": 80},
-      {"name": "VINSH", "pos": "SF", "pts": 32, "ast": 4, "reb": 2, "blk": 1, "stl": 4, "fgm": 12, "fga": 12, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80},
-      {"name": "miyu6i", "pos": "PF", "pts": 6, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 2, "fga": 4, "tpm": 2, "tpa": 3, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80},
-      {"name": "Fearisalwaysgone", "pos": "C", "pts": 0, "ast": 0, "reb": 0, "blk": 0, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 2, "pm": 80}
+      { "name": "WokBacc", "pos": "PG", "pts": 56, "ast": 4, "reb": 0, "blk": 0, "stl": 4, "fgm": 20, "fga": 21, "tpm": 16, "tpa": 17, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80 },
+      { "name": "tkfo", "pos": "PG", "pts": 6, "ast": 18, "reb": 0, "blk": 0, "stl": 4, "fgm": 2, "fga": 2, "tpm": 2, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 1, "pm": 80 },
+      { "name": "VINSH", "pos": "SF", "pts": 32, "ast": 4, "reb": 2, "blk": 1, "stl": 4, "fgm": 12, "fga": 12, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80 },
+      { "name": "miyu6i", "pos": "PF", "pts": 6, "ast": 2, "reb": 2, "blk": 0, "stl": 0, "fgm": 2, "fga": 4, "tpm": 2, "tpa": 3, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 80 },
+      { "name": "Fearisalwaysgone", "pos": "C", "pts": 0, "ast": 0, "reb": 0, "blk": 0, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 2, "pm": 80 }
     ]
   },
   {
@@ -146,18 +146,18 @@
     "homeScore": 103,
     "awayScore": 95,
     "home": [
-      {"name": "BOXEDBYTAI", "pos": "PG", "pts": 60, "ast": 8, "reb": 1, "blk": 0, "stl": 2, "fgm": 22, "fga": 30, "tpm": 15, "tpa": 20, "ftm": 1, "fta": 3, "tov": 2, "fls": 0, "pm": 8},
-      {"name": "RaisingHelll", "pos": "PG", "pts": 16, "ast": 2, "reb": 1, "blk": 2, "stl": 0, "fgm": 6, "fga": 7, "tpm": 4, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 3, "pm": 8},
-      {"name": "fye1of1", "pos": "SG", "pts": 18, "ast": 2, "reb": 0, "blk": 0, "stl": 0, "fgm": 6, "fga": 8, "tpm": 6, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 8},
-      {"name": "Killer78634", "pos": "SF", "pts": 4, "ast": 2, "reb": 9, "blk": 1, "stl": 0, "fgm": 2, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 8},
-      {"name": "ourtruestory", "pos": "C", "pts": 5, "ast": 6, "reb": 3, "blk": 2, "stl": 0, "fgm": 2, "fga": 3, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 4, "pm": 8}
+      { "name": "BOXEDBYTAI", "pos": "PG", "pts": 60, "ast": 8, "reb": 1, "blk": 0, "stl": 2, "fgm": 22, "fga": 30, "tpm": 15, "tpa": 20, "ftm": 1, "fta": 3, "tov": 2, "fls": 0, "pm": 8 },
+      { "name": "RaisingHelll", "pos": "PG", "pts": 16, "ast": 2, "reb": 1, "blk": 2, "stl": 0, "fgm": 6, "fga": 7, "tpm": 4, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 3, "pm": 8 },
+      { "name": "fye1of1", "pos": "SG", "pts": 18, "ast": 2, "reb": 0, "blk": 0, "stl": 0, "fgm": 6, "fga": 8, "tpm": 6, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 8 },
+      { "name": "Killer78634", "pos": "SF", "pts": 4, "ast": 2, "reb": 9, "blk": 1, "stl": 0, "fgm": 2, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 8 },
+      { "name": "ourtruestory", "pos": "C", "pts": 5, "ast": 6, "reb": 3, "blk": 2, "stl": 0, "fgm": 2, "fga": 3, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 4, "pm": 8 }
     ],
     "away": [
-      {"name": "IllegalSoccerMenace", "pos": "PG", "pts": 8, "ast": 14, "reb": 2, "blk": 0, "stl": 2, "fgm": 3, "fga": 8, "tpm": 0, "tpa": 3, "ftm": 2, "fta": 3, "tov": 0, "fls": 2, "pm": -8},
-      {"name": "LeBewwy", "pos": "SG", "pts": 30, "ast": 7, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 15, "tpm": 9, "tpa": 11, "ftm": 1, "fta": 1, "tov": 1, "fls": 0, "pm": -8},
-      {"name": "underr4te", "pos": "PF", "pts": 27, "ast": 1, "reb": 2, "blk": 1, "stl": 0, "fgm": 9, "fga": 11, "tpm": 6, "tpa": 8, "ftm": 3, "fta": 4, "tov": 0, "fls": 1, "pm": -8},
-      {"name": "zPud", "pos": "C", "pts": 7, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 3, "fga": 5, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 1, "tov": 2, "fls": 1, "pm": 1},
-      {"name": "Defencse", "pos": "PF", "pts": 23, "ast": 1, "reb": 5, "blk": 0, "stl": 0, "fgm": 11, "fga": 13, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 4}
+      { "name": "IllegalSoccerMenace", "pos": "PG", "pts": 8, "ast": 14, "reb": 2, "blk": 0, "stl": 2, "fgm": 3, "fga": 8, "tpm": 0, "tpa": 3, "ftm": 2, "fta": 3, "tov": 0, "fls": 2, "pm": -8 },
+      { "name": "LeBewwy", "pos": "SG", "pts": 30, "ast": 7, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 15, "tpm": 9, "tpa": 11, "ftm": 1, "fta": 1, "tov": 1, "fls": 0, "pm": -8 },
+      { "name": "underr4te", "pos": "PF", "pts": 27, "ast": 1, "reb": 2, "blk": 1, "stl": 0, "fgm": 9, "fga": 11, "tpm": 6, "tpa": 8, "ftm": 3, "fta": 4, "tov": 0, "fls": 1, "pm": -8 },
+      { "name": "zPud", "pos": "C", "pts": 7, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 3, "fga": 5, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 1, "tov": 2, "fls": 1, "pm": 1 },
+      { "name": "Defencse", "pos": "PF", "pts": 23, "ast": 1, "reb": 5, "blk": 0, "stl": 0, "fgm": 11, "fga": 13, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 4 }
     ]
   },
   {
@@ -169,18 +169,18 @@
     "homeScore": 101,
     "awayScore": 108,
     "home": [
-      {"name": "j9shwa", "pos": "PG", "pts": 12, "ast": 5, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 3, "tpa": 4, "ftm": 1, "fta": 1, "tov": 4, "fls": 2, "pm": -7},
-      {"name": "IllegalSoccerMenace", "pos": "PG", "pts": 20, "ast": 12, "reb": 3, "blk": 0, "stl": 3, "fgm": 8, "fga": 10, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 1, "tov": 5, "fls": 2, "pm": -7},
-      {"name": "LeBewwy", "pos": "SG", "pts": 46, "ast": 5, "reb": 0, "blk": 0, "stl": 1, "fgm": 16, "fga": 22, "tpm": 14, "tpa": 18, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -7},
-      {"name": "underr4te", "pos": "PF", "pts": 5, "ast": 1, "reb": 1, "blk": 1, "stl": 0, "fgm": 2, "fga": 5, "tpm": 1, "tpa": 3, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": -7},
-      {"name": "Defencse", "pos": "PF", "pts": 18, "ast": 6, "reb": 2, "blk": 0, "stl": 0, "fgm": 8, "fga": 11, "tpm": 2, "tpa": 3, "ftm": 0, "fta": 0, "tov": 2, "fls": 1, "pm": -7}
+      { "name": "j9shwa", "pos": "PG", "pts": 12, "ast": 5, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 3, "tpa": 4, "ftm": 1, "fta": 1, "tov": 4, "fls": 2, "pm": -7 },
+      { "name": "IllegalSoccerMenace", "pos": "PG", "pts": 20, "ast": 12, "reb": 3, "blk": 0, "stl": 3, "fgm": 8, "fga": 10, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 1, "tov": 5, "fls": 2, "pm": -7 },
+      { "name": "LeBewwy", "pos": "SG", "pts": 46, "ast": 5, "reb": 0, "blk": 0, "stl": 1, "fgm": 16, "fga": 22, "tpm": 14, "tpa": 18, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -7 },
+      { "name": "underr4te", "pos": "PF", "pts": 5, "ast": 1, "reb": 1, "blk": 1, "stl": 0, "fgm": 2, "fga": 5, "tpm": 1, "tpa": 3, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": -7 },
+      { "name": "Defencse", "pos": "PF", "pts": 18, "ast": 6, "reb": 2, "blk": 0, "stl": 0, "fgm": 8, "fga": 11, "tpm": 2, "tpa": 3, "ftm": 0, "fta": 0, "tov": 2, "fls": 1, "pm": -7 }
     ],
     "away": [
-      {"name": "k005r", "pos": "PG", "pts": 30, "ast": 12, "reb": 1, "blk": 0, "stl": 4, "fgm": 12, "fga": 16, "tpm": 6, "tpa": 7, "ftm": 0, "fta": 0, "tov": 4, "fls": 1, "pm": 7},
-      {"name": "capzole", "pos": "SG", "pts": 26, "ast": 14, "reb": 2, "blk": 0, "stl": 4, "fgm": 11, "fga": 14, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 7},
-      {"name": "q2vvx", "pos": "SG", "pts": 24, "ast": 1, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 12, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 2, "tov": 0, "fls": 0, "pm": 7},
-      {"name": "uh182481", "pos": "SF", "pts": 11, "ast": 3, "reb": 3, "blk": 1, "stl": 0, "fgm": 4, "fga": 4, "tpm": 3, "tpa": 3, "ftm": 0, "fta": 1, "tov": 0, "fls": 0, "pm": 7},
-      {"name": "MellyFromDmv", "pos": "C", "pts": 17, "ast": 4, "reb": 8, "blk": 2, "stl": 0, "fgm": 8, "fga": 10, "tpm": 0, "tpa": 0, "ftm": 1, "fta": 2, "tov": 4, "fls": 2, "pm": 10}
+      { "name": "k005r", "pos": "PG", "pts": 30, "ast": 12, "reb": 1, "blk": 0, "stl": 4, "fgm": 12, "fga": 16, "tpm": 6, "tpa": 7, "ftm": 0, "fta": 0, "tov": 4, "fls": 1, "pm": 7 },
+      { "name": "capzole", "pos": "SG", "pts": 26, "ast": 14, "reb": 2, "blk": 0, "stl": 4, "fgm": 11, "fga": 14, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 7 },
+      { "name": "q2vvx", "pos": "SG", "pts": 24, "ast": 1, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 12, "tpm": 4, "tpa": 5, "ftm": 0, "fta": 2, "tov": 0, "fls": 0, "pm": 7 },
+      { "name": "uh182481", "pos": "SF", "pts": 11, "ast": 3, "reb": 3, "blk": 1, "stl": 0, "fgm": 4, "fga": 4, "tpm": 3, "tpa": 3, "ftm": 0, "fta": 1, "tov": 0, "fls": 0, "pm": 7 },
+      { "name": "MellyFromDmv", "pos": "C", "pts": 17, "ast": 4, "reb": 8, "blk": 2, "stl": 0, "fgm": 8, "fga": 10, "tpm": 0, "tpa": 0, "ftm": 1, "fta": 2, "tov": 4, "fls": 2, "pm": 10 }
     ]
   },
   {
@@ -192,18 +192,41 @@
     "homeScore": 70,
     "awayScore": 110,
     "home": [
-      {"name": "BOXEDBYTAI", "pos": "PG", "pts": 34, "ast": 8, "reb": 1, "blk": 0, "stl": 1, "fgm": 13, "fga": 20, "tpm": 8, "tpa": 11, "ftm": 0, "fta": 2, "tov": 3, "fls": 1, "pm": -40},
-      {"name": "RaisingHelll", "pos": "PG", "pts": 19, "ast": 0, "reb": 1, "blk": 2, "stl": 0, "fgm": 8, "fga": 13, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 2, "pm": -40},
-      {"name": "truegrail", "pos": "SG", "pts": 2, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 1, "fga": 1, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -40},
-      {"name": "Killer78634", "pos": "SF", "pts": 0, "ast": 0, "reb": 2, "blk": 2, "stl": 0, "fgm": 0, "fga": 1, "tpm": 0, "tpa": 1, "ftm": 0, "fta": 0, "tov": 1, "fls": 3, "pm": -40},
-      {"name": "ourtruestory", "pos": "C", "pts": 15, "ast": 1, "reb": 1, "blk": 0, "stl": 0, "fgm": 6, "fga": 8, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 4, "pm": -37}
+      { "name": "BOXEDBYTAI", "pos": "PG", "pts": 34, "ast": 8, "reb": 1, "blk": 0, "stl": 1, "fgm": 13, "fga": 20, "tpm": 8, "tpa": 11, "ftm": 0, "fta": 2, "tov": 3, "fls": 1, "pm": -40 },
+      { "name": "RaisingHelll", "pos": "PG", "pts": 19, "ast": 0, "reb": 1, "blk": 2, "stl": 0, "fgm": 8, "fga": 13, "tpm": 3, "tpa": 5, "ftm": 0, "fta": 0, "tov": 0, "fls": 2, "pm": -40 },
+      { "name": "truegrail", "pos": "SG", "pts": 2, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 1, "fga": 1, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -40 },
+      { "name": "Killer78634", "pos": "SF", "pts": 0, "ast": 0, "reb": 2, "blk": 2, "stl": 0, "fgm": 0, "fga": 1, "tpm": 0, "tpa": 1, "ftm": 0, "fta": 0, "tov": 1, "fls": 3, "pm": -40 },
+      { "name": "ourtruestory", "pos": "C", "pts": 15, "ast": 1, "reb": 1, "blk": 0, "stl": 0, "fgm": 6, "fga": 8, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 4, "pm": -37 }
     ],
     "away": [
-      {"name": "w6lk", "pos": "PG", "pts": 15, "ast": 20, "reb": 3, "blk": 0, "stl": 2, "fgm": 6, "fga": 7, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 40},
-      {"name": "AyJaqob", "pos": "SG", "pts": 9, "ast": 3, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 40},
-      {"name": "leywinoli", "pos": "SG", "pts": 37, "ast": 5, "reb": 0, "blk": 0, "stl": 0, "fgm": 13, "fga": 15, "tpm": 10, "tpa": 12, "ftm": 1, "fta": 1, "tov": 0, "fls": 0, "pm": 40},
-      {"name": "syncco", "pos": "SF", "pts": 26, "ast": 4, "reb": 4, "blk": 2, "stl": 0, "fgm": 9, "fga": 9, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 40},
-      {"name": "devhourr", "pos": "PF", "pts": 23, "ast": 0, "reb": 2, "blk": 1, "stl": 0, "fgm": 8, "fga": 13, "tpm": 3, "tpa": 6, "ftm": 4, "fta": 4, "tov": 2, "fls": 0, "pm": 40}
+      { "name": "w6lk", "pos": "PG", "pts": 15, "ast": 20, "reb": 3, "blk": 0, "stl": 2, "fgm": 6, "fga": 7, "tpm": 3, "tpa": 4, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 40 },
+      { "name": "AyJaqob", "pos": "SG", "pts": 9, "ast": 3, "reb": 2, "blk": 0, "stl": 0, "fgm": 4, "fga": 6, "tpm": 1, "tpa": 2, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": 40 },
+      { "name": "leywinoli", "pos": "SG", "pts": 37, "ast": 5, "reb": 0, "blk": 0, "stl": 0, "fgm": 13, "fga": 15, "tpm": 10, "tpa": 12, "ftm": 1, "fta": 1, "tov": 0, "fls": 0, "pm": 40 },
+      { "name": "syncco", "pos": "SF", "pts": 26, "ast": 4, "reb": 4, "blk": 2, "stl": 0, "fgm": 9, "fga": 9, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 40 },
+      { "name": "devhourr", "pos": "PF", "pts": 23, "ast": 0, "reb": 2, "blk": 1, "stl": 0, "fgm": 8, "fga": 13, "tpm": 3, "tpa": 6, "ftm": 4, "fta": 4, "tov": 2, "fls": 0, "pm": 40 }
+    ]
+  },
+  {
+    "id": "w2-bkn-at-por",
+    "week": 2,
+    "date": "2026-11-27",
+    "homeId": "portland-trail-blazers",
+    "awayId": "brooklyn-nets",
+    "homeScore": 127,
+    "awayScore": 99,
+    "home": [
+      { "name": "nonstopdribbler", "pos": "PG", "pts": 30, "ast": 9, "reb": 4, "blk": 0, "stl": 2, "fgm": 11, "fga": 11, "tpm": 8, "tpa": 8, "ftm": 0, "fta": 0, "tov": 1, "fls": 1, "pm": 28 },
+      { "name": "countertais", "pos": "PG", "pts": 15, "ast": 20, "reb": 0, "blk": 2, "stl": 0, "fgm": 4, "fga": 6, "tpm": 1, "tpa": 2, "ftm": 6, "fta": 6, "tov": 0, "fls": 0, "pm": 28 },
+      { "name": "HesACone", "pos": "SG", "pts": 50, "ast": 2, "reb": 3, "blk": 0, "stl": 0, "fgm": 19, "fga": 23, "tpm": 12, "tpa": 16, "ftm": 0, "fta": 0, "tov": 1, "fls": 2, "pm": 28 },
+      { "name": "kzazify", "pos": "SF", "pts": 25, "ast": 1, "reb": 1, "blk": 0, "stl": 0, "fgm": 10, "fga": 14, "tpm": 4, "tpa": 7, "ftm": 1, "fta": 1, "tov": 0, "fls": 1, "pm": 28 },
+      { "name": "Chunkymunky_08", "pos": "C", "pts": 7, "ast": 4, "reb": 6, "blk": 0, "stl": 0, "fgm": 3, "fga": 4, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 1, "tov": 0, "fls": 2, "pm": 28 }
+    ],
+    "away": [
+      { "name": "heyarchive", "pos": "PG", "pts": 30, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 12, "fga": 13, "tpm": 6, "tpa": 6, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": -28 },
+      { "name": "frxgrances", "pos": "SG", "pts": 23, "ast": 3, "reb": 1, "blk": 0, "stl": 0, "fgm": 9, "fga": 11, "tpm": 5, "tpa": 5, "ftm": 0, "fta": 0, "tov": 3, "fls": 0, "pm": -28 },
+      { "name": "jxstflow", "pos": "SG", "pts": 31, "ast": 8, "reb": 1, "blk": 0, "stl": 0, "fgm": 11, "fga": 21, "tpm": 4, "tpa": 11, "ftm": 5, "fta": 5, "tov": 3, "fls": 2, "pm": -28 },
+      { "name": "kub6n", "pos": "SF", "pts": 15, "ast": 7, "reb": 0, "blk": 0, "stl": 0, "fgm": 7, "fga": 11, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 2, "tov": 1, "fls": 2, "pm": -28 },
+      { "name": "e9mx", "pos": "C", "pts": 0, "ast": 4, "reb": 6, "blk": 1, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 4, "pm": -28 }
     ]
   }
 ]
