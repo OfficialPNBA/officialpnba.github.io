@@ -228,5 +228,28 @@
       { "name": "kub6n", "pos": "SF", "pts": 15, "ast": 7, "reb": 0, "blk": 0, "stl": 0, "fgm": 7, "fga": 11, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 2, "tov": 1, "fls": 2, "pm": -28 },
       { "name": "e9mx", "pos": "C", "pts": 0, "ast": 4, "reb": 6, "blk": 1, "stl": 0, "fgm": 0, "fga": 0, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 1, "fls": 4, "pm": -28 }
     ]
+  },
+  {
+    "id": "w2-nyk-at-bos",
+    "week": 2,
+    "date": "2026-11-27",
+    "homeId": "boston-celtics",
+    "awayId": "new-york-knicks",
+    "homeScore": 42,
+    "awayScore": 83,
+    "home": [
+      { "name": "Moss_Vibes", "pos": "PG", "pts": 13, "ast": 9, "reb": 0, "blk": 0, "stl": 0, "fgm": 6, "fga": 8, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 0, "tov": 5, "fls": 1, "pm": -41 },
+      { "name": "puff8910", "pos": "SG", "pts": 10, "ast": 1, "reb": 1, "blk": 0, "stl": 0, "fgm": 4, "fga": 9, "tpm": 2, "tpa": 4, "ftm": 0, "fta": 0, "tov": 1, "fls": 0, "pm": -41 },
+      { "name": "TheShadowGamer012", "pos": "SF", "pts": 4, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 2, "fga": 3, "tpm": 0, "tpa": 1, "ftm": 0, "fta": 0, "tov": 2, "fls": 0, "pm": -41 },
+      { "name": "thelittlebuck", "pos": "PF", "pts": 6, "ast": 3, "reb": 3, "blk": 0, "stl": 0, "fgm": 2, "fga": 3, "tpm": 0, "tpa": 0, "ftm": 2, "fta": 2, "tov": 2, "fls": 0, "pm": -41 },
+      { "name": "noahalexf", "pos": "PF", "pts": 2, "ast": 0, "reb": 0, "blk": 0, "stl": 0, "fgm": 1, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": -9 }
+    ],
+    "away": [
+      { "name": "bruhgaaaa", "pos": "PG", "pts": 35, "ast": 16, "reb": 2, "blk": 0, "stl": 9, "fgm": 13, "fga": 16, "tpm": 8, "tpa": 10, "ftm": 1, "fta": 1, "tov": 2, "fls": 2, "pm": 41 },
+      { "name": "ZilixFN", "pos": "SG", "pts": 23, "ast": 1, "reb": 0, "blk": 0, "stl": 0, "fgm": 8, "fga": 8, "tpm": 7, "tpa": 7, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 41 },
+      { "name": "60tzl", "pos": "SF", "pts": 4, "ast": 2, "reb": 1, "blk": 2, "stl": 0, "fgm": 2, "fga": 2, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 1, "pm": 41 },
+      { "name": "SheFW_PrinceP", "pos": "SF", "pts": 8, "ast": 0, "reb": 1, "blk": 0, "stl": 0, "fgm": 4, "fga": 5, "tpm": 0, "tpa": 0, "ftm": 0, "fta": 0, "tov": 0, "fls": 0, "pm": 41 },
+      { "name": "donnell083", "pos": "PF", "pts": 13, "ast": 0, "reb": 2, "blk": 1, "stl": 0, "fgm": 6, "fga": 6, "tpm": 1, "tpa": 1, "ftm": 0, "fta": 1, "tov": 0, "fls": 0, "pm": 41 }
+    ]
   }
 ]
