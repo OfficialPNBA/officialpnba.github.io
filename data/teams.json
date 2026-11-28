@@ -6,9 +6,9 @@
     "conference": "Super",
     "color": "#007A33",
     "logo": "/assets/teams/boston-celtics.webp?v=1",
-    "seed": 6,
+    "seed": 9,
     "wins": 1,
-    "losses": 0,
+    "losses": 1,
     "primary": "#BA9653",
     "secondary": "#FFFFFF"
   },
@@ -86,8 +86,8 @@
     "conference": "Super",
     "color": "#F58426",
     "logo": "/assets/teams/new-york-knicks.webp?v=1",
-    "seed": 9,
-    "wins": 0,
+    "seed": 6,
+    "wins": 1,
     "losses": 1,
     "primary": "#006BB6",
     "secondary": "#FFFFFF"
