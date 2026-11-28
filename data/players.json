@@ -38,7 +38,8 @@
     "teamId": "boston-celtics",
     "headshot": "https://cdn.discordapp.com/avatars/574592217675464724/3a8be0b618919057e03c6f8fbc88ced8.webp?size=128",
     "discordId": "574592217675464724",
-    "discord": "ilovemoneybags1"
+    "discord": "ilovemoneybags1",
+    "coach": true
   },
   {
     "id": "ranchero209-53836",
@@ -273,12 +274,13 @@
   {
     "id": "frxgrances",
     "name": "frag",
-    "teamId": "cleveland-cavaliers",
+    "teamId": null,
     "position": "SG",
     "overall": 99,
     "headshot": "https://cdn.discordapp.com/avatars/1317699131489255477/a_d221b48faab80e387b0aa9bd568b3882.webp?size=128",
     "discordId": "1317699131489255477",
-    "discord": "frxgrances"
+    "discord": "frxgrances",
+    "formerTeamId": "cleveland-cavaliers"
   },
   {
     "id": "luvians",
@@ -308,13 +310,14 @@
   {
     "id": "myvengeances",
     "name": "myvengeances",
-    "teamId": "cleveland-cavaliers",
+    "teamId": null,
     "position": "SG",
     "overall": 99,
     "headshot": "https://cdn.discordapp.com/guilds/1566558045151043754/users/1331766883417981101/avatars/c9d49d4c6b2c83b67816913efc1ed939.webp?size=128",
     "discordId": "1331766883417981101",
     "discord": "aestasuu",
-    "roblox": "Accelerxtxr"
+    "roblox": "Accelerxtxr",
+    "formerTeamId": "cleveland-cavaliers"
   },
   {
     "id": "owner-tai-nuggets",
@@ -781,7 +784,8 @@
     "teamId": "minnesota-timberwolves",
     "headshot": "https://cdn.discordapp.com/avatars/317861499035189248/14091bb5bbd16993c299e4628f6836f2.webp?size=128",
     "discordId": "317861499035189248",
-    "discord": "zadet"
+    "discord": "zadet",
+    "coach": true
   },
   {
     "id": "ry3nnn",
@@ -1119,12 +1123,11 @@
   {
     "id": "hatito-is-goated",
     "name": "Pptoshifty",
-    "teamId": null,
+    "teamId": "new-york-knicks",
     "headshot": "https://cdn.discordapp.com/avatars/1003801754732875786/a2474784bedc8c08d8caecf8e2479ddd.webp?size=128",
     "discordId": "1003801754732875786",
     "discord": "hatito_is_goated",
-    "roblox": "Shefw_princep",
-    "formerTeamId": "memphis-grizzlies"
+    "roblox": "Shefw_princep"
   },
   {
     "id": "tay-playz1",
@@ -1332,5 +1335,44 @@
     "headshot": "https://cdn.discordapp.com/avatars/1280276176232779837/c6cd56d9919415948d6af3eefe28c99a.webp?size=128",
     "discordId": "1280276176232779837",
     "discord": "cash2mac"
+  },
+  {
+    "id": "diversjty",
+    "name": "ʞuı̣p",
+    "teamId": "memphis-grizzlies",
+    "discordId": "771831462072156171",
+    "discord": "diversjty",
+    "headshot": "https://cdn.discordapp.com/avatars/771831462072156171/7ed090245b53360c011b6e12bdc61910.webp?size=128"
+  },
+  {
+    "id": "rivershelf",
+    "name": "rivershelf",
+    "teamId": "memphis-grizzlies",
+    "discordId": "423194781565583360",
+    "discord": "rivershelf",
+    "headshot": "https://cdn.discordapp.com/avatars/423194781565583360/0bf1c23673b0a4f6d70680153aa04290.webp?size=128"
+  },
+  {
+    "id": "godbigby",
+    "name": "Guardxpost",
+    "teamId": "new-york-knicks",
+    "discordId": "1075293810902442064",
+    "discord": "godbigby",
+    "headshot": "https://cdn.discordapp.com/avatars/1075293810902442064/8aba7641bd4531c39360f2317d3b199c.webp?size=128"
+  },
+  {
+    "id": "fate-4231",
+    "name": "ky",
+    "teamId": "new-york-knicks",
+    "discordId": "1089302484574539787",
+    "discord": "fate.4231",
+    "headshot": "https://cdn.discordapp.com/avatars/1089302484574539787/fd3a923d197c1a3b8f8ac40bffc9f103.webp?size=128"
+  },
+  {
+    "id": "noahandnoglahgregs",
+    "name": "noglahnoglah",
+    "teamId": "boston-celtics",
+    "discordId": "1428977881815715890",
+    "discord": "noahandnoglahgregs"
   }
 ]
