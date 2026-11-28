@@ -291,10 +291,11 @@
   {
     "id": "ohshitcold",
     "name": "ohshitcold",
-    "teamId": "cleveland-cavaliers",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/762872816181706773/a_f7a32b26ee3d077edcd0ba01d16712f3.webp?size=128",
     "discordId": "762872816181706773",
-    "discord": "ohshitcold"
+    "discord": "ohshitcold",
+    "formerTeamId": "cleveland-cavaliers"
   },
   {
     "id": "geeanz",
@@ -312,7 +313,7 @@
     "overall": 99,
     "headshot": "https://cdn.discordapp.com/guilds/1566558045151043754/users/1331766883417981101/avatars/c9d49d4c6b2c83b67816913efc1ed939.webp?size=128",
     "discordId": "1331766883417981101",
-    "discord": "myvengeances",
+    "discord": "aestasuu",
     "roblox": "Accelerxtxr"
   },
   {
@@ -552,7 +553,7 @@
     "teamId": "houston-rockets",
     "headshot": "https://cdn.discordapp.com/avatars/1226973042958405818/6a861cad518606d3813dcbcfaa2217cb.webp?size=128",
     "discordId": "1226973042958405818",
-    "discord": "balenciagas1"
+    "discord": "tronnyappleseed"
   },
   {
     "id": "dinkhaa",
@@ -655,10 +656,11 @@
   {
     "id": "strangelite",
     "name": "strangelite",
-    "teamId": "miami-heat",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/1519751444255870997/3e209a435a092e95bf68a2081dda9cf8.webp?size=128",
     "discordId": "1519751444255870997",
-    "discord": "strangelite_"
+    "discord": "strangelite_",
+    "formerTeamId": "miami-heat"
   },
   {
     "id": "tendeds",
@@ -767,10 +769,11 @@
   {
     "id": "xoxo7nyzori42",
     "name": "xo",
-    "teamId": "minnesota-timberwolves",
+    "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/1452588040479309950/a_9f37e1d6ce2fd696dfd46473b3b016de.webp?size=128",
     "discordId": "1452588040479309950",
-    "discord": "xoxo7nyzori42"
+    "discord": "xoxo7nyzori42",
+    "formerTeamId": "minnesota-timberwolves"
   },
   {
     "id": "zadet",
@@ -877,7 +880,7 @@
     "teamId": "oklahoma-city-thunder",
     "headshot": "https://cdn.discordapp.com/avatars/1411119285375598592/cdc25db6b9724e5c9df62ce3b7d3b0c7.webp?size=128",
     "discordId": "1411119285375598592",
-    "discord": "leavemebeplease"
+    "discord": "clearflames"
   },
   {
     "id": "realqazzy",
@@ -1201,7 +1204,7 @@
     "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/270647398089359372/a207a9d8f7b7ea40691354f2af164b39.webp?size=128",
     "discordId": "270647398089359372",
-    "discord": "shielddecay",
+    "discord": "auditorycue2",
     "formerTeamId": "new-york-knicks"
   },
   {
@@ -1321,5 +1324,13 @@
     "teamId": null,
     "headshot": "https://cdn.discordapp.com/avatars/693277314401959996/34f3a7ea86a53aad41d9384e91c71752.webp?size=128",
     "discordId": "693277314401959996"
+  },
+  {
+    "id": "cash2mac",
+    "name": "2S",
+    "teamId": "miami-heat",
+    "headshot": "https://cdn.discordapp.com/avatars/1280276176232779837/c6cd56d9919415948d6af3eefe28c99a.webp?size=128",
+    "discordId": "1280276176232779837",
+    "discord": "cash2mac"
   }
 ]
