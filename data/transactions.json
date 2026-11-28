@@ -889,6 +889,27 @@
   "at": "2026-11-24T00:49:45Z"
  },
  {
+  "type": "Release",
+  "discordId": "1009991553789468722",
+  "discord": "choppa_thatgoat",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-24T00:50:07Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1461785460023103549",
+  "discord": "zek34christ",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-24T00:50:14Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "270647398089359372",
+  "discord": "auditorycue2",
+  "teamId": "new-york-knicks",
+  "at": "2026-11-24T00:50:22Z"
+ },
+ {
   "type": "Signing",
   "discordId": "884844164691410944",
   "discord": "killer112779",
@@ -938,13 +959,6 @@
   "at": "2026-11-24T20:46:22Z"
  },
  {
-  "type": "Release",
-  "discordId": "640280668982739012",
-  "discord": "j9shwa",
-  "teamId": "houston-rockets",
-  "at": "2026-11-25T01:03:00Z"
- },
- {
   "type": "Signing",
   "discordId": "665644980270006272",
   "discord": "xenkle",
@@ -957,6 +971,13 @@
   "discord": "hoopzp13348",
   "teamId": "philadelphia-76ers",
   "at": "2026-11-24T23:31:35Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "640280668982739012",
+  "discord": "j9shwa",
+  "teamId": "houston-rockets",
+  "at": "2026-11-25T01:03:00Z"
  },
  {
   "type": "Signing",
@@ -1153,5 +1174,26 @@
   "discord": "z3shard",
   "teamId": "memphis-grizzlies",
   "at": "2026-11-26T23:16:13Z"
+ },
+ {
+  "type": "Signing",
+  "discordId": "1280276176232779837",
+  "discord": "cash2mac",
+  "teamId": "miami-heat",
+  "at": "2026-11-27T03:27:43Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "1519751444255870997",
+  "discord": "strangelite_",
+  "teamId": "miami-heat",
+  "at": "2026-11-27T03:31:04Z"
+ },
+ {
+  "type": "Release",
+  "discordId": "762872816181706773",
+  "discord": "ohshitcold",
+  "teamId": "cleveland-cavaliers",
+  "at": "2026-11-27T07:20:43Z"
  }
 ]
